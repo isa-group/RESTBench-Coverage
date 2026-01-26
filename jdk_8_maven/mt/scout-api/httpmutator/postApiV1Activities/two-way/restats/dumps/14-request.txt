@@ -1,4 +1,0 @@
-POST /api/v1/activities HTTP/1.1
-Authorization: ApiKey administrator
-
-{"name":"hiking","description_prepare":"a preparation","description_safety":"the descp of safety","age_min":100,"age_max":100,"participants_min":50,"participants_max":50,"featured":false,"tags":[{"id":4}],"source":"https://example.com/example","media_files":[{"uri":"https://example.com/forest.jpg","mime_type":"image/jpeg","name":"forest hunt"}]}

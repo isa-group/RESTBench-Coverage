@@ -1,4 +1,0 @@
-POST /api/v1/activities HTTP/1.1
-Authorization: ApiKey administrator
-
-{"date_created":"2025-06-17T09:00:00.000Z","description_material":"an activity","description_introduction":"an introduction","description_main":"the main part","description_notes":"a note","age_min":100,"participants_min":50,"participants_max":100,"time_min":6,"time_max":2,"featured":false,"source":"https://example.com/example","author":{"id":1}}

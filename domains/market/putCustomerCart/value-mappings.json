@@ -1,0 +1,34 @@
+{
+  "api": "market",
+  "operation": "putCustomerCart",
+  "source": {
+    "mapper_files": [
+      "jdk_11_maven/mt/market/src/test/java/mt/market/mapper/PutCustomerCartMapper.java"
+    ],
+    "resource_files": []
+  },
+  "fields": [
+    {
+      "field": "user",
+      "domain_representation": "email string in CSV",
+      "resolved_value_representation": "password lookup and Basic Authorization header",
+      "mapping": [
+        {
+          "domain_value": "ivan.petrov@yandex.ru",
+          "resolved_value": {
+            "password": "petrov",
+            "authorization_header": "Basic aXZhbi5wZXRyb3ZAeWFuZGV4LnJ1OnBldHJvdg=="
+          }
+        },
+        {
+          "domain_value": "user2@yandex.ru",
+          "resolved_value": {
+            "password": "yuridolgoruki",
+            "authorization_header": "Basic dXNlcjJAeWFuZGV4LnJ1Onl1cmlkb2xnb3J1a2k="
+          }
+        }
+      ],
+      "notes": "Resolved via USERS map and buildBasicAuthHeader in mapper."
+    }
+  ]
+}

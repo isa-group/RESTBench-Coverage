@@ -1,0 +1,238 @@
+{
+  "api": "project-tracking-system",
+  "operation": "postAppApiAssignments",
+  "source": {
+    "mapper_files": [
+      "jdk_11_maven/mt/project-tracking-system/src/test/java/mt/com/pfa/mapper/PostAssignmentMapper.java",
+      "jdk_11_maven/mt/project-tracking-system/src/test/java/mt/com/pfa/mapper/JsonResourceUtil.java"
+    ],
+    "resource_files": [
+      "domains/project-tracking-system/postAppApiAssignments/resources/employees.json",
+      "domains/project-tracking-system/postAppApiAssignments/resources/projects.json"
+    ]
+  },
+  "fields": [
+    {
+      "field": "employee",
+      "domain_representation": "employeeId (string in CSV)",
+      "resolved_value_representation": "employee object from employees.json",
+      "mapping": [
+        {
+          "domain_value": "1",
+          "resolved_value": {
+            "employeeId": 1,
+            "firstName": "Selim",
+            "lastName": "Horri",
+            "email": "springabcxyzboot@gmail.com",
+            "phone": "22125144",
+            "hiredate": "15-04-2019",
+            "job": "Billing",
+            "salary": 5000.0,
+            "manager": {
+              "employeeId": 4,
+              "firstName": "Soumaya",
+              "lastName": "Hajjem",
+              "email": "springabcxyzboot@gmail.com",
+              "phone": "22125144",
+              "hiredate": null,
+              "job": "Chef service Billing",
+              "salary": 6000.0,
+              "manager": null,
+              "department": {
+                "departmentId": 6,
+                "departmentName": "Billing",
+                "location": {
+                  "locationId": 1,
+                  "adr": "RUE DE LA BOURSE",
+                  "postalCode": "2016",
+                  "city": "LAC2"
+                }
+              },
+              "credential": {
+                "credentialId": 5,
+                "username": "soumayahajjem",
+                "password": "$2y$04$ljw6KJaAkzMzJZOf8eU6qOoq7jV2SXRqeg7uHS7tQb6x86SBS/oEW",
+                "enabled": true,
+                "role": "ROLE_MGR"
+              }
+            },
+            "department": {
+              "departmentId": 6,
+              "departmentName": "Billing",
+              "location": {
+                "locationId": 1,
+                "adr": "RUE DE LA BOURSE",
+                "postalCode": "2016",
+                "city": "LAC2"
+              }
+            },
+            "credential": {
+              "credentialId": 3,
+              "username": "selimhorri",
+              "password": "$2a$10$ldBd/ZuGtUgxHNKd.qCGxuPVVM5oZ6kHkKyu5By8NIQxrv4rV9O/C",
+              "enabled": true,
+              "role": "ROLE_EMP"
+            }
+          }
+        },
+        {
+          "domain_value": "2",
+          "resolved_value": {
+            "employeeId": 2,
+            "firstName": "Badr",
+            "lastName": "Idoudi",
+            "email": "springabcxyzboot@gmail.com",
+            "phone": "22125144",
+            "hiredate": "15-04-2019",
+            "job": "Digital",
+            "salary": 5000.0,
+            "manager": {
+              "employeeId": 9,
+              "firstName": "John",
+              "lastName": "Doe",
+              "email": "springabcxyzboot@gmail.com",
+              "phone": "22125144",
+              "hiredate": null,
+              "job": "Chef service digital",
+              "salary": 6000.0,
+              "manager": null,
+              "department": {
+                "departmentId": 5,
+                "departmentName": "Digital",
+                "location": {
+                  "locationId": 1,
+                  "adr": "RUE DE LA BOURSE",
+                  "postalCode": "2016",
+                  "city": "LAC2"
+                }
+              },
+              "credential": {
+                "credentialId": 7,
+                "username": "johndoe",
+                "password": "$2y$04$CT3Jad4jrOq1zGt0Q4maEeTV57rdLtYNVnBM96vyVaGbaE4YgwfvO",
+                "enabled": true,
+                "role": "ROLE_MGR"
+              }
+            },
+            "department": {
+              "departmentId": 5,
+              "departmentName": "Digital",
+              "location": {
+                "locationId": 1,
+                "adr": "RUE DE LA BOURSE",
+                "postalCode": "2016",
+                "city": "LAC2"
+              }
+            },
+            "credential": {
+              "credentialId": 2,
+              "username": "badridoudi",
+              "password": "$2y$04$c09yvJ4rcadTRGaoVQRRZugld/9z377uaIHwRCWxexBADCVT.jC4S",
+              "enabled": true,
+              "role": "ROLE_EMP"
+            }
+          }
+        }
+      ],
+      "notes": "Sample only; full employee lookup uses employees.json by employeeId."
+    },
+    {
+      "field": "project",
+      "domain_representation": "projectId (string in CSV)",
+      "resolved_value_representation": "project object from projects.json",
+      "mapping": [
+        {
+          "domain_value": "1",
+          "resolved_value": {
+            "projectId": 1,
+            "title": "TRANSBSCS",
+            "startDate": "28-09-2020",
+            "endDate": "04-11-2020",
+            "status": "COMPLETED"
+          }
+        },
+        {
+          "domain_value": "2",
+          "resolved_value": {
+            "projectId": 2,
+            "title": "SYNCH_BSCS_IMX",
+            "startDate": "26-11-2020",
+            "endDate": "25-03-2021",
+            "status": "IN_PROGRESS"
+          }
+        },
+        {
+          "domain_value": "3",
+          "resolved_value": {
+            "projectId": 3,
+            "title": "TASYI9A LILVIRANDA",
+            "startDate": "26-11-2020",
+            "endDate": "26-11-2020",
+            "status": "COMPLETED"
+          }
+        },
+        {
+          "domain_value": "4",
+          "resolved_value": {
+            "projectId": 4,
+            "title": "MACHYA_RANDONNEE",
+            "startDate": "29-01-2021",
+            "endDate": "30-04-2021",
+            "status": "NOT_STARTED"
+          }
+        },
+        {
+          "domain_value": "5",
+          "resolved_value": {
+            "projectId": 5,
+            "title": "TATIB LEFTOUR",
+            "startDate": "14-11-2020",
+            "endDate": "14-11-2020",
+            "status": "COMPLETED"
+          }
+        },
+        {
+          "domain_value": "6",
+          "resolved_value": {
+            "projectId": 6,
+            "title": "ChatBot",
+            "startDate": "11-12-2020",
+            "endDate": "30-01-2021",
+            "status": "NOT_STARTED"
+          }
+        },
+        {
+          "domain_value": "7",
+          "resolved_value": {
+            "projectId": 7,
+            "title": "MyOoredoo",
+            "startDate": "01-08-2018",
+            "endDate": "14-05-2021",
+            "status": "IN_PROGRESS"
+          }
+        },
+        {
+          "domain_value": "8",
+          "resolved_value": {
+            "projectId": 8,
+            "title": "GREENPLUME_UPGRADE",
+            "startDate": "02-11-2020",
+            "endDate": "01-05-2021",
+            "status": "IN_PROGRESS"
+          }
+        },
+        {
+          "domain_value": "9",
+          "resolved_value": {
+            "projectId": 9,
+            "title": "COMMISION_AUTOMATION",
+            "startDate": "01-06-2020",
+            "endDate": "02-03-2021",
+            "status": "IN_PROGRESS"
+          }
+        }
+      ],
+      "notes": "Full mapping in resources/projects.json."
+    }
+  ]
+}

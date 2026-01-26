@@ -1,5 +1,0 @@
-HTTP/1.1 400 
-content-type: application/json;charset=UTF-8
-transfer-encoding: chunked
-
-{"status":400,"error":"Bad Request","message":"JSON parse error: Cannot deserialize value of type `int` from String \"re\": not a valid `int` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String \"re\": not a valid `int` value\n at [Source: (PushbackInputStream); line: 1, column: 72] (through reference chain: br.com.codenation.hospital.dto.HospitalDTO[\"beds\"])","path":"/v1/hospitais/"}

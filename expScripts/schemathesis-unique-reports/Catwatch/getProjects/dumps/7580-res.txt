@@ -1,18 +1,0 @@
-HTTP/1.1 400 
-x-content-type-options: nosniff
-x-xss-protection: 1; mode=block
-cache-control: no-cache, no-store, max-age=0, must-revalidate
-pragma: no-cache
-expires: 0
-x-frame-options: DENY
-access-control-allow-origin: *
-access-control-allow-methods: POST, GET, OPTIONS, DELETE
-access-control-max-age: 3600
-access-control-allow-headers: x-requested-with
-x-application-context: application:0
-Content-Type: application/json;charset=UTF-8
-transfer-encoding: chunked
-date: Sun, 28 Dec 2025 11:57:19 GMT
-connection: close
-
-{"timestamp":1766923039575,"status":400,"error":"Bad Request","exception":"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException","message":"Failed to convert value of type 'java.lang.String[]' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: \"96134187598235183056529579747225369643,3.1768797377640554e+288,1.3359699581530707e-212,{},['\\x06éï÷\\U0009c449¨',{'\\x03ñô\\U000c0327\\U000ba2a0':{}}],[[],{'@\\x8a\\U0007de1e\\xa0F\\U00083437FXù\\U0003fd87õqÛ\\x9c\\U000c396a\\U0001a31dß\\x85':{'?':-4.527759258561314e+180},'Næ\\x83\\x83÷E\\x9cù\\x1f\\U000480aeÅR':[-1.1754943508222875e-38,-0.99999,-91069990091585282075280588712989454324],'ê\\U00105192zÊ_=÷':{'\\x14Ã':'\\x00V'}},[{'\\x95\\U000cbaea':None,'\\nÎ\\U000c4a55»\\U00049111é¨':False},{'\\U00055af4':-5e-324}]],4.,勨ÍØ,¯Ôìáw[lÊ,\uD82E\uDC6FÊ\uDB2D\uDC3DV6Ù,,61,{},ûÛ,\uD8A4\uDC0BÐ\uDBC1\uDC16ù,,None,16259,[7],{'':True,'Ø\\U0008b11f':None,'\\U000bdf0f\\x90':-1665385969910394.0},[True,True],{'1\\U0004daadá\\U0008bf04\\U0007c1ccÛ':[]},[],[True,'A\\x913\\U00090a6b±Q\\U000905f2\\U0006e64e\\U000c9178'],[[{'ðH\\x99\\x08\\x08µW$\\U000ffae7uÚ¬':None,'\\x9bå\\x88Ö\\U00054af5Þ\\x87\\U000fb0ee':9406,'\\U000d6fae':7338502128265353309},[-1.839836210592024e+16,1.7865059590789796e-187,False],False],['µ',{'h\\xa0Ð\\U000c0d5eu§2':1.6811821135297246e-246,'\\U000774ee':True,'':-1.5067983768042476e+60},None],True],{},False,[None,True,False],[[None,6878]],2.3320068377278e+16,[{\"\\\\l'\\x98í\\U00042ccb\":False,'~¯ë\\x07鯬\uD801\uDD71\\x12méÜ\\x1d\\U0008f3e6æB\\U0005619c}¶u\\x89\\x08\\U00098d4e4':-7.84318725900361e-157,'':None},{'':[-5.430690929403237e+16,1.9,'È\\x1b\\x1b\\x8a\\x87'],'.\\U0010fd4aÍ\"yQ\\U0004098e\\x060ë':{'\\x82æ\\U000be33c':'\uD835\uDC13\uD835\uDC21\uD835\uDC1E\uD835\uDC2A\uD835\uDC2E\uD835\uDC22\uD835\uDC1C\uD835\uDC24\uD835\uDC1B\uD835\uDC2B\uD835\uDC28\uD835\uDC30\uD835\uDC27\uD835\uDC1F\uD835\uDC28\uD835\uDC31\uD835\uDC23\uD835\uDC2E\uD835\uDC26\uD835\uDC29\uD835\uDC2C\uD835\uDC28\uD835\uDC2F\uD835\uDC1E\uD835\uDC2B\uD835\uDC2D\uD835\uDC21\uD835\uDC1E\uD835\uDC25\uD835\uDC1A\uD835\uDC33\uD835\uDC32\uD835\uDC1D\uD835\uDC28\uD835\uDC20','':-121806178570093373700676107909504145516}},{'K\\x07\\x13\\x9c\\U00071da9iÒ\\x95\\U000e4178ê1':{'×Ï\\x8aêª.T\\U00041785':1.775814691815368e+16,'':-1.5433472770393361e+209,'±\\U000ab35e\\U000a8ab6\\U000c8032½\"\\x05m':None}}],[{'':None,'ç':False,'H':-3758313205054280888},{'n':[-0.99999,'\\U00091075\\U00057595]èq\\xad\\U000ef6ac\\U000ea311~\\U000be40a×]\uD820\uDF4C.\\U000f4eb6Ⴞ']},[]],Yì,LÃ,{'\\x99.\\U00095e22\\U000e2cb1':{'\uD844\uDF1BÃ\\U000f7b20öUë2b\\U0006c35f\\x98\\x8fN\\U0007a7f3B\\x07%\\x87':'뻃m','w%Bè':''},'\\x02/tv©L\\x8f\\x02\\x10':[],'':{}},{'':-21,'\\U000509f8\\x96\\t\\U0009e8f7\\x9fAÅ\\U00105df8\\U000fcc74\\x96\\të´ïÏj\\x04¬':-8.743849004284156e-62,'_\\x9b\\U00057e57\\x83\\x84b\\U00037539\\U00053f42\\U000edb0d':None},[],D,ìö\uD854\uDFB5|õ\uD973\uDF05Æ\uDBD5\uDE90ßiZ\uDAEA\uDD6CIDÄ+g\uDA1E\uDE08,\uD9A0\uDD78èúé\"","path":"/projects"}

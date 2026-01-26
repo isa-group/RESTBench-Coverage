@@ -1,7 +1,0 @@
-HTTP/1.1 400 
-Content-Type: application/json;charset=UTF-8
-transfer-encoding: chunked
-date: Sun, 28 Dec 2025 12:04:17 GMT
-connection: close
-
-{"timestamp":"2025-12-28T12:04:17.803+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Cannot deserialize value of type `int` from String \"3ow\uDB3E\uDFFC\uDBFB\uDD8D\uD80C\uDC133\": not a valid `int` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `int` from String \"3ow\uDB3E\uDFFC\uDBFB\uDD8D\uD80C\uDC133\": not a valid `int` value\n at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: br.com.codenation.hospital.dto.HospitalDTO[\"availableBeds\"])","path":"/v1/hospitais/"}

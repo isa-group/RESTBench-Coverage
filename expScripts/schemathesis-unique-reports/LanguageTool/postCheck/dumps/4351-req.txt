@@ -1,11 +1,0 @@
-POST /v2/check HTTP/1.1
-User-Agent: schemathesis/4.6.1
-Accept-Encoding: gzip, deflate
-Accept: */*
-Connection: keep-alive
-X-Schemathesis-TestCaseId: XSS2DF
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 177
-Host: localhost:36155
-
-enabledCategories=2Í?`𒜺&Ë&preferredVariants=Z&text=&disabledCategories=2+Ãç\&enabledOnly=True&altLanguages=MN

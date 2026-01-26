@@ -1,18 +1,0 @@
-HTTP/1.1 400 
-x-content-type-options: nosniff
-x-xss-protection: 1; mode=block
-cache-control: no-cache, no-store, max-age=0, must-revalidate
-pragma: no-cache
-expires: 0
-x-frame-options: DENY
-access-control-allow-origin: *
-access-control-allow-methods: POST, GET, OPTIONS, DELETE
-access-control-max-age: 3600
-access-control-allow-headers: x-requested-with
-x-application-context: application:0
-Content-Type: application/json;charset=UTF-8
-transfer-encoding: chunked
-date: Sun, 28 Dec 2025 11:56:26 GMT
-connection: close
-
-{"timestamp":1766922987043,"status":400,"error":"Bad Request","exception":"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException","message":"Failed to convert value of type 'java.lang.String[]' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: \"False,{},{},G\uDB11\uDF45Ã\uDAEA\uDEA3\uDB81\uDF1A\uDAD0\uDDBDû¹m,ÿ50,qq\uDB03\uDEC84K¬%ÿ \uD878\uDE32\uDBAB\uDCCF,,e2ôÜ\u00154Á½\u0001C6Ï¹\u0007®\uDAB8\uDEEF2%,-3682958334447170152,{'l\\\\\\xa0Àú\\x99»µõ8Ç\\x19ôõsÓ':[],'f':{'\uD877\uDE85i':True,'\\U000d0b9b':-5880,'':False}},[],[9007199254740992.0],{'\"':True,'\\U00101d07uØw푮\\U000507f9Û¸\\U0006140b':None,'m':0.3333333333333333},-1.9629911360392216e+16,-20,«X¢,dbm.gnu,ç,115,{'0':False,'®v\\x04\\x1cdc\\x9b3´g\\x86hë':-1.401298464324817e-45,'input':'I\\x12ô\\x91\\U000e5a32\\x88:\\U00041505\\x16\\U000369b7'},True,[-3.1741713753209652e+16,{},[1.5]],{'\\x93¬ÈI':['ÍÞ\\x9a',None,'Ò\\x08\\ue480\\x06Ü']},[],[[],{},{'':None,'<\\U00075186\\x96':None}],True,{},,t,,,qÃ\uDB39\uDE0C\uDAE6\uDC6D,Df\uD862\uDCE2\u0010P<,·\uDA2A\uDDB7\uDB36\uDE12,$©Èò°魼Q\uD98B\uDCBD*CRO\u0004\u0016ÜY»\uDA73\uDE94sPA¯:0\\&\u0010,\uDB2A\uDE7Aö\uDB75\uDFE8c]¥ |,None,-27957,t(b\uD84A\uDE8BÈ\uD940\uDC1B\uDB76\uDFBF,n\u0004Ô,_,[-5.164439487636622e+16,'¹\\x97&ÿ¦@\\x87',False],[True],{'':'3','+0.0':False,'ù©|\\U000650c9\\U000a8926\\x84W»êb%':1.990165024784698e+298},[[]],-19,[1.5666070430765253e-129],{},[],,\u0010nR_iØ,,I,½\uDBCF\uDDF1\u0005,\u0012(\uDB62\uDC64Úf\"","path":"/projects"}

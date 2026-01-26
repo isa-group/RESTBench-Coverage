@@ -1,9 +1,0 @@
-GET /location-finder/v1/find-by-address?radius=10000000.0&postalCode=&serviceType=express%3Adrop-off&serviceType=postident&serviceType=parcel%3Apick-up&serviceType=parcel%3Adrop-off-return&serviceType=parcel%3Apick-up-registered&serviceType=parcel%3Adrop-off-return&serviceType=postident&serviceType=cash-service&serviceType=express%3Adrop-off-unlabeled&serviceType=cash-service&limit=10000000.0 HTTP/1.1
-User-Agent: schemathesis/4.5.4
-Accept-Encoding: gzip, deflate, br, zstd
-Accept: */*
-Connection: keep-alive
-DHL-API-Key: [Filtered]
-X-Schemathesis-TestCaseId: D5K94F
-Host: api.dhl.com
-

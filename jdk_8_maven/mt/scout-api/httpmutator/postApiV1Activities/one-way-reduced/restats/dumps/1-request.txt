@@ -1,4 +1,0 @@
-POST /api/v1/activities HTTP/1.1
-Authorization: ApiKey administrator
-
-{"date_updated":"2025-06-18T09:00:00.000Z","description_introduction":"an introduction","description_prepare":"a preparation","description_notes":"a note","age_max":0,"participants_min":0,"participants_max":0,"time_min":6,"time_max":6,"featured":true,"tags":[{"group":"1feelings","name":"1Happy","activities_count":1}],"source":"https://example.com/example","author":{"id":1},"media_files":[{"uri":"https://example.com/forest.jpg","mime_type":"image/jpeg","name":"forest hunt"}]}

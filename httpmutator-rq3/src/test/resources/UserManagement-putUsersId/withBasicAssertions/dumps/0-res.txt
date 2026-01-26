@@ -1,7 +1,0 @@
-HTTP/1.1 400
-Content-Type: application/json
-Transfer-Encoding: chunked
-Date: Wed, 31 Dec 2025 12:04:16 GMT
-Connection: close
-
-{"timestamp":"2025-12-31T12:04:16.626+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \"2033-02-29\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2033-02-29' could not be parsed: Invalid date 'February 29' as '2033' is not a leap year; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \"2033-02-29\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2033-02-29' could not be parsed: Invalid date 'February 29' as '2033' is not a leap year\n at [Source: (PushbackInputStream); line: 1, column: 18] (through reference chain: com.giassi.microservice.demo2.rest.users.dtos.requests.CreateOrUpdateUserDTO[\"birthDate\"])","path":"/users/7"}

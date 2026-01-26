@@ -1,4 +1,0 @@
-POST /api/v1/activities HTTP/1.1
-Authorization: ApiKey administrator
-
-{"date_published":"2025-06-16T09:00:00.000Z","date_created":"2025-06-17T09:00:00.000Z","description_material":"an activity","description_introduction":"an introduction","description_main":"the main part","description_notes":"a note","age_min":0,"age_max":50,"participants_max":100,"time_max":4,"author":{"id":1},"media_files":[{"uri":"https://example.com/forest.jpg","mime_type":"image/jpeg","name":"forest hunt"}]}

@@ -1,0 +1,52 @@
+{
+  "api": "catwatch",
+  "operation": "getContributors",
+  "source": {
+    "mapper_files": [
+      "jdk_8_maven/mt/catwatch/src/test/java/mt/org/zalando/catwatch/backend/mapper/GetContributorsMapper.java"
+    ],
+    "resource_files": []
+  },
+  "fields": [
+    {
+      "field": "start_date",
+      "domain_representation": "0-based index string in CSV",
+      "resolved_value_representation": "timestamp string formatted yyyy-MM-dd'T'HH:mm:ss'Z'",
+      "mapping": [
+        {
+          "domain_value": "0",
+          "resolved_value": "<computed: now - 10 days>"
+        },
+        {
+          "domain_value": "1",
+          "resolved_value": "<computed: now - 20 days>"
+        },
+        {
+          "domain_value": "2",
+          "resolved_value": "<computed: now - 30 days>"
+        }
+      ],
+      "notes": "Values are computed at mapper initialization using LocalDateTime.now() and formatted with yyyy-MM-dd'T'HH:mm:ss'Z'."
+    },
+    {
+      "field": "end_date",
+      "domain_representation": "0-based index string in CSV",
+      "resolved_value_representation": "timestamp string formatted yyyy-MM-dd'T'HH:mm:ss'Z'",
+      "mapping": [
+        {
+          "domain_value": "0",
+          "resolved_value": "<computed: now - 0 days>"
+        },
+        {
+          "domain_value": "1",
+          "resolved_value": "<computed: now - 4 days>"
+        },
+        {
+          "domain_value": "2",
+          "resolved_value": "<computed: now - 8 days>"
+        }
+      ],
+      "notes": "Values are computed at mapper initialization using LocalDateTime.now() and formatted with yyyy-MM-dd'T'HH:mm:ss'Z'."
+    }
+  ]
+}

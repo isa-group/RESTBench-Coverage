@@ -1,4 +1,0 @@
-HTTP/1.1 200 
-content-type: application/json
-
-{"software":{"name":"LanguageTool","version":"5.2-SNAPSHOT","buildDate":null,"apiVersion":1,"premium":false,"premiumHint":"You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.","status":""},"warnings":{"incompleteResults":false},"language":{"name":"English (US)","code":"en-US","detectedLanguage":{"name":"French","code":"fr","confidence":0.7916527}},"matches":[{"message":"Possible spelling mistake found.","shortMessage":"Spelling mistake","replacements":[{"value":"testiest"},{"value":"test test"}],"offset":2,"length":11,"context":{"text":"A test<b>test</b>","offset":2,"length":11},"sentence":"A testtest","type":{"typeName":"Other"},"rule":{"id":"MORFOLOGIK_RULE_EN_US","description":"Possible spelling mistake","issueType":"misspelling","category":{"id":"TYPOS","name":"Possible Typo"}},"ignoreForIncompleteSentence":false,"contextForSureMatch":0}]}

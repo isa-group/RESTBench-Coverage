@@ -1,0 +1,52 @@
+{
+  "api": "catwatch",
+  "operation": "getProjects",
+  "source": {
+    "mapper_files": [
+      "jdk_8_maven/mt/catwatch/src/test/java/mt/org/zalando/catwatch/backend/mapper/GetProjectMapper.java"
+    ],
+    "resource_files": []
+  },
+  "fields": [
+    {
+      "field": "start_date",
+      "domain_representation": "0-based index string in CSV",
+      "resolved_value_representation": "timestamp string formatted yyyy-MM-dd'T'HH:mm:ss",
+      "mapping": [
+        {
+          "domain_value": "0",
+          "resolved_value": "2024-01-02T00:00:00"
+        },
+        {
+          "domain_value": "1",
+          "resolved_value": "2024-01-03T00:00:00"
+        },
+        {
+          "domain_value": "2",
+          "resolved_value": "2024-01-04T00:00:00"
+        }
+      ],
+      "notes": "Derived from base date 2024-01-01 in mapper."
+    },
+    {
+      "field": "end_date",
+      "domain_representation": "0-based index string in CSV",
+      "resolved_value_representation": "timestamp string formatted yyyy-MM-dd'T'HH:mm:ss",
+      "mapping": [
+        {
+          "domain_value": "0",
+          "resolved_value": "2024-01-08T00:00:00"
+        },
+        {
+          "domain_value": "1",
+          "resolved_value": "2024-01-09T00:00:00"
+        },
+        {
+          "domain_value": "2",
+          "resolved_value": "2024-01-10T00:00:00"
+        }
+      ],
+      "notes": "Derived from base date 2024-01-01 in mapper."
+    }
+  ]
+}
