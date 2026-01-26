@@ -1,0 +1,386 @@
+# version: '3.8'
+x-exp-base: &exp-base
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: lxxu/httpmutator-replication:artifact
+  volumes:
+    - .:/app
+    - /var/run/docker.sock:/var/run/docker.sock:rw
+  environment:
+    - HOST_UID=${UID}
+    - HOST_GID=${GID}
+    - DOCKER_GID=${DOCKER_GID}
+    - DOCKER_HOST=unix:///var/run/docker.sock
+    - TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+    - LANG=C.UTF-8
+    - LC_ALL=C.UTF-8
+    - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+    - MAVEN_OPTS=-Dfile.encoding=UTF-8
+
+
+services:
+  quick-test:
+    <<: *exp-base
+    command: ""
+
+  rq3-Deutschebahn-java:
+    <<: *exp-base
+    command: >
+      bash -lc '
+        set -euo pipefail;
+      
+        echo "[JAVA] compile + run SchemathesisMutantGenerator";
+      
+        cd /app/httpmutator-rq3 &&
+        mvn -q -DskipTests compile &&
+        mvn exec:java -Dexec.mainClass=es.us.isa.httpmutator.experiment.rq3.schemathesis.SchemathesisMutantGenerator
+      '
+
+  rq3-Deutschebahn-python:
+    <<: *exp-base
+    command: >
+      bash -lc '
+        set -euo pipefail;
+
+        echo "[PY] run assert_mutants_with_schemathesis.py";
+
+        cd /app/expScripts &&
+        python3 assert_mutants_with_schemathesis.py
+      '
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ProjectTrackingSystem: /app/api/assignments (BLACK → BLACK_RANDOM → WHITE)
+  # ─────────────────────────────────────────────────────────────────────────────
+  run-PTS:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api ProjectTrackingSystem --op-id postAssignments --strength TWO_WAY 
+      "
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Market: /register (BLACK → BLACK_RANDOM → WHITE)
+  # ─────────────────────────────────────────────────────────────────────────────
+  run-MARKET:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Market --op-id postRegister --strength TWO_WAY
+      "
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ScoutAPI: /api/v1/activities (BLACK → BLACK_RANDOM → WHITE)
+  run-ScoutAPI:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api ScoutAPI --op-id postActivities --strength TWO_WAY
+      "
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # UserManagement: POST /users  &  PUT /users/{id}  — two-way WHITE FIVE_XX
+  # ─────────────────────────────────────────────────────────────────────────────
+  URM-MYSQL:
+    image: mysql:8.0.32
+    environment:
+      MYSQL_ROOT_PASSWORD: root      # Root password for MySQL
+      MYSQL_DATABASE: users          # Default database created on startup
+    # ports:
+    #   - "3306:3306"                  # Expose MySQL port (optional, only if you want external access)
+    healthcheck:
+      # Use mysqladmin ping to check if the server is ready
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-proot" ]
+      interval: 10s                  # Run the health check every 10 seconds
+      timeout: 5s                    # Health check fails if not completed in 5s
+      retries: 5                     # Mark container as unhealthy after 5 failures
+      start_period: 30s              # Allow 30s for MySQL to finish bootstrapping
+
+  run-URM:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api UserManagement --op-id putUsersId --strength TWO_WAY
+      "
+    depends_on:
+      URM-MYSQL:
+        condition: service_healthy
+
+  # the dependency service for Person-Controller API
+  PERSON-MONGO:
+    image: mongo:4.4.3
+    restart: unless-stopped
+    # ports:
+    #   - "27017:27017" 
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: example
+    # volumes:
+    #   - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s       # run every 10 seconds
+      timeout: 5s         # fail if takes more than 5 seconds
+      retries: 5          # need 5 consecutive passes
+      start_period: 30s   # give Mongo time to initialize before checking
+
+  run-PERSON:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api PersonController --op-id postPerson --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api PersonController --op-id postPerson --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED
+      "
+    depends_on:
+      PERSON-MONGO:
+        condition: service_healthy
+
+  GENOME-MONGO:
+    image: mongo:3.6.2
+    restart: unless-stopped
+    # ports:
+      # - "27017:27017"
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: example
+    # volumes:
+    #   - mongo_data:/data/db
+    healthcheck:
+      test: [ "CMD", "mongo", "--eval", "db.adminCommand('ping')" ]
+      interval: 10s       # run every 10 seconds
+      timeout: 5s         # fail if takes more than 5 seconds
+      retries: 5          # need 5 consecutive passes
+      start_period: 30s   # give Mongo time to initialize before checking
+
+  run-GENOME:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py preparation --api GenomeNexus --op-id postAnnotation 
+      "
+    depends_on:
+      GENOME-MONGO:
+        condition: service_healthy
+
+  run-PROXYPRINT:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api ProxyPrint --op-id postRequestRegister --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api ProxyPrint --op-id postRequestRegister --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED
+      "
+
+  run-CATWATCH:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Catwatch --op-id getProjects --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Catwatch --op-id getProjects --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED
+      "
+
+  GES-MONGO:
+    image: mongo:6.0
+    restart: unless-stopped
+    # ports:
+      # - "27017:27017"
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: example
+    # volumes:
+    #   - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+
+  run-LANGTOOL:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api LanguageTool --op-id postCheck --mode WHITE --strength TWO_WAY
+      "
+
+  run-GES:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Gestaohospital --op-id postHospital --mode WHITE --strength TWO_WAY 
+      "
+    depends_on:
+      GES-MONGO:
+        condition: service_healthy
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Industrial APIs (no preparation / WHITE-mode)
+  # ─────────────────────────────────────────────────────────────────────────────
+  run-STRIPE:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Stripe --op-id postV1Products --mode BLACK --level FIVE_XX &&
+      python3 /app/expScripts/cli.py endpoint --api Stripe --op-id postV1Products --mode BLACK_RANDOM --level FIVE_XX
+      "
+
+  run-FOURSQUARE:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Foursquare --op-id getPlacesSearch --mode BLACK --level FIVE_XX &&
+      python3 /app/expScripts/cli.py endpoint --api Foursquare --op-id getPlacesSearch --mode BLACK_RANDOM --level FIVE_XX
+      "
+
+  run-YELP:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Yelp --op-id getBusinessesSearch --mode BLACK --level FIVE_XX &&
+      python3 /app/expScripts/cli.py endpoint --api Yelp --op-id getBusinessesSearch --mode BLACK_RANDOM --level FIVE_XX
+      "
+
+  run-AMADEUS-HOTEL:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api AmadeusHotel --op-id getHotelOffers --mode BLACK --level FIVE_XX --strength TWO_WAY
+      "
+
+  run-YOUTUBE-VIDEOS:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api YouTube-getVideos --op-id getVideos --mode BLACK --level FIVE_XX &&
+      python3 /app/expScripts/cli.py endpoint --api YouTube-getVideos --op-id getVideos --mode BLACK_RANDOM --level FIVE_XX
+      "
+
+  run-DHL:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api DHL --op-id getFindByAddress --mode BLACK --level FIVE_XX &&
+      python3 /app/expScripts/cli.py endpoint --api DHL --op-id getFindByAddress --mode BLACK_RANDOM --level FIVE_XX
+      "
+
+  run-FDIC:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api FDIC --op-id getInstitutions --mode BLACK --level FIVE_XX --strength TWO_WAY
+      "
+
+  run-OHSOME:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Ohsome --op-id getElementsAggregation --mode BLACK --level FIVE_XX &&
+      python3 /app/expScripts/cli.py endpoint --api Ohsome --op-id getElementsAggregation --mode BLACK_RANDOM --level FIVE_XX
+      "
+
+  run-DEUTSCHEBAHN:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Deutschebahn --op-id getStations --mode BLACK --level FIVE_XX --strength TWO_WAY
+      "
+
+  run-ITUNES:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api iTunes --op-id getSearch --mode BLACK_RANDOM --level FIVE_XX --strength TWO_WAY
+      "
+
+  run-ALL-BLACK-ONEWAY:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api ProjectTrackingSystem --op-id postAssignments --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Market --op-id postRegister --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api ScoutAPI --op-id postActivities --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api UserManagement --op-id putUsersId --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api PersonController --op-id postPerson --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api GenomeNexus --op-id postAnnotation --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api ProxyPrint --op-id postRequestRegister --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Catwatch --op-id getProjects --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api LanguageTool --op-id postCheck --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Gestaohospital --op-id postHospital --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Stripe --op-id postV1Products --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Foursquare --op-id getPlacesSearch --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Yelp --op-id getBusinessesSearch --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api AmadeusHotel --op-id getHotelOffers --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api YouTube-getVideos --op-id getVideos --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api DHL --op-id getFindByAddress --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api FDIC --op-id getInstitutions --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Ohsome --op-id getElementsAggregation --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api Deutschebahn --op-id getStations --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py endpoint --api iTunes --op-id getSearch --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED
+      "
+
+  run-ALL-BLACK-TWOWAY:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api ProjectTrackingSystem --op-id postAssignments --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Market --op-id postRegister --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api ScoutAPI --op-id postActivities --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api UserManagement --op-id putUsersId --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api PersonController --op-id postPerson --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api GenomeNexus --op-id postAnnotation --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api ProxyPrint --op-id postRequestRegister --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Catwatch --op-id getProjects --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api LanguageTool --op-id postCheck --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Gestaohospital --op-id postHospital --mode BLACK,BLACK_RANDOM --level FIVE_XX,OAS,REGRESSION --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Stripe --op-id postV1Products --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Foursquare --op-id getPlacesSearch --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Yelp --op-id getBusinessesSearch --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api AmadeusHotel --op-id getHotelOffers --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api YouTube-getVideos --op-id getVideos --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api DHL --op-id getFindByAddress --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api FDIC --op-id getInstitutions --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Ohsome --op-id getElementsAggregation --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Deutschebahn --op-id getStations --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api iTunes --op-id getSearch --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength TWO_WAY
+      "
+
+  run-ALL-TWOWAY-INVARIANT:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api ProjectTrackingSystem --op-id postAssignments --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Market --op-id postRegister --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api ScoutAPI --op-id postActivities --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api UserManagement --op-id putUsersId --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api PersonController --op-id postPerson --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api GenomeNexus --op-id postAnnotation --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api ProxyPrint --op-id postRequestRegister --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Catwatch --op-id getProjects --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api LanguageTool --op-id postCheck --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Gestaohospital --op-id postHospital --mode BLACK,BLACK_RANDOM --level INVARIANT --strength TWO_WAY 
+      "
+
+  run-TEMP:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/cli.py endpoint --api Catwatch --op-id getProjects --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Catwatch --op-id getProjects --mode BLACK,BLACK_RANDOM --level FIVE_XX --strength ONE_WAY,ONE_WAY_REDUCED &&
+      python3 /app/expScripts/cli.py preparation --api GenomeNexus --op-id postAnnotation &&
+      python3 /app/expScripts/cli.py endpoint --api GenomeNexus --op-id postAnnotation --strength ONE_WAY_REDUCED,ONE_WAY --level FIVE_XX --mode BLACK,BLACK_RANDOM &&
+      python3 /app/expScripts/cli.py endpoint --api GenomeNexus --op-id postAnnotation --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api Gestaohospital --op-id postHospital --mode WHITE --strength TWO_WAY &&
+      python3 /app/expScripts/cli.py endpoint --api LanguageTool --op-id postCheck --mode WHITE --strength TWO_WAY
+      "
+
+  run-EVO:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/run_evomaster.py
+      "
+  
+  run-SCHEMATHESIS:
+    <<: *exp-base
+    command: >
+      bash -lc "
+      python3 /app/expScripts/run_schemathesis.py
+      "

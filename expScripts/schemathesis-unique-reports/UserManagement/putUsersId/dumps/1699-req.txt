@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: LWnSjG
+Content-Type: application/json
+Content-Length: 310
+Host: localhost:42371
+
+{"secured": false, "null": {"\u00de\u007f": {"": false}}, "\ud9c5\udc85{\u00e6": {"\udb7a\udc97\u00fe\u00bd": false, "\udbfc\udd6d": [[]], ".moves.urllib_error": [{"\u0001\u009b\u00d1": 31214, "": "\u00c4", "@": -1.6688381079406503e+289}, null]}, "\ud96c\udd580\u00a8b\udb29\udda7\u0082X": {"\u00de\u007f": 0}}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: R0hvRZ
+Content-Type: application/json
+Content-Length: 192
+Host: localhost:34113
+
+{"lastName": "", "insurance": true, "address": {"": {"$": [1519648943, 1519648943, -26666], "<\ud908\udfc8yT\u00fb\uda66\udd8e7&": [null], "\udb4f\udf80!9\u00e1\u008b": [null]}, "city": null}}

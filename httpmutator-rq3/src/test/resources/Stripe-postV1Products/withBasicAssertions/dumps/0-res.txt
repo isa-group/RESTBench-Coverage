@@ -1,0 +1,31 @@
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Thu, 04 Dec 2025 15:27:05 GMT
+Content-Type: application/json
+Content-Length: 209
+Connection: keep-alive
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, HEAD, PUT, PATCH, POST, DELETE
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+Access-Control-Max-Age: 300
+Cache-Control: no-cache, no-store
+Content-Security-Policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=JbCfCi4N6r23Hl3zzCJRojStGS24y3WE641EUubyyblNn5K9Eo53Q-xMS0JpFbp8CsFit7XH8N0JlXVX
+Idempotency-Key: 652725d7-2b6c-4979-9c35-d61863ed87db
+Original-Request: req_01lKKcoNwhrEAG
+Request-Id: req_01lKKcoNwhrEAG
+Stripe-Version: 2024-12-18.acacia
+Vary: Origin
+X-Stripe-Priority-Routing-Enabled: true
+X-Stripe-Routing-Context-Priority-Tier: api-testmode
+X-Wc: ABGHIJ
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+{
+  "error": {
+    "message": "Invalid array",
+    "param": "images",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_01lKKcoNwhrEAG?t=1764862025",
+    "type": "invalid_request_error"
+  }
+}

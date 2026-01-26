@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+Connection: keep-alive
+Content-Length: 140
+Content-Type: application/json
+x-routing-service: routing-main--uswest2-b575679b6-z9zqc; site=public_api_v3
+x-zipkin-id: 2dc270ab61abeae83f562751d2c9f5c2
+server: envoy
+x-mode: ro
+x-proxied: 10-69-149-128-uswest2bprod
+x-extlb: 10-69-149-128-uswest2bprod
+Accept-Ranges: bytes
+Date: Thu, 15 Jan 2026 12:06:15 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sjc10072-SJC
+X-Cache: MISS
+X-Cache-Hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'sdl_SX' is not a 'yelp-supported-locale'", "field": "locale", "instance": "sdl_SX"}}

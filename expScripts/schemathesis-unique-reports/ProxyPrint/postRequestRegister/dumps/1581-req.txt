@@ -1,0 +1,11 @@
+POST /request/register HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: krUnld
+Content-Type: application/json
+Content-Length: 100
+Host: localhost:41773
+
+{"managerUsername": "n\u001c\u00c4\u0002\u0085\udac7\udec6\u00c4", "pShopDateRequestAccepted": null}

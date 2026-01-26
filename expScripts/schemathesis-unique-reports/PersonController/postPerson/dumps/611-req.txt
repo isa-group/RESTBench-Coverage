@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: R8au6A
+Content-Type: application/json
+Content-Length: 218
+Host: localhost:34113
+
+{"w\u00dc": [[-1.491310596294503e-81], {"\u0001\u008eU": -1.491310596294503e-81, "w\u00a2\u00c6": -4.2206862369955904e-77, "": null}, {}], "address": {"": {}, "postcode": null, "number": 27368}, "id": {"timestamp": 3}}

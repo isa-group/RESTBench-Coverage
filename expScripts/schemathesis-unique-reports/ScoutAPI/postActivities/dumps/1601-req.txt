@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: Ww4EVN
+Content-Type: application/json
+Content-Length: 30
+Host: localhost:37143
+
+{"activity": {}, "age_min": 0}

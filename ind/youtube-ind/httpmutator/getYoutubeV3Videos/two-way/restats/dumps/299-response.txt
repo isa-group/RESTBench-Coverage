@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"MWvmNfjPwSIM6ZPzr1HvAfIFgfU","items":[{"kind":"youtube#video","etag":"Te3bjDk7ntSdjsHro0CrknLTeCQ","id":"CKamNm4y3OU","player":{"embedHtml":"<iframe width=\"72\" height=\"41\" src=\"https://www.youtube.com/embed/CKamNm4y3OU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>","embedHeight":"41","embedWidth":"72"},"localizations":{"en":{"title":"TUTOR (Official Video) Cheema Y | Gur Sidhu | New Punjabi Song","description":"Track Credits\nAlbum: The Simpsons\nSong: Tutor\nSinger: Cheema Y\nLyrics: Cheema Y\nMusic: Gur Sidhu\nMix & Master: B Sanjh\nFemale Lead: Ritu Matharo\nMUA: Glambyreena\nDirector.DOP.Edit: Hrprt Brar\n2nd DP: Cale Fara\nGaffer: Aidan Grossman\n1st AC: Jonny Hwang\n2nd AC: Eliana D'Assisi\nColour Grade: Onkar\nProducer: Nav Sandhu\nLabel: Brown Town Music\n\n\nTeam Hrprt Brar: Sahil Sharma, Sashi, Ritik, Demon\nSpecial Thanks: EGM Motors (Nitish)\nTeam VFX: Jasvir Vfx, Prabkirat, Deep Mr. Vfx\n\n\nDigital Partner :- Believe Artist Services.  \n► For Licensing inquiries:\n► Email:- sync-india@believedigital.com"}},"paidProductPlacementDetails":{"hasPaidProductPlacement":false}}],"nextPageToken":"CAEQAA","pageInfo":{"totalResults":200,"resultsPerPage":1}}

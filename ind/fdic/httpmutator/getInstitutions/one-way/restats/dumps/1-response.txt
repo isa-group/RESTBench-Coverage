@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"131-tg0rpwy0C6Y8+dcQ8DfUemzE0Ow"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjonvohdb0288qd050
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 5ef99d13-0652-4282-7d39-84fec8115b02
+
+{"meta":{"total":0,"parameters":{"filters":"STNAME: Georgia","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC","limit":"1","search":"NAME: Shelbyville"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[],"totals":{"count":0}}

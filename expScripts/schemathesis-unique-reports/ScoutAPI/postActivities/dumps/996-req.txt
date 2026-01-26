@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: 51DpOE
+Content-Type: application/json
+Content-Length: 58
+Host: localhost:37143
+
+{"featured": true, "date_updated": "2000-05-08T01:01:00Z"}

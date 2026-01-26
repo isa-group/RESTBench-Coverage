@@ -1,0 +1,9 @@
+GET /v3/businesses/search?reservation_covers=3&limit=30&locale=ar_LG&price=3 HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: RmD4dg
+Host: api.yelp.com
+

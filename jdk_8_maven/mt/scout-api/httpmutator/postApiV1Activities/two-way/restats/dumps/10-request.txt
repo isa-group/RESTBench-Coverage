@@ -1,0 +1,4 @@
+POST /api/v1/activities HTTP/1.1
+Authorization: ApiKey administrator
+
+{"name":"hiking","description_material":"an activity","description_main":"the main part","description_safety":"the descp of safety","description_notes":"a note","age_min":50,"participants_min":100,"participants_max":50,"time_min":4,"time_max":2,"featured":true,"tags":[{"group":"1feelings","name":"1Happy","activities_count":1}],"source":"https://example.com/example","author":{"id":3}}

@@ -1,0 +1,21 @@
+===== API: Market =====
+===== Operation: postRegister =====
+===== Mode: WHITE =====
+===== Level: REGRESSION =====
+===== Strength: TWO_WAY =====
+
+===== Pitest Timings =====
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 34 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 4 minutes and 45 seconds
+> Total  : 5 minutes and 20 seconds
+
+===== Pitest Statistics =====
+>> Line Coverage (for mutated classes only): 228/359 (64%)
+>> 1 tests examined
+>> Generated 86 mutations Killed 62 (72%)
+>> Mutations with no coverage 6. Test strength 78%
+>> Ran 252 tests (2.93 tests per mutation)
+

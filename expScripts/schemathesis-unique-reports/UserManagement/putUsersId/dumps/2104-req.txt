@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: hgSp6B
+Content-Type: application/json
+Content-Length: 74
+Host: localhost:42371
+
+{"surname": "\u00fa\ud82d\udeb0\u00ebyO\ud948\uddb3\u00d0", "address": ""}

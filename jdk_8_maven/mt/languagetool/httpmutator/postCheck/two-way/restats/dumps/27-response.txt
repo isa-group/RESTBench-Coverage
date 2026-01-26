@@ -1,0 +1,4 @@
+HTTP/1.1 200 
+content-type: application/json
+
+{"software":{"name":"LanguageTool","version":"5.2-SNAPSHOT","buildDate":null,"apiVersion":1,"premium":false,"premiumHint":"You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.","status":""},"warnings":{"incompleteResults":false},"language":{"name":"French","code":"fr","detectedLanguage":{"name":"English (US)","code":"en-US","confidence":0.9999895}},"matches":[{"message":"Voulez-vous écrire « À » ?","shortMessage":"","replacements":[{"value":"À"}],"offset":0,"length":1,"context":{"text":"A quick brown fox","offset":0,"length":1},"sentence":"A quick brown fox","type":{"typeName":"Other"},"rule":{"id":"A_A_ACCENT","subId":"1","sourceFile":"grammar.xml","description":"'A' au lieu de 'À'","issueType":"uncategorized","category":{"id":"CAT_HOMONYMES_PARONYMES","name":"Confusion d’homonymes et paronymes"}},"ignoreForIncompleteSentence":true,"contextForSureMatch":4}]}

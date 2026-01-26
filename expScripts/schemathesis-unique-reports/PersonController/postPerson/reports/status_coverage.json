@@ -1,0 +1,22 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/api/person": {
+			"post": [
+				201,
+				401,
+				403,
+				404,
+				500
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/api/person": {
+			"post": [
+				"201",
+				"500"
+			]
+		}
+	}
+}

@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":3,"username":"johndoe90","name":"John","surname":"Smith","gender":"FEMALE","birthDate":"1990-05-20","enabled":false,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":"+44-7700-900123","skype":"john.doe.skype","facebook":"https://facebook.com/test.user","linkedin":"https://linkedin.com/in/johndoe","website":null,"contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":null,"address2":"Apt. 4B","city":null,"country":"UK","zipCode":null},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 7stPpQ
+Content-Type: application/json
+Content-Length: 202
+Host: localhost:42371
+
+{"surname": "D", "\u00b6\ud89b\udc20N": [[], [{"\ud8d1\udcf7\u0012\u008f\u0083": "\u3a78\u00af\udb00\udf90\ud84a\udf2f\u00c9(\u00bf\u009c\u00cb", "null": "OpenerDirector"}, [true, true, null], [null]]]}

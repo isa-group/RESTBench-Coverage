@@ -1,0 +1,17 @@
+HTTP/1.1 500 Internal Server Error
+date: Tue, 30 Dec 2025 05:45:42 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 107
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"6b-Wj4M4NlNwGzuQXGYjwkjlDUvhqs"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdn56v5monv15pvm8a0
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: b4c166bc-d22e-414f-4668-1d6c9d9147d0
+x-frame-options: DENY
+
+{"errors":[{"status":500,"title":"Internal server error","meta":{"timestamp":"2025-12-30T05:45:42.051Z"}}]}

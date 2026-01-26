@@ -1,0 +1,19 @@
+{
+	"documentedAndTested": {
+		"/shopping/hotel-offers": {
+			"get": [
+				"400",
+				"401"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/shopping/hotel-offers": {
+			"get": [
+				"200",
+				"500"
+			]
+		}
+	},
+	"notDocumentedAndTested": {}
+}

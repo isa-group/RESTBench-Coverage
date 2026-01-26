@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: Nwj5r1
+Content-Type: application/json
+Content-Length: 138
+Host: localhost:42371
+
+{"D\u00ea": [[false, -18892], [], {"\ub5b9\udb92\uddae\u001c": -1.7976931348623157e+308, "": "\u00fb\uda46\udf57\u0012"}], "city": "+0.0"}

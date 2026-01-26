@@ -1,0 +1,17 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 05:40:47 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 201
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"c9-iUBqsV/AhR0lywm5MongQX7HyMM"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdn2v2b75mb74dcgbog
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: e0800347-fa2e-45f0-422d-ebfe272ec43d
+x-frame-options: DENY
+
+{"errors":[{"status":400,"code":"validate:numericality","title":"Invalid field data","detail":"Offset is not a number","source":{"parameter":"offset"},"meta":{"timestamp":"2025-12-30T05:40:47.544Z"}}]}

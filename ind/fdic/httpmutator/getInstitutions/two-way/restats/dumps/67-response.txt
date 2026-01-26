@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"e8-UaWJaQ5U+59Sestw5UXeVGVWXG4"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjr4ibufj8k9i1du5g
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 96b571c9-1f4e-4375-480c-7ce6ca21f13f
+
+{"meta":{"total":1,"parameters":{"filters":"STNAME: Georgia","limit":"50","offset":"10","search":"NAME: Early"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[],"totals":{"count":1}}

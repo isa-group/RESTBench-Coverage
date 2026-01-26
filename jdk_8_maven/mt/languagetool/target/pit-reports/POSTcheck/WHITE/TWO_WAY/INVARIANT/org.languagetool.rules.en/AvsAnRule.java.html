@@ -1,0 +1,3254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>AvsAnRule.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/* LanguageTool, a natural language style checker</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Copyright (C) 2005 Daniel Naber (http://www.danielnaber.de)</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * </span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This library is free software; you can redistribute it and/or</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * modify it under the terms of the GNU Lesser General Public</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * License as published by the Free Software Foundation; either</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * version 2.1 of the License, or (at your option) any later version.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This library is distributed in the hope that it will be useful,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Lesser General Public License for more details.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * You should have received a copy of the GNU Lesser General Public</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * License along with this library; if not, write to the Free Software</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * USA</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.languagetool.rules.en;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.languagetool.*;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.languagetool.rules.*;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.languagetool.tools.StringTools;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.*;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.regex.Pattern;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static org.languagetool.rules.en.AvsAnData.getWordsRequiringA;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static org.languagetool.rules.en.AvsAnData.getWordsRequiringAn;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Check if the determiner (if any) preceding a word is:</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * &#60;ul&#62;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *   &#60;li&#62;&#60;i&#62;an&#60;/i&#62; if the next word starts with a vowel</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *   &#60;li&#62;&#60;i&#62;a&#60;/i&#62; if the next word does not start with a vowel</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * &#60;/ul&#62;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  This rule loads some exceptions from external files {@code det_a.txt} and</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *  {@code det_an.txt} (e.g. for &#60;i&#62;an hour&#60;/i&#62;).</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * </span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @author Daniel Naber</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class AvsAnRule extends Rule {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  enum Determiner {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    A, AN, A_OR_AN, UNKNOWN</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  private static final Pattern cleanupPattern = Pattern.compile(&#34;[^&#945;a-zA-Z0-9.;,:&#39;]&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  public AvsAnRule(ResourceBundle messages) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_51'/>
+51
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_51'>1</a>
+<span>
+1. &#60;init&#62; : removed call to org/languagetool/rules/Rule::setCategory &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    super.setCategory(Categories.MISC.getCategory(messages));</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_52'/>
+52
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_52'>1</a>
+<span>
+1. &#60;init&#62; : removed call to org/languagetool/rules/en/AvsAnRule::setLocQualityIssueType &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    setLocQualityIssueType(ITSIssueType.Misspelling);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_53'/>
+53
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_53'>1</a>
+<span>
+1. &#60;init&#62; : removed call to org/languagetool/rules/en/AvsAnRule::addExamplePair &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    addExamplePair(Example.wrong(&#34;The train arrived &#60;marker&#62;a hour&#60;/marker&#62; ago.&#34;),</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                   Example.fixed(&#34;The train arrived &#60;marker&#62;an hour&#60;/marker&#62; ago.&#34;));</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String getId() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_59'/>
+59
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_59'>1</a>
+<span>
+1. getId : replaced return value with &#34;&#34; for org/languagetool/rules/en/AvsAnRule::getId &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return &#34;EN_A_VS_AN&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String getDescription() {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_64'/>
+64
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_64'>1</a>
+<span>
+1. getDescription : replaced return value with &#34;&#34; for org/languagetool/rules/en/AvsAnRule::getDescription &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    return &#34;Use of &#39;a&#39; vs. &#39;an&#39;&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public int estimateContextForSureMatch() {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_69'/>
+69
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_69'>1</a>
+<span>
+1. estimateContextForSureMatch : replaced int return with 0 for org/languagetool/rules/en/AvsAnRule::estimateContextForSureMatch &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    return 1;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public RuleMatch[] match(AnalyzedSentence sentence) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    List&#60;RuleMatch&#62; ruleMatches = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    AnalyzedTokenReadings[] tokens = sentence.getTokensWithoutWhitespace();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    int prevTokenIndex = 0;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    boolean isSentenceStart;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    boolean equalsA;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    boolean equalsAn;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_80'/>
+80
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_80'>2</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+2. match : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    for (int i = 1; i &#60; tokens.length; i++) {  // ignoring token 0, i.e., SENT_START</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      AnalyzedTokenReadings token = tokens[i];</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_82'/>
+82
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_82'>2</a>
+<span>
+1. match : changed conditional boundary &rarr; SURVIVED<br/>
+2. match : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      String prevTokenStr = prevTokenIndex &#62; 0 ? tokens[prevTokenIndex].getToken() : null;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_84'/>
+84
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_84'>1</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      isSentenceStart = prevTokenIndex == 1;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_86'/>
+86
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_86'>1</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      if (!isSentenceStart) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_87'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        equalsA = &#34;a&#34;.equals(prevTokenStr);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_88'/>
+88
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_88'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        equalsAn = &#34;an&#34;.equals(prevTokenStr);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_89'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      } else {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_90'/>
+90
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_90'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      &#9;equalsA = &#34;a&#34;.equalsIgnoreCase(prevTokenStr);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_91'/>
+91
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_91'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        equalsAn = &#34;an&#34;.equalsIgnoreCase(prevTokenStr);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_92'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_93'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_94'/>
+94
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_94'>2</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+2. match : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      if (equalsA || equalsAn) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_95'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        Determiner determiner = getCorrectDeterminerFor(token);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_96'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        String msg = null;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_97'/>
+97
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_97'>2</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+2. match : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (equalsA &#38;&#38; determiner == Determiner.AN) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_98'/>
+98
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_98'>1</a>
+<span>
+1. match : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>          String replacement = StringTools.startsWithUppercase(prevTokenStr) ? &#34;An&#34; : &#34;an&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_99'/>
+99
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_99'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>          msg = &#34;Use &#60;suggestion&#62;&#34; + replacement + &#34;&#60;/suggestion&#62; instead of &#39;&#34; + prevTokenStr + &#34;&#39; if the following &#34;+</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_100'/>
+100
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_100'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                  &#34;word starts with a vowel sound, e.g. &#39;an article&#39;, &#39;an hour&#39;&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_101'/>
+101
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_101'>2</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+2. match : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        } else if (equalsAn &#38;&#38; determiner == Determiner.A) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_102'/>
+102
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_102'>1</a>
+<span>
+1. match : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>          String replacement = StringTools.startsWithUppercase(prevTokenStr) ? &#34;A&#34; : &#34;a&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_103'/>
+103
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_103'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>          msg = &#34;Use &#60;suggestion&#62;&#34; + replacement + &#34;&#60;/suggestion&#62; instead of &#39;&#34; + prevTokenStr + &#34;&#39; if the following &#34;+</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_104'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                  &#34;word doesn&#39;t start with a vowel sound, e.g. &#39;a sentence&#39;, &#39;a university&#39;&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_105'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_106'/>
+106
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_106'>1</a>
+<span>
+1. match : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (msg != null) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_107'/>
+107
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_107'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>          RuleMatch match = new RuleMatch(</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_108'/>
+108
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_108'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>              this, sentence, tokens[prevTokenIndex].getStartPos(), tokens[prevTokenIndex].getEndPos(),</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_109'/>
+109
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_109'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>                  tokens[prevTokenIndex].getStartPos(), token.getEndPos(), msg, &#34;Wrong article&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_110'/>
+110
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_110'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>          ruleMatches.add(match);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_111'/>
+111
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_111'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_112'/>
+112
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_112'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_113'/>
+113
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_113'>1</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      if (token.hasPosTag(&#34;DT&#34;)) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_114'/>
+114
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_114'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        prevTokenIndex = i;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_115'/>
+115
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_115'>1</a>
+<span>
+1. match : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      } else if (token.getToken().matches(&#34;[-\&#34;()\\[\\]]+&#34;)) {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_116'/>
+116
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_116'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // skip e.g. the quote in &#62;&#62;an &#34;industry party&#34;&#60;&#60;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_117'/>
+117
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_117'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      } else {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_118'/>
+118
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_118'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        prevTokenIndex = 0;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_119'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_120'/>
+120
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_120'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_121'/>
+121
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_121'>1</a>
+<span>
+1. match : replaced return value with null for org/languagetool/rules/en/AvsAnRule::match &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return toRuleMatchArray(ruleMatches);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_122'/>
+122
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_122'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_123'/>
+123
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_123'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_124'/>
+124
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_124'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_125'/>
+125
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_125'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Adds &#34;a&#34; or &#34;an&#34; to the English noun. Used for suggesting the proper form of the indefinite article.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_126'/>
+126
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_126'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * For the rare cases where both &#34;a&#34; and &#34;an&#34; are considered okay (e.g. for &#34;historical&#34;), &#34;a&#34; is returned.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_127'/>
+127
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_127'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * @param origWord Word that needs an article.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_128'/>
+128
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_128'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * @return String containing the word with a determiner, or just the word if the word is an abbreviation.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_129'/>
+129
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_129'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_130'/>
+130
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_130'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String suggestAorAn(String origWord) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_131'/>
+131
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_131'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    AnalyzedTokenReadings token = new AnalyzedTokenReadings(new AnalyzedToken(origWord, null, null), 0);</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_132'/>
+132
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_132'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    Determiner determiner = getCorrectDeterminerFor(token);</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_133'/>
+133
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_133'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    if (determiner == Determiner.A || determiner == Determiner.A_OR_AN) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_134'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>      return &#34;a &#34; + StringTools.lowercaseFirstCharIfCapitalized(origWord);</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_135'/>
+135
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_135'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>    } else if (determiner == Determiner.AN) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_136'/>
+136
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_136'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>      return &#34;an &#34; + StringTools.lowercaseFirstCharIfCapitalized(origWord);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_137'/>
+137
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_137'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    } else {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_138'/>
+138
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_138'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>      return origWord;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_139'/>
+139
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_139'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_140'/>
+140
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_140'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_141'/>
+141
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_141'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_142'/>
+142
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_142'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  Determiner getCorrectDeterminerFor(AnalyzedTokenReadings token) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_143'/>
+143
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_143'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String word = token.getToken();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_144'/>
+144
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_144'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    Determiner determiner = Determiner.UNKNOWN;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_145'/>
+145
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_145'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String[] parts = word.split(&#34;[-&#39;]&#34;);  // for example, in &#34;one-way&#34; only &#34;one&#34; is relevant</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_146'/>
+146
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_146'>3</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+2. getCorrectDeterminerFor : changed conditional boundary &rarr; SURVIVED<br/>
+3. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (parts.length &#62;= 1 &#38;&#38; !parts[0].equalsIgnoreCase(&#34;a&#34;)) {  // avoid false alarm on &#34;A-levels are...&#34;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_147'/>
+147
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_147'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      word = parts[0];</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_148'/>
+148
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_148'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_149'/>
+149
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_149'>2</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+2. getCorrectDeterminerFor : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (token.isWhitespaceBefore() || !&#34;-&#34;.equals(word)) { // e.g., &#39;a- or anti- are prefixes&#39;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_150'/>
+150
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_150'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      word = cleanupPattern.matcher(word).replaceAll(&#34;&#34;);         // e.g. &#62;&#62;an &#34;industry party&#34;&#60;&#60;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_151'/>
+151
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_151'>1</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      if (StringTools.isEmpty(word)) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_152'/>
+152
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_152'>1</a>
+<span>
+1. getCorrectDeterminerFor : replaced return value with null for org/languagetool/rules/en/AvsAnRule::getCorrectDeterminerFor &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>        return Determiner.UNKNOWN;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_153'/>
+153
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_153'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_154'/>
+154
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_154'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_155'/>
+155
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_155'>2</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+2. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (getWordsRequiringA().contains(word.toLowerCase()) || getWordsRequiringA().contains(word)) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_156'/>
+156
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_156'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>      determiner = Determiner.A;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_157'/>
+157
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_157'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_158'/>
+158
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_158'>2</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+2. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (getWordsRequiringAn().contains(word.toLowerCase()) || getWordsRequiringAn().contains(word)) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_159'/>
+159
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_159'>1</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>      if (determiner == Determiner.A) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_160'/>
+160
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_160'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        determiner = Determiner.A_OR_AN;   // e.g. for &#39;historical&#39;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_161'/>
+161
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_161'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      } else {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_162'/>
+162
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_162'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        determiner = Determiner.AN;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_163'/>
+163
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_163'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_164'/>
+164
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_164'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_165'/>
+165
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_165'>1</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (determiner == Determiner.UNKNOWN) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_166'/>
+166
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_166'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      char tokenFirstChar = word.charAt(0);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_167'/>
+167
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_167'>2</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+2. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      if (StringTools.isAllUppercase(word) || StringTools.isMixedCase(word)) {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_168'/>
+168
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_168'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // we don&#39;t know how all-uppercase words (often abbreviations) are pronounced,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_169'/>
+169
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_169'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // so never complain about these</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_170'/>
+170
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_170'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        determiner = Determiner.UNKNOWN;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_171'/>
+171
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_171'>1</a>
+<span>
+1. getCorrectDeterminerFor : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      } else if (isVowel(tokenFirstChar)) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_172'/>
+172
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_172'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        determiner = Determiner.AN;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_173'/>
+173
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_173'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      } else {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_174'/>
+174
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_174'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        determiner = Determiner.A;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_175'/>
+175
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_175'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_176'/>
+176
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_176'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_177'/>
+177
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_177'>1</a>
+<span>
+1. getCorrectDeterminerFor : replaced return value with null for org/languagetool/rules/en/AvsAnRule::getCorrectDeterminerFor &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return determiner;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_178'/>
+178
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_178'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_179'/>
+179
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_179'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_180'/>
+180
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_180'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private boolean isVowel(char c) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_181'/>
+181
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_181'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    char lc = Character.toLowerCase(c);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_182'/>
+182
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_182'>6</a>
+<span>
+1. isVowel : negated conditional &rarr; SURVIVED<br/>
+2. isVowel : replaced boolean return with true for org/languagetool/rules/en/AvsAnRule::isVowel &rarr; SURVIVED<br/>
+3. isVowel : negated conditional &rarr; SURVIVED<br/>
+4. isVowel : negated conditional &rarr; SURVIVED<br/>
+5. isVowel : negated conditional &rarr; SURVIVED<br/>
+6. isVowel : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return lc == &#39;a&#39; || lc == &#39;e&#39; || lc == &#39;i&#39; || lc == &#39;o&#39; || lc == &#39;u&#39;;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_183'/>
+183
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_183'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_184'/>
+184
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_184'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5140dc0_185'/>
+185
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_185'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_51'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to org/languagetool/rules/Rule::setCategory &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_52'>52</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_52'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to org/languagetool/rules/en/AvsAnRule::setLocQualityIssueType &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[16],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[16],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[16],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_53'>53</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_53'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> removed call to org/languagetool/rules/en/AvsAnRule::addExamplePair &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=<init>,-methodDesc=(Ljava/util/ResourceBundle;)V],-indexes=[28],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_59'>59</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_59'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getId<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for org/languagetool/rules/en/AvsAnRule::getId &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getId,-methodDesc=()Ljava/lang/String;],-indexes=[4],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getId,-methodDesc=()Ljava/lang/String;],-indexes=[4],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getId,-methodDesc=()Ljava/lang/String;],-indexes=[4],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_64'>64</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_64'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getDescription<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for org/languagetool/rules/en/AvsAnRule::getDescription &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_69'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>estimateContextForSureMatch<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for org/languagetool/rules/en/AvsAnRule::estimateContextForSureMatch &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_80'>80</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_80'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[25],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[25],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[25],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_82'>82</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_82'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_84'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_86'>86</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_86'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[63],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[63],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[63],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_94'>94</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_94'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[97],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[97],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[97],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[95],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[95],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[95],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_97'>97</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_97'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[115],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[115],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[115],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_98'>98</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_98'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_101'>101</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_101'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[152],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[152],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[152],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_102'>102</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_102'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_106'>106</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_106'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_113'>113</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_113'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[231],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[231],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[231],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_115'>115</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_115'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[244],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[244],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=match,-methodDesc=(Lorg/languagetool/AnalyzedSentence;)[Lorg/languagetool/rules/RuleMatch;],-indexes=[244],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_121'>121</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_121'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>match<br/><b>Killed by : </b>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</span></span> replaced return value with null for org/languagetool/rules/en/AvsAnRule::match &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_146'>146</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_146'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_149'>149</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_149'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[39],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[39],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[39],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_151'>151</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_151'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_152'>152</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_152'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> replaced return value with null for org/languagetool/rules/en/AvsAnRule::getCorrectDeterminerFor &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_155'>155</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_155'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[69],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[69],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[69],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[73],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[73],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[73],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_158'>158</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_158'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[90],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[86],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[86],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[86],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_159'>159</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_159'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_165'>165</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_165'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_167'>167</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_167'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[123],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[123],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[123],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[126],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[126],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[126],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_171'>171</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_171'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[139],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[139],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[139],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_177'>177</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_177'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getCorrectDeterminerFor<br/><b>Killed by : </b>none</span></span> replaced return value with null for org/languagetool/rules/en/AvsAnRule::getCorrectDeterminerFor &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[154],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[154],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=getCorrectDeterminerFor,-methodDesc=(Lorg/languagetool/AnalyzedTokenReadings;)Lorg/languagetool/rules/en/AvsAnRule$Determiner;],-indexes=[154],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5140dc0_182'>182</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5140dc0_182'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isVowel<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isVowel<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for org/languagetool/rules/en/AvsAnRule::isVowel &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[32],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[32],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[32],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isVowel<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[22],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[22],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[22],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isVowel<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[16],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[16],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[16],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isVowel<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[13],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[13],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[13],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>isVowel<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[19],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[19],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.rules.en.AvsAnRule,-method=isVowel,-methodDesc=(C)Z],-indexes=[19],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15] (1924 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14] (1953 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19] (1988 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29] (2055 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17] (2660 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1] (4839 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22] (1911 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9] (2776 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.1
+
+</body>
+</html>

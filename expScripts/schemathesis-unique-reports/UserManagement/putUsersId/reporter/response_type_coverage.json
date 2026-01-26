@@ -1,0 +1,23 @@
+{
+	"documentedAndTested": {
+		"/users/{id}": {
+			"put": [
+				"application/json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/users/{id}": {
+			"put": [
+				"*/*"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/users/{id}": {
+			"put": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

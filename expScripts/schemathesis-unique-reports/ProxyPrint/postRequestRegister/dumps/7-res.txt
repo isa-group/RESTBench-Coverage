@@ -1,0 +1,14 @@
+HTTP/1.1 400 
+x-application-context: application:0
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-frame-options: DENY
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:55:11 GMT
+connection: close
+
+{"timestamp":1766919311891,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Required request body is missing: public org.springframework.http.ResponseEntity<io.github.proxyprint.kitchen.models.printshops.RegisterRequest> io.github.proxyprint.kitchen.controllers.printshops.RegisterRequestController.registerRequest(io.github.proxyprint.kitchen.models.printshops.RegisterRequest)","path":"/request/register"}

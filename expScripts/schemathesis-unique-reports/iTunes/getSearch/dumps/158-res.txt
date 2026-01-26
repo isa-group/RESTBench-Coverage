@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+content-length: 225
+x-apple-jingle-correlation-key: [Filtered]
+x-apple-request-uuid: f6268d26-9c25-4bee-fa8a-1cb41d3f7bca
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?country=%F3%BE%8A%80_&term=OX%F1%8A%8F%85&attribute=%F2%A5%87%B4%C3%8A%C3%93%C3%9A%7B%C2%80%F0%A0%87%89NX%C3%A4-%C2%B9Q%C2%A3%C3%B5%C3%BAa%F2%B5%8F%AA%C2%A6&urlDesc=
+apple-tk: false
+x-b3-spanid: a5e1b42515a4d587
+b3: f6268d269c254beefa8a1cb41d3f7bca-a5e1b42515a4d587
+x-b3-traceid: f6268d269c254beefa8a1cb41d3f7bca
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6001903:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-st.itunes.apple.com/search?country=%F3%BE%8A%80_&term=OX%F1%8A%8F%85&attribute=%F2%A5%87%B4%C3%8A%C3%93%C3%9A%7B%C2%80%F0%A0%87%89NX%C3%A4-%C2%B9Q%C2%A3%C3%B5%C3%BAa%F2%B5%8F%AA%C2%A6
+x-apple-application-site: ST11
+apple-timing-app: 2 ms
+x-apple-application-instance: 6001903
+x-daiquiri-instance: daiquiri:47317004:st44p00it-hyhk16014801:7987:25HOTFIX33:daiquiri-amp-store-shared-int-001-st, daiquiri:42282004:st53p00it-qujn12050502:7987:25HOTFIX33:daiquiri-amp-store-l7shared-ext-001-st
+vary: Accept-Encoding
+expires: Mon, 29 Dec 2025 06:42:13 GMT
+cache-control: max-age=0, no-cache
+pragma: no-cache
+date: Mon, 29 Dec 2025 06:42:13 GMT
+x-cache: TCP_MISS from a2-20-196-17.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-true-cache-key: [Filtered]
+connection: keep-alive
+x-cache-remote: TCP_MISS from a2-20-179-7.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-apple-partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [country]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}
+

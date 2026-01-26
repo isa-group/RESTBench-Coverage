@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: OpPliM
+Content-Type: application/json
+Content-Length: 179
+Host: localhost:34113
+
+{"age": 24003, "\u0095U\u00b2": null, "": [[], [], []], "firstName": "Fa\u00d2\u83e5\ud8ad\udd8b\u0094!\u0004\u0014", "address": {"street": null, "number": -14, "postcode": null}}

@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+content-length: 230
+x-apple-jingle-correlation-key: [Filtered]
+x-apple-request-uuid: f131d5fe-f153-5b95-df29-00aee1c2a1d9
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?M%C2%90=-16817&term=2%29%F3%A0%AB%B3%C3%93%19%C2%AD%C2%93%F2%9E%9F%B0%C2%8AG%C3%8D%C3%85%F2%98%83%B6%C2%92%C3%81%C3%A2%C3%96%C2%B8V&entity=%F3%A5%AE%BB%C3%A6n%F1%92%A2%9A%22%0F&lang=ja_jp&%C3%A4%5B=&urlDesc=
+apple-tk: false
+x-b3-spanid: 65feb4209713fa40
+b3: f131d5fef1535b95df2900aee1c2a1d9-65feb4209713fa40
+x-b3-traceid: f131d5fef1535b95df2900aee1c2a1d9
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6001566:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-st.itunes.apple.com/search?M%C2%90=-16817&term=2%29%F3%A0%AB%B3%C3%93%19%C2%AD%C2%93%F2%9E%9F%B0%C2%8AG%C3%8D%C3%85%F2%98%83%B6%C2%92%C3%81%C3%A2%C3%96%C2%B8V&entity=%F3%A5%AE%BB%C3%A6n%F1%92%A2%9A%22%0F&lang=ja_jp&%C3%A4%5B=
+x-apple-application-site: ST11
+apple-timing-app: 2 ms
+x-apple-application-instance: 6001566
+x-daiquiri-instance: daiquiri:47317003:st44p00it-hyhk15124001:7987:25HOTFIX33:daiquiri-amp-store-shared-int-001-st, daiquiri:42282003:st53p00it-qujn11050301:7987:25HOTFIX33:daiquiri-amp-store-l7shared-ext-001-st
+vary: Accept-Encoding
+expires: Mon, 29 Dec 2025 07:11:12 GMT
+cache-control: max-age=0, no-cache
+pragma: no-cache
+date: Mon, 29 Dec 2025 07:11:12 GMT
+x-cache: TCP_MISS from a2-20-196-17.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-true-cache-key: [Filtered]
+connection: keep-alive
+x-cache-remote: TCP_MISS from a2-20-179-22.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-apple-partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [resultEntity]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}
+

@@ -1,0 +1,10 @@
+HTTP/1.1 201 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/hal+json
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+
+{"email":"martin.lopez@uni.es","password":"hidden","name":"Jean-Luc Wei","phone":"+34 911 123 45 67","address":"No 5 Zhongguancun East Road","_links":{"Shopping cart":{},"Manage contacts":{}}}

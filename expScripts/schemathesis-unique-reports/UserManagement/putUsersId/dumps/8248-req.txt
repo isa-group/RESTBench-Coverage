@@ -1,0 +1,11 @@
+PUT /users/2 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: NIdzR6
+Content-Type: application/json
+Content-Length: 215
+Host: localhost:42371
+
+{"ds": [[[{}, {}, ["\"\u00f3z"]]], [[true]], {"h\udbaa\udd69\u00c8\u00e4\ud986\udcec\u0004\n(wV": 34, "\f;\u0002\u001b`C8q\u0086\u00f6\u00a4\ua5854\u0003": [false, -63, "\udaf4\uddb2\u00b8in\u00catm\u0013\u0017"]}]}

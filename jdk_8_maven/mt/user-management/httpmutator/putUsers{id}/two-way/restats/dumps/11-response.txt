@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":3,"username":"alice1985","name":"Bob","surname":"Doe","gender":"FEMALE","birthDate":"1985-12-01","enabled":true,"note":"VIP customer","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":null,"skype":null,"facebook":"https://facebook.com/john.doe","linkedin":"https://linkedin.com/in/johndoe","website":"https://johndoe.dev","contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":"456 High Road","address2":null,"city":"New York","country":null,"zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

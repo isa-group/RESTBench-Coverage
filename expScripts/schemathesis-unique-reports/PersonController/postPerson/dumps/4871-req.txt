@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 8Dv7wO
+Content-Type: application/json
+Content-Length: 415
+Host: localhost:34113
+
+{"firstName": "", "lorem \u0644\u0627 \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 ipsum \u4f60\u597d1234\u4f60\u597d": [], "\ud83d\uddf1\u00e3f": [{"W9T": {"\u00a6\u001d\u00a6\u00a9\ud9f3\udf29\u00c6|": 0.5}}, {"\ud82d\udf68M\u0088\u00aa\udb50\udeea\u00f1\ud9e4\udc6fh%\u0004O\ud97e\uddf79\udb56\udfd2!\u00ca&": 54}, [{}, {"": false, "o\udb11\udc5b": null, "\u0019\u00da\u00be]E\udaca\ude32\u00ce\u00a0": -23249}]]}

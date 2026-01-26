@@ -1,0 +1,12 @@
+HTTP/1.1 401 
+accept-ranges: bytes
+access-control-allow-credentials: true
+access-control-expose-headers: Link
+content-type: application/json;charset=utf-8
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-served-by: cache-toj-leto2350025-TOJ
+
+{"message":"Invalid request token."}

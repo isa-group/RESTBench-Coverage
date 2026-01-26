@@ -1,0 +1,15 @@
+{
+	"documentedAndTested": {
+		"/v1/hospitais/": {
+			"post": [
+				"application/json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/v1/hospitais/": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {}
+}

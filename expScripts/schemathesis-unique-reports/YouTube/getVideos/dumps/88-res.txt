@@ -1,0 +1,49 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+vary: Origin, X-Origin, Referer
+content-encoding: gzip
+date: Mon, 29 Dec 2025 02:53:38 GMT
+server: scaffolding on HTTPServer2
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+transfer-encoding: chunked
+
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "C7kmxy99v1soqTYAT5UnanqN-jQ",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "HSinafDLxDbGF_k1RvYk_4rJf7A",
+      "id": "pATpMNDCV84"
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "g9r2bUF03IIybAAiAR-vlfT-K-8",
+      "id": "rbNBqW2r114"
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "DbdBsS8wjdL8UyjMV1GSAwTSxao",
+      "id": "s0UdN6baK2c"
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "MJ6pGr3YWDUbz2BZ0TR5Sdb8kkQ",
+      "id": "5L5eSTYX6wc"
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "dbw2LrDaOMpZ-obWYGIAyI6lNcg",
+      "id": "i6E2qYuiIVA"
+    }
+  ],
+  "nextPageToken": "CAUQAA",
+  "pageInfo": {
+    "totalResults": 200,
+    "resultsPerPage": 5
+  }
+}
+

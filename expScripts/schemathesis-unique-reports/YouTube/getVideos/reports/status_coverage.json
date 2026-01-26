@@ -1,0 +1,24 @@
+{
+	"documentedAndTested": {
+		"/youtube/v3/videos": {
+			"get": [
+				"200",
+				"400"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/youtube/v3/videos": {
+			"get": [
+				"403"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/youtube/v3/videos": {
+			"get": [
+				"404"
+			]
+		}
+	}
+}

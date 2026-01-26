@@ -1,0 +1,34 @@
+HTTP/1.1 400 Bad Request
+server: nginx
+date: Sun, 28 Dec 2025 13:23:58 GMT
+Content-Type: application/json
+content-length: 350
+connection: keep-alive
+access-control-allow-credentials: [Filtered]
+access-control-allow-methods: GET, HEAD, PUT, PATCH, POST, DELETE
+access-control-allow-origin: *
+access-control-expose-headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+access-control-max-age: 300
+cache-control: no-cache, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=fbGvEyqSM02VmoutZoLpwl8rhvJhpLKFcsRk8FrxfAV_d0yRBHieAQkO6xa9P8M_BJPZKYdxvJUa76Jr
+idempotency-key: [Filtered]
+original-request: req_bQ4OR1wmNpLVCD
+request-id: req_bQ4OR1wmNpLVCD
+stripe-version: 2024-12-18.acacia
+vary: Origin
+x-stripe-priority-routing-enabled: true
+x-stripe-routing-context-priority-tier: api-testmode
+x-wc: ABGHIJ
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+
+{
+  "error": {
+    "code": "parameter_unknown",
+    "doc_url": "https://stripe.com/docs/error-codes/parameter-unknown",
+    "message": "Received unknown parameters: zÀ򮵄1, ;𫔗·a",
+    "param": "zÀ򮵄1",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_bQ4OR1wmNpLVCD?t=1766928238",
+    "type": "invalid_request_error"
+  }
+}
+

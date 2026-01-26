@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":7,"username":"johndoe90","name":"Alice","surname":"Doe","gender":"MALE","birthDate":"2000-07-15","enabled":true,"note":null,"loginDt":null,"secured":false,"contactDTO":{"email":"user123@demo.net","phone":"+44-7700-900123","skype":"user123.skype","facebook":"https://facebook.com/alice.smith","linkedin":"https://linkedin.com/in/testuser","website":"https://alicesmith.me","contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":"789 Broadway","address2":"Suite 210","city":null,"country":"UK","zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

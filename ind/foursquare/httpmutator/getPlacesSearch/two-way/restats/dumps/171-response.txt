@@ -1,0 +1,15 @@
+HTTP/1.1 200 
+accept-ranges: bytes
+content-type: application/json; charset=utf-8
+link: <https://places-api.foursquare.com/places/search?max_price=3&open_now=true&cursor=c3I6MQ&near=Nervi%EF%BF%BDn%2C%20Sevilla&fsq_category_ids=4bf58dd8d48988d1e0931735&fields=fsq_place_id%2Cname%2Ccategories%2Clocation%2Clatitude%2Clongitude%2Cdistance%2Ctel%2Cemail%2Cwebsite%2Csocial_media%2Clink%2Cdate_closed%2Cplacemaker_url&tel_format=E164&exclude_all_chains=false&exclude_fsq_chain_ids=556f3bfabd6a8104863beb14&limit=1&min_price=2>; rel="next"
+server: Finatra
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-ratelimit-limit: 0
+x-ratelimit-path: /v3/places/search
+x-ratelimit-remaining: 0
+x-served-by: cache-toj-leto2350025-TOJ
+
+{"results":[{"fsq_place_id":"55dcb826498e6b0be3a1e5de","latitude":37.38464736627907,"longitude":-6.004046404090613,"categories":[{"fsq_category_id":"4bf58dd8d48988d1db931735","name":"Tapas Restaurant","short_name":"Tapas","plural_name":"Tapas Restaurants","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/tapas_","suffix":".png"}},{"fsq_category_id":"4bf58dd8d48988d1e0931735","name":"Coffee Shop","short_name":"Coffee Shop","plural_name":"Coffee Shops","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_","suffix":".png"}}],"distance":2733,"link":"/places/55dcb826498e6b0be3a1e5de","location":{"address":"C/ San Jacinto, 12","locality":"Sevilla","region":"Andalucía","postcode":"41010","admin_region":"Andalucía","country":"ES","formatted_address":"C/ San Jacinto, 12, 41010 Sevilla Andalucía"},"name":"C&Tapas","placemaker_url":"https://foursquare.com/placemakers/review-place/55dcb826498e6b0be3a1e5de","social_media":{"twitter":""},"tel":"+34607720457","website":"http://cafeandtapas.com"}],"context":{"geo_bounds":{"circle":{"center":{"latitude":37.38283,"longitude":-5.97317},"radius":8207}}}}

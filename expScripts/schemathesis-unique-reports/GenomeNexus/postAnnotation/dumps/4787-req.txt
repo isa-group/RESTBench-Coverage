@@ -1,0 +1,11 @@
+POST /annotation?isoformOverrideSource=%C3%A5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 6hNrPb
+Content-Type: application/json
+Content-Length: 122
+Host: localhost:34841
+
+["=\u00e7t", "t", "a\u00e2v\u00fc\u00ae\u00ff,|\"\ud903\udcb1\udbfb\udf1c\u0086\ud9f2\udeba,\u0093\udb5c\udf66", "t", "4"]

@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: mieGbA
+Content-Type: application/json
+Content-Length: 152
+Host: localhost:42371
+
+{"secured": true, "skype": "\u0096\u00a7D", "facebook": "", "surname": "\u0010n", "country": "\udbe2\ude1fmw\u00ff\ud9c5\udff8\u00f1\u00bc\u00b9\u00b5"}

@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 138
+Content-Type: application/json
+x-zipkin-id: 94c41a976465f7d298b5104b3033d438
+x-routing-service: routing-main--useast1-679fdcbd8b-frjp6; site=public_api_v3
+server: envoy
+x-mode: ro
+x-proxied: 10-65-124-171-useast1aprod
+x-extlb: 10-65-124-171-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 22:33:34 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220182-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'ir_SO' is not a 'yelp-supported-locale'", "field": "locale", "instance": "ir_SO"}}

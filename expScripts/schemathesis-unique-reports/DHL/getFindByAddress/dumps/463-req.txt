@@ -1,0 +1,9 @@
+GET /location-finder/v1/find-by-address?countryCode=%1C&locationType=~&serviceType=parcel%3Adrop-off-all&serviceType=express%3Adrop-off-account&serviceType=express%3Adrop-off-easy&serviceType=parcel%3Apick-up-all&addressLocality=&streetAddress=youtube&radius=1.2524800730235598e%2B308&currentDate=2000-01-07 HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+DHL-API-Key: [Filtered]
+X-Schemathesis-TestCaseId: i3Iva7
+Host: api.dhl.com
+

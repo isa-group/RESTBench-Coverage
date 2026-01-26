@@ -1,0 +1,21 @@
+{
+	"documentedAndTested": {
+		"/projects": {
+			"get": [
+				"application/json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/projects": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/projects": {
+			"get": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

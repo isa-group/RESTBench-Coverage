@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: uoo0Kh
+Content-Type: application/json
+Content-Length: 86
+Host: localhost:37143
+
+{"date_published": "4187-05-17T17:04:23.117042Z", "activity": {"ratings_count": 4187}}

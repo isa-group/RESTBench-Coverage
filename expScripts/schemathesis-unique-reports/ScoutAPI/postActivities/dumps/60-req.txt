@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: S1P7wZ
+Content-Type: application/json
+Content-Length: 126
+Host: localhost:37143
+
+{"featured": true, "\u00e3\u0013\u008d\udbc3\ude3a": [], "\u00ad\u0013\u009b": [[[null], [{"\t\u00ff": true}], [null]], null]}

@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"-NsPYXV2iVx6KilDFIqxzxFKZLQ","items":[{"kind":"youtube#video","etag":"GZxoFRq0ysjWbHbnqY2xbGP8R-g","id":"EN1tMeXQii0","player":{"embedHtml":"<iframe width=\"72\" height=\"54\" src=\"https://www.youtube.com/embed/EN1tMeXQii0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>","embedHeight":"54","embedWidth":"72"},"localizations":{"en":{"title":"JISOO X ZAYN - EYES CLOSED (OFFICIAL MV)","description":"JISOO X ZAYN - EYES CLOSED (OFFICIAL MV)\n\nFollow JISOO\nyoutube : www.youtube.com/@sooyaaa__\ninstagram : https://www.instagram.com/sooyaaa__\nX : https://x.com/officialBLISSOO \ntiktok : https://www.tiktok.com/@jisoo\nweibo : https://weibo.com/u/7458000931\nAPP : https://www.jisoo.app\n\nFollow ZAYN\nyoutube : www.youtube.com/@Zayn\ninstagram : https://www.instagram.com/zayn\nX : https://x.com/zaynmalik\nfacebook : https://www.facebook.com/zayn\ntiktok : https://www.tiktok.com/@zayn\n\n#JISOO #ZAYN #EYESCLOSED #20251010 #BLISSOO"}},"paidProductPlacementDetails":{"hasPaidProductPlacement":true}}],"nextPageToken":"CAEQAA","pageInfo":{"totalResults":200,"resultsPerPage":1}}

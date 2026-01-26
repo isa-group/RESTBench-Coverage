@@ -1,0 +1,407 @@
+OriginalTestCaseId,TestCaseId,Success,FailureMessage
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,501348c3-6f3d-4d65-8b79-495ce5dc1cfd,false,[NO_5XX] Unexpected 5XX response: 504
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,d718c0a2-5c3d-4c1c-bdbe-6245580a9e7f,false,"[OAS] [OAS] validation failed:
+ - ERROR - Object instance has properties which are not allowed by the schema: [""randomBoolean1""]: []
+"
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,748f5bf4-2408-4609-bb35-c4696cd7ba50,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] ECMA 262 regex ""^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$"" does not match input string ""sara/,-ivanova@mail.ru"": []
+"
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,31e21feb-0e63-412c-b096-1cee5789de1f,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,ee7a3e51-5c0f-40d5-bbe1-0c4e6941636f,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""EJEMPLO MAYUS"": []
+"
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,11691182-363b-433f-8c96-164d604da8d7,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,3ae27f2b-98cb-4a87-a27a-e9d819b804c3,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Object instance has properties which are not allowed by the schema: [""randomArray3"",""randomLong2"",""randomObject1"",""randomObject4""]: []
+"
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,a5db2f11-ee82-4251-880f-2aa68b7320b8,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (integer) does not match any allowed primitive type (allowed: [""object""]): []
+"
+801082d1-89b2-4e21-a265-d2ee9650faf2,4ce6b81b-1c86-42f2-ae59-84c52bfa4c26,false,"[OAS] [OAS] validation failed:
+ - ERROR - Response status 200 not defined for path '/register'.: []
+"
+801082d1-89b2-4e21-a265-d2ee9650faf2,dfa02d26-7de6-4a99-95b4-006d2b92b090,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (number) does not match any allowed primitive type (allowed: [""string""]): []
+"
+801082d1-89b2-4e21-a265-d2ee9650faf2,272dcd8a-4d7f-4c6d-8434-92d76dbe0953,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] ECMA 262 regex ""^[a-zA-Z0-9]+$"" does not match input string ""pF[:iO"": []
+"
+801082d1-89b2-4e21-a265-d2ee9650faf2,a18b9840-f3cd-40af-ae9e-8f34230d0a72,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""EJEMPLO MAYUS"": []
+"
+801082d1-89b2-4e21-a265-d2ee9650faf2,caf4b4f4-fc46-4beb-a1a9-44d550fb9327,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Object instance has properties which are not allowed by the schema: [""randomBoolean1"",""randomObject2""]: []
+"
+801082d1-89b2-4e21-a265-d2ee9650faf2,650fc47b-c7c1-4a3f-af45-d654073fa9ba,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (array) does not match any allowed primitive type (allowed: [""object""]): []
+"
+801082d1-89b2-4e21-a265-d2ee9650faf2,73f234b5-d894-4ad6-a170-efbffa2ea3ce,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,9b5a5236-caed-439f-a48d-7cb90f7f12a1,false,[NO_5XX] Unexpected 5XX response: 501
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,c9fbf315-fdcd-4abe-8523-217bcac72937,false,"[OAS] [OAS] validation failed:
+ - ERROR - Object instance has properties which are not allowed by the schema: [""{\""email\"":\""sara-ivanova@mail.ru\"",\""password\"":\""hidden\"",\""name\"":\""Jean-Luc Wei\"",\""phone\"":\"" 86 110 888 66 55\"",\""address\"":\""Calle Mayor 10 3A Madrid\"",\""_links\"":{\""Shopping cart\"":{},\""Manage contacts\"":{}}}""]: []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,4eb17d05-1f6a-4f32-a556-d6f1f0637cd9,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,f9d4c213-a23d-4a47-bbce-8b998f7bfd22,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] String ""8"" is too short (length: 1, required minimum: 6): []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,f185935e-6bee-47ea-a484-fc138393191f,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] ECMA 262 regex ""^(?:[A-Za-z]+(?:['-][A-Za-z]+)?)(?:\s+[A-Za-z]+(?:['-][A-Za-z]+)?)*$"" does not match input string ""Jean-Luc ´,Wei"": []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,6b3f0d2a-2221-41e9-b91c-687eea928921,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""!<A-^O6Fi"": []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,59dcc929-53bc-482b-90b2-c4f108fd71fc,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (integer) does not match any allowed primitive type (allowed: [""string""]): []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,2c17ec59-8d2e-4418-ac15-cb56f9be103c,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (array) does not match any allowed primitive type (allowed: [""object""]): []
+"
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,3ad6dde6-73ce-4d9e-a55b-4d6b8c5cd35e,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (integer) does not match any allowed primitive type (allowed: [""object""]): []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,3e46a18d-c11c-44cc-90d5-e5b459d1a33a,false,"[OAS] [OAS] validation failed:
+ - ERROR - Response status 200 not defined for path '/register'.: []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,7b0ea376-8208-4854-bd4f-f2a021292586,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] ECMA 262 regex ""^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$"" does not match input string ""martin.lopez@u/,ni.es"": []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,16d9ad9b-31f8-4873-a2fe-fde26e79ce76,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] String ""C"" is too short (length: 1, required minimum: 6): []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,8bd2b703-a6d1-41e7-a6f5-5b33b1d45281,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,13c78596-a217-4f87-9c98-1cecefa8fb78,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""Xj:az%\*"": []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,70fb4a9f-3c96-4f0d-a106-63e40f025a30,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (integer) does not match any allowed primitive type (allowed: [""string""]): []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,2af72bfe-cc21-41f7-9fa1-32fc8cf8bff9,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (array) does not match any allowed primitive type (allowed: [""object""]): []
+"
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,0095c1d8-6eec-4896-a400-d244d8124b2e,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,e26046c0-1ff0-4f05-9ea9-68746b12a3d8,false,[NO_5XX] Unexpected 5XX response: 503
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,0e5eafc9-a9f4-4655-894b-9778ab66adb0,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (number) does not match any allowed primitive type (allowed: [""string""]): []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,1aa072bf-5584-48fb-bec1-afd3d0d9cf4c,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] Instance type (object) does not match any allowed primitive type (allowed: [""string""]): []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,71dfa519-86cc-4683-85d1-8bc89a946d27,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] Instance type (object) does not match any allowed primitive type (allowed: [""string""]): []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,0d4c9cdd-0f2b-4fa8-a773-f8b48fbbf52f,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""EJEMPLO MAYUS"": []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,860e9364-b627-4c0a-89f1-b31a5b6127ad,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,d8904050-0806-4771-8812-2652cb34533f,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Object instance has properties which are not allowed by the schema: [""randomBoolean1"",""randomObject2""]: []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,eaefb0b7-0d39-4f5b-a52c-ed75c1cb354e,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,bdb919f8-7361-4542-8b2d-13b49e063ae6,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Object instance has properties which are not allowed by the schema: [""randomArray4"",""randomLong1"",""randomObject2"",""randomString3""]: []
+"
+d2521b53-3631-46aa-bcb7-5777a0e87942,ffd06388-d293-4ff0-94f7-24a6026feb8c,false,"[OAS] [OAS] validation failed:
+ - ERROR - Response status 200 not defined for path '/register'.: []
+"
+d2521b53-3631-46aa-bcb7-5777a0e87942,494bae97-e5e2-4021-a271-1f801f341384,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] ECMA 262 regex ""^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$"" does not match input string ""alex/,.chen@example.com"": []
+"
+d2521b53-3631-46aa-bcb7-5777a0e87942,f16079b9-147f-4efe-8ae7-52ac3432a0d4,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] ECMA 262 regex ""^[a-zA-Z0-9]+$"" does not match input string ""hidden´/"": []
+"
+d2521b53-3631-46aa-bcb7-5777a0e87942,d21ba4be-aeef-4d9c-b7f4-5f93d9a5e076,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""5S9#N&]H"": []
+"
+d2521b53-3631-46aa-bcb7-5777a0e87942,13963d6f-757e-4713-8429-3f681e529ae4,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Object instance has properties which are not allowed by the schema: [""randomArray3"",""randomLong2"",""randomObject1"",""randomObject4""]: []
+"
+d2521b53-3631-46aa-bcb7-5777a0e87942,9ae0fa6a-6ad0-4ece-9286-f5130f84caa0,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (integer) does not match any allowed primitive type (allowed: [""object""]): []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,48255ef8-d3b3-4580-9f55-73485ccf458f,false,"[OAS] [OAS] validation failed:
+ - ERROR - No response body is expected but one was found.: []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,bbad405d-2ce0-4da1-9ea6-7021e9486d5c,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,2cab5d14-3cf0-4adc-a5db-027fa2389e43,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] String "" ."" is too short (length: 2, required minimum: 6): []
+ - ERROR - [Path '/password'] ECMA 262 regex ""^[a-zA-Z0-9]+$"" does not match input string "" ."": []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,b16e4778-c4df-4ab9-b669-dd14168b5f3e,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] ECMA 262 regex ""^(?:[A-Za-z]+(?:['-][A-Za-z]+)?)(?:\s+[A-Za-z]+(?:['-][A-Za-z]+)?)*$"" does not match input string ""Jean-Luc ´,Wei"": []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,bb17facb-5444-4397-b3a6-16578d1dfdbd,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""EJEMPLO MAYUS"": []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,0e2972b2-9733-4e6c-b8d0-5b2275208c4c,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,e33f61f0-1d45-4d42-b605-fdda7f3b8a4b,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,98973014-3904-44bb-a493-b80216d00c76,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,28b5795d-8b87-4854-b20f-66bf0d261e5d,false,"[OAS] [OAS] validation failed:
+ - ERROR - Response status 400 not defined for path '/register'.: []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,d84b0c61-3518-4362-9f34-d4fc2bc16af3,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] ECMA 262 regex ""^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$"" does not match input string ""s5, 7VjPB"": []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,8d0688a5-8149-4ea2-9b10-01cd42b6a3e8,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] Instance type (object) does not match any allowed primitive type (allowed: [""string""]): []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,6b24da60-dbc2-4dd8-917e-adec86c96d40,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] ECMA 262 regex ""^(?:[A-Za-z]+(?:['-][A-Za-z]+)?)(?:\s+[A-Za-z]+(?:['-][A-Za-z]+)?)*$"" does not match input string ""Anna ´,Maria"": []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,0ad0d2da-ebbe-4ad6-9abc-0be70bd80ff9,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""EJEMPLO MAYUS"": []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,ea3c3ba7-59dd-416e-ba28-36ca866b8c21,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (integer) does not match any allowed primitive type (allowed: [""string""]): []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,25d6fcef-43a8-4cff-8cae-13fa102b9b53,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Object instance has properties which are not allowed by the schema: [""randomBoolean1"",""randomObject2""]: []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,cd539ddd-9d5e-4ed7-b800-652686c5d32e,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,a6dc821e-d9f7-443d-9528-a059b2f99788,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+f64d596a-995c-4c04-8ea3-f90112e6052f,53568dd0-88ed-4b8e-ba48-92130e15ec46,false,[NO_5XX] Unexpected 5XX response: 501
+f64d596a-995c-4c04-8ea3-f90112e6052f,29d4d639-bd4d-4a02-9798-e9a8ba97cac1,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+f64d596a-995c-4c04-8ea3-f90112e6052f,307cb395-fe61-4f89-b8c0-73b31a050e00,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] Instance type (object) does not match any allowed primitive type (allowed: [""string""]): []
+"
+f64d596a-995c-4c04-8ea3-f90112e6052f,8f5965c4-1097-4e3c-9a75-9e17536dc319,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] Instance type (object) does not match any allowed primitive type (allowed: [""string""]): []
+"
+f64d596a-995c-4c04-8ea3-f90112e6052f,9b04aa1a-7bd0-42e6-b02a-8a00502bc1dd,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""+1 (41/*5) 555-12-34"": []
+"
+f64d596a-995c-4c04-8ea3-f90112e6052f,d946a432-d4b8-4011-8106-f512ce0c741a,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (array) does not match any allowed primitive type (allowed: [""object""]): []
+"
+f64d596a-995c-4c04-8ea3-f90112e6052f,cb170deb-ca4f-45ed-98ce-b7857bb4db51,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Object instance has properties which are not allowed by the schema: [""randomArray4"",""randomLong1"",""randomObject2"",""randomString3""]: []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,afd17898-612f-4b76-a61c-ecf5cc957db6,false,[NO_5XX] Unexpected 5XX response: 500
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,c9d66182-b97c-431f-a0ea-21f0b7138344,false,"[OAS] [OAS] validation failed:
+ - ERROR - Object instance has properties which are not allowed by the schema: [""randomBoolean1""]: []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,755d7c06-a986-4823-975b-d4db3732e93f,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] ECMA 262 regex ""^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$"" does not match input string ""]cqhfUJ^n"": []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,26c88cdc-38db-4bca-b84a-49ccc152075b,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] String ""T"" is too short (length: 1, required minimum: 6): []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,4de83585-5d50-4486-b376-9b61a81d878b,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,8c965b22-992e-4c66-b425-7c0003eadb62,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""j9E"": []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,04c73a31-709f-4822-9964-9f268fb66ba2,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (integer) does not match any allowed primitive type (allowed: [""string""]): []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,09aa8093-ae0a-416b-8b1e-bdf2dabcee9e,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Instance type (number) does not match any allowed primitive type (allowed: [""object""]): []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,a68c31ae-b645-4420-83af-a84a05469840,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Object instance has properties which are not allowed by the schema: [""randomArray3"",""randomLong2"",""randomObject1"",""randomObject4""]: []
+"
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,16635f0b-45ef-417f-931f-34aa7081cb17,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (integer) does not match any allowed primitive type (allowed: [""object""]): []
+"
+4a083676-fde7-4f2c-984e-b29e0c12daa2,e4e3caee-10b4-4ee2-8686-315b580bc794,false,[NO_5XX] Unexpected 5XX response: 504
+4a083676-fde7-4f2c-984e-b29e0c12daa2,cb9597fb-50d0-4bd4-b706-084b23957333,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] ECMA 262 regex ""^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$"" does not match input string ""sara/,-ivanova@mail.ru"": []
+"
+4a083676-fde7-4f2c-984e-b29e0c12daa2,203a1e50-b09f-4abf-bbe7-d7de3b36016a,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] ECMA 262 regex ""^[a-zA-Z0-9]+$"" does not match input string ""hidden´/"": []
+"
+4a083676-fde7-4f2c-984e-b29e0c12daa2,e0289536-b62e-40a3-9dd8-4227a8f45bb8,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""[$#w(Qo]"": []
+"
+4a083676-fde7-4f2c-984e-b29e0c12daa2,75deb0f9-243b-4b24-b402-503bd3ee616c,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Instance type (number) does not match any allowed primitive type (allowed: [""object""]): []
+"
+4a083676-fde7-4f2c-984e-b29e0c12daa2,638993de-0f6f-4b4b-adad-9fc87bbc7b05,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+4a083676-fde7-4f2c-984e-b29e0c12daa2,40f8f345-76ef-4c79-a398-264735f4964e,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (integer) does not match any allowed primitive type (allowed: [""object""]): []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,460c4e7e-e803-4527-99c0-4360ad713bf3,false,"[OAS] [OAS] validation failed:
+ - ERROR - Response status 204 not defined for path '/register'.: []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,f068fbe8-4cc7-4f4c-81d4-e4a256f44473,false,"[OAS] [OAS] validation failed:
+ - ERROR - Object instance has properties which are not allowed by the schema: [""randomBoolean1""]: []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,c54c3253-52d7-4544-9501-6d8c43eeebf0,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,a7aa1d86-23e2-4159-a87e-e8aa960e0fe1,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] String ""w"" is too short (length: 1, required minimum: 6): []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,cc038e0a-5b8a-4d03-a856-1a4d83b78f24,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,51ea9f38-6339-4f01-a067-996f19fee4f9,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] ECMA 262 regex ""^\+[1-9][0-9]?[\s]*\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"" does not match input string ""+1 (41/*5) 555-12-34"": []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,5191372c-0e60-4d39-a6b5-00e5bf122d23,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Instance type (number) does not match any allowed primitive type (allowed: [""object""]): []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,a2357ada-f851-40ad-999e-427162d101bc,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,20e142b3-0ab4-4ad5-b600-3105a2750c7b,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Object instance has properties which are not allowed by the schema: [""randomArray4"",""randomLong1"",""randomObject2"",""randomString3""]: []
+"
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,6238ae3b-a607-45ce-bf6d-9d7be5ce614c,false,[NO_5XX] Unexpected 5XX response: 504
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,93f786c9-f7a6-4816-97ea-9d6fc6dc55f6,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (number) does not match any allowed primitive type (allowed: [""string""]): []
+"
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,a975512a-4192-4517-8baa-d2607d1925db,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] ECMA 262 regex ""^[a-zA-Z0-9]+$"" does not match input string ""hidden´/"": []
+"
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,f566d2eb-89e7-4acb-bc53-0609507519ce,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] Instance type (object) does not match any allowed primitive type (allowed: [""string""]): []
+"
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,61ec65b9-d1c4-49c5-8b39-29bbb9cb51b1,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] Instance type (array) does not match any allowed primitive type (allowed: [""string""]): []
+"
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,452412dd-b7ec-4a59-afac-66e5d7ff216b,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Instance type (number) does not match any allowed primitive type (allowed: [""object""]): []
+"
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,ae2c4088-622a-4d1e-8dbb-56ee5ec40450,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,6afc3984-732e-45e4-8290-5136eb07f23d,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (null) does not match any allowed primitive type (allowed: [""object""]): []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,7b6bc091-31df-4dab-b339-9ce134b5f4fb,false,[NO_5XX] Unexpected 5XX response: 501
+28d57d6a-c274-436e-9f9f-02df7fde1199,efb2ecbf-25f7-41bb-a441-ec863b2abb79,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/email'] Instance type (number) does not match any allowed primitive type (allowed: [""string""]): []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,6d916f62-ae90-4789-b7f8-4631c5cf6c56,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/password'] ECMA 262 regex ""^[a-zA-Z0-9]+$"" does not match input string ""xcr6)rH8`"": []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,0e4ef60c-280c-4bb7-abce-1c5d97a142ee,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/name'] ECMA 262 regex ""^(?:[A-Za-z]+(?:['-][A-Za-z]+)?)(?:\s+[A-Za-z]+(?:['-][A-Za-z]+)?)*$"" does not match input string ""Wei´, Ming"": []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,9962b0b2-11c9-4f2d-82c8-7c4b91fd0765,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/phone'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,ea17609e-3123-4b83-81b4-79e46aa56057,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/address'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,b84a71bc-0abd-41db-b86e-e032b866ffb9,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links'] Instance type (number) does not match any allowed primitive type (allowed: [""object""]): []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,12a70a63-90b6-4f5e-926a-3e36c502d227,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Shopping cart'] Object instance has properties which are not allowed by the schema: [""randomArray3"",""randomLong2"",""randomObject1"",""randomObject4""]: []
+"
+28d57d6a-c274-436e-9f9f-02df7fde1199,60ef98f7-0324-4cbd-b416-9a786fa83a45,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/_links/Manage contacts'] Instance type (integer) does not match any allowed primitive type (allowed: [""object""]): []
+"
+f8d1a623-a2c3-4372-9bf4-345681700e09,97b7573d-3bd0-458d-a84f-870c36e0f126,false,"[OAS] [OAS] validation failed:
+ - ERROR - Response status 409 not defined for path '/register'.: []
+"
+f8d1a623-a2c3-4372-9bf4-345681700e09,6e75d80d-7c94-49ab-8b5e-0c2042d122e4,true,
+f8d1a623-a2c3-4372-9bf4-345681700e09,f9ae2610-1ee2-47e2-b964-3bf651e1685d,true,
+f8d1a623-a2c3-4372-9bf4-345681700e09,e2a94b91-d484-4fd0-ae78-f46650911256,false,"[OAS] [OAS] validation failed:
+ - ERROR - Object instance has properties which are not allowed by the schema: [""randomBoolean1""]: []
+"
+f8d1a623-a2c3-4372-9bf4-345681700e09,312935e1-b6e6-4e40-b60b-4349ca49ac57,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/message'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+f8d1a623-a2c3-4372-9bf4-345681700e09,d9f86f3e-24d8-4fb3-a8ac-b8fa37195847,true,
+f8d1a623-a2c3-4372-9bf4-345681700e09,efa369a4-0141-4474-80fa-291190d8d6c0,true,
+f8d1a623-a2c3-4372-9bf4-345681700e09,cd0706d8-532e-465b-8497-944f5dbcb426,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/fieldErrors/1'] Instance type (boolean) does not match any allowed primitive type (allowed: [""object""]): []
+"
+f8d1a623-a2c3-4372-9bf4-345681700e09,2f75d487-bb39-4ed4-80f4-53c6712053eb,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/fieldErrors/0'] Instance type (number) does not match any allowed primitive type (allowed: [""object""]): []
+"
+f8d1a623-a2c3-4372-9bf4-345681700e09,cc9a90da-a317-4672-94e1-3d1fdbbe430d,false,"[OAS] [OAS] validation failed:
+ - ERROR - [Path '/fieldErrors/0/field'] Instance type (null) does not match any allowed primitive type (allowed: [""string""]): []
+"
+f8d1a623-a2c3-4372-9bf4-345681700e09,b93a7f1c-6cc3-4f94-a7d6-2539b6883d26,true,
+801082d1-89b2-4e21-a265-d2ee9650faf2,afa0a84a-6a93-44b6-9677-6427b9b3ce41,true,
+801082d1-89b2-4e21-a265-d2ee9650faf2,15034dab-018a-4c6c-b995-9c2b2b9f9379,true,
+801082d1-89b2-4e21-a265-d2ee9650faf2,fae50dc4-6ecc-4867-a82f-541b7ebf62f6,true,
+801082d1-89b2-4e21-a265-d2ee9650faf2,b26f7233-a5ff-4e7d-be4d-2b31e2708a29,true,
+801082d1-89b2-4e21-a265-d2ee9650faf2,177e5c8b-67a1-4cca-a38e-8fc1acdfd280,true,
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,d14764fe-d1d8-4d6b-b784-18257e1616bc,true,
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,c6e93106-1682-4b25-ad2e-4b08bd82b11d,true,
+91e1ad07-f9fc-4790-aa8f-0075323a4ff9,5f057bd6-9874-499d-8647-0086cfb05faa,true,
+4a083676-fde7-4f2c-984e-b29e0c12daa2,3072679e-d984-41e6-ade7-1a0f4247c4ed,true,
+4a083676-fde7-4f2c-984e-b29e0c12daa2,e9de0851-e9f5-4135-9d1a-68628415ff48,true,
+4a083676-fde7-4f2c-984e-b29e0c12daa2,68b6ca41-a3b4-40bf-ba0c-82dd03bb52b4,true,
+4a083676-fde7-4f2c-984e-b29e0c12daa2,512e44d4-5eb8-4609-97c7-2d13910afdbd,true,
+4a083676-fde7-4f2c-984e-b29e0c12daa2,1fca0e6f-5eac-4903-94d2-91d32d698716,true,
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,6554a41e-c711-4b05-89e7-7a881f357f09,true,
+aeabd7c6-3606-4359-838a-be61e8b7c3c6,b62bc234-93d0-4b2b-883d-bf02e75077e4,true,
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,7f6c3fed-6e4a-4cc7-8799-0cf79337eaa9,true,
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,00e95c99-4f73-4cda-b23b-43fba5fe4688,true,
+757c6751-de51-4c22-8ab6-6f29ddf77ca3,26b44bc8-7cb4-4c6e-b02a-ccfac85f2b20,true,
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,71c3882d-a891-41af-8245-c482b235aa3d,true,
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,1de472ea-bf56-4a9d-b591-66c727f9759b,true,
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,b1d28fc7-ba47-4a64-8834-9eb1bf389cac,true,
+ef8c7efe-c24b-4f6a-b8ea-0657fd46c84c,9c3f0ae1-83a1-4df4-a6eb-1f468fedc9ab,true,
+d2521b53-3631-46aa-bcb7-5777a0e87942,3dd03067-42d2-4c29-ba34-c8de798869ab,true,
+d2521b53-3631-46aa-bcb7-5777a0e87942,0b2cd08b-9a98-4698-93a0-7f427d1d4c47,true,
+d2521b53-3631-46aa-bcb7-5777a0e87942,36d5d1eb-03d3-4cf9-8009-14564965b02b,true,
+d2521b53-3631-46aa-bcb7-5777a0e87942,c72eb394-5f6e-478e-8b8f-e8e1f43b0a62,true,
+d2521b53-3631-46aa-bcb7-5777a0e87942,88383c16-4cae-47cb-88cb-540f677676f5,true,
+d2521b53-3631-46aa-bcb7-5777a0e87942,bee173dd-6821-41f3-bbd6-5ee2a9c9b5f7,true,
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,ea88ee52-3b60-4d28-8f31-87790f6c8c13,true,
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,73949416-512e-4372-9d73-99e3324932b3,true,
+5b5cd551-b36e-44dd-a4b0-3713f2da5480,a0f5d953-06d1-47d7-b30a-b1550aa6b783,true,
+f64d596a-995c-4c04-8ea3-f90112e6052f,59da8812-f311-4c58-acde-4ada46a378ef,true,
+f64d596a-995c-4c04-8ea3-f90112e6052f,596baec0-b8f3-4b27-9846-54aedab54661,true,
+f64d596a-995c-4c04-8ea3-f90112e6052f,dfc6a803-bedb-4abf-a02e-b1fbf6f50fe7,true,
+f64d596a-995c-4c04-8ea3-f90112e6052f,abebd670-e1d7-4aec-bf26-65448701c53d,true,
+f64d596a-995c-4c04-8ea3-f90112e6052f,278ec033-9425-4c22-aeb7-4a9eb941eedd,true,
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,24528e4a-f773-43a0-98c5-95ad2b154ec1,true,
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,366e9606-9d05-4f98-a3a9-b1728bbd8ba1,true,
+405c9553-a2f8-4548-b0f4-1d3d40794a9f,24666707-be6f-4aa3-a63e-095cec0e8488,true,
+28d57d6a-c274-436e-9f9f-02df7fde1199,cd21af4d-a94f-4f8f-a23c-9b6dd58459b7,true,
+28d57d6a-c274-436e-9f9f-02df7fde1199,0502df0e-3bdb-4daa-b73e-bf397376a2a4,true,
+28d57d6a-c274-436e-9f9f-02df7fde1199,824cd195-1460-4eb7-9f31-2902a0cef739,true,
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,1614ca65-7568-47b4-844f-8d41525d32cf,true,
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,ec45b6ce-a672-4e11-bfb8-ca0a23368a91,true,
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,53cf93e5-4d58-4900-98b4-872864cd5ace,true,
+c1c67714-0ee3-4b8a-a072-17684f0ceba9,c82a6d02-476e-4bb1-b5c0-f607c828d22b,true,
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,a57b6d14-43d4-4bea-9ca7-f660667fd22a,true,
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,e2ca43d7-6bf4-4e05-80b0-07240c863561,true,
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,4569c12b-cba1-46cf-8d79-647f3f2cba71,true,
+2a9f3e8d-c883-4fab-aa4c-a050c6e0e7d5,6ee26725-ecb8-42a3-bfcd-8de9de938fe0,true,
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,53cbaf1b-0a67-4270-a771-511356d710e6,true,
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,5986928b-2efa-4336-ac9d-3082ce8e554c,true,
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,07d644ee-562d-4b3b-b944-d6757b554e96,true,
+aa00e520-fe34-4b9a-b8eb-44adf5042bd2,82f45b40-37f6-4849-bbdc-483868276ca2,true,
+
+Summary,Total=179,Passed=59,KillRate=67.0%,TimeCost=4.04 s

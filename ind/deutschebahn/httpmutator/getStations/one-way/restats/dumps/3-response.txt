@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-transform
+content-type: application/json;charset=utf-8
+set-cookie: TS0165d0f4=01d513bcd1d11dbbdb9a1b45c7bb7fc3d219c186e9553d19a5b105e09484e67be0e174edc68ee15c95d7a2b1a030d09d5159e071b3; Path=/; Domain=.apis.deutschebahn.com; Secure; HttpOnly;
+strict-transport-security: max-age=16070400; includeSubDomains
+x-global-transaction-id: 9b5d9cdf68ee270003ce0ac3
+x-ratelimit-limit: name=default,10;
+x-ratelimit-remaining: name=default,9;
+
+{"offset":10,"limit":1,"total":4204,"result":[{"number":13,"ifopt":"de:09575:14680","name":"Adelsdorf (Mittelfr)","mailingAddress":{"city":"Neuhof a.d.Zenn","zipcode":"90616","street":"Adelsdorf - St 2413"},"category":6,"priceCategory":6,"hasParking":true,"hasBicycleParking":false,"hasLocalPublicTransport":true,"hasPublicFacilities":false,"hasLockerSystem":false,"hasTaxiRank":false,"hasTravelNecessities":false,"hasSteplessAccess":"yes","hasMobilityService":"no","hasWiFi":false,"hasTravelCenter":false,"hasRailwayMission":false,"hasDBLounge":false,"hasLostAndFound":false,"hasCarRental":false,"federalState":"Bayern","federalStateCode":"DE-BY","countryCode":"DE","municipalityCode":"09575152","regionalbereich":{"number":7,"name":"RB Süd","shortName":"RB Süd"},"aufgabentraeger":{"shortName":"BEG","name":"Bayerische Eisenbahngesellschaft mbH"},"timeTableOffice":{"email":"dbs.fahrplan.nordbayern@deutschebahn.com","name":"Nürnberg"},"szentrale":{"number":42,"publicPhoneNumber":"0911/2191055","name":"Nürnberg Hbf"},"stationManagement":{"number":228,"name":"Nürnberg"},"evaNumbers":[{"number":8000420,"geographicCoordinates":{"type":"Point","coordinates":[10.687041,49.474944]},"isMain":true}],"ril100Identifiers":[{"rilIdentifier":"NADM","isMain":true,"hasSteamPermission":true,"steamPermission":"unrestricted","geographicCoordinates":{"type":"Point","coordinates":[10.687041,49.474944]},"primaryLocationCode":"DE10036"}],"productLine":{"productLine":"Zubringerbahnhof","segment":"ländlicher Zubringer"}}]}

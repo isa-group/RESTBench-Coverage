@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: wCnZl9
+Content-Type: application/json
+Content-Length: 94
+Host: localhost:34113
+
+{"cars": [{}, {"\u00abdH\u00d3\u0013<\ud835\udd3b\u0002": [{"B\udaf3\udc9b": []}], "": null}]}

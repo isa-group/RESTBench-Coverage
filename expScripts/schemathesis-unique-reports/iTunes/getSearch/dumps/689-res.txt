@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+content-length: 230
+x-apple-jingle-correlation-key: [Filtered]
+x-apple-request-uuid: 133f43d2-4ad0-3c62-8350-2ec2e0af1c46
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?media=L3%F0%A3%98%8E%21%F4%8B%AA%A3%60%C3%94%C3%87&=%5B%5D&%5B%C3%96=%C2%90%E4%B0%8F%C2%A6%C3%8E%C3%8F%C2%A9%C2%A2%2FT%1A%C3%B7%C3%9C%23&lang=en_us&term=%F1%85%81%B6%C2%BF%C2%B8d&J%C2%82%C2%AA~%0ERQ%7B%C2%865%C3%BE%C3%A8=%7C%C2%8FE%F2%9D%85%ABF%F0%A9%A0%B5%F0%A6%9C%9A%F1%87%9D%B2X%40%C3%86%F1%B6%92%95%F3%A7%BF%B8K%09&entity=7%C2%B0%C3%81%F3%B3%81%85%C3%BB%C3%87%E3%9F%9A%C3%A0%3F%C3%94&urlDesc=
+apple-tk: false
+x-b3-spanid: 4a58485444504995
+b3: 133f43d24ad03c6283502ec2e0af1c46-4a58485444504995
+x-b3-traceid: 133f43d24ad03c6283502ec2e0af1c46
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6501423:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-mr.itunes.apple.com/search?media=L3%F0%A3%98%8E%21%F4%8B%AA%A3%60%C3%94%C3%87&=-32654&=True&=%7B%27%5Cx8e%C3%96%5CU0006a0d3%F0%A9%9F%88%C2%BB%27%3A+%27%3A%5CU000396de%C2%A8%C3%A6%27%2C+%27_%27%3A+-8889180035846397760%2C+%27%27%3A+7.07442583690872e%2B16%7D&=%5B%5D&=%5B%5D&%5B%C3%96=%C2%90%E4%B0%8F%C2%A6%C3%8E%C3%8F%C2%A9%C2%A2%2FT%1A%C3%B7%C3%9C%23&lang=en_us&term=%F1%85%81%B6%C2%BF%C2%B8d&J%C2%82%C2%AA~%0ERQ%7B%C2%865%C3%BE%C3%A8=%C3%AE%F2%99%A4%BD%C2%8D%3E%3Ee&J%C2%82%C2%AA~%0ERQ%7B%C2%865%C3%BE%C3%A8=&J%C2%82%C2%AA~%0ERQ%7B%C2%865%C3%BE%C3%A8=%7C%C2%8FE%F2%9D%85%ABF%F0%A9%A0%B5%F0%A6%9C%9A%F1%87%9D%B2X%40%C3%86%F1%B6%92%95%F3%A7%BF%B8K%09&entity=7%C2%B0%C3%81%F3%B3%81%85%C3%BB%C3%87%E3%9F%9A%C3%A0%3F%C3%94
+x-apple-application-site: MR22
+apple-timing-app: 3 ms
+x-apple-application-instance: 6501423
+x-daiquiri-instance: daiquiri:17317005:mr85p00it-hyhk04174901:7987:25HOTFIX33:daiquiri-amp-store-shared-int-001-mr, daiquiri:12282004:mr47p00it-qujn04120301:7987:25HOTFIX33:daiquiri-amp-store-l7shared-ext-001-mr
+vary: Accept-Encoding
+expires: Mon, 29 Dec 2025 07:35:16 GMT
+cache-control: max-age=0, no-cache
+pragma: no-cache
+date: Mon, 29 Dec 2025 07:35:16 GMT
+x-cache: TCP_MISS from a2-20-196-17.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-true-cache-key: [Filtered]
+connection: keep-alive
+x-cache-remote: TCP_MISS from a23-213-160-197.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-apple-partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [resultEntity]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}
+

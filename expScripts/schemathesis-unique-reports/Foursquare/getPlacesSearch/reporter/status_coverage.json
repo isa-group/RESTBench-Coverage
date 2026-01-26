@@ -1,0 +1,20 @@
+{
+	"documentedAndTested": {
+		"/places/search": {
+			"get": [
+				"200",
+				"401"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/places/search": {
+			"get": [
+				"400",
+				"403",
+				"429"
+			]
+		}
+	},
+	"notDocumentedAndTested": {}
+}

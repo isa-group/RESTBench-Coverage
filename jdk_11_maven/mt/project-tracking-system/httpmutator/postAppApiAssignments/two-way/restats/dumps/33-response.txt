@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+{"employeeId":3,"projectId":1,"commitDate":"13-06-201817:30:00","commitEmpDesc":"","commitMgrDesc":"","employee":{"employeeId":3,"firstName":"Imen","lastName":"Touk","email":"springabcxyzboot@gmail.com","phone":"22125144","hiredate":"15-04-2019","job":"Data Warehouse","salary":5000.0,"manager":{"employeeId":5,"firstName":"Nour","lastName":"Larguech","email":"springabcxyzboot@gmail.com","phone":"22125144","hiredate":null,"job":"Chef service Data Warehouse","salary":6000.0,"manager":null,"department":{"departmentId":4,"departmentName":"DWH","location":{"locationId":1,"adr":"RUE DE LA BOURSE","postalCode":"2016","city":"LAC2"}},"credential":{"credentialId":6,"username":"nourlarguech","password":"$2y$04$ngbUBXKPaTRFAUFEifgPpuqmBTf4VjUJL.eGpeEIGwI/iiE18ZSny","enabled":true,"role":"ROLE_MGR"}},"department":{"departmentId":4,"departmentName":"DWH","location":{"locationId":1,"adr":"RUE DE LA BOURSE","postalCode":"2016","city":"LAC2"}},"credential":{"credentialId":1,"username":"imentouk","password":"$2y$04$8jC1Xb/fKB3EQIHy0XoFUunQNhjiVpvuMZys6iCOkphCAsyBkmCTC","enabled":true,"role":"ROLE_EMP"}},"project":{"projectId":4,"title":"MACHYA_RANDONNEE","startDate":"29-01-2021","endDate":"30-04-2021","status":"NOT_STARTED"}}

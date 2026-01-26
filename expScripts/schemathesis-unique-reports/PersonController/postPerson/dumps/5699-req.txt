@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ARCFxK
+Content-Type: application/json
+Content-Length: 244
+Host: localhost:34113
+
+{"cars": [{"model": null, "brand": "\u00ee\u0015\u0017", "\ud97f\udc2e\ud958\udc0b\u0000\u00c1\u0081~": [{"\u00ab\u001f\u00d3c\u008a\u00a7\u0084Z\u00b3\u0014\udb4f\udeec": [true, null, 0.0]}, [null], []], "": null}, {}, {}, {"": []}], "": null}

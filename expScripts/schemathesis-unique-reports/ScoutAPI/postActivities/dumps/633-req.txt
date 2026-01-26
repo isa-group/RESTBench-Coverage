@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: otaOsh
+Content-Type: application/json
+Content-Length: 92
+Host: localhost:37143
+
+{"Y\"\u00ad\u0005": {"Y\"\u00ad\u0005": [{}, [" \u00bc\u00e1", " \u00bc\u00e1", null], {}]}}

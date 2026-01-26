@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="2288.7347471993417">
+	<testsuite disabled="0" errors="0" failures="1" name="schemathesis" skipped="1" tests="1" time="2288.7347471993417" hostname="c8b8913eebcf">
+		<testcase name="GET /youtube/v3/videos" time="2288.734747">
+			<failure type="failure" message="1. Test Case ID: okAGPD
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{
+      &quot;error&quot;: {
+        &quot;code&quot;: 400,
+        &quot;message&quot;: &quot;No filter selected. Expected one of: chart, myRating, id&quot;,
+        &quot;errors&quot;: [
+          {
+            &quot;message&quot;: &quot;No filter selected. Expected one of: chart, myRating, id&quot;,
+            &quot;domain&quot;: &quot;youtube.parameter&quot;,
+            &quot;reason&quot;: &quot;missingRequiredParameter&quot;,
+            &quot;location&quot;: &quot;parameters.&quot;,
+            &quot;locationType&quot;: &quot;other&quot;
+          }
+        ]
+      }
+    }`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' https://youtube.googleapis.com/youtube/v3/videos
+
+2. Test Case ID: VLn8wI
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 400, 403
+
+[404] Not Found:
+
+    `{
+      &quot;error&quot;: {
+        &quot;code&quot;: 404,
+        &quot;message&quot;: &quot;The specified content owner account was not found.&quot;,
+        &quot;errors&quot;: [
+          {
+            &quot;message&quot;: &quot;The specified content owner account was not found.&quot;,
+            &quot;domain&quot;: &quot;youtube.parameter&quot;,
+            &quot;reason&quot;: &quot;contentOwnerAccountNotFound&quot;,
+            &quot;location&quot;: &quot;onBehalfOfContentOwner&quot;,
+            &quot;locationType&quot;: &quot;parameter&quot;
+          }
+        ]
+      }
+    }`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://youtube.googleapis.com/youtube/v3/videos?videoCategoryId=%C2%BD&amp;id=%7CTX%F0%9B%91%92T&amp;id=%C2%83%F0%95%89%92&amp;id=%C2%80l%C3%A19%12&amp;id=%F1%A3%85%85%C2%A9%F4%84%8E%83%24%00%1E%3B%EB%85%A8T%C3%9D%C3%B7&amp;%0A%F3%AB%96%93%F2%BA%81%91%C3%93%C2%8E%C2%BB%5CtR=%C2%8E%0A%C2%A6&amp;%0A%F3%AB%96%93%F2%BA%81%91%C3%93%C2%8E%C2%BB%5CtR=&amp;%0A%F3%AB%96%93%F2%BA%81%91%C3%93%C2%8E%C2%BB%5CtR=%C2%94%C3%BD%C3%B4%C3%B4%C3%B0&amp;onBehalfOfContentOwner=%C3%8CY%C2%BA%1Ak%C3%BE'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

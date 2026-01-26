@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: oWlFTj
+Content-Type: application/json
+Content-Length: 102
+Host: localhost:34113
+
+{"lastName": "\u00bc\u008b\u00db\f\ud8f3\udce2\ud87a\udf65<\u0093Xf\udac4\udc93Q\u001eA", "age": 1690}

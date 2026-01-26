@@ -1,0 +1,21 @@
+===== API: UserManagement =====
+===== Operation: putUsersId =====
+===== Mode: WHITE =====
+===== Level: INVARIANT =====
+===== Strength: TWO_WAY =====
+
+===== Pitest Timings =====
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 5 minutes and 27 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 2 hours, 59 minutes and 2 seconds
+> Total  : 3 hours, 4 minutes and 31 seconds
+
+===== Pitest Statistics =====
+>> Line Coverage (for mutated classes only): 239/457 (52%)
+>> 1 tests examined
+>> Generated 811 mutations Killed 46 (6%)
+>> Mutations with no coverage 663. Test strength 31%
+>> Ran 4823 tests (5.95 tests per mutation)
+

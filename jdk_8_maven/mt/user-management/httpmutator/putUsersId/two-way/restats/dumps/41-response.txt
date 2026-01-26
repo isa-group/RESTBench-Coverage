@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":4,"username":"testuser123","name":"John","surname":null,"gender":"FEMALE","birthDate":"2000-07-15","enabled":false,"note":null,"loginDt":null,"secured":false,"contactDTO":{"email":"user123@demo.net","phone":"+86-13800138000","skype":"john.doe.skype","facebook":"https://facebook.com/alice.smith","linkedin":"https://linkedin.com/in/johndoe","website":"https://alicesmith.me","contactNote":null},"addressDTO":{"address":"123 Main Street","address2":"Apt. 4B","city":"New York","country":"USA","zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

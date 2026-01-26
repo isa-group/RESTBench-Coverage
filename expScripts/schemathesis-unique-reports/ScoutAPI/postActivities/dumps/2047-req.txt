@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: 0U1xGu
+Content-Type: application/json
+Content-Length: 136
+Host: localhost:37143
+
+{"activity": {"properties": {"time_max": -5008, "name": "\u0007\ud864\udc90<\u0003<", "date_published": "1383-06-26T00:06:26.000011Z"}}}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: hlZHrv
+Content-Type: application/json
+Content-Length: 270
+Host: localhost:34113
+
+{"E\u00aczzC\u00c0": true, "": [null], "\ud868\udf79n": [false, {"": false}, false], "address": {"number": -14526}, "\u00d3": ["uses_fragment", {"\u00f1": ["\u00e8\ud92e\ude77e\u00c2\n\u00ce"]}, [false]], "createdAt": "2000-01-04T00:00:00.000001Z", "cars": [{"": null}]}

@@ -1,0 +1,40 @@
+{
+	"documentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": {
+				"hideClosedLocations": [
+					"false",
+					"true"
+				]
+			}
+		}
+	},
+	"documentedAndNotTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": {
+				"hideClosedLocations": []
+			}
+		}
+	},
+	"notDocumentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": {
+				"hideClosedLocations": [
+					"['\\U000a0786\\x1d\\U000a1924', True, 0]",
+					"17230",
+					"0.0",
+					"188",
+					">\b\u00a0\u008e",
+					"\u00fe\u00a4\u00ac-",
+					"0",
+					"-40",
+					"null",
+					"['\\U000a0786\\x1d\\U000a1924', True, None]",
+					"-1.192092896e-07",
+					"25364",
+					"\u00f5"
+				]
+			}
+		}
+	}
+}

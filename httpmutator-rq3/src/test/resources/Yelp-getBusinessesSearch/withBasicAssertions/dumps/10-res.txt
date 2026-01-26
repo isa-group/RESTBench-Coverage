@@ -1,0 +1,24 @@
+HTTP/1.1 400 Bad Request
+Connection: keep-alive
+Content-Length: 111
+Content-Type: application/json
+access-control-max-age: 1728000
+access-control-allow-origin: *
+x-zipkin-id: bf05451abcaac9d934995b4be902e718
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+access-control-allow-credentials: true
+x-routing-service: routing-canary--uswest2-747fd878d-mhwgk; site=public_api_v3
+server: envoy
+x-mode: ro
+x-proxied: 10-69-82-226-uswest2aprod
+x-extlb: 10-69-82-226-uswest2aprod
+Accept-Ranges: bytes
+Date: Mon, 19 Jan 2026 11:49:49 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sjc10062-SJC
+X-Cache: MISS
+X-Cache-Hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "DATE_TIME_VALIDATION_ERROR", "description": "Invalid format, expected format is %Y-%m-%d"}}

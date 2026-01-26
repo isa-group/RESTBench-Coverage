@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: FKbNLx
+Content-Type: application/json
+Content-Length: 172
+Host: localhost:37143
+
+{"description_safety": "\u00bc", "source": "&\u009c\u0005E\u00deM\u00ba\t", "age_min": -86, "activity": {"\u001e\u00e4\u00fb\ud859\udfa2\u00e3": [], "ratings_count": 2853}}

@@ -1,0 +1,9 @@
+GET /location-finder/v1/find-by-address?countryCode=~%C3%8A%C2%A5&serviceType=parcel%3Adrop-off-return&serviceType=express%3Adrop-off-account&serviceType=express%3Adrop-off-easy&serviceType=parcel%3Adrop-off-all&serviceType=express%3Adrop-off-account&serviceType=handicapped-access&serviceType=express%3Adrop-off-unlabeled&serviceType=franking&postalCode=&streetAddress=&hideClosedLocations=false HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+DHL-API-Key: [Filtered]
+X-Schemathesis-TestCaseId: BczPDg
+Host: api.dhl.com
+

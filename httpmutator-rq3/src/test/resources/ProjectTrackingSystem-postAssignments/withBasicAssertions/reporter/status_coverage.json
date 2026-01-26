@@ -1,0 +1,19 @@
+{
+	"documentedAndTested": {
+		"/app/api/assignments": {
+			"post": [
+				"400",
+				"405"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/app/api/assignments": {
+			"post": [
+				"200",
+				"201"
+			]
+		}
+	},
+	"notDocumentedAndTested": {}
+}

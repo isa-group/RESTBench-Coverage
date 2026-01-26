@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: OipeCg
+Content-Type: application/json
+Content-Length: 101
+Host: localhost:38545
+
+{"\udb72\udef2\u00ed\u0018": {"\uda5e\udd43#=": false, "\udb72\udef2\u00ed\u0018": false}, "beds": 2}

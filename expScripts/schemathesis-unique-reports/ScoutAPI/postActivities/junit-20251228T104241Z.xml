@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="1390.0504075232893">
+	<testsuite disabled="0" errors="0" failures="1" name="schemathesis" skipped="1" tests="1" time="1390.0504075232893" hostname="fcd653bde8bc">
+		<testcase name="POST /v1/activities" time="1390.050408">
+			<failure type="failure" message="1. Test Case ID: VtWxhG
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 401, 400
+
+[500] Internal Server Error:
+
+    `{&quot;code&quot;:500,&quot;message&quot;:&quot;There was an error processing your request. It has been logged (ID e90f9ab7387ec216).&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d null http://localhost:37143/api/v1/activities
+
+2. Test Case ID: XW5JPm
+
+- API accepted schema-violating request
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 406, 422, 428, 5xx
+    Invalid component: in body - violates `$ref` (#/x-bundled/schema1), `x-bundled` ({'schema3': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'mime_type': {'type': 'string'}, 'uri': {'type': 'string'}, 'name': {'type': 'string'}, 'capture_date': {'type': 'string', 'format': 'date-time'}, 'copy_right': {'type': 'string'}, 'author': {'type': 'string'}}}, 'schema2': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'group': {'type': 'string'}, 'name': {'type': 'string'}, 'media_file': {'$ref': '#/x-bundled/schema3'}, 'activities_count': {'type': 'integer', 'format': 'int64'}}}, 'schema5': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'date_created': {'type': 'string', 'format': 'date-time'}, 'type': {'type': 'string', 'enum': ['API', 'GOOGLE']}, 'value': {'type': 'string'}, 'user': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'name': {'type': 'string'}, 'email_address': {'type': 'string'}, 'authorization_level': {'type': 'integer', 'format': 'int32'}}}}}, 'schema4': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'name': {'type': 'string'}, 'email_address': {'type': 'string'}, 'authorization_level': {'type': 'integer', 'format': 'int32'}, 'identities': {'type': 'array', 'xml': {'wrapped': True}, 'items': {'xml': {'name': 'identity'}, '$ref': '#/x-bundled/schema5'}}}}, 'schema6': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'properties_revisions': {'type': 'array', 'xml': {'name': 'propertiesRevisions', 'wrapped': True}, 'items': {'xml': {'name': 'properties'}, 'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'name': {'type': 'string', 'minLength': 0, 'maxLength': 100}, 'date_published': {'type': 'string', 'format': 'date-time'}, 'date_created': {'type': 'string', 'format': 'date-time'}, 'date_updated': {'type': 'string', 'format': 'date-time'}, 'description_material': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_introduction': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_prepare': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_main': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_safety': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_notes': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'age_min': {'type': 'integer', 'format': 'int32', 'maximum': 100}, 'age_max': {'type': 'integer', 'format': 'int32', 'maximum': 100}, 'participants_min': {'type': 'integer', 'format': 'int32'}, 'participants_max': {'type': 'integer', 'format': 'int32'}, 'time_min': {'type': 'integer', 'format': 'int32'}, 'time_max': {'type': 'integer', 'format': 'int32'}, 'featured': {'type': 'boolean'}, 'source': {'type': 'string'}}}}, 'properties': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'name': {'type': 'string', 'minLength': 0, 'maxLength': 100}, 'date_published': {'type': 'string', 'format': 'date-time'}, 'date_created': {'type': 'string', 'format': 'date-time'}, 'date_updated': {'type': 'string', 'format': 'date-time'}, 'description_material': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_introduction': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_prepare': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_main': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_safety': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_notes': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'age_min': {'type': 'integer', 'format': 'int32', 'maximum': 100}, 'age_max': {'type': 'integer', 'format': 'int32', 'maximum': 100}, 'participants_min': {'type': 'integer', 'format': 'int32'}, 'participants_max': {'type': 'integer', 'format': 'int32'}, 'time_min': {'type': 'integer', 'format': 'int32'}, 'time_max': {'type': 'integer', 'format': 'int32'}, 'featured': {'type': 'boolean'}, 'source': {'type': 'string'}}}, 'ratings_count': {'type': 'integer', 'format': 'int64'}, 'ratings_sum': {'type': 'integer', 'format': 'int64'}, 'favourites_count': {'type': 'integer', 'format': 'int64'}, 'ratings_average': {'type': 'number', 'format': 'double'}, 'related': {'not': {}}}}, 'schema1': {'type': 'object', 'properties': {'id': {'type': 'integer', 'format': 'int64'}, 'name': {'type': 'string', 'minLength': 0, 'maxLength': 100}, 'date_published': {'type': 'string', 'format': 'date-time'}, 'date_created': {'type': 'string', 'format': 'date-time'}, 'date_updated': {'type': 'string', 'format': 'date-time'}, 'description_material': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_introduction': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_prepare': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_main': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_safety': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'description_notes': {'type': 'string', 'minLength': 0, 'maxLength': 20000}, 'age_min': {'type': 'integer', 'format': 'int32', 'maximum': 100}, 'age_max': {'type': 'integer', 'format': 'int32', 'maximum': 100}, 'participants_min': {'type': 'integer', 'format': 'int32'}, 'participants_max': {'type': 'integer', 'format': 'int32'}, 'time_min': {'type': 'integer', 'format': 'int32'}, 'time_max': {'type': 'integer', 'format': 'int32'}, 'featured': {'type': 'boolean'}, 'source': {'type': 'string'}, 'tags': {'type': 'array', 'xml': {'wrapped': True}, 'items': {'xml': {'name': 'tag'}, '$ref': '#/x-bundled/schema2'}}, 'media_files': {'type': 'array', 'xml': {'name': 'mediaFiles', 'wrapped': True}, 'items': {'xml': {'name': 'mediaFile'}, '$ref': '#/x-bundled/schema3'}}, 'author': {'$ref': '#/x-bundled/schema4'}, 'activity': {'$ref': '#/x-bundled/schema6'}}}})
+
+[200] OK:
+
+    `{&quot;id&quot;:2,&quot;properties_revisions&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;U'S&quot;,&quot;date_created&quot;:&quot;2025-12-28T10:42:44.964Z&quot;}],&quot;ratings_count&quot;:0,&quot;ratings_sum&quot;:0,&quot;favourites_count&quot;:0,&quot;ratings_average&quot;:-1.0,&quot;properties&quot;:{&quot;id&quot;:2,&quot;name&quot;:&quot;U'S&quot;,&quot;date_created&quot;:&quot;2025-12-28T10:42:44.964Z&quot;}}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '&quot;U'&quot;'&quot;'\u0087S&quot;' http://localhost:37143/api/v1/activities
+
+3. Test Case ID: qFoFnK
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{&quot;code&quot;:400,&quot;message&quot;:&quot;Unable to process JSON&quot;}`
+
+Reproduce with: 
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{&quot;#F\u009aO&quot;: {&quot;&quot;: true, &quot;\u0096(\ud97a\ude78\u00d3\u00d4\u00a0\f,\ud888\udc0e\u0018\u00a8\u00d8&quot;: {&quot;\u00f6\udab3\udc0fs=\u0088\u009e&quot;: false, &quot;?\u00c0\u00bd/&quot;: &quot;NUL&quot;, &quot;n\udb32\udeda\u00f9p3\u0014\u001d\u0001u\u00b5EW&quot;: &quot;\u00cf\u00eb-\udb3e\ude0f\u00ca&quot;}}, &quot;\u00b2\u000f\ud956\udd0c\ud85c\ude4b\u00fc\u00e5\u00a5&quot;: {&quot;L\udb73\udf98\uda0e\udcbc,\u00ecE`\r&quot;: -1519606038, &quot;\udabd\udf67&quot;: -2159, &quot;\u000e\u0012&quot;: 1.9}, &quot;time_max&quot;: -61561860835636628795448241264727785701, &quot;\ud8db\udfef'&quot;'&quot;'C\u0017\ud934\ude7d\u0006\udaac\udd57\u00e3\u00e5\u00f0&quot;: {}}' http://localhost:37143/api/v1/activities"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+GET /location-finder/v1/find-by-address?countryCode=&addressLocality=&radius=0.0 HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+DHL-API-Key: [Filtered]
+X-Schemathesis-TestCaseId: 6vRD4y
+Host: api.dhl.com
+

@@ -1,0 +1,34 @@
+{
+	"documentedAndTested": {
+		"/youtube/v3/videos": {
+			"get": [
+				"part",
+				"id",
+				"myRating",
+				"maxHeight",
+				"maxResults",
+				"maxWidth",
+				"onBehalfOfContentOwner",
+				"regionCode",
+				"chart",
+				"hl",
+				"videoCategoryId",
+				"pageToken"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/youtube/v3/videos": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/youtube/v3/videos": {
+			"get": [
+				"Host",
+				"Accept",
+				"Authorization"
+			]
+		}
+	}
+}

@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"2c3-Gwjr6/mngTtDtUDg4F1yItx9WDw"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjqkse3gq1i5mq4t70
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: f953b1db-9a17-4447-703d-83c902c05340
+
+{"meta":{"total":16,"parameters":{"filters":"STNAME: Delaware","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC,DEP,DEPDOM,ROE,ROA,DATEUPDT,OFFICES","limit":"1","search":"NAME: First"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"19711","ACTIVE":0,"ROA":-1.3763329591277291,"DEPDOM":164867,"DATEUPDT":"10/04/1990","ROE":-15,"STNAME":"Delaware","ASSET":582350,"NETINC":-3866,"DEP":164867,"NAME":"First RepublicBank Delaware","CBSA":"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","CITY":"Newark","OFFDOM":1,"CERT":26723,"STALP":"DE","COUNTY":"New Castle","ID":"26723"},"score":97.51948}],"totals":{"count":16}}

@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: kmM9wf
+Content-Type: application/json
+Content-Length: 216
+Host: localhost:42371
+
+{"\u00ff": [[-51, {"\u00f0\udbc0\uddbf\u0093\u00b6\u0096\udb8b\udddb5": true, "": null}], "\u00c7\u00b4", {}], "birthDate": "8965-09-23", "zipCode": "\u00e4\u00c0\uda71\udeea\u001f\u00a5\u008c", "username": "\u023a"}

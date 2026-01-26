@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":2,"username":"testuser123","name":"John","surname":"Zhang","gender":"MALE","birthDate":"1990-05-20","enabled":false,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":null,"skype":null,"facebook":null,"linkedin":"https://linkedin.com/in/alicesmith","website":null,"contactNote":"Call after 6pm"},"addressDTO":{"address":"123 Main Street","address2":"Apt. 4B","city":"London","country":"UK","zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

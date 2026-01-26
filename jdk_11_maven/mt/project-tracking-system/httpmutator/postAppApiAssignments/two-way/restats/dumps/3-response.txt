@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+{"employeeId":7,"projectId":1,"commitDate":"13-12-202017:30:00","commitEmpDesc":"","commitMgrDesc":"this is a new assignment","employee":null,"project":{"projectId":2,"title":"SYNCH_BSCS_IMX","startDate":"26-11-2020","endDate":"25-03-2021","status":"IN_PROGRESS"}}

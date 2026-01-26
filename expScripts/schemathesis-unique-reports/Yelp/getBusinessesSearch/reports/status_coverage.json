@@ -1,0 +1,24 @@
+{
+	"documentedAndTested": {
+		"/businesses/search": {
+			"get": [
+				"200",
+				"400"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/businesses/search": {
+			"get": [
+				"401"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/businesses/search": {
+			"get": [
+				"500"
+			]
+		}
+	}
+}

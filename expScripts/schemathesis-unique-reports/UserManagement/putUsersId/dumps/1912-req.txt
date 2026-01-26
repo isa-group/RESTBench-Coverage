@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: TAhqrY
+Content-Type: application/json
+Content-Length: 195
+Host: localhost:42371
+
+{"country": "\u00fe\uda8b\ude87\ud983\uddfe\u00ea", "name": "\u0018\u00c5", "*": {"\u000e4": true, "\u0016\u0004I\udad0\udce1y\ud98e\udc1e\ud92e\udfd3\u00e1W\u0098\u0085\u00d7n": null}, "": null}

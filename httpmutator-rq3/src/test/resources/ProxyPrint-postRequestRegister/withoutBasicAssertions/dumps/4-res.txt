@@ -1,0 +1,14 @@
+HTTP/1.1 400
+X-Application-Context: application:0
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Wed, 31 Dec 2025 12:14:28 GMT
+Connection: close
+
+{"timestamp":1767183268162,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Could not read document: Cannot deserialize value of type `java.util.GregorianCalendar` from String \"u\": not a valid representation (error: Failed to parse Date value 'u': Cannot parse date \"u\": not compatible with any of standard forms (\"yyyy-MM-dd'T'HH:mm:ss.SSSX\", \"yyyy-MM-dd'T'HH:mm:ss.SSS\", \"EEE, dd MMM yyyy HH:mm:ss zzz\", \"yyyy-MM-dd\"))\n at [Source: (PushbackInputStream); line: 1, column: 122] (through reference chain: io.github.proxyprint.kitchen.models.printshops.RegisterRequest[\"pShopDateRequestAccepted\"]); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.GregorianCalendar` from String \"u\": not a valid representation (error: Failed to parse Date value 'u': Cannot parse date \"u\": not compatible with any of standard forms (\"yyyy-MM-dd'T'HH:mm:ss.SSSX\", \"yyyy-MM-dd'T'HH:mm:ss.SSS\", \"EEE, dd MMM yyyy HH:mm:ss zzz\", \"yyyy-MM-dd\"))\n at [Source: (PushbackInputStream); line: 1, column: 122] (through reference chain: io.github.proxyprint.kitchen.models.printshops.RegisterRequest[\"pShopDateRequestAccepted\"])","path":"/request/register"}

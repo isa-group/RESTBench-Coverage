@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"ea-FXndiqfZoYALxzgT+Ixneq09TG0"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjtfl2803q3qf1m760
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 45bf2bc8-86f6-481b-51bb-3748d13a046e
+
+{"meta":{"total":2,"parameters":{"filters":"STNAME: Colorado","limit":"100","offset":"100","search":"NAME: Lake"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[],"totals":{"count":2}}

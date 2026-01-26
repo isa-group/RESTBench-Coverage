@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"b27-eUvj7CqqcQmDDtbglFp0xHNdQnQ"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjph7dleagl5io6jkg
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 3db8e630-400c-4c4e-5f73-c56cf7eb3ed1
+
+{"meta":{"total":9,"parameters":{"filters":"","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC","limit":"50","offset":"0","search":"NAME: Andrew"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"32317","CBSA":"Tallahassee, FL","CITY":"Tallahassee","ACTIVE":0,"OFFDOM":5,"STNAME":"Florida","ASSET":446425,"CERT":31832,"NETINC":4938,"STALP":"FL","COUNTY":"Leon","NAME":"Andrew Jackson Savings Bank","ID":"31832"},"score":365.31964},{"data":{"ZIP":"79714","CBSA":"Andrews, TX","CITY":"Andrews","ACTIVE":1,"OFFDOM":4,"STNAME":"Texas","ASSET":285688,"CERT":17603,"NETINC":4647,"STALP":"TX","COUNTY":"Andrews","NAME":"The National Bank of Andrews","ID":"17603"},"score":52.338257,"highlight":{"PRIORNAME1.raw":["First <em>National</em> <em>Bank</em> <em>of</em> <em>Andrews</em>"],"NAME.raw":["The <em>National</em> <em>Bank</em> <em>of</em> <em>Andrews</em>"]}},{"data":{"ZIP":"37743","CBSA":"Greeneville, TN","CITY":"Greeneville","ACTIVE":1,"OFFDOM":8,"STNAME":"Tennessee","ASSET":603309,"CERT":22015,"NETINC":3949,"STALP":"TN","COUNTY":"Greene","NAME":"Andrew Johnson Bank","ID":"22015"},"score":652.64954},{"data":{"ZIP":"29510","CBSA":"Georgetown, SC","CITY":"Andrews","ACTIVE":0,"OFFDOM":5,"STNAME":"South Carolina","ASSET":86764,"CERT":14109,"NETINC":1066,"STALP":"SC","COUNTY":"Georgetown","NAME":"Andrews Bank & Trust Company","ID":"14109"},"score":34.807457},{"data":{"ZIP":"79714","CBSA":"Andrews, TX","CITY":"Andrews","ACTIVE":0,"OFFDOM":1,"STNAME":"Texas","ASSET":32662,"CERT":24394,"NETINC":296,"STALP":"TX","COUNTY":"Andrews","NAME":"The National Bank of Andrews","ID":"24394"},"score":34.807457,"highlight":{"NAME.raw":["The <em>National</em> <em>Bank</em> <em>of</em> <em>Andrews</em>"]}},{"data":{"ZIP":"52031","CITY":"Bellevue","ACTIVE":0,"OFFDOM":3,"STNAME":"Iowa","ASSET":31347,"CERT":10124,"NETINC":256,"STALP":"IA","COUNTY":"Jackson","NAME":"Andrew Savings Bank","ID":"10124"},"score":404.7375},{"data":{"ZIP":"79714","CBSA":"Andrews, TX","CITY":"Andrews","ACTIVE":0,"OFFDOM":10,"STNAME":"Texas","ASSET":126078,"CERT":31053,"NETINC":-1771,"STALP":"TX","COUNTY":"Andrews","NAME":"Andrews Savings and Loan Association","ID":"31053"},"score":34.807457},{"data":{"ZIP":"79714","CBSA":"Andrews, TX","CITY":"Andrews","ACTIVE":0,"OFFDOM":10,"STNAME":"Texas","ASSET":74169,"CERT":33275,"NETINC":-5268,"STALP":"TX","COUNTY":"Andrews","NAME":"Andrews Savings and Loan Association, F.A.","ID":"33275"},"score":32.04642},{"data":{"ZIP":"28901","CITY":"Andrews","ACTIVE":0,"STNAME":"North Carolina","CERT":8924,"STALP":"NC","COUNTY":"Cherokee","NAME":"Citizens Bank & Trust Company of Andrews","ID":"8924"},"score":29.629862,"highlight":{"NAME.raw":["Citizens Bank & <em>Trust</em> <em>Company</em> <em>of</em> <em>Andrews</em>"]}}],"totals":{"count":9}}

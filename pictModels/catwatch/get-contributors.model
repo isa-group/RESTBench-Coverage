@@ -1,0 +1,9 @@
+organizations: galanto
+limit: 3 * 1 * 2 * NULL
+offset: NULL
+start_date: 0 * NULL
+end_date: 0 * 1 * 2 * NULL
+sortBy:  organizationalCommitsCount  * organizationalProjectsCount  * personalCommitsCount * personalProjectsCount  * organizationName  * name * -organizationalCommitsCount  * -organizationalProjectsCount  * -personalCommitsCount * -personalProjectsCount  * -organizationName  * -name * NULL
+q: a * b * c * d * e * f * g * h * i * j * k * l * m * n * o * p * q * r * s * t * u * v * w * x * y * z * NULL
+
+IF [start_date] = "NULL" THEN [end_date] = "NULL";

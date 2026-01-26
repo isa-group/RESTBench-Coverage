@@ -1,0 +1,14 @@
+hm_mutator,hm_operator,survived_mutants,killed_mutants,invalid_mutants,kill_rate,original_total,original_valid,original_invalid
+HeaderMutator,CharsetReplacementOperator,2,0,2,0.0,4,2,2
+HeaderMutator,MediaTypeReplacementOperator,0,0,2,0.0,4,2,2
+HeaderMutator,NullOperator,0,2,0,1.0,4,2,2
+LongMutator,ChangeTypeOperator,0,2,1,1.0,4,2,2
+LongMutator,LongReplacementOperator,0,0,1,0.0,4,2,2
+ObjectMutator,ObjectAddElementOperator,0,0,1,0.0,4,2,2
+ObjectMutator,ObjectRemoveElementOperator,0,2,1,1.0,4,2,2
+StatusCodeMutator,StatusCodeReplacementWith50XOperator,0,2,2,1.0,4,2,2
+StringMutator,ChangeTypeOperator,0,0,1,0.0,4,2,2
+StringMutator,NullOperator,0,2,3,1.0,4,2,2
+StringMutator,StringAddSpecialCharactersMutationOperator,1,0,1,0.0,4,2,2
+StringMutator,StringBoundaryOperator,1,1,1,0.5,4,2,2
+StringMutator,StringReplacementOperator,1,0,0,0.0,4,2,2

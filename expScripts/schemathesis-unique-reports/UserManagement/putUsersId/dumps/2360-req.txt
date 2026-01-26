@@ -1,0 +1,11 @@
+PUT /users/6 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: TEz30U
+Content-Type: application/json
+Content-Length: 307
+Host: localhost:42371
+
+{"@\u00e23\u0015": [{"\ud83c\ude35": [[false, -9.055977195841555e+89, false], [-9.055977195841555e+89, -1.7976931348623155e+308]]}, [-9007199254740992.0, {}, {"\u001a\u000b": [-11970], "\u00cem\u00e2": [false, -9.055977195841555e+89, false]}], 5e-324], "username": "\u00c0\u00ad", "city": "", "address": ""}

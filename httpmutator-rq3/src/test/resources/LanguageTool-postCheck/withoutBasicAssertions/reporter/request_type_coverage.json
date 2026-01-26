@@ -1,0 +1,17 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/check": {
+			"post": [
+				"application/x-www-form-urlencoded"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/check": {
+			"post": [
+				"application/x-www-form-urlencoded; charset=ISO-8859-1"
+			]
+		}
+	}
+}

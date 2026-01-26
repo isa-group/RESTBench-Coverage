@@ -1,0 +1,24 @@
+{
+	"documentedAndTested": {
+		"/v1/activities": {
+			"post": [
+				"200",
+				"400"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/v1/activities": {
+			"post": [
+				"401"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/v1/activities": {
+			"post": [
+				"500"
+			]
+		}
+	}
+}

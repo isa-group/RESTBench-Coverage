@@ -1,0 +1,7 @@
+HTTP/1.1 400 
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 12:05:53 GMT
+connection: close
+
+{"timestamp":"2025-12-28T12:05:53.518+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Numeric value (44769680399060988650093092972793044937) out of range of int (-2147483648 - 2147483647); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Numeric value (44769680399060988650093092972793044937) out of range of int (-2147483648 - 2147483647)\n at [Source: (PushbackInputStream); line: 1, column: 510] (through reference chain: br.com.codenation.hospital.dto.HospitalDTO[\"availableBeds\"])","path":"/v1/hospitais/"}

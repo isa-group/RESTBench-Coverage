@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: zrLk0a
+Content-Type: application/json
+Content-Length: 119
+Host: localhost:34113
+
+{"\u00a1\u00b8": [true, [["P\u0099y\u00f5\uda20\udeacD\u00f5\u00cb\u00ef-\u008b\u00fc\ud90a\udcb10\u0082"], [], null]]}

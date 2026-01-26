@@ -1,0 +1,8 @@
+GET /banks/institutions?sort_by=__main__&format=csv&sort_order=__main__&filters=%C2%AB HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: D6QE66
+Host: api.fdic.gov
+

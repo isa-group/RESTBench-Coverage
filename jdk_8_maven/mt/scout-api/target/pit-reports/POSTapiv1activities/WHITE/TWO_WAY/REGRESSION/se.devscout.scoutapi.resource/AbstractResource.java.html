@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>AbstractResource.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package se.devscout.scoutapi.resource;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.core.JsonProcessingException;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.databind.ObjectMapper;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.databind.ObjectWriter;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.databind.PropertyNamingStrategy;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.base.Splitter;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.base.Strings;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.collect.Sets;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import io.dropwizard.jackson.Jackson;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.Logger;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.LoggerFactory;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import se.devscout.scoutapi.ScoutAPIApplication;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import se.devscout.scoutapi.auth.AuthResult;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import se.devscout.scoutapi.auth.Permission;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import se.devscout.scoutapi.auth.apikey.ApiKeyAuthenticator;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import se.devscout.scoutapi.model.IdentityType;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import se.devscout.scoutapi.model.UserIdentity;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.servlet.http.HttpServletResponse;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.ws.rs.Produces;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.ws.rs.WebApplicationException;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.ws.rs.core.MediaType;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.ws.rs.core.Response;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.HashSet;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@Produces(MediaType.APPLICATION_JSON)</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class AbstractResource {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private static final String HTTP_RESPONSE_HEADER_API_KEY = &#34;X-ScoutAdmin-APIKey&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    private static final ObjectMapper OBJECT_MAPPER = Jackson.newObjectMapper().setPropertyNamingStrategy(PropertyNamingStrategy.CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    private static final ObjectWriter DEFAULT_WRITER = OBJECT_MAPPER.writer(ScoutAPIApplication.DEFAULT_FILTER_PROVIDER);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractResource.class);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected static final String API_DOCS_ATTRS_DESCR = &#34;The attributes to include in the response. Comma-separated list.&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected void doAuth(AuthResult authResult, HttpServletResponse response, Permission requiredAuthorizationLevel) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_39'/>
+39
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_39'>2</a>
+<span>
+1. doAuth : negated conditional &rarr; SURVIVED<br/>
+2. doAuth : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (authResult != null &#38;&#38; response != null) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_40'/>
+40
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_40'>1</a>
+<span>
+1. doAuth : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (!ApiKeyAuthenticator.ID.equals(authResult.getAuthenticator())) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>                for (UserIdentity identity : authResult.getUser().getIdentities()) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_42'/>
+42
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_42'>1</a>
+<span>
+1. doAuth : negated conditional &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                    if (identity.getType() == IdentityType.API) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_43'/>
+43
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_43'>1</a>
+<span>
+1. doAuth : removed call to javax/servlet/http/HttpServletResponse::setHeader &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>                        response.setHeader(HTTP_RESPONSE_HEADER_API_KEY, identity.getValue());</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                    }</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>                }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_48'/>
+48
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_48'>2</a>
+<span>
+1. doAuth : negated conditional &rarr; SURVIVED<br/>
+2. doAuth : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>            if (requiredAuthorizationLevel != null &#38;&#38; !requiredAuthorizationLevel.isGrantedTo(authResult.getUser())) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>                throw new WebApplicationException(Response.Status.FORBIDDEN);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected String toJson(Object o, String properties) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        return toJson(o, Strings.isNullOrEmpty(properties) ? null : Sets.newHashSet(Splitter.on(&#39;,&#39;).split(properties)));</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private String toJson(Object o, HashSet&#60;String&#62; properties) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        ObjectWriter writer = properties != null ? OBJECT_MAPPER.writer(new SimpleFilterProvider().addFilter(&#34;custom&#34;, SimpleBeanPropertyFilter.filterOutAllExcept(properties))) : DEFAULT_WRITER;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        try {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>            return writer.writeValueAsString(o);</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        } catch (JsonProcessingException e) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>            throw new WebApplicationException(&#34;Could not generated JSON from &#34; + o.getClass().getSimpleName() + &#34; object.&#34;, e);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected Response okResponse(Object entity, String includedEntityProperties) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        String json = toJson(entity, includedEntityProperties);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        if (LOGGER.isDebugEnabled()) LOGGER.debug(&#34;JSON returned to client: &#34; + json);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        return Response.ok().entity(json).build();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@27e8a588_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@27e8a588_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_39'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>doAuth<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[4],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[4],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[4],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>doAuth<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@27e8a588_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_40'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>doAuth<br/><b>Killed by : </b>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@27e8a588_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_42'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>doAuth<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@27e8a588_43'>43</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_43'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>doAuth<br/><b>Killed by : </b>none</span></span> removed call to javax/servlet/http/HttpServletResponse::setHeader &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@27e8a588_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@27e8a588_48'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>doAuth<br/><b>Killed by : </b>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>doAuth<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=se.devscout.scoutapi.resource.AbstractResource,-method=doAuth,-methodDesc=(Lse/devscout/scoutapi/auth/AuthResult;Ljavax/servlet/http/HttpServletResponse;Lse/devscout/scoutapi/auth/Permission;)V],-indexes=[51],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23] (3527 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25] (3517 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21] (3532 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26] (3523 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29] (3529 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22] (3530 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28] (3534 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24] (3557 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13] (3566 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15] (3560 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27] (3560 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18] (3578 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14] (3575 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19] (3586 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17] (3585 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20] (3593 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12] (3594 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11] (3600 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16] (3600 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8] (3671 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9] (3659 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10] (3692 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6] (3694 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7] (3688 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5] (3701 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4] (3769 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3] (3848 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2] (4026 ms)</li><li>mt.se.devscout.scoutapi.ScoutAPIEndpointTest.[engine:junit-jupiter]/[class:mt.se.devscout.scoutapi.ScoutAPIEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1] (8483 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.1
+
+</body>
+</html>

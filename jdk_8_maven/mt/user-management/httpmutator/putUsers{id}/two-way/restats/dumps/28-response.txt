@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":4,"username":"alice1985","name":"John","surname":"Zhang","gender":"MALE","birthDate":"1990-05-20","enabled":false,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"user123@demo.net","phone":"+44-7700-900123","skype":"user123.skype","facebook":"https://facebook.com/john.doe","linkedin":"https://linkedin.com/in/alicesmith","website":null,"contactNote":null},"addressDTO":{"address":"789 Broadway","address2":null,"city":"New York","country":null,"zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

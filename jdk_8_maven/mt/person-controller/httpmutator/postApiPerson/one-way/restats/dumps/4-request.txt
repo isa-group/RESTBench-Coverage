@@ -1,0 +1,3 @@
+POST /api/person HTTP/1.1
+
+{"age":42,"lastName":"García","createdAt":"2024-01-05T09:30:00Z","insurance":true,"address":{"number":221,"postcode":"28013","street":"Prospekt Lenina"},"cars":[{"brand":"Tesla","maxSpeedKmH":220.0,"model":"Clio"}]}

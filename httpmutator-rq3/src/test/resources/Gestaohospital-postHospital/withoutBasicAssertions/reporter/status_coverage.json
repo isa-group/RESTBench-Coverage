@@ -1,0 +1,18 @@
+{
+	"documentedAndTested": {
+		"/v1/hospitais/": {
+			"post": [
+				"400"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/v1/hospitais/": {
+			"post": [
+				"200",
+				"201"
+			]
+		}
+	},
+	"notDocumentedAndTested": {}
+}

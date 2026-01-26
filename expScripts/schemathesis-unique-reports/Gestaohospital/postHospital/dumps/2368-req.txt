@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: biaTuj
+Content-Type: application/json
+Content-Length: 102
+Host: localhost:38545
+
+{"name": "\u00b1#\u00b8`\ud9ca\udd50=\u00c3\u00db\u0089\u00e6\u008c\u001f*\u00df\u00daV\u00944\u00b9"}

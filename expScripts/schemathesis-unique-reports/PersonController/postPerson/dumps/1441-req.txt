@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 607Mta
+Content-Type: application/json
+Content-Length: 222
+Host: localhost:34113
+
+{"insurance": true, "\u00aa\u00f7\u00cf\u009c\ud89d\uddf2\uda27\udc21@sl\u00c7\u008a\u009f\ud922\udced\u00bc\u00fd\u0083\u008d%*\u00f93\u0013": [], "\udb60\udd8f\u00c9$\u00be\u001dU\u001d\u009a\u00ab\ud95d\udd13c6": false}

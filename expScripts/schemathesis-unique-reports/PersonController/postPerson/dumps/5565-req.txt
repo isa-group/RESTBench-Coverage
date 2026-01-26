@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: tCU1yS
+Content-Type: application/json
+Content-Length: 301
+Host: localhost:34113
+
+{"firstName": "\u0082\u00c3\uda37\udd53-\u00c7\u0098\u00c9", "address": {"city": null, "street": "=\udbc4\udfc8\ud9c6\udea8", "postcode": null, "\u00d3\udb50\ude63\\\u00b9\udac2\udc4a\ud935\udd95": {"$\u008cy\u0080\u00f6\udb0f\uddb5": true, "": null, "\udaa6\udece$\u00bf\u00d3\"\ud899\ude03": null}}}

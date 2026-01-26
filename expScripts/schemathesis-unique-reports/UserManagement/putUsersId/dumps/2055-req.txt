@@ -1,0 +1,11 @@
+PUT /users/6 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: HknSDn
+Content-Type: application/json
+Content-Length: 148
+Host: localhost:42371
+
+{"password": "l\u009d\udaf6\udf318", "birthDate": "2557-01-28", "enabled": true, "\u00f5\ud9fc\ude54q\u00aa\ud8a8\udd9fO_\u00edP'\u0010q": {"": 94}}

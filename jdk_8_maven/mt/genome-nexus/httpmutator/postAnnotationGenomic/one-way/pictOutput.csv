@@ -1,0 +1,9 @@
+genomicLocations.chromosome,genomicLocations.start,genomicLocations.end,genomicLocations.referenceAllele,genomicLocations.variantAllele,isoformOverrideSource,token,fields
+4,140453136,14106037,-,AGA,ensembl,"{""source1"":""put-your-token1-here"",""source2"":""put-your-token2-here""}",NULL
+3,14106026,9784948,A,T,uniprot,NULL,"hotspots,nucleotide_context,my_variant_info"
+7,9784947,140453136,CCAGCAGTAGCT,-,mskcc,NULL,"hotspots,nucleotide_context"
+7,140453136,14106037,A,-,genome_nexus,NULL,"hotspots,nucleotide_context,my_variant_info,ptms,signal,clinvar"
+7,9784947,9784948,A,AGA,NULL,"{""source1"":""put-your-token1-here"",""source2"":""put-your-token2-here""}",hotspots
+3,9784947,9784948,A,T,genome_nexus,"{""source1"":""put-your-token1-here"",""source2"":""put-your-token2-here""}","hotspots,nucleotide_context,my_variant_info,ptms,signal,clinvar,annotation_summary"
+3,9784947,140453136,-,T,mskcc,"{""source1"":""put-your-token1-here"",""source2"":""put-your-token2-here""}","hotspots,nucleotide_context,my_variant_info,ptms"
+4,9784947,140453136,-,-,NULL,NULL,"hotspots,nucleotide_context,my_variant_info,ptms,signal"

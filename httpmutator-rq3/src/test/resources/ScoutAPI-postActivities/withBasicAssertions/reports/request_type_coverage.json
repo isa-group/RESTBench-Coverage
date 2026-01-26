@@ -1,0 +1,15 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/v1/activities": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/v1/activities": {
+			"post": [
+				"application/json"
+			]
+		}
+	}
+}

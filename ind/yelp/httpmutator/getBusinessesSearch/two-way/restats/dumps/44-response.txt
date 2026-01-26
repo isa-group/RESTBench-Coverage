@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+access-control-allow-credentials: true
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-origin: *
+access-control-max-age: 1728000
+cache-control: max-age=0, no-store, private, no-transform
+content-type: application/json
+ratelimit-dailylimit: 300
+server: envoy
+vary: Accept-Encoding
+x-mode: ro
+
+{"businesses":[{"id":"86iu2vSEsuvo3Mj2iZj9Hg","alias":"cyndias-totowa-2","name":"Cyndia's","image_url":"https://s3-media0.fl.yelpcdn.com/bphoto/iQPVO5NLF4NB7b88Hlu0iA/o.jpg","is_closed":false,"url":"https://www.yelp.com/biz/cyndias-totowa-2?adjust_creative=hbkNBOyFKhZhx0x1aJM8kQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=hbkNBOyFKhZhx0x1aJM8kQ","review_count":591,"categories":[{"alias":"breakfast_brunch","title":"Breakfast & Brunch"},{"alias":"cafes","title":"Cafes"}],"rating":4.5,"coordinates":{"latitude":40.9078085131449,"longitude":-74.20634329319},"transactions":["delivery","pickup"],"price":"$$","location":{"address1":"169 Union Blvd","address2":"","address3":"","city":"Totowa","zip_code":"07512","country":"US","state":"NJ","display_address":["169 Union Blvd","Totowa, NJ 07512"]},"phone":"+19739257778","display_phone":"(973) 925-7778","distance":28720.295956806494,"business_hours":[{"open":[{"is_overnight":false,"start":"0700","end":"1500","day":1},{"is_overnight":false,"start":"0700","end":"1500","day":2},{"is_overnight":false,"start":"0700","end":"1500","day":3},{"is_overnight":false,"start":"0700","end":"1500","day":4},{"is_overnight":false,"start":"0700","end":"1500","day":5},{"is_overnight":false,"start":"0700","end":"1400","day":6}],"hours_type":"REGULAR","is_open_now":false}],"attributes":{"business_temp_closed":null,"menu_url":"https://cyndias.weebly.com/menu.html","open24_hours":null,"waitlist_reservation":true}}],"total":3,"region":{"center":{"longitude":-73.99429321289062,"latitude":40.70544486444615}}}

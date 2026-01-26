@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: fLyunx
+Content-Type: application/json
+Content-Length: 250
+Host: localhost:34113
+
+{"firstName": "\u0003\u0092T\ud9f1\udf964\u0097\ud973\udf26\udb9b\udd29\u0002\u00b0\u00dbW\u00b9", "id": {"timestamp": -12, "\u0003\u0092T\ud9f1\udf964\u0097\ud973\udf26\udb9b\udd29\u0002\u00b0\u00dbW\u00b9": [[null], [null], 5.896455970965456e+16]}}

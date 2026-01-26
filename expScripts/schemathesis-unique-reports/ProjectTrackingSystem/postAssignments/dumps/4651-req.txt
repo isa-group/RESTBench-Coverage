@@ -1,0 +1,11 @@
+POST /app/api/assignments HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ZLIM5g
+Content-Type: application/json
+Content-Length: 172
+Host: localhost:37971
+
+{" \u00e0\uda86\udeff\b": [true, {"": ""}], "\u0007=\u00e6": [[]], "employee": {"\u00d8/2\u00f2": [], "manager": {"firstName": "\u00f4\udaad\udfd1\u00d6"}}, "projectId": 3}

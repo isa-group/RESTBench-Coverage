@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 2KZAYO
+Content-Type: application/json
+Content-Length: 119
+Host: localhost:34113
+
+{"firstName": "", "cars": [{"maxSpeedKmH": -2.1417560746893603e+280, "email.mime.text": [{"null": 18814}, -4003]}, {}]}

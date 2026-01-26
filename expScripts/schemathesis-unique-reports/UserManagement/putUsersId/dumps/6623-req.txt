@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: yde2na
+Content-Type: application/json
+Content-Length: 103
+Host: localhost:42371
+
+{"city": "c@\udbe9\udce3\u00b1\u00b8\u0015l\udb78\udd43<\u00c1", "email": "\t\u00ca\udb82\udc17\u0007"}

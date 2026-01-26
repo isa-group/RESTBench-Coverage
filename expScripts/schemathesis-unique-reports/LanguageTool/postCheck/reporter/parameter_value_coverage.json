@@ -1,0 +1,31 @@
+{
+	"documentedAndTested": {
+		"/check": {
+			"post": {
+				"enabledOnly": []
+			}
+		}
+	},
+	"documentedAndNotTested": {
+		"/check": {
+			"post": {
+				"enabledOnly": [
+					"false",
+					"true"
+				]
+			}
+		}
+	},
+	"notDocumentedAndTested": {
+		"/check": {
+			"post": {
+				"enabledOnly": [
+					"False",
+					"True\n",
+					"True",
+					"False\n"
+				]
+			}
+		}
+	}
+}

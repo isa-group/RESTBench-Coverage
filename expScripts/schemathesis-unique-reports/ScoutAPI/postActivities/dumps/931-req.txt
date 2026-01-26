@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: Xd1G8I
+Content-Type: application/json
+Content-Length: 133
+Host: localhost:37143
+
+{"description_safety": "", "participants_max": -101, "shlex_quote": [-13430], "activity": {"favourites_count": 0, "id": 1, "": null}}

@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: TOALCL
+Content-Type: application/json
+Content-Length: 68
+Host: localhost:42371
+
+{"\u00ec\u00c5b\u009d\u0005\ud8c1\udcab\u00ed-.": "", "address": ""}

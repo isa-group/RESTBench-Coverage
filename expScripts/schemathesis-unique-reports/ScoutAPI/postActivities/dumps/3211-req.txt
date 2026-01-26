@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: AS1zM1
+Content-Type: application/json
+Content-Length: 161
+Host: localhost:37143
+
+{"author": {"\ud807\udc28/": {"\uda3f\udc6c": [null]}, "name": "\u00e0.C\u00e8 \t", "identities": [{"user": {}, "date_created": "2000-01-14T00:00:01.000001Z"}]}}

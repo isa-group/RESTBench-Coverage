@@ -1,0 +1,12 @@
+HTTP/1.1 500 
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:39:48 GMT
+connection: close
+
+{"message":"JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)\n at [Source: (PushbackInputStream); line: 1, column: 13] (through reference chain: market.dto.UserDTO[\"address\"])","description":"uri=/register","entityName":null,"fieldErrors":[]}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: x89VzX
+Content-Type: application/json
+Content-Length: 243
+Host: localhost:34113
+
+{"lastName": "\u0092\u0081\u00f6\u0004\u0012#\ud9a9\udda7\u00d3\u001e\u00f6\u00b6", "createdAt": "7794-02-12T12:43:00.582659-14:04", "address": {"qUT": {"+\u00ea": false, "": null}}, "id": {"\f\ud88f\udc041\u008e|\u00ef": [], "W\u001a": null}}

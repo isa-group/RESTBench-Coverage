@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: CEdy1d
+Content-Type: application/json
+Content-Length: 272
+Host: localhost:42371
+
+{"Sa\u009em\"\u0080\u00c9\ud956\udec8~\u0090": [], "country": "F", "\u00c3\ud876\uddb8\u001c\ud9cc\udd19\u00ad\"\ud829\udc06\u0097": [-2.9300395735634996e+16, {}, [{"\udbf9\udc32C\ud971\udc3a\udbe4\ude00": -2.9300395735634996e+16, "\udb4a\udd554$": 2565783374617466883}]]}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: F63ddc
+Content-Type: application/json
+Content-Length: 156
+Host: localhost:34113
+
+{"insurance": false, "parse_http_list": ["\u00a5p\u00b4\\8\u0016m\ud965\udd98\u00db\u0004\u00fa", 5, true], "createdAt": "2597-01-12T07:15:23.456394+01:12"}

@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: j2KRhd
+Content-Type: application/json
+Content-Length: 118
+Host: localhost:42371
+
+{" \u00c7<?": [{}, []], "country": "\u009c\u00b9\u0097\t\u00e6", "city": "\u0018\ud9c2\udcd0:", "password": "\u0087f"}

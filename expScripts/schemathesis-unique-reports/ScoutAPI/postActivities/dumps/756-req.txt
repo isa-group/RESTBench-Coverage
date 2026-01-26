@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: 4Xxpoe
+Content-Type: application/json
+Content-Length: 123
+Host: localhost:37143
+
+[[], {"": {"": null}}, [[[null], 83, {}], [[[null], [false, false, 1.1754943508222875e-38], {"": "f"}], [[null], []], []]]]

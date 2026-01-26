@@ -1,0 +1,18 @@
+HTTP/1.1 403 Forbidden
+date: Tue, 30 Dec 2025 05:46:05 GMT
+Content-Type: text/csv
+transfer-encoding: chunked
+connection: keep-alive
+access-control-allow-origin: *
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding
+x-api-umbrella-request-id: crdn5cmuflrggo2f9kag
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: 9a3cbdab-d080-4b05-4c68-0833b8d8ae81
+x-xss-protection: 1; mode=block
+x-frame-options: DENY
+
+Error Code,Error Message
+"API_KEY_INVALID","An invalid api_key was supplied. Get one at https://api.data.gov/signup/"

@@ -1,0 +1,14 @@
+HTTP/1.1 400 
+x-application-context: application:0
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-frame-options: DENY
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 11:00:28 GMT
+connection: close
+
+{"timestamp":1766919628750,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Could not read document: Cannot deserialize value of type `io.github.proxyprint.kitchen.models.printshops.RegisterRequest` from Array value (token `JsonToken.START_ARRAY`)\n at [Source: (PushbackInputStream); line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `io.github.proxyprint.kitchen.models.printshops.RegisterRequest` from Array value (token `JsonToken.START_ARRAY`)\n at [Source: (PushbackInputStream); line: 1, column: 1]","path":"/request/register"}

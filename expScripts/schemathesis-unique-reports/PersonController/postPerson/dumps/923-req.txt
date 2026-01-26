@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: x7PZh1
+Content-Type: application/json
+Content-Length: 173
+Host: localhost:34113
+
+{"\u00f0\uda38\udf1eL\u00a1WA": [[[], {}], [[], {}]], "cars": [{}, {"model": ""}], "createdAt": "0313-06-02T09:56:43.714806+19:55", "address": {"postcode": null, "": false}}

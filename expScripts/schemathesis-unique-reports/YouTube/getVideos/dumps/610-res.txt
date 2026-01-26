@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+vary: Origin, X-Origin, Referer
+content-encoding: gzip
+date: Mon, 29 Dec 2025 03:19:42 GMT
+server: scaffolding on HTTPServer2
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+transfer-encoding: chunked
+
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "1iPsYLcag70d4TwF1efkiXI72x8",
+  "items": [],
+  "nextPageToken": "CAAQAA",
+  "pageInfo": {
+    "totalResults": 200,
+    "resultsPerPage": 0
+  }
+}
+

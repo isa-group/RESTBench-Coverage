@@ -1,0 +1,8 @@
+pptname;invariant;invariantType;variables;postmanAssertion
+/v1/hospitais/&insertUsingPOST&200():::EXIT;input.address == return.address;daikon.inv.binary.twoString.StringEqual;(input.address, return.address);pm.expect(input_address).to.eql(return_address)
+/v1/hospitais/&insertUsingPOST&200():::EXIT;input.availableBeds == return.availableBeds;daikon.inv.binary.twoScalar.IntEqual;(input.availableBeds, return.availableBeds);pm.expect(input_availableBeds).to.eql(return_availableBeds)
+/v1/hospitais/&insertUsingPOST&200():::EXIT;input.beds == return.beds;daikon.inv.binary.twoScalar.IntEqual;(input.beds, return.beds);pm.expect(input_beds).to.eql(return_beds)
+/v1/hospitais/&insertUsingPOST&200():::EXIT;input.name == return.name;daikon.inv.binary.twoString.StringEqual;(input.name, return.name);pm.expect(input_name).to.eql(return_name)
+/v1/hospitais/&insertUsingPOST&200():::EXIT;LENGTH(return.id)==24;daikon.inv.unary.string.FixedLengthString;(return.id);pm.expect(return_id).to.have.length(24)
+/v1/hospitais/&insertUsingPOST&200():::EXIT;return.latitude is Numeric;daikon.inv.unary.string.IsNumeric;(return.latitude);pm.expect(return_latitude).to.match(/^[+-]{0,1}(0|([0-9](\d*|\d{0,2}(,\d{3})*)))?(\.\d*[0-9])?$/)
+/v1/hospitais/&insertUsingPOST&200():::EXIT;return.longitude is Numeric;daikon.inv.unary.string.IsNumeric;(return.longitude);pm.expect(return_longitude).to.match(/^[+-]{0,1}(0|([0-9](\d*|\d{0,2}(,\d{3})*)))?(\.\d*[0-9])?$/)

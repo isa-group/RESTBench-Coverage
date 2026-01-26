@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+access-control-allow-credentials: true
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-origin: *
+access-control-max-age: 1728000
+cache-control: max-age=0, no-store, private, no-transform
+content-type: application/json
+ratelimit-dailylimit: 300
+server: envoy
+vary: Accept-Encoding
+x-mode: ro
+
+{"businesses":[{"id":"O60SjdV9ruBag0ua_CNL0Q","alias":"los-chilangos-restaurant-anaheim","name":"Los Chilangos Restaurant","image_url":"https://s3-media0.fl.yelpcdn.com/bphoto/mUnnQLNGRyEQtKfy3YzQcw/o.jpg","is_closed":false,"url":"https://www.yelp.es/biz/los-chilangos-restaurant-anaheim?adjust_creative=hbkNBOyFKhZhx0x1aJM8kQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=hbkNBOyFKhZhx0x1aJM8kQ","review_count":190,"categories":[{"alias":"mexican","title":"Mexicano"}],"rating":3.7,"coordinates":{"latitude":33.8321362,"longitude":-117.9472187},"transactions":["pickup","delivery","restaurant_reservation"],"price":"$","location":{"address1":"1830 W Lincoln Ave","address2":"","address3":"","city":"Anaheim","zip_code":"92801","country":"US","state":"CA","display_address":["1830 W Lincoln Ave","Anaheim, CA 92801","Estados Unidos"]},"phone":"+17146608321","display_phone":"+1 714-660-8321","distance":47593.08303913707,"business_hours":[{"open":[{"is_overnight":false,"start":"0900","end":"2000","day":0},{"is_overnight":false,"start":"0900","end":"2000","day":1},{"is_overnight":false,"start":"0900","end":"2000","day":2},{"is_overnight":false,"start":"0900","end":"2000","day":3},{"is_overnight":false,"start":"0900","end":"2100","day":4},{"is_overnight":false,"start":"0800","end":"2100","day":5},{"is_overnight":false,"start":"0800","end":"1600","day":6}],"hours_type":"REGULAR","is_open_now":false}],"attributes":{"business_temp_closed":null,"menu_url":null,"open24_hours":null,"waitlist_reservation":true}}],"total":1,"region":{"center":{"longitude":-118.41064453125,"latitude":34.02010806957986}}}

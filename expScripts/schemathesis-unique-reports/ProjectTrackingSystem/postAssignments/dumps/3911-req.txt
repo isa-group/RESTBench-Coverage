@@ -1,0 +1,11 @@
+POST /app/api/assignments HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 21YkPK
+Content-Type: application/json
+Content-Length: 152
+Host: localhost:37971
+
+{"employeeId": 4, "employee": {"firstName": "", "employeeId": 1, "credential": {"role": "", "credentialId": 1}, "tkColorChooser": null, "hiredate": ""}}

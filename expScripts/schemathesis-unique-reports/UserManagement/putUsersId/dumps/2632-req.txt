@@ -1,0 +1,11 @@
+PUT /users/4 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: Ob8fDN
+Content-Type: application/json
+Content-Length: 151
+Host: localhost:42371
+
+{"zipCode": "t\u00aaV\u0015\u00d8\u0093P\u00b0\u00b4\u0016N\uda70\udc3d", "surname": "\ud96d\udc0a\u00ef[\u0011E\u00a9\u00fdZ\udaf0\uddd3\u0001\u00fc"}

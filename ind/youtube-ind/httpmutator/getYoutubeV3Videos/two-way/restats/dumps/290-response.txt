@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"fFQdMvG_Pzk1Lr2ytYUhMiSsovw","items":[{"kind":"youtube#video","etag":"P1Vl4whL84BrTtmxGA9ijOCqGrI","id":"EN1tMeXQii0","contentDetails":{"duration":"PT3M12S","dimension":"2d","definition":"hd","caption":"true","licensedContent":true,"regionRestriction":{"blocked":["BY","RU"]},"contentRating":{},"projection":"rectangular"},"liveStreamingDetails":{"actualStartTime":"2025-10-10T04:00:06Z","actualEndTime":"2025-10-10T04:05:33Z","scheduledStartTime":"2025-10-10T04:00:00Z"}},{"kind":"youtube#video","etag":"iyz5ma8iW_YZXgzU2bfZSYtaTPI","id":"39x89Tl1vMI","contentDetails":{"duration":"PT2M39S","dimension":"2d","definition":"hd","caption":"true","licensedContent":true,"contentRating":{},"projection":"rectangular"}},{"kind":"youtube#video","etag":"T7akDJYWeN5rZxr0kLAx98bME3g","id":"Qi-LsPq7DJ8","contentDetails":{"duration":"PT4M5S","dimension":"2d","definition":"hd","caption":"false","licensedContent":true,"regionRestriction":{"allowed":["SG"]},"contentRating":{},"projection":"rectangular"}},{"kind":"youtube#video","etag":"c2IExyoyBQbexGn4THm0RjP_yDY","id":"ko70cExuzZM","contentDetails":{"duration":"PT3M59S","dimension":"2d","definition":"hd","caption":"false","licensedContent":false,"regionRestriction":{"blocked":["BY","RU"]},"contentRating":{},"projection":"rectangular"},"liveStreamingDetails":{"actualStartTime":"2025-10-05T23:00:06Z","actualEndTime":"2025-10-05T23:06:33Z","scheduledStartTime":"2025-10-05T23:00:00Z"}},{"kind":"youtube#video","etag":"ge9x8axVqHoQQq9DbLy4KgMBmyc","id":"pxzHn_T1Vvs","contentDetails":{"duration":"PT2M28S","dimension":"2d","definition":"hd","caption":"true","licensedContent":true,"contentRating":{},"projection":"rectangular"}}],"nextPageToken":"CAUQAA","pageInfo":{"totalResults":200,"resultsPerPage":5}}

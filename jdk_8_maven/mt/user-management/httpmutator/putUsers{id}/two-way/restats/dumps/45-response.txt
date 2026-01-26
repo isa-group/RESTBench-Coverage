@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":8,"username":"testuser123","name":"Bob","surname":null,"gender":"FEMALE","birthDate":"1990-05-20","enabled":false,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":"+44-7700-900123","skype":"john.doe.skype","facebook":null,"linkedin":null,"website":"https://johndoe.dev","contactNote":"Urgent contact only"},"addressDTO":{"address":"456 High Road","address2":"Building 5","city":"Beijing","country":null,"zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

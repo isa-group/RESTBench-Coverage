@@ -1,0 +1,10 @@
+HTTP/1.1 400 
+cache-control: no-cache, no-transform
+content-type: application/json;charset=utf-8
+set-cookie: TS0165d0f4=01d513bcd197894bc7587231b56c7c663771e69c1b945be411f020b1575c3c6364a1fd65fb42bb95af2ac3b172bc2d54e6a0ce61fd; Path=/; Domain=.apis.deutschebahn.com; Secure; HttpOnly;
+strict-transport-security: max-age=16070400; includeSubDomains
+x-global-transaction-id: 39574c5868ee26fc054a5243
+x-ratelimit-limit: name=default,10;
+x-ratelimit-remaining: name=default,9;
+
+{"errNo":400,"errMsg":"Illegal parameter"}

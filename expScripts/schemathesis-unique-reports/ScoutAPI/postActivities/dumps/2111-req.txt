@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: qSaq4m
+Content-Type: application/json
+Content-Length: 233
+Host: localhost:37143
+
+{"age_max": 79, "description_prepare": "e\u0080", "activity": {"\u00ef\uda61\uddd9": [{}], "\u00b6\u0019?\u59ba\ud9f8\uddad": [["\ub703)\u00f5\udb62\udfe9\u00e3\u00ee\u0019\\\ud9ec\uddbf\u0007~", null], [null, null], 0.0]}, "": null}

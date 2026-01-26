@@ -1,0 +1,20 @@
+language: en-US* de-DE* fr* auto
+text: NULL* A quick brown fox* Bonjour le monde
+data: NULL* {"annotation":[{"text":"A test"},{"markup":"<b>"},{"text":"test"},{"markup":"</b>"}]}
+altLanguages: NULL* en-GB,en-AU* en-AU
+motherTongue: NULL* en-US* de-DE
+preferredVariants: NULL* en-GB* de-AT
+enabledRules: NULL* SON_T* SON_T,THANK_NNP_PRP* SON_T,THANK_NNP_PRP,CONTRACTION_CASE
+disabledRules: NULL* SON_T* SON_T,THANK_NNP_PRP* SON_T,THANK_NNP_PRP,CONTRACTION_CASE
+enabledCategories: NULL* TYPOS* TYPOS,GRAMMAR* TYPOS,GRAMMAR,COLLOCATIONS
+disabledCategories: NULL* TYPOS* TYPOS,GRAMMAR* TYPOS,GRAMMAR,COLLOCATIONS
+enabledOnly: NULL* false* true
+
+IF ([data] <> "NULL") THEN [text] = "NULL";
+IF ([text] <> "NULL") THEN [data] = "NULL";
+IF [data] = "NULL" THEN [text] <> "NULL";
+IF [text] = "NULL" THEN [data] <> "NULL";
+
+IF ([preferredVariants] <> "NULL") THEN [language] = "auto";
+IF ([enabledOnly] = "true") THEN [disabledRules] = "NULL";
+IF ([enabledOnly] = "true") THEN [disabledCategories] = "NULL";

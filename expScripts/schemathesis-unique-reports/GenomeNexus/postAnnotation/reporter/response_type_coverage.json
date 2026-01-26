@@ -1,0 +1,21 @@
+{
+	"documentedAndTested": {
+		"/annotation": {
+			"post": [
+				"application/json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/annotation": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/annotation": {
+			"post": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

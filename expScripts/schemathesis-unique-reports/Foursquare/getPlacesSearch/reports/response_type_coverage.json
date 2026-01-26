@@ -1,0 +1,17 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/places/search": {
+			"get": [
+				"application/json"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/places/search": {
+			"get": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

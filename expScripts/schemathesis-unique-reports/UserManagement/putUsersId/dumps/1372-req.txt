@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: T1QlpA
+Content-Type: application/json
+Content-Length: 205
+Host: localhost:42371
+
+{"\u00cfR": {}, "skype": "y\u00b2\u0088", "surname": "\u00ea\u0003\u00c0\u0087\u00b6\ud907\udfd1\u000f\u00da\ud985\udf6e", "note": "\u008c\ud819\ude0d", "website": "SJ\u008f\ud9a0\udffa\u00be\ud819\ude06"}

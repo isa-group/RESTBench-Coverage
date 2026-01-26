@@ -1,0 +1,4 @@
+POST /api/v1/activities HTTP/1.1
+Authorization: ApiKey administrator
+
+{"name":"hiking","date_updated":"2025-06-18T09:00:00.000Z","description_material":"an activity","description_prepare":"a preparation","description_notes":"a note","age_min":50,"age_max":100,"participants_min":0,"participants_max":100,"time_min":2,"time_max":2,"featured":true,"tags":[{"group":"1feelings","name":"1Happy","activities_count":1}],"media_files":[{"uri":"https://example.com/forest.jpg","mime_type":"image/jpeg","name":"forest hunt"}]}

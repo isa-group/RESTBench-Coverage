@@ -1,0 +1,21 @@
+===== API: Catwatch =====
+===== Operation: getProjects =====
+===== Mode: WHITE =====
+===== Level: INVARIANT =====
+===== Strength: TWO_WAY =====
+
+===== Pitest Timings =====
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 4 minutes and 50 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 2 hours, 40 minutes and 15 seconds
+> Total  : 2 hours, 45 minutes and 5 seconds
+
+===== Pitest Statistics =====
+>> Line Coverage (for mutated classes only): 535/730 (73%)
+>> 1 tests examined
+>> Generated 301 mutations Killed 51 (17%)
+>> Mutations with no coverage 22. Test strength 18%
+>> Ran 4290 tests (14.25 tests per mutation)
+

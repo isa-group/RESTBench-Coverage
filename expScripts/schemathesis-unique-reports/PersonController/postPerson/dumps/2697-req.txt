@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: aBwAip
+Content-Type: application/json
+Content-Length: 478
+Host: localhost:34113
+
+{"insurance": true, "address": {"city": "I\u00c3\u00dcq\udbf1\udf2bG\u0096\u00d1``z("}, "\u00a0\u001a\u001e]\ud8ea\udd7ah\u00f1\u00ec\t\u001a\u009f\u00bc\u00a1": {}, "": [{"@2": null, "\\": 9.251946222751538e-285}, {"\u00ac\u00fa\ud8dd\udfda": null, "\udb6a\udde8\u00f0\u00e3\u00fd": -4.027105654444905e+16, "\ud98c\udc46,": null}, {"T\u0085": null, "\u00b3": "\u00cc\udba2\uddf3"}], "id": {"timestamp": 4804}, "html.parser": {}, "createdAt": "1720-07-31T13:48:02.809846-13:39"}

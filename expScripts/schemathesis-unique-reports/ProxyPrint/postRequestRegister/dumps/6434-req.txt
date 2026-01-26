@@ -1,0 +1,11 @@
+POST /request/register HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: f4zlu4
+Content-Type: application/json
+Content-Length: 59
+Host: localhost:41773
+
+{"pShopName": "\u00a8\u00dd\u0087\u0085\u00bc\ud9de\udc24"}

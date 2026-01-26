@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: Orp27i
+Content-Type: application/json
+Content-Length: 63
+Host: localhost:37143
+
+{"date_created": "2000-10-04T08:00:00.000010Z", "activity": {}}

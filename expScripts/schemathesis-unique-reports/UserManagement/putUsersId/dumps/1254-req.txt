@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: Ox06ec
+Content-Type: application/json
+Content-Length: 81
+Host: localhost:42371
+
+{"country": "~\uda9f\udebe\ud907\ude7b", "contactNote": "\u00c8", "address2": ""}

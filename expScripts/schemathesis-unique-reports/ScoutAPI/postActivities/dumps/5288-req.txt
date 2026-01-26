@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: bOTyFR
+Content-Type: application/json
+Content-Length: 100
+Host: localhost:37143
+
+[[{":\u00ac ": [5.7220212435063256e+16, ""]}, []], [{":\u00ac ": [5.7220212435063256e+16, ""]}, []]]

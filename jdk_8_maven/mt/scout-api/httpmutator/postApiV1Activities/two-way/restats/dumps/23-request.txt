@@ -1,0 +1,4 @@
+POST /api/v1/activities HTTP/1.1
+Authorization: ApiKey administrator
+
+{"description_prepare":"a preparation","description_main":"the main part","description_safety":"the descp of safety","age_max":50,"participants_min":0,"time_min":4}

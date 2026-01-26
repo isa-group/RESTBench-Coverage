@@ -1,0 +1,7 @@
+HTTP/1.1 400 
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:38:58 GMT
+connection: close
+
+{"timestamp":"2025-12-28T10:38:59.486+00:00","status":400,"error":"Bad Request","message":"Required request body is missing: public org.springframework.http.ResponseEntity<com.giassi.microservice.demo2.rest.users.dtos.UserDTO> com.giassi.microservice.demo2.rest.UserRestController.updateUser(java.lang.Long,com.giassi.microservice.demo2.rest.users.dtos.requests.CreateOrUpdateUserDTO)","path":"/users/83"}

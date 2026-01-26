@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ZlifRe
+Content-Type: application/json
+Content-Length: 120
+Host: localhost:34113
+
+{"id": {"timestamp": 7}, "firstName": "\u00cf!\u008b\u009f\u00d2\u00df7XP\u001d\u00a6\u00b7\udaa6\udd2f", "address": {}}

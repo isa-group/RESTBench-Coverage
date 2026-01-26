@@ -1,0 +1,12 @@
+POST /v1/products HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: X9nx4Q
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 100
+Host: api.stripe.com
+
+package_dimensions=󇕭&package_dimensions=&package_dimensions=Tix&package_dimensions=length

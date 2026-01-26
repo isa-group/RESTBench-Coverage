@@ -1,0 +1,22 @@
+{
+	"documentedAndTested": {
+		"/app/api/assignments": {
+			"post": [
+				"2",
+				"4"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/app/api/assignments": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/app/api/assignments": {
+			"post": [
+				"4"
+			]
+		}
+	}
+}

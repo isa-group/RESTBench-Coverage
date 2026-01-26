@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: H062eg
+Content-Type: application/json
+Content-Length: 168
+Host: localhost:34113
+
+{"/": [[-2.229533751194877e+119, 1.4779932546493788e+16, {}], -623854169], ">": [[-2.229533751194877e+119, -2.229533751194877e+119, {}], -623854169], "insurance": true}

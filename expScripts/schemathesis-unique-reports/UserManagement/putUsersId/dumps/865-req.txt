@@ -1,0 +1,11 @@
+PUT /users/80 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: t4TBR6
+Content-Type: application/json
+Content-Length: 189
+Host: localhost:42371
+
+{"birthDate": [[], {}, {"<\u00dcZi": "\u00b4\u00c8\ud900\udf9e", "": -1.2238750043363938e-128, "\u0084\u0084\u001e": false}], "linkedin": ">\ud8aa\udf56\u00bfD\u00c7$CdJ\uda37\udf8d\u00a3"}

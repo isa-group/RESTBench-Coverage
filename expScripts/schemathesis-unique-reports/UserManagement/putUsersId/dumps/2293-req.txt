@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: DptcVs
+Content-Type: application/json
+Content-Length: 575
+Host: localhost:42371
+
+{"email": "A\u0086R\u0081\u00cd\u001a\u000b\ud8c6\ude81\u0096\u00e0\uf2cd\udb43\ude97\ud92f\udc20\u00c2\t\u00a5J\ud9bb\udecf\udb76\uddfb\u00b7\u00b4\u00de\u00b4\u00ea\udb8b\udf97%", "$^\udae8\udf10~": {"\udb5a\udff5\u00d5\u00d0L": [[[], [false]], {"": {"f\u00f9\ud9a0\ude84\u00c4I%\ud835\udd995\ud9b0\udd22\ud8c6\udc1e\u00d8": -21466}, "\u00f0": {"f\u00f9\ud9a0\ude84\u00c4I%\ud835\udd995\ud9b0\udd22\ud8c6\udc1e\u00d8": -21466}}, {"\u00f0": {"\u00dc\u0099\uda5d\udd32Jx\u00ea\u5aab\ud831\ude09yo\u00e1]\ud841\udd43\udba0\uddda\u00de\u00fa\u00bfTO\u009f": null}, "": null}]}}

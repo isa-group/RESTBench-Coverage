@@ -1,0 +1,46 @@
+{
+	"documentedAndTested": {
+		"/places/search": {
+			"get": [
+				"X-Places-Api-Version",
+				"exclude_all_chains"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/places/search": {
+			"get": [
+				"query",
+				"ll",
+				"radius",
+				"fsq_category_ids",
+				"fsq_chain_ids",
+				"exclude_fsq_chain_ids",
+				"fields",
+				"min_price",
+				"max_price",
+				"open_at",
+				"open_now",
+				"tel_format",
+				"ne",
+				"sw",
+				"near",
+				"sort",
+				"limit"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/places/search": {
+			"get": [
+				"User-Agent",
+				"Accept-Encoding",
+				"Accept",
+				"Connection",
+				"Authorization",
+				"X-Schemathesis-TestCaseId",
+				"Host"
+			]
+		}
+	}
+}

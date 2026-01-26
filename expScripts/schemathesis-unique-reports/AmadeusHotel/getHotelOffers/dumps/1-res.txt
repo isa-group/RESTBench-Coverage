@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+date: Mon, 29 Dec 2025 02:41:16 GMT
+Content-Type: application/vnd.amadeus+json
+transfer-encoding: chunked
+connection: keep-alive
+access-control-allow-headers: Ama-Client-Ref, Accept, Content-Type, origin, x-requested-with, accept, Content-Type, Authorization
+access-control-allow-origin: *
+ama-request-id: 0001VJDJQ80FGR
+content-encoding: gzip
+ama-gateway-request-id: rrt-0643941a93edefc96-b-de-3073835-517633588-1
+access-control-max-age: 3628800
+access-control-allow-methods: *
+server: Amadeus
+
+{"data":[{"type":"hotel-offers","hotel":{"type":"hotel","hotelId":"MCLONGHM","chainCode":"MC","dupeId":"700031300","name":"JW Marriott Grosvenor House London","cityCode":"LON","latitude":51.50988,"longitude":-0.15509},"available":true,"offers":[{"id":"HKSZEY9FHD","checkInDate":"2025-12-29","checkOutDate":"2025-12-30","rateCode":"RAC","room":{"type":"REG","typeEstimated":{"beds":1,"bedType":"QUEEN"},"description":{"text":"Flexible Rate\nQueen, 20sqm/215sqft-29sqm/312sqft, Wireless\ninternet, for a fee, Wired internet, for a","lang":"EN"}},"guests":{"adults":1},"price":{"currency":"GBP","base":"815.00","total":"855.75","variations":{"average":{"base":"815.00"},"changes":[{"startDate":"2025-12-29","endDate":"2025-12-30","base":"815.00"}]}},"policies":{"cancellations":[{"numberOfNights":1,"deadline":"2025-12-28T23:59:00+00:00","amount":"815.00","policyType":"CANCELLATION"}],"paymentType":"guarantee","refundable":{"cancellationRefund":"REFUNDABLE_UP_TO_DEADLINE"}},"self":"https://test.api.amadeus.com/v3/shopping/hotel-offers/HKSZEY9FHD","roomInformation":{"description":"Flexible Rate\nQueen, 20sqm/215sqft-29sqm/312sqft, Wireless\ninternet, for a fee, Wired internet, for a","type":"REG","typeEstimated":{"bedType":"QUEEN","beds":1}}}],"self":"https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=MCLONGHM&adults=1"}]}

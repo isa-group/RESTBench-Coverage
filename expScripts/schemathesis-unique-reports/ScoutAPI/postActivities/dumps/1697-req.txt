@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: TlBc9j
+Content-Type: application/json
+Content-Length: 84
+Host: localhost:37143
+
+[[true, {"\u00df": 9, "\u0004": null}, {}], [{}, {"\u00df": 9, "\u0004": null}, {}]]

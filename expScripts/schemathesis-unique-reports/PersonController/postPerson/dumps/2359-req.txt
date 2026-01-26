@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: veeszy
+Content-Type: application/json
+Content-Length: 644
+Host: localhost:34113
+
+{"lastName": "\u00d9,\ud81a\uded4\u0007", "address": {"street": null, "country": "", ",./;'[]\\-=<>?:\"{}|_+!@#$%^&*()`~": {"\u00bf\u00ad\u00e4\u0083": {"+0.0": {"q": {"\u00db": "\ud8b8\uddde\u00ce;\u00d2\ud93c\udcae", "\ud888\ude19\udbf4\udc85\uda85\udef7V\uda82\udfdd": -1.7976931348623155e+308, "Z\u00e9\u0002\ud9bb\ude16\u0019\ud9a3\uddb6": -120371386065689588093161893647483492226}, "xmlrpc_client": [true], "\uda02\udcdf:\u00da": -6.103515625e-05}}, "\ud988\udcc8\ud802\udf13\uda94\udc95\u0012\u00ad\u00e1\u00fb\u00f5\uda85\udcdd\u00d8": [], "\ud8f2\uddff\ud8de\ude34": [true, ["0/0"], [[[46], [2, "@", 2], []]]]}, "": false}, "cars": []}

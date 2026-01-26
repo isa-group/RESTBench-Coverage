@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: SNetui
+Content-Type: application/json
+Content-Length: 192
+Host: localhost:38545
+
+{"name": "\u0099\u00c7\u00fb\u00e9", "address": "2\u00eaPgn\u009a\u00fd\u00ae\u00f5", "": {"\u0088\u001ag\ud927\uddfa\u00db\u00c3\u00bf\u0083\u00a7\u00073": []}, "beds": 1, "availableBeds": 1}

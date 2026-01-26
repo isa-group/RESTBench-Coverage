@@ -1,0 +1,11 @@
+POST /app/api/assignments HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: GwAwqF
+Content-Type: application/json
+Content-Length: 362
+Host: localhost:37971
+
+{"employee": {"firstName": "\u00ea", "credential": {"password": ""}, "manager": null, "P\u009f\u00e2\u007f\u00cd": [-5.668730569010974e+301, [2.4001139792635804e+16, false, null], {"\u0081\udbb6\ude4b\u00fe\u0006": 1.8386023704313632e-292}]}, "]": {"\u0081\udbb6\ude4b\u00fe\u0006": 1.8386023704313632e-292}, "commitDate": null, "project": null, "employeeId": 1}

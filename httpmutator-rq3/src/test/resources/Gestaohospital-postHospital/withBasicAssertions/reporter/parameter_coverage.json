@@ -1,0 +1,19 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/v1/hospitais/": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/v1/hospitais/": {
+			"post": [
+				"Host",
+				"Accept",
+				"Content-Type",
+				"beds",
+				"name"
+			]
+		}
+	}
+}

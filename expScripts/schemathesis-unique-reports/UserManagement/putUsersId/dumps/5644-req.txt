@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: iWewYd
+Content-Type: application/json
+Content-Length: 85
+Host: localhost:42371
+
+{"\u00e2": [], "username": "\ud8c5\udd3e\u00d56;5@\u00a7", "name": "", "country": ""}

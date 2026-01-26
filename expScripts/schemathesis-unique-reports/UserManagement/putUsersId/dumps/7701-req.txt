@@ -1,0 +1,11 @@
+PUT /users/4 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: bagE4y
+Content-Type: application/json
+Content-Length: 187
+Host: localhost:42371
+
+{"contactNote": "\u0081a\u00f6\u00e0\ud82f\ude05", "mobile": "", "zipCode": "6\u0091^\u00f4*\udbe0\ude30\u001d", "address": "6\u0091^\u00f4*\udbe0\ude30\u001d", "birthDate": "2000-01-01"}

@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":3,"username":"johndoe90","name":"John","surname":"Doe","gender":"FEMALE","birthDate":"1985-12-01","enabled":false,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":"+1-202-555-0189","skype":null,"facebook":null,"linkedin":"https://linkedin.com/in/testuser","website":"https://example.org","contactNote":"Call after 6pm"},"addressDTO":{"address":"456 High Road","address2":"Apt. 4B","city":"New York","country":null,"zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

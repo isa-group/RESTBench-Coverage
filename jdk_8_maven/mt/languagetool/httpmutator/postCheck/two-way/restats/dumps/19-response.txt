@@ -1,0 +1,4 @@
+HTTP/1.1 200 
+content-type: application/json
+
+{"software":{"name":"LanguageTool","version":"5.2-SNAPSHOT","buildDate":null,"apiVersion":1,"premium":false,"premiumHint":"You might be missing errors only the Premium version can find. Contact us at support<at>languagetoolplus.com.","status":""},"warnings":{"incompleteResults":false},"language":{"name":"English (US)","code":"en-US","detectedLanguage":{"name":"French","code":"fr","confidence":0.9999962}},"matches":[{"message":"If the term is a proper noun, use initial capitals.","shortMessage":"","replacements":[{"value":"Le Monde"}],"offset":8,"length":8,"context":{"text":"Bonjour le monde","offset":8,"length":8},"sentence":"Bonjour le monde","type":{"typeName":"Other"},"rule":{"id":"EN_SPECIFIC_CASE","description":"Checks upper/lower case spelling of some proper nouns","issueType":"misspelling","category":{"id":"CASING","name":"Capitalization"}},"ignoreForIncompleteSentence":false,"contextForSureMatch":0}]}

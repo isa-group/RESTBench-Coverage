@@ -1,0 +1,110 @@
+###############################################################################
+# Foursquare /places/search – Seville (Hit-Rate Optimized) PICT Model
+# Values: no quotes/brackets.  Constraints: [param] + "value".
+# "NULL" is a literal test value meaning "not provided".
+###############################################################################
+X-Places-Api-Version: 2025-06-17
+# -------------------------
+# Query (Spanish common)
+# -------------------------
+query: supermercado * cafeteria * panaderia * hotel * comida rapida * NULL
+
+# -------------------------------------
+# Category IDs (Foursquare Taxonomy)
+# Supermarket / Coffee Shop / Bakery / Hotel / Fast Food / NULL
+# （保留 NULL，便于放宽组合，提升命中）
+# -------------------------------------
+fsq_category_ids: 52f2ab2ebcbc57f1066b8b46 * 4bf58dd8d48988d1e0931735 * 4bf58dd8d48988d16a941735 * 4bf58dd8d48988d1fa931735 * 4bf58dd8d48988d16e941735 * NULL
+
+# --------------------------------
+# Chain IDs (present in Seville)
+# Starbucks / Paul / Carrefour / KFC / McDonald's / NULL
+# --------------------------------
+fsq_chain_ids: 5568ecaaa7c8a9cf8ec38f1c * 5568f59ca7c8a9cf8ec4990c * 5568f4c9a7c8a9cf8ec497a0 * 5568f4a2a7c8a9cf8ec4962a * 556f3bfabd6a8104863beb14 * NULL
+
+# ----------------------------------------------------
+# Chain Exclusions (exercise exclusion behavior)
+# ----------------------------------------------------
+exclude_fsq_chain_ids: 5568ecaaa7c8a9cf8ec38f1c * 556f3bfabd6a8104863beb14 * 5568f4a2a7c8a9cf8ec4962a * NULL
+exclude_all_chains: true * false * NULL
+
+# --------------------------------------
+# Location – Seville (multiple hot spots)
+# --------------------------------------
+ll: 37.3891,-5.9845 * 37.3929,-5.9959 * 37.3775,-5.9713 * 37.3861,-5.9920 * 37.3772,-6.0008 * NULL
+
+# Larger radii to avoid empty results (meters)
+radius: 3000 * 5000 * 8000 * NULL
+
+# Bounding boxes (city center variants)
+ne: 37.4065,-5.9692 * 37.4031,-5.9770 * NULL
+sw: 37.3760,-6.0050 * 37.3705,-6.0101 * NULL
+
+# near (broad locality; keeps results plentiful)
+near: Sevilla * Nervion, Sevilla * Triana, Sevilla * Santa Cruz, Sevilla * Los Remedios, Sevilla * NULL
+
+# --------------------------
+# Field selector (by idx)
+# --------------------------
+fields: 6 * 12 * 19 * NULL
+
+# ------------------
+# Price & Opening
+# （保留取值，但不强制；避免先期过滤）
+# ------------------
+min_price: 1 * 2 * 3 * 4 * NULL
+max_price: 1 * 2 * 3 * 4 * NULL
+open_at: 2T0701 * 3T0204 * 6T2109 * NULL
+open_now: true * false * NULL
+tel_format: NATIONAL * E164 * NULL
+
+# -------------
+# Sorting + K
+# -------------
+sort: RELEVANCE * RATING * DISTANCE * POPULARITY * NULL
+limit: 10 * 20 * 50 * NULL
+
+
+###############################################################################
+# Constraints (keep API rules; relax business ties to boost hit rate)
+###############################################################################
+
+# A. Location exclusivity (API rules)
+IF [ll]   <> "NULL" THEN [near] = "NULL" AND [ne] = "NULL" AND [sw] = "NULL";
+IF [near] <> "NULL" THEN [ll]   = "NULL" AND [ne] = "NULL" AND [sw] = "NULL";
+IF [ne]   <> "NULL" THEN [sw]   <> "NULL" AND [ll] = "NULL" AND [near] = "NULL";
+IF [sw]   <> "NULL" THEN [ne]   <> "NULL" AND [ll] = "NULL" AND [near] = "NULL";
+
+# Radius only valid with ll
+IF [radius] <> "NULL" THEN [ll] <> "NULL";
+
+# ne & sw must appear together
+IF [ne] <> "NULL" THEN [sw] <> "NULL";
+IF [sw] <> "NULL" THEN [ne] <> "NULL";
+
+# B. Chain inclusion/exclusion mutual exclusivity
+IF [fsq_chain_ids] <> "NULL" THEN [exclude_fsq_chain_ids] = "NULL";
+IF [fsq_chain_ids] <> "NULL" THEN [exclude_all_chains] <> "true";
+IF [exclude_fsq_chain_ids] <> "NULL" THEN [exclude_all_chains] = "false";
+
+# C. Opening time exclusivity
+IF [open_at]  <> "NULL" THEN [open_now] = "NULL";
+IF [open_now] <> "NULL" THEN [open_at]  = "NULL";
+
+# D. Price range logic
+IF [min_price] <> "NULL" AND [max_price] <> "NULL" THEN [min_price] <= [max_price];
+
+# E. Query ↔ Category (SOFT mapping to increase hits)
+# 只在“未指定类别时”按查询词建议类别；若指定了类别则不覆盖，避免过约束
+IF [fsq_category_ids] = "NULL" AND [query] = "supermercado"  THEN [fsq_category_ids] = "52f2ab2ebcbc57f1066b8b46";
+IF [fsq_category_ids] = "NULL" AND [query] = "cafeteria"     THEN [fsq_category_ids] = "4bf58dd8d48988d1e0931735";
+IF [fsq_category_ids] = "NULL" AND [query] = "panaderia"     THEN [fsq_category_ids] = "4bf58dd8d48988d16a941735";
+IF [fsq_category_ids] = "NULL" AND [query] = "hotel"         THEN [fsq_category_ids] = "4bf58dd8d48988d1fa931735";
+IF [fsq_category_ids] = "NULL" AND [query] = "comida rapida" THEN [fsq_category_ids] = "4bf58dd8d48988d16e941735";
+
+# F. Query ↔ Chain (SOFT pairing; allow NULL to improve hit rate)
+IF [query] = "supermercado"  THEN [fsq_chain_ids] = "5568f4c9a7c8a9cf8ec497a0" OR [fsq_chain_ids] = "NULL";
+IF [query] = "cafeteria"     THEN [fsq_chain_ids] = "5568ecaaa7c8a9cf8ec38f1c" OR [fsq_chain_ids] = "5568f59ca7c8a9cf8ec4990c" OR [fsq_chain_ids] = "NULL";
+IF [query] = "panaderia"     THEN [fsq_chain_ids] = "5568f59ca7c8a9cf8ec4990c" OR [fsq_chain_ids] = "NULL";
+IF [query] = "hotel"         THEN [fsq_chain_ids] = "NULL";
+IF [query] = "comida rapida" THEN [fsq_chain_ids] = "5568f4a2a7c8a9cf8ec4962a" OR [fsq_chain_ids] = "556f3bfabd6a8104863beb14" OR [fsq_chain_ids] = "NULL";

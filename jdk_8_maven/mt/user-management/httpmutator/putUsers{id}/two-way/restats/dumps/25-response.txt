@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":3,"username":"testuser123","name":"Bob","surname":null,"gender":"MALE","birthDate":"2000-07-15","enabled":true,"note":null,"loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":null,"skype":null,"facebook":null,"linkedin":"https://linkedin.com/in/johndoe","website":"https://johndoe.dev","contactNote":null},"addressDTO":{"address":"123 Main Street","address2":"Building 5","city":"London","country":"China","zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

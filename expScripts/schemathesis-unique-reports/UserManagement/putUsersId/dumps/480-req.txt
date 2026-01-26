@@ -1,0 +1,11 @@
+PUT /users/2 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 2e5uuk
+Content-Type: application/json
+Content-Length: 249
+Host: localhost:42371
+
+{"city": "\u00de\u00f5\ud83a\udddf\ud83a\udf13", "linkedin": "", "G\u00bd\u00cb7H|Y\u00ca\u00cb\udbfc\udfea": {}, "surname": "u\u00e3-\u0082?*\u0098", "\u008c\u00ed\u000fq8\u00e7sO-\ud81b\udfac\u00c7": null, "gender": "?", "birthDate": "2000-01-01"}

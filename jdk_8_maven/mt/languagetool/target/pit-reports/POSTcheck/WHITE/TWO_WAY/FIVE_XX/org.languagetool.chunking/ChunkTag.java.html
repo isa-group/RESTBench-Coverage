@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ChunkTag.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/* LanguageTool, a natural language style checker</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Copyright (C) 2013 Daniel Naber (http://www.danielnaber.de)</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This library is free software; you can redistribute it and/or</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * modify it under the terms of the GNU Lesser General Public</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * License as published by the Free Software Foundation; either</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * version 2.1 of the License, or (at your option) any later version.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * This library is distributed in the hope that it will be useful,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Lesser General Public License for more details.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * You should have received a copy of the GNU Lesser General Public</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * License along with this library; if not, write to the Free Software</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * USA</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.languagetool.chunking;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * The name of a chunk. Just a string - this class exists mostly for better type safety.</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @since 2.3</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class ChunkTag {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private final String chunkTag;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private final boolean isRegexp;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public ChunkTag(String chunkTag) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this(chunkTag, false);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** @since 5.1 */</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  public ChunkTag(String chunkTag, boolean isRegexp) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_36'/>
+36
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_36'>2</a>
+<span>
+1. &#60;init&#62; : negated conditional &rarr; SURVIVED<br/>
+2. &#60;init&#62; : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (chunkTag == null || chunkTag.trim().isEmpty()) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>      throw new IllegalArgumentException(&#34;chunkTag cannot be null or empty: &#39;&#34; + chunkTag + &#34;&#39;&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.chunkTag = chunkTag;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.isRegexp = isRegexp;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String getChunkTag() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_44'/>
+44
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_44'>1</a>
+<span>
+1. getChunkTag : replaced return value with &#34;&#34; for org/languagetool/chunking/ChunkTag::getChunkTag &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return chunkTag;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** @since 5.1 */</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public boolean isRegexp() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_49'/>
+49
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_49'>2</a>
+<span>
+1. isRegexp : replaced boolean return with false for org/languagetool/chunking/ChunkTag::isRegexp &rarr; SURVIVED<br/>
+2. isRegexp : replaced boolean return with true for org/languagetool/chunking/ChunkTag::isRegexp &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return isRegexp;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public boolean equals(Object o) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_54'/>
+54
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_54'>2</a>
+<span>
+1. equals : replaced boolean return with false for org/languagetool/chunking/ChunkTag::equals &rarr; NO_COVERAGE<br/>
+2. equals : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (this == o) return true;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_55'/>
+55
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_55'>3</a>
+<span>
+1. equals : negated conditional &rarr; SURVIVED<br/>
+2. equals : negated conditional &rarr; SURVIVED<br/>
+3. equals : replaced boolean return with true for org/languagetool/chunking/ChunkTag::equals &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    if (o == null || getClass() != o.getClass()) return false;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    ChunkTag other = (ChunkTag) o;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_57'/>
+57
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_57'>2</a>
+<span>
+1. equals : replaced boolean return with false for org/languagetool/chunking/ChunkTag::equals &rarr; SURVIVED<br/>
+2. equals : replaced boolean return with true for org/languagetool/chunking/ChunkTag::equals &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return chunkTag.equals(other.chunkTag);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public int hashCode() {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_62'/>
+62
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_62'>1</a>
+<span>
+1. hashCode : replaced int return with 0 for org/languagetool/chunking/ChunkTag::hashCode &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    return chunkTag.hashCode();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String toString() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_67'/>
+67
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_67'>2</a>
+<span>
+1. toString : replaced return value with &#34;&#34; for org/languagetool/chunking/ChunkTag::toString &rarr; SURVIVED<br/>
+2. toString : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return chunkTag + (isRegexp ? &#34;[regex]&#34; : &#34;&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_36'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=<init>,-methodDesc=(Ljava/lang/String;Z)V],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=<init>,-methodDesc=(Ljava/lang/String;Z)V],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=<init>,-methodDesc=(Ljava/lang/String;Z)V],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>&#60;init&#62;<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=<init>,-methodDesc=(Ljava/lang/String;Z)V],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=<init>,-methodDesc=(Ljava/lang/String;Z)V],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=<init>,-methodDesc=(Ljava/lang/String;Z)V],-indexes=[8],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_44'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getChunkTag<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for org/languagetool/chunking/ChunkTag::getChunkTag &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=getChunkTag,-methodDesc=()Ljava/lang/String;],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=getChunkTag,-methodDesc=()Ljava/lang/String;],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=getChunkTag,-methodDesc=()Ljava/lang/String;],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_49'>49</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_49'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isRegexp<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for org/languagetool/chunking/ChunkTag::isRegexp &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=isRegexp,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=isRegexp,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=isRegexp,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isRegexp<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for org/languagetool/chunking/ChunkTag::isRegexp &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=isRegexp,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=isRegexp,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=isRegexp,-methodDesc=()Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_54'>54</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_54'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for org/languagetool/chunking/ChunkTag::equals &rarr; NO_COVERAGE</span>
+</div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_55'>55</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_55'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[17],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[17],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[17],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for org/languagetool/chunking/ChunkTag::equals &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_57'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for org/languagetool/chunking/ChunkTag::equals &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for org/languagetool/chunking/ChunkTag::equals &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=equals,-methodDesc=(Ljava/lang/Object;)Z],-indexes=[35],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_62'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for org/languagetool/chunking/ChunkTag::hashCode &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@4e0f03bd_67'>67</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@4e0f03bd_67'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for org/languagetool/chunking/ChunkTag::toString &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=toString,-methodDesc=()Ljava/lang/String;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=toString,-methodDesc=()Ljava/lang/String;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=toString,-methodDesc=()Ljava/lang/String;],-indexes=[21],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>toString<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=toString,-methodDesc=()Ljava/lang/String;],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=toString,-methodDesc=()Ljava/lang/String;],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.languagetool.chunking.ChunkTag,-method=toString,-methodDesc=()Ljava/lang/String;],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23] (16 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22] (66 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7] (69 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14] (79 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15] (78 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29] (105 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19] (117 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18] (316 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17] (777 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9] (954 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1] (2849 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4] (11536 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26] (12 ms)</li><li>mt.org.languagetool.server.LanguagetoolEndpointTest.[engine:junit-jupiter]/[class:mt.org.languagetool.server.LanguagetoolEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2] (858 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.1
+
+</body>
+</html>

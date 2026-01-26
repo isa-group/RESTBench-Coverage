@@ -1,0 +1,32 @@
+HTTP/1.1 400 Bad Request
+server: nginx
+date: Sun, 28 Dec 2025 13:22:46 GMT
+Content-Type: application/json
+content-length: 222
+connection: keep-alive
+access-control-allow-credentials: [Filtered]
+access-control-allow-methods: GET, HEAD, PUT, PATCH, POST, DELETE
+access-control-allow-origin: *
+access-control-expose-headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+access-control-max-age: 300
+cache-control: no-cache, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=U6EHiFz_def4HXu_zlOSsDiWanbXgYTrbMMtJc26S4WxEtTvKgck3XEjQaMu7ZQKyhlGFRJv54Bd8gnS
+idempotency-key: [Filtered]
+original-request: req_D37BfZrCycD5AB
+request-id: req_D37BfZrCycD5AB
+stripe-version: 2024-12-18.acacia
+vary: Origin
+x-stripe-priority-routing-enabled: true
+x-stripe-routing-context-priority-tier: api-testmode
+x-wc: ABGHIJ
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+
+{
+  "error": {
+    "message": "Invalid object",
+    "param": "package_dimensions",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_D37BfZrCycD5AB?t=1766928166",
+    "type": "invalid_request_error"
+  }
+}
+

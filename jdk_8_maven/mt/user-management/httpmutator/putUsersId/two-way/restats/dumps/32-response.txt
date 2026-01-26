@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":5,"username":"alice1985","name":"Bob","surname":"Smith","gender":"MALE","birthDate":null,"enabled":true,"note":null,"loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":"+1-202-555-0189","skype":"user123.skype","facebook":"https://facebook.com/alice.smith","linkedin":"https://linkedin.com/in/testuser","website":"https://johndoe.dev","contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":"789 Broadway","address2":"Building 5","city":"New York","country":"USA","zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

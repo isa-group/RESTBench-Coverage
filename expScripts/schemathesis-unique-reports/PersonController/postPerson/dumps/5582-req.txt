@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: M82Fab
+Content-Type: application/json
+Content-Length: 136
+Host: localhost:34113
+
+{"address": {"e\ud8be\udcea~\u0011`\u001eqY\u00e0\u009c2\udb58\udf461": [[], []], "": null, "country": null, "number": 0, "city": null}}

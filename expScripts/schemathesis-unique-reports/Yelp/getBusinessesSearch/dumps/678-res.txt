@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 168
+Content-Type: application/json
+x-routing-service: routing-main--useast1-679fdcbd8b-bzpkw; site=public_api_v3
+x-zipkin-id: afbea57e67a23722e6ce77fd105c90c2
+server: envoy
+x-mode: ro
+x-proxied: 10-65-135-77-useast1bprod
+x-extlb: 10-65-135-77-useast1bprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 23:32:37 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220116-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'\\x1d\\U000e03b5' does not match '^[a-z]{2,3}_[A-Z]{2}$'", "field": "locale", "instance": "\u001d\udb40\udfb5"}}

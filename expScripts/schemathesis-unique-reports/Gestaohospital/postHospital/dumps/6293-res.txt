@@ -1,0 +1,7 @@
+HTTP/1.1 400 
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 12:12:32 GMT
+connection: close
+
+{"timestamp":"2025-12-28T12:12:32.876+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Cannot construct instance of `br.com.codenation.hospital.dto.HospitalDTO` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (90); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `br.com.codenation.hospital.dto.HospitalDTO` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (90)\n at [Source: (PushbackInputStream); line: 1, column: 1]","path":"/v1/hospitais/"}

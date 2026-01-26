@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: LxdUG8
+Content-Type: application/json
+Content-Length: 207
+Host: localhost:42371
+
+{"country": "", "mobile": "\u00b1", "gender": "\u00d6\ud8bb\uded4\u00923\u0003\u00c7Y", "address2": "e\f\u00d3\u00e8", "E%x": [null, {}], "secured": true, "password": "\u00f0G\u00e6\ud81d\ude9c\ud8c7\udf17"}

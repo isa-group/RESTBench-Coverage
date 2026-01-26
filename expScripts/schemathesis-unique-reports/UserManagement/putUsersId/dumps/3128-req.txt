@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: gdugw4
+Content-Type: application/json
+Content-Length: 188
+Host: localhost:42371
+
+{"surname": "", "username": "\u00d1\u008d", "facebook": "&p\ud84f\udd22\u00d1[\u00db\u001c", "": [[null], [-5.586853841399339e+16, -2.4528450160098124e-132, true], 3.803347462329715e+190]}

@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"2b2-m8DZN8Sa8Tm0LooeWaeFvwek99E"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjpfdospd7r02qf7e0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 9b25feed-31c4-4503-711a-bfae83b0a425
+
+{"meta":{"total":1,"parameters":{"filters":"STNAME: Delaware","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC,DEP,DEPDOM,ROE,ROA,DATEUPDT,OFFICES","limit":"1","search":"NAME: NBG"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"19702","ACTIVE":0,"ROA":2.4737080110461083,"DEPDOM":3001,"DATEUPDT":"12/02/1991","ROE":24.57,"STNAME":"Delaware","ASSET":274693,"NETINC":5316,"DEP":3001,"NAME":"NBD Delaware Bank","CBSA":"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD","CITY":"Newark","OFFDOM":1,"CERT":25153,"STALP":"DE","COUNTY":"New Castle","ID":"25153"},"score":28.332598}],"totals":{"count":1}}

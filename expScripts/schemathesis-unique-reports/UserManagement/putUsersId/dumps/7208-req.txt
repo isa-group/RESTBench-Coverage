@@ -1,0 +1,11 @@
+PUT /users/4 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: CuEzFr
+Content-Type: application/json
+Content-Length: 125
+Host: localhost:42371
+
+{"skype": "/\u00d8\u00e9\u008e\u00a0\u00eco\u00ac\ud876\udcfa\f\u0084\u008a\u009c\u6f19\udbcc\udde3\u0007\u0095\u001f\u00e9"}

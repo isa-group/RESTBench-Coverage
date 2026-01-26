@@ -1,0 +1,17 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 05:45:04 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 229
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"e5-e+7MKmLVfYGhxVcaqc2fwmaUgMA"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdn4tono5kghls5e40g
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: 434a9815-e7a1-4d79-4d39-98187d1830b5
+x-frame-options: DENY
+
+{"errors":[{"status":400,"code":"validate:format","title":"Invalid field data","detail":"Filename can only contain letters, numbers, and - or _","source":{"parameter":"filename"},"meta":{"timestamp":"2025-12-30T05:45:04.364Z"}}]}

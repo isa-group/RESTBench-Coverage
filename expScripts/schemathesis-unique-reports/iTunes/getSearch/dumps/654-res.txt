@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+content-length: 225
+x-apple-jingle-correlation-key: [Filtered]
+x-apple-request-uuid: 5a49ef88-ceba-c43f-0a68-4a4ac094e1c4
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?country=%F3%83%B9%AA%C2%A2&lang=%1A%E5%84%A2%C3%91%C2%BD%03%C3%9Af%F3%A1%BC%BE%C3%A0%C2%94%C2%9D&term=%C2%AC%C3%A6%C2%94%C3%97%C2%B1&entity=%7C%F2%AA%B3%BD%C3%82%F0%9E%9C%8E%C2%AC%C3%83%F3%86%9E%A69%0F%C3%97%C2%B1&limit=173&media=shortFilm&urlDesc=
+apple-tk: false
+x-b3-spanid: 10874f3aadf227e7
+b3: 5a49ef88cebac43f0a684a4ac094e1c4-10874f3aadf227e7
+x-b3-traceid: 5a49ef88cebac43f0a684a4ac094e1c4
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6502523:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-mr.itunes.apple.com/search?country=%F3%83%B9%AA%C2%A2&lang=%1A%E5%84%A2%C3%91%C2%BD%03%C3%9Af%F3%A1%BC%BE%C3%A0%C2%94%C2%9D&term=%C2%AC%C3%A6%C2%94%C3%97%C2%B1&entity=%7C%F2%AA%B3%BD%C3%82%F0%9E%9C%8E%C2%AC%C3%83%F3%86%9E%A69%0F%C3%97%C2%B1&limit=173&media=shortFilm
+x-apple-application-site: MR22
+apple-timing-app: 2 ms
+x-apple-application-instance: 6502523
+x-daiquiri-instance: daiquiri:17317002:mr85p00it-hyhk03144801:7987:25HOTFIX33:daiquiri-amp-store-shared-int-001-mr, daiquiri:12282001:mr47p00it-qujn06080702:7987:25HOTFIX33:daiquiri-amp-store-l7shared-ext-001-mr
+vary: Accept-Encoding
+expires: Mon, 29 Dec 2025 07:32:14 GMT
+cache-control: max-age=0, no-cache
+pragma: no-cache
+date: Mon, 29 Dec 2025 07:32:14 GMT
+x-cache: TCP_MISS from a2-20-196-17.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-true-cache-key: [Filtered]
+connection: keep-alive
+x-cache-remote: TCP_MISS from a92-122-215-20.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-apple-partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [country]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}
+

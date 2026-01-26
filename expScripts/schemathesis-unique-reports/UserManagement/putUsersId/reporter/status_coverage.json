@@ -1,0 +1,20 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/users/{id}": {
+			"put": [
+				201,
+				400,
+				404
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/users/{id}": {
+			"put": [
+				"400",
+				"404"
+			]
+		}
+	}
+}

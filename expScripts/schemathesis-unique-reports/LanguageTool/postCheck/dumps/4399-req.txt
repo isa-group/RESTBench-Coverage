@@ -1,0 +1,11 @@
+POST /v2/check HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: AAPbnj
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 139
+Host: localhost:36155
+
+éT§=î&éT§={}&éT§={'\U000a3b4d\U0007d0e5\U00034d6b\xadர\U000a6c52':+True}

@@ -1,0 +1,11 @@
+POST /annotation?isoformOverrideSource=urllib2&token=%5BFiltered%5D HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: SAx351
+Content-Type: application/json
+Content-Length: 123
+Host: localhost:34841
+
+["\u0018", "\u00ea", "{\udab3\uddfc\ud816\udc7f\u00101\u00cf\u00c2\udb53\udcd7", "", "\u0003\uda1f\ude3f\u0098", "urllib2"]

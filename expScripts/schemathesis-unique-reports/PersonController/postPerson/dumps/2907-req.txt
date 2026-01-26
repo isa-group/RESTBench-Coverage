@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 2N5kV6
+Content-Type: application/json
+Content-Length: 1169
+Host: localhost:34113
+
+{"lastName": "I\b\u00aa", "address": {"\u00f3\ud9bd\udd7f\n\u0085": {"\u009en\u00b8\ud921\udeac\u00c2\udbe8\udf53Zu": [], "\udabe\udf7dU\u007f\u00d2\u00ad\ud9f3\udc57": 5.960464477539063e-08, "\u00b53p\udbde\udcd1\u00b3\udac5\uddd6\uda01\udfb3#\udaed\uddf0\udb89\udea5*\u0002\ud9b4\udcfb\u00d2\ud818\ude85N\u00bb\u008b\u00a7\u001a": "s\u00c5\u0016-\udaf4\udef2f"}}, "age": 1636897748, "": {"Infinity": [false, false, 2.896828115005797e+169], "Y\u00ea\u00b1\udaa3\udc7aP\u00a6\u00e9\udbb4\udcf3$\u007f\u00c4j\u00ee9\f\u00cf": [[], [false, -6.822748508822676e+16, 3.385745710349271e+16], ["\u0015\ud9cc\udfbc", -18017, 113]], "\u00a0\udb9f\ude34\udb48\udfff\ud8ee\udc59": {"\ud8bd\udd45\ud97a\udd59\u0000": [], "9F": [-30895], "\udbef\udfb4": {"&": {"else": ["", null, "3\udacb\udca5/\ud918\udd43\u00de"], "\u00b2\u0018\u001e": "\ud857\udc91^\u0080\u000e\u00e0\uda93\udc67\u00c2\u009a"}, "#": [], "\udba8\udd1em\u00b3W\udb83\ude7b\u00e1\u00bb\u0012\u0013\u00ea\u00ae\u0091\u0662\ud934\udfc8\u00f0\udabc\udd36": [[-1.7976931348623155e+308]]}}}, "\uda1c\udea5\udb36\udd49\u000e\u00e2": [true, 6665, [[3.1170020843723003e+155], [false, -72, false], -8.513034880623081e-50]]}

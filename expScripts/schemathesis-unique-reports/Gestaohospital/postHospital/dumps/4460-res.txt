@@ -1,0 +1,7 @@
+HTTP/1.1 400 
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 12:08:39 GMT
+connection: close
+
+{"timestamp":"2025-12-28T12:08:40.620+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Cannot deserialize value of type `int` from Boolean value (token `JsonToken.VALUE_TRUE`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `int` from Boolean value (token `JsonToken.VALUE_TRUE`)\n at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: br.com.codenation.hospital.dto.HospitalDTO[\"availableBeds\"])","path":"/v1/hospitais/"}

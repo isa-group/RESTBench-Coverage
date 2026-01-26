@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 140
+Content-Type: application/json
+x-zipkin-id: 1b46bd711140599a040b3967c0ad5124
+x-routing-service: routing-main--useast1-679fdcbd8b-7qvws; site=public_api_v3
+server: envoy
+x-mode: ro
+x-proxied: 10-65-116-236-useast1aprod
+x-extlb: 10-65-116-236-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 23:20:38 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220102-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'tfc_ZH' is not a 'yelp-supported-locale'", "field": "locale", "instance": "tfc_ZH"}}

@@ -1,0 +1,7 @@
+operationId,status,mediaType,field
+getBusinesses,200,application/json,/businesses[]/attributes/business_temp_closed
+getBusinesses,200,application/json,/businesses[]/attributes/menu_url
+getBusinesses,200,application/json,/businesses[]/attributes/open24_hours
+getBusinesses,200,application/json,/businesses[]/attributes/waitlist_reservation
+getBusinesses,200,application/json,/businesses[]/location/display_address[]
+getBusinesses,200,application/json,/businesses[]/transactions[]

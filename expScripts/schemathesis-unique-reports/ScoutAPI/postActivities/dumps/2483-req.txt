@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: t1csel
+Content-Type: application/json
+Content-Length: 114
+Host: localhost:37143
+
+{"activity": {"\u0014\u00e4\u00b6\uda67\ude16!\u00bb!": []}, "\u0014\u00e4\u00b6\uda67\ude16!\u00bb!": {"": null}}

@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: GxwBBa
+Content-Type: application/json
+Content-Length: 64
+Host: localhost:42371
+
+{"q\u00af\u46e0\uda40\uded5\u00c5\u00b8": [], "contactNote": ""}

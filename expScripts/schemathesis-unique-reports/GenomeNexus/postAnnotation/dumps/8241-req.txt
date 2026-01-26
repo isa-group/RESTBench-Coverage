@@ -1,0 +1,11 @@
+POST /annotation HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: FINPhw
+Content-Type: application/json
+Content-Length: 77
+Host: localhost:34841
+
+["\u0002$\u00ae", "\u0002$\u00ae", "shlex_quote", "\u0002$\u00ae", "\u00d7:"]

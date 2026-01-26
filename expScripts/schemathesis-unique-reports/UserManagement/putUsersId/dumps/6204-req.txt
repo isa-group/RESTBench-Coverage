@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 5einmR
+Content-Type: application/json
+Content-Length: 122
+Host: localhost:42371
+
+{"password": "urlcleanup", "surname": "\ud9bf\udeb2\u00c5\n\u5c6d\u008f@$A\u00dc-5\udb86\udc4f#n\u00ac\u0099\ud85f\ude28"}

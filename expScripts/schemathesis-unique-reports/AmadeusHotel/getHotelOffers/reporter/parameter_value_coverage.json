@@ -1,0 +1,76 @@
+{
+	"documentedAndTested": {
+		"/shopping/hotel-offers": {
+			"get": {
+				"paymentPolicy": [
+					"NONE",
+					"GUARANTEE",
+					"DEPOSIT"
+				],
+				"boardType": [
+					"FULL_BOARD",
+					"BREAKFAST",
+					"HALF_BOARD",
+					"ALL_INCLUSIVE",
+					"ROOM_ONLY"
+				],
+				"includeClosed": [
+					"false",
+					"true"
+				],
+				"bestRateOnly": [
+					"false",
+					"true"
+				]
+			}
+		}
+	},
+	"documentedAndNotTested": {
+		"/shopping/hotel-offers": {
+			"get": {
+				"paymentPolicy": [],
+				"boardType": [],
+				"includeClosed": [],
+				"bestRateOnly": []
+			}
+		}
+	},
+	"notDocumentedAndTested": {
+		"/shopping/hotel-offers": {
+			"get": {
+				"paymentPolicy": [
+					"W\u00ff\udb6c\udd64\ud87f\uded4",
+					"7",
+					"\uda54\ude4c\u0007\udb5c\udd3d\ud82c\udc0b\u009a\u00c8U\ud940\uddc5",
+					"1",
+					"\u00ee\u00f3\u0082",
+					"\ud9b8\ude74\u0087\u0087)\u00ef\u00ebX\u00cb\u0099",
+					"r\u00ec"
+				],
+				"boardType": [
+					"NIL",
+					"9",
+					"\u00ff\u00a2L\u0005J(\ud9e3\udfbb",
+					"\u00fb \ud955\ude8f\u00e7\u0019\u00e1\u00ab",
+					"\ud9b3\uddff\u00ff\u00d4\u009c\u00b5\u00e9\u0002\ud8a1\udf85\u0011\ud996\udd8a\ud9ff\udd9c",
+					"\u657a\u00e1\u0081",
+					"z\\\u001bI\ud9fb\ude8e\ud9ca\udde5\u00aa~\u000eRQ{\u00865\u00fe\u00e8"
+				],
+				"includeClosed": [
+					"108",
+					"{'\u00bf\\x90\ud844\udff4\u00a6': 103}",
+					"x",
+					"0",
+					"0.0"
+				],
+				"bestRateOnly": [
+					"1.4731784770084477e+185",
+					"0",
+					"107",
+					"null",
+					"\udb69\udfd7\ud960\udd87\u0096\udb2d\udf11f\u00e1"
+				]
+			}
+		}
+	}
+}

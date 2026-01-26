@@ -1,0 +1,18 @@
+{
+	"documentedAndTested": {
+		"/stations": {
+			"get": [
+				"200",
+				"400",
+				"401",
+				"404"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/stations": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {}
+}

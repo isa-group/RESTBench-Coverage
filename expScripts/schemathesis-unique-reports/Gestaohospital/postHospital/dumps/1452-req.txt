@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: wslNon
+Content-Type: application/json
+Content-Length: 81
+Host: localhost:38545
+
+{"\b)-<9\u00e1\u00bd": [[4.421085264074241e+16, true, 4790]], "\udb00\udc2b": []}

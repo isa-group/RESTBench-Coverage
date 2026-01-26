@@ -1,0 +1,9 @@
+GET /v3/businesses/search?latitude=-1.1&reservation_covers=3&radius=35058&price=1%2C3 HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: BuPEOn
+Host: api.yelp.com
+

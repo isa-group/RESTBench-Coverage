@@ -1,0 +1,32 @@
+HTTP/1.1 400 Bad Request
+server: nginx
+date: Sun, 28 Dec 2025 13:19:43 GMT
+Content-Type: application/json
+content-length: 302
+connection: keep-alive
+access-control-allow-credentials: [Filtered]
+access-control-allow-methods: GET, HEAD, PUT, PATCH, POST, DELETE
+access-control-allow-origin: *
+access-control-expose-headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+access-control-max-age: 300
+cache-control: no-cache, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=lDTkSvQw_sWqtos5jE9gJrbrV2UG5idzTKJg8Vbi0w42G4apd6XPEGRUP7kgpgXp6KGDvgHJHU-YQnxw
+idempotency-key: [Filtered]
+original-request: req_aMz9Ud6wkhrXrS
+request-id: req_aMz9Ud6wkhrXrS
+stripe-version: 2024-12-18.acacia
+vary: Origin
+x-stripe-priority-routing-enabled: true
+x-stripe-routing-context-priority-tier: api-testmode
+x-wc: ABGHIJ
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+
+{
+  "error": {
+    "message": "Invalid tax code ``. See https://stripe.com/docs/tax/tax-categories for the list of available tax codes.",
+    "param": "tax_code",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_aMz9Ud6wkhrXrS?t=1766927983",
+    "type": "invalid_request_error"
+  }
+}
+

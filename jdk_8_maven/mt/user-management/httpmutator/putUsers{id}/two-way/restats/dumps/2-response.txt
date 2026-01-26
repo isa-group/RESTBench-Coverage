@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":8,"username":"johndoe90","name":"Alice","surname":null,"gender":"FEMALE","birthDate":"1990-05-20","enabled":false,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":"+1-202-555-0189","skype":"alice.smith.skype","facebook":null,"linkedin":"https://linkedin.com/in/testuser","website":"https://alicesmith.me","contactNote":"Call after 6pm"},"addressDTO":{"address":"789 Broadway","address2":null,"city":null,"country":"USA","zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

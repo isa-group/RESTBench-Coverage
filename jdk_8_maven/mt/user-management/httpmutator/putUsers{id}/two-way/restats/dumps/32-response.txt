@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":5,"username":"alice1985","name":"Alice","surname":"Zhang","gender":"MALE","birthDate":"1990-05-20","enabled":false,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":"+1-202-555-0189","skype":null,"facebook":"https://facebook.com/test.user","linkedin":"https://linkedin.com/in/alicesmith","website":"https://johndoe.dev","contactNote":"Urgent contact only"},"addressDTO":{"address":"456 High Road","address2":"Suite 210","city":null,"country":null,"zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

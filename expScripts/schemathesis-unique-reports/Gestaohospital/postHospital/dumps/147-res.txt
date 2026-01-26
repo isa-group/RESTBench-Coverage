@@ -1,0 +1,7 @@
+HTTP/1.1 400 
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 11:59:56 GMT
+connection: close
+
+{"timestamp":"2025-12-28T11:59:57.122+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)\n at [Source: (PushbackInputStream); line: 1, column: 14] (through reference chain: br.com.codenation.hospital.dto.HospitalDTO[\"latitude\"])","path":"/v1/hospitais/"}

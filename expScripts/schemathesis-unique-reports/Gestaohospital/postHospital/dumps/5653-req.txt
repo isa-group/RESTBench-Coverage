@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: HDskew
+Content-Type: application/json
+Content-Length: 68
+Host: localhost:38545
+
+{"\u008b\u0093\t\u00b0\u00b4\u00f9\u00c5\u009a'\u0084\u0012 ": null}

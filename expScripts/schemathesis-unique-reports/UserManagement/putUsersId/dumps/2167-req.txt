@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: i7q3Yi
+Content-Type: application/json
+Content-Length: 105
+Host: localhost:42371
+
+{"username": "\u00d2?\u0099\u00ce\ud8d4\udef5$P\ud8e1\udf99\u00e8", "note": "\u00bb\u00d8\u00aa0\u00ac@"}

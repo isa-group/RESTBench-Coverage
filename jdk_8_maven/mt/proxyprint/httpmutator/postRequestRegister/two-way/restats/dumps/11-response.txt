@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json;charset=UTF-8
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+x-application-context: application:0
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+
+{"id":1,"managerName":"Jean-Luc Wei","managerUsername":"jeanluc","managerEmail":"alice@example.com","managerPassword":"P@ssw0rd!","pShopAddress":"San Francisco","pShopLatitude":37.7749,"pShopLongitude":-122.4194,"pShopNIF":"123456789","pShopName":"Tech Print Solutions","pShopDateRequestAccepted":"19/08/2025 12:00"}

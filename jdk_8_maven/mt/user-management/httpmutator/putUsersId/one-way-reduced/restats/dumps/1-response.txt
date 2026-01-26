@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":8,"username":"testuser123","name":"John","surname":"Doe","gender":"FEMALE","birthDate":null,"enabled":false,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":"+44-7700-900123","skype":null,"facebook":"https://facebook.com/alice.smith","linkedin":"https://linkedin.com/in/johndoe","website":"https://johndoe.dev","contactNote":null},"addressDTO":{"address":"456 High Road","address2":"Suite 210","city":"Beijing","country":"UK","zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

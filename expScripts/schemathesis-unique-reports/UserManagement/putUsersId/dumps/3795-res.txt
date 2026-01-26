@@ -1,0 +1,7 @@
+HTTP/1.1 400 
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:29:08 GMT
+connection: close
+
+{"timestamp":"2025-12-28T10:29:08.418+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Cannot coerce empty String (\"\") to `com.giassi.microservice.demo2.rest.users.dtos.requests.CreateOrUpdateUserDTO` value (but could if coercion was enabled using `CoercionConfig`); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot coerce empty String (\"\") to `com.giassi.microservice.demo2.rest.users.dtos.requests.CreateOrUpdateUserDTO` value (but could if coercion was enabled using `CoercionConfig`)\n at [Source: (PushbackInputStream); line: 1, column: 1]","path":"/users/42"}

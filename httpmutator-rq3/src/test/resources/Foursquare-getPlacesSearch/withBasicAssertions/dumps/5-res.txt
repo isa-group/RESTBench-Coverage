@@ -1,0 +1,22 @@
+HTTP/1.1 429 Too Many Requests
+Connection: keep-alive
+Content-Length: 241
+Content-Type: application/json;charset=utf-8
+X-Fsq-Request-ID: 69319f3734ab05641ef317b7
+X-RateLimit-Path: /v3/places/search
+X-RateLimit-Limit: 0
+X-RateLimit-Remaining: 0
+Access-Control-Allow-Origin: https://subwaynewyork.com
+Access-Control-Expose-Headers: Link
+Access-Control-Allow-Credentials: true
+content-encoding: gzip
+Accept-Ranges: bytes
+Date: Thu, 04 Dec 2025 14:48:23 GMT
+Via: 1.1 varnish
+X-Served-By: cache-fra-etou8220063-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1764859703.692888,VS0,VE411
+Vary: Origin
+
+{"message":"Your account has no API credits remaining. Please visit your organization’s billing page at https://foursquare.com/developers/orgs to manually add credits or enable automatic payments. Purchasing credits is required if you are trying to make Premium calls or you have exceeded your freePro tier limit."}

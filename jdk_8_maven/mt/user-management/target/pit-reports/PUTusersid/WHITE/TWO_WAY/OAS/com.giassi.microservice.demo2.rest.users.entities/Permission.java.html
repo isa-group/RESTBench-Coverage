@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>Permission.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.giassi.microservice.demo2.rest.users.entities;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import lombok.AllArgsConstructor;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import lombok.Data;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import lombok.NoArgsConstructor;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.hibernate.annotations.GenericGenerator;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.persistence.*;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@Entity</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@Table(name=&#34;permissions&#34;)</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_12'/>
+12
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_12'>22</a>
+<span>
+1. equals : negated conditional &rarr; NO_COVERAGE<br/>
+2. equals : replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE<br/>
+3. equals : replaced boolean return with false for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE<br/>
+4. equals : negated conditional &rarr; NO_COVERAGE<br/>
+5. equals : replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE<br/>
+6. hashCode : negated conditional &rarr; NO_COVERAGE<br/>
+7. equals : replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE<br/>
+8. hashCode : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+9. equals : negated conditional &rarr; NO_COVERAGE<br/>
+10. equals : replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE<br/>
+11. equals : negated conditional &rarr; NO_COVERAGE<br/>
+12. hashCode : replaced int return with 0 for com/giassi/microservice/demo2/rest/users/entities/Permission::hashCode &rarr; NO_COVERAGE<br/>
+13. equals : negated conditional &rarr; NO_COVERAGE<br/>
+14. hashCode : Replaced integer addition with subtraction &rarr; NO_COVERAGE<br/>
+15. equals : negated conditional &rarr; NO_COVERAGE<br/>
+16. equals : replaced boolean return with false for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE<br/>
+17. equals : negated conditional &rarr; NO_COVERAGE<br/>
+18. hashCode : negated conditional &rarr; NO_COVERAGE<br/>
+19. hashCode : Replaced integer multiplication with division &rarr; NO_COVERAGE<br/>
+20. equals : negated conditional &rarr; NO_COVERAGE<br/>
+21. equals : negated conditional &rarr; NO_COVERAGE<br/>
+22. hashCode : Replaced integer multiplication with division &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>@Data</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>@NoArgsConstructor</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>@AllArgsConstructor</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class Permission {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Id</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @GeneratedValue(strategy= GenerationType.AUTO, generator=&#34;native&#34;)</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @GenericGenerator(name = &#34;native&#34;, strategy = &#34;native&#34;)</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Column(name=&#34;id&#34;)</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_21'/>
+21
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_21'>1</a>
+<span>
+1. getId : replaced Long return value with 0L for com/giassi/microservice/demo2/rest/users/entities/Permission::getId &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>    private Long id;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    @Column(name=&#34;permission&#34;, nullable = false)</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_24'/>
+24
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_24'>1</a>
+<span>
+1. getPermission : replaced return value with &#34;&#34; for com/giassi/microservice/demo2/rest/users/entities/Permission::getPermission &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    private String permission;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@52cc5f92_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@52cc5f92_12'>12</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_12'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with true for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> replaced int return with 0 for com/giassi/microservice/demo2/rest/users/entities/Permission::hashCode &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>13.<span><b>13</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>14.<span><b>14</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>15.<span><b>15</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>16.<span><b>16</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> replaced boolean return with false for com/giassi/microservice/demo2/rest/users/entities/Permission::equals &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>17.<span><b>17</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>18.<span><b>18</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>19.<span><b>19</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>20.<span><b>20</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>21.<span><b>21</b><br/><b>Location : </b>equals<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; NO_COVERAGE</span>
+</div> <p class='NO_COVERAGE'><span class='pop'>22.<span><b>22</b><br/><b>Location : </b>hashCode<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@52cc5f92_21'>21</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_21'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getId<br/><b>Killed by : </b>none</span></span> replaced Long return value with 0L for com/giassi/microservice/demo2/rest/users/entities/Permission::getId &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@52cc5f92_24'>24</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@52cc5f92_24'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getPermission<br/><b>Killed by : </b>none</span></span> replaced return value with &#34;&#34; for com/giassi/microservice/demo2/rest/users/entities/Permission::getPermission &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.giassi.microservice.demo2.rest.users.entities.Permission,-method=getPermission,-methodDesc=()Ljava/lang/String;],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.giassi.microservice.demo2.rest.users.entities.Permission,-method=getPermission,-methodDesc=()Ljava/lang/String;],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.giassi.microservice.demo2.rest.users.entities.Permission,-method=getPermission,-methodDesc=()Ljava/lang/String;],-indexes=[5],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#48]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#49]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#45]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#47]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#50]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#46]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39] (3156 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19] (3168 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18] (3188 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21] (3266 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29] (3277 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40] (3328 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42] (3335 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20] (3346 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33] (3418 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36] (3439 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32] (3491 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17] (3500 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38] (3501 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22] (3542 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28] (3549 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15] (3557 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41] (3606 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37] (3622 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12] (3629 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30] (3630 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27] (3659 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14] (3663 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34] (3674 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35] (3678 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10] (3682 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31] (3696 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#48] (3702 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#49] (3714 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26] (3758 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44] (3762 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43] (3763 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13] (3769 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#45] (3830 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7] (3831 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24] (3904 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#47] (3921 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5] (3951 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9] (4022 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23] (4022 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4] (4064 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3] (4070 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6] (4119 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25] (4196 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2] (4316 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#50] (4508 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16] (4811 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#46] (4824 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11] (5243 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8] (5730 ms)</li><li>mt.com.giassi.microservice.demo2.UserManagementEndpointTest.[engine:junit-jupiter]/[class:mt.com.giassi.microservice.demo2.UserManagementEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1] (10812 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.1
+
+</body>
+</html>

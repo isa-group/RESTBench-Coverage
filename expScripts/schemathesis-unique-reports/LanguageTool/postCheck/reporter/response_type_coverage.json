@@ -1,0 +1,21 @@
+{
+	"documentedAndTested": {
+		"/check": {
+			"post": [
+				"application/json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/check": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/check": {
+			"post": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

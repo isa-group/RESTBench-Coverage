@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 7id98Z
+Content-Type: application/json
+Content-Length: 38
+Host: localhost:42371
+
+{"city": "\u0081i\u0081P\u00ca\u00e1"}

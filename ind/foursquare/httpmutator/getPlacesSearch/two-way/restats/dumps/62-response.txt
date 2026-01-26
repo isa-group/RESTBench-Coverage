@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+accept-ranges: bytes
+content-type: application/json; charset=utf-8
+server: Finatra
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-ratelimit-limit: 0
+x-ratelimit-path: /v3/places/search
+x-ratelimit-remaining: 0
+x-served-by: cache-toj-leto2350056-TOJ
+
+{"results":[{"fsq_place_id":"59f8d9ef6f0aa22ebdc5ed6e","latitude":37.38595215037824,"longitude":-5.973587022708965,"categories":[{"fsq_category_id":"4bf58dd8d48988d1cc941735","name":"Steakhouse","short_name":"Steakhouse","plural_name":"Steakhouses","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/steakhouse_","suffix":".png"}}],"distance":1446,"link":"/places/59f8d9ef6f0aa22ebdc5ed6e","location":{"address":"Calle Fray Pedro de Zuñiga, 4","locality":"Sevilla","region":"Andalucía","postcode":"41018","admin_region":"Andalucía","country":"ES","formatted_address":"Calle Fray Pedro de Zuñiga, 4, 41018 Sevilla Andalucía"},"name":"Asador La Despensa - Restaurante En Nervión (sevilla)","social_media":{"facebook_id":"182679441747597","twitter":""},"tel":"+34954536663","website":"http://www.asadorladespensa.com"}],"context":{"geo_bounds":{"circle":{"center":{"latitude":37.3885,"longitude":-5.98965},"radius":2694}}}}

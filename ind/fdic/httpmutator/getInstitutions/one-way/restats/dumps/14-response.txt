@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"239-hDkhOUw4jjMVn+wxKsqPZR+5qms"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjp3uhsqhhl6d6gvr0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 392f1c65-008d-4cc2-4407-9e9b0afd10f3
+
+{"meta":{"total":273,"parameters":{"filters":"STNAME: Connecticut","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC","limit":"1","offset":"10"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"06103","CBSA":"Hartford-East Hartford-Middletown, CT","CITY":"Hartford","ACTIVE":0,"OFFDOM":63,"STNAME":"Connecticut","ASSET":4295062,"CERT":17948,"NETINC":71645,"STALP":"CT","COUNTY":"Hartford","NAME":"Bank of Boston Connecticut","ID":"17948"},"score":0}],"totals":{"count":273}}

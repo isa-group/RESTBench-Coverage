@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: r23aCM
+Content-Type: application/json
+Content-Length: 58
+Host: localhost:37143
+
+{"author": {"id": 7925278294617079679}, "time_min": 19649}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: kgIbrY
+Content-Type: application/json
+Content-Length: 130
+Host: localhost:34113
+
+{"lastName": "z\u00aa", "firstName": "\u0088{", "": {"\u00b13\u00cd\u00f2\ud9dc\udec5\u008d\ud867\udc28l-z7\n\u00e0": {}, "": {}}}

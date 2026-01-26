@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 138
+Content-Type: application/json
+x-routing-service: routing-main--useast1-679fdcbd8b-dw4x7; site=public_api_v3
+x-zipkin-id: 14252d3ef4d0e1cdd603c503e9d353cf
+server: envoy
+x-mode: ro
+x-proxied: 10-65-90-142-useast1aprod
+x-extlb: 10-65-90-142-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 22:33:30 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220120-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'ff_AA' is not a 'yelp-supported-locale'", "field": "locale", "instance": "ff_AA"}}

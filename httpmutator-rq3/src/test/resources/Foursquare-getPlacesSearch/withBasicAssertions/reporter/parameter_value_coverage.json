@@ -1,0 +1,57 @@
+{
+	"documentedAndTested": {
+		"/places/search": {
+			"get": {
+				"X-Places-Api-Version": [
+					"2025-06-17"
+				],
+				"exclude_all_chains": [
+					"true",
+					"false"
+				],
+				"open_now": [
+					"true",
+					"false"
+				],
+				"tel_format": [
+					"NATIONAL",
+					"E164"
+				],
+				"sort": [
+					"RATING",
+					"RELEVANCE",
+					"POPULARITY",
+					"DISTANCE"
+				]
+			}
+		}
+	},
+	"documentedAndNotTested": {
+		"/places/search": {
+			"get": {
+				"X-Places-Api-Version": [],
+				"exclude_all_chains": [],
+				"open_now": [],
+				"tel_format": [],
+				"sort": []
+			}
+		}
+	},
+	"notDocumentedAndTested": {
+		"/places/search": {
+			"get": {
+				"X-Places-Api-Version": [
+					"EVOMASTER"
+				],
+				"exclude_all_chains": [],
+				"open_now": [],
+				"tel_format": [
+					"EVOMASTER"
+				],
+				"sort": [
+					"EVOMASTER"
+				]
+			}
+		}
+	}
+}

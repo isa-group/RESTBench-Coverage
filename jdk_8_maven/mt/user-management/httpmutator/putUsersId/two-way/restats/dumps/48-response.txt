@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":8,"username":"alice1985","name":"John","surname":"Smith","gender":"MALE","birthDate":null,"enabled":true,"note":"VIP customer","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":null,"skype":"john.doe.skype","facebook":"https://facebook.com/alice.smith","linkedin":"https://linkedin.com/in/johndoe","website":"https://johndoe.dev","contactNote":"Call after 6pm"},"addressDTO":{"address":"123 Main Street","address2":null,"city":"Beijing","country":"UK","zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

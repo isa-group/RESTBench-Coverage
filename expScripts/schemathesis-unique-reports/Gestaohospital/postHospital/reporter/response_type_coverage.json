@@ -1,0 +1,18 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/v1/hospitais/": {
+			"post": [
+				"*/*"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/v1/hospitais/": {
+			"post": [
+				"application/json",
+				"application/octet-stream"
+			]
+		}
+	}
+}

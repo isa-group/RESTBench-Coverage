@@ -1,0 +1,34 @@
+HTTP/1.1 400 Bad Request
+server: nginx
+date: Sun, 28 Dec 2025 13:26:53 GMT
+Content-Type: application/json
+content-length: 328
+connection: keep-alive
+access-control-allow-credentials: [Filtered]
+access-control-allow-methods: GET, HEAD, PUT, PATCH, POST, DELETE
+access-control-allow-origin: *
+access-control-expose-headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+access-control-max-age: 300
+cache-control: no-cache, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=D0c-dzqGHXzj9uLBgxTSaYO1BzeAdfX_Da6Max7G6xWTEs4JPNqRgvYR9EpiDnEdDu569KhNVs6-Cqbx
+idempotency-key: [Filtered]
+original-request: req_eCNkhQcaCwgYpB
+request-id: req_eCNkhQcaCwgYpB
+stripe-version: 2024-12-18.acacia
+vary: Origin
+x-stripe-priority-routing-enabled: true
+x-stripe-routing-context-priority-tier: api-testmode
+x-wc: ABGHIJ
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+
+{
+  "error": {
+    "code": "parameter_missing",
+    "doc_url": "https://stripe.com/docs/error-codes/parameter-missing",
+    "message": "Missing required param: name.",
+    "param": "name",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_eCNkhQcaCwgYpB?t=1766928413",
+    "type": "invalid_request_error"
+  }
+}
+

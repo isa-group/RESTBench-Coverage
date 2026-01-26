@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 1rc9EK
+Content-Type: application/json
+Content-Length: 162
+Host: localhost:42371
+
+{"surname": "\u00db\u00a7\u00cbQ\u00e1\u00a1\u0094\udb6d\udc48\u001f\ud9de\udd03\r\ud915\udca9\ud9d7\udd0e\u00d9\u0095\u0099\u00edE", "shlex_quote": {}, "": null}

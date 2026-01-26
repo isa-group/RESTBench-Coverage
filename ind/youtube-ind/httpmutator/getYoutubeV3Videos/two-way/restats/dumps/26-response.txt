@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"hsuZZjXDhE9Fr9GBtUWS2kj9DD8","items":[{"kind":"youtube#video","etag":"cbijE-i6mW20WvbnvCRak3sBpDk","id":"UPOl7EIOnRM","player":{"embedHtml":"<iframe width=\"72\" height=\"41\" src=\"https://www.youtube.com/embed/UPOl7EIOnRM\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>","embedHeight":"41","embedWidth":"72"},"localizations":{"en":{"title":"SALMO - RAPTILIAN FREESTYLE","description":"Directed by Andrea Folino\nEditor Alessandro Forroia\nMake Up Artist Emanuela Pigozzi\nProduced by REEF Studios"}},"paidProductPlacementDetails":{"hasPaidProductPlacement":false}}],"nextPageToken":"CAEQAA","pageInfo":{"totalResults":200,"resultsPerPage":1}}

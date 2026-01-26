@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: RF3rej
+Content-Type: application/json
+Content-Length: 167
+Host: localhost:42371
+
+{"\ud8d2\udd08\u0011": {"": [[], []], "\u00f9i": [47, -1.429927455297076e+16, null]}, "name": "\ud857\udd03\u00d2", "enabled": true, "\u00cc": [[{}, {"": true}, 0.0]]}

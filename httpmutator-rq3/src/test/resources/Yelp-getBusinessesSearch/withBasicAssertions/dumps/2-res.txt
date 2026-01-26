@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+Connection: keep-alive
+Content-Length: 107
+Content-Type: application/json
+x-routing-service: routing-main--uswest2-b575679b6-wx8vx; site=public_api_v3
+server: envoy
+x-zipkin-id: c98595b6310c1a4a62ba36b8b265fcbc
+x-mode: ro
+x-proxied: 10-69-164-248-uswest2bprod
+x-extlb: 10-69-164-248-uswest2bprod
+Accept-Ranges: bytes
+Date: Mon, 19 Jan 2026 11:49:34 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sjc10032-SJC
+X-Cache: MISS
+X-Cache-Hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "[] is too short", "field": "price", "instance": []}}

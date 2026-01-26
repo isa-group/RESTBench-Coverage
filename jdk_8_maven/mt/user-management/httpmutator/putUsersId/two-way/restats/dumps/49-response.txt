@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":6,"username":"testuser123","name":"Alice","surname":"Smith","gender":"FEMALE","birthDate":"1990-05-20","enabled":false,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":"+86-13800138000","skype":"john.doe.skype","facebook":"https://facebook.com/alice.smith","linkedin":"https://linkedin.com/in/johndoe","website":"https://alicesmith.me","contactNote":"Urgent contact only"},"addressDTO":{"address":"789 Broadway","address2":"Building 5","city":"Beijing","country":"UK","zipCode":"100000"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

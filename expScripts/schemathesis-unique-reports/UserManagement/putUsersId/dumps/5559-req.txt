@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ypOtKK
+Content-Type: application/json
+Content-Length: 515
+Host: localhost:42371
+
+{"city": "\u00a1?\u00a0y", "gender": "\u0004\udaf9\udcc1^\udb37\udca9\u0097\u0085\u0095Z\u0ca1", "surname": "\u00d2", "\u009c": {}, "\u00fb8H\ud906\ude10\u00d0\u00a0\u00b4E\u00ab\u00e1\u00c8|(a\ud87e\udc38\udbc7\udc68EI%\u007f\u009b\udaad\udc7e<Z": {"": [[], {"P\u00a8\u007f\u00a8\u00f6$u)": true, "": "8\u1383\u00ff", "\uda70\udfdf\ud9d1\udec5\u0086": -29024}, {"p": {"H\ud97e\udd06\u0014": null, "C8\u00ad": null}}], "\u00d1C/D\u00bb50": -3.676114387616547e-14, ">\udba8\udc5f2\f\u00e1\u00de)\u00c1\u0082": null}}

@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: fX7C65
+Content-Type: application/json
+Content-Length: 183
+Host: localhost:42371
+
+{"mobile": "1\u008b\u00f5\ud9c9\ude48\udbe5\udf2b\u0090", "\u00ff\u0010": {"\u00e5\u00b7\ud866\udcad_\u0012": 1471849976, "\ud8ea\udc89\u00cf": 1471849976, "\u00b3\udbfd\udfa2": 0.0}}

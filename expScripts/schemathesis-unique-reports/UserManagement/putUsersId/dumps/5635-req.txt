@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 3mYgQ3
+Content-Type: application/json
+Content-Length: 60
+Host: localhost:42371
+
+{"if": [], "address2": "", "secured": true, "enabled": true}

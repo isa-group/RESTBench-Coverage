@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: cvGGFd
+Content-Type: application/json
+Content-Length: 104
+Host: localhost:37143
+
+{"\u00ff\u0098": {}, "participants_max": -10, "\u00af\udb8c\udfd0\ud89a\udd87f": [[], [null]], "": null}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="751.9943662546575">
+	<testsuite disabled="0" errors="0" failures="1" name="schemathesis" skipped="1" tests="1" time="751.9943662546575" hostname="fcd653bde8bc">
+		<testcase name="POST /check" time="751.994366">
+			<failure type="failure" message="1. Test Case ID: lcp0rO
+
+- JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `Error: Missing 'text' or 'data' parameter`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/x-www-form-urlencoded' -d language= http://localhost:36155/v2/check
+
+2. Test Case ID: oCueTa
+
+- Server error
+
+[500] Internal Server Error:
+
+    `Error: Internal Error: Unexpected character ((CTRL-CHAR, code 135)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+     at [Source: (String)&quot;°d򩧿󂫵¤m«xe󳵑écÌ2&quot;; line: 1, column: 2]`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/x-www-form-urlencoded' -d data=%C2%87%C2%B0%1F%C2%82d%F2%A9%A7%BF%1B%C2%9E%C2%97%F3%82%AB%B5%C2%9A%C2%9B%C2%A4m%04%C2%ABxe%F3%B3%B5%91%C3%A9c%C3%8C2 http://localhost:36155/v2/check"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

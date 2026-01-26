@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: cazo2L
+Content-Type: application/json
+Content-Length: 290
+Host: localhost:42371
+
+{"city": "f\u00fb\u00e3\u00f4", "\u0014": {"\ud850\uddea\u0099f": {"\u00e8\u000b\u00e9%": true, "1e100": true, "\ud84c\uddd4 \u00d8": true}, "5@": {"\u00e8\u000b\u00e9%": true, "\ud84c\uddd4 \u00d8": true, "": null}, "[\u000b\u0094\uda2d\udf4a\u001a6\u001b+\u00d4\udac6\udc0f\u00c8": null}}

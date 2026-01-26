@@ -1,0 +1,73 @@
+HTTP/1.1 400 Bad Request
+vary: Origin, X-Origin, Referer
+Content-Type: application/json; charset=UTF-8
+content-encoding: gzip
+date: Mon, 29 Dec 2025 02:57:39 GMT
+server: scaffolding on HTTPServer2
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+transfer-encoding: chunked
+
+{
+  "error": {
+    "code": 400,
+    "message": "Invalid value at 'my_rating' (type.googleapis.com/youtube.api.v3.RatingWrapper.Rating), \"\"\nInvalid value at 'max_width' (TYPE_INT32), \"null\"\nInvalid value at 'max_results' (TYPE_UINT32), \"null\"\nInvalid value at 'max_height' (TYPE_INT32), \"ʇǝɯɐ ʇᴉs ɹolop ɯnsdᴉ ɯǝɹo˥\"\nInvalid value at 'max_height' (TYPE_INT32), \"\u0003\"\nInvalid value at 'max_height' (TYPE_INT32), \"񐙼uU\"\nInvalid value at 'max_height' (TYPE_INT32), \"-0.5\"\nInvalid value at 'max_height' (TYPE_INT32), \"False\"\nInvalid value at 'max_height' (TYPE_INT32), \"ûqáÓ򼆮\"\nInvalid value at 'chart' (type.googleapis.com/youtube.api.v3.VideoListRequest.Chart), \"3N𮤏úíñé򳳫¹\u0015@è{]ðno\"",
+    "errors": [
+      {
+        "message": "Invalid value at 'my_rating' (type.googleapis.com/youtube.api.v3.RatingWrapper.Rating), \"\"\nInvalid value at 'max_width' (TYPE_INT32), \"null\"\nInvalid value at 'max_results' (TYPE_UINT32), \"null\"\nInvalid value at 'max_height' (TYPE_INT32), \"ʇǝɯɐ ʇᴉs ɹolop ɯnsdᴉ ɯǝɹo˥\"\nInvalid value at 'max_height' (TYPE_INT32), \"\u0003\"\nInvalid value at 'max_height' (TYPE_INT32), \"񐙼uU\"\nInvalid value at 'max_height' (TYPE_INT32), \"-0.5\"\nInvalid value at 'max_height' (TYPE_INT32), \"False\"\nInvalid value at 'max_height' (TYPE_INT32), \"ûqáÓ򼆮\"\nInvalid value at 'chart' (type.googleapis.com/youtube.api.v3.VideoListRequest.Chart), \"3N𮤏úíñé򳳫¹\u0015@è{]ðno\"",
+        "reason": "invalid"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "field": "my_rating",
+            "description": "Invalid value at 'my_rating' (type.googleapis.com/youtube.api.v3.RatingWrapper.Rating), \"\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"null\""
+          },
+          {
+            "field": "max_results",
+            "description": "Invalid value at 'max_results' (TYPE_UINT32), \"null\""
+          },
+          {
+            "field": "max_height",
+            "description": "Invalid value at 'max_height' (TYPE_INT32), \"ʇǝɯɐ ʇᴉs ɹolop ɯnsdᴉ ɯǝɹo˥\""
+          },
+          {
+            "field": "max_height",
+            "description": "Invalid value at 'max_height' (TYPE_INT32), \"\u0003\""
+          },
+          {
+            "field": "max_height",
+            "description": "Invalid value at 'max_height' (TYPE_INT32), \"񐙼uU\""
+          },
+          {
+            "field": "max_height",
+            "description": "Invalid value at 'max_height' (TYPE_INT32), \"-0.5\""
+          },
+          {
+            "field": "max_height",
+            "description": "Invalid value at 'max_height' (TYPE_INT32), \"False\""
+          },
+          {
+            "field": "max_height",
+            "description": "Invalid value at 'max_height' (TYPE_INT32), \"ûqáÓ򼆮\""
+          },
+          {
+            "field": "chart",
+            "description": "Invalid value at 'chart' (type.googleapis.com/youtube.api.v3.VideoListRequest.Chart), \"3N𮤏úíñé򳳫¹\u0015@è{]ðno\""
+          }
+        ]
+      }
+    ]
+  }
+}
+

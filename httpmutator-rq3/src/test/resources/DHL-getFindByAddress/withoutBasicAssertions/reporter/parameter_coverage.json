@@ -1,0 +1,33 @@
+{
+	"documentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"countryCode",
+				"addressLocality",
+				"streetAddress",
+				"providerType",
+				"locationType",
+				"serviceType",
+				"radius",
+				"limit",
+				"hideClosedLocations",
+				"postalCode",
+				"currentDate"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"Host",
+				"Accept",
+				"DHL-API-Key"
+			]
+		}
+	}
+}

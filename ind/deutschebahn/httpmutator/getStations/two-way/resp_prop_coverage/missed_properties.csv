@@ -1,0 +1,13 @@
+operationId,status,mediaType,field
+getStations,200,application/json,/result[]/mailingAddress/houseNumber
+getStations,200,application/json,/result[]/szentrale/address
+getStations,200,application/json,/result[]/szentrale/address/city
+getStations,200,application/json,/result[]/szentrale/address/houseNumber
+getStations,200,application/json,/result[]/szentrale/address/street
+getStations,200,application/json,/result[]/szentrale/address/zipcode
+getStations,200,application/json,/result[]/szentrale/email
+getStations,200,application/json,/result[]/szentrale/internalFaxNumber
+getStations,200,application/json,/result[]/szentrale/internalPhoneNumber
+getStations,200,application/json,/result[]/szentrale/mobilePhoneNumber
+getStations,200,application/json,/result[]/szentrale/publicFaxNumber
+getStations,200,application/json,/result[]/wirelessLan

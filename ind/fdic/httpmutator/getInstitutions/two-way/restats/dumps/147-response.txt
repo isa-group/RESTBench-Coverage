@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"2cc-/gFvMGFgX89SP1ztaKZEigYvZ0c"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjteo5rsiqfgf3kang
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 414d3817-ce83-4ba2-735f-f36d5d49eed6
+
+{"meta":{"total":16,"parameters":{"filters":"STNAME: Florida","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC,DEP,DEPDOM,ROE,ROA,DATEUPDT,OFFICES","limit":"1","offset":"0","search":"NAME: Springs"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"33011","CBSA":"Miami-Fort Lauderdale-Pompano Beach, FL","CITY":"Hialeah","ACTIVE":0,"DATEUPDT":"09/18/1999","STNAME":"Florida","CERT":1348,"STALP":"FL","COUNTY":"Miami-Dade","NAME":"Hialeah-Miami Springs First State Bank","ID":"1348"},"score":238.53992,"highlight":{"NAME.raw":["<em>Hialeah</em>-<em>Miami</em> <em>Springs</em> First State Bank"]}}],"totals":{"count":16}}

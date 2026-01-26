@@ -1,0 +1,14 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 09:48:51 GMT
+Content-Type: application/json;charset=utf-8
+connection: keep-alive
+cache-control: no-cache, no-transform
+x-global-transaction-id: 39574c586953a003053abfe0
+x-ratelimit-limit: name=default,10;
+x-ratelimit-remaining: name=default,3;
+content-encoding: gzip
+strict-transport-security: max-age=16070400; includeSubDomains
+set-cookie: [Filtered]
+transfer-encoding: chunked
+
+{"errNo":400,"errMsg":"Illegal Parameter"}

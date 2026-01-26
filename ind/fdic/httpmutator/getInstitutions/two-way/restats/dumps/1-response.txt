@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"d3-NVOXQnPu1Dma0lHJqKkeZAz0E/Y"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjp74dbojrdfn12kkg
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 36801ea7-5fd3-4dd9-6956-dd1ef0445b7c
+
+{"meta":{"total":27,"parameters":{"filters":"STNAME: Alaska","limit":"50","offset":"100"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[],"totals":{"count":27}}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: xclGgW
+Content-Type: application/json
+Content-Length: 587
+Host: localhost:34113
+
+{"lastName": "\u00ba", "address": {"": [{"F\u008eIp\u001b": {"2\u00c3": [], "\u00dd\ud81e\udc63\u00bd\uda05\udf46": []}, "\u00aa\udbbf\udeef\ud9f3\uddc7\u00ad^\uda69\udcbe\u00f6:\ub0f3\u00a1\u00ba": [null, {"=\n\u00f3E\u00a2\u009f\u00a7\u00ca\udb93\udcf2\u00b6": -3706}], "6\u007f\u0000": {}}, {"=\n\u00f3E\u00a2\u009f\u00a7\u00ca\udb93\udcf2\u00b6": {"F\u008eIp\u001b": null, "2\u00c3": false, "\u00dd\ud81e\udc63\u00bd\uda05\udf46": 0.0}, "\u00aa\udbbf\udeef\ud9f3\uddc7\u00ad^\uda69\udcbe\u00f6:\ub0f3\u00a1\u00ba": null}], "=\n\u00f3E\u00a2\u009f\u00a7\u00ca\udb93\udcf2\u00b6": {}}}

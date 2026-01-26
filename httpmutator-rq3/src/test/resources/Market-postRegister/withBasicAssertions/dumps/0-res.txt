@@ -1,0 +1,14 @@
+HTTP/1.1 406
+Set-Cookie: JSESSIONID=5683252BAB7E027481B878D5AE6C1089; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 31 Dec 2025 12:07:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{"message":"Argument validation error","description":"uri=/register","entityName":"userDTO","fieldErrors":[{"field":"password","message":"Length shall be between 6 and 50 characters"},{"field":"email","message":"The value shall not be empty"},{"field":"phone","message":"The value shall not be empty"},{"field":"name","message":"Only letters, whitespace, hyphen and apostrophe are allowed"}]}

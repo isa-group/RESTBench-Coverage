@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: wwlwJo
+Content-Type: application/json
+Content-Length: 181
+Host: localhost:34113
+
+{"address": {"street": "\u00ae\u0010\udb09\ude43\u008f.\u001f", "number": 49}, "\u00da\u00fc*\u0019": "\u00e4\ud96e\udcffl\u00e9\u009al", "createdAt": "9158-11-06T10:35:27.941889Z"}

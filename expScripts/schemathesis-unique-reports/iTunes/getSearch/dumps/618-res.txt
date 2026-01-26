@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+content-length: 225
+x-apple-jingle-correlation-key: [Filtered]
+x-apple-request-uuid: f1a47fb5-933a-4621-b454-e00b22d68033
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?country=%C3%9E%F1%B8%96%B2&term=I%1A&urlDesc=
+apple-tk: false
+x-b3-spanid: d725e37648d07d72
+b3: f1a47fb5933a4621b454e00b22d68033-d725e37648d07d72
+x-b3-traceid: f1a47fb5933a4621b454e00b22d68033
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6501823:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-mr.itunes.apple.com/search?country=%C3%9E%F1%B8%96%B2&term=I%1A
+x-apple-application-site: MR22
+apple-timing-app: 2 ms
+x-apple-application-instance: 6501823
+x-daiquiri-instance: daiquiri:17317004:mr85p00it-hyhk04154601:7987:25HOTFIX33:daiquiri-amp-store-shared-int-001-mr, daiquiri:12282001:mr47p00it-qujn06080702:7987:25HOTFIX33:daiquiri-amp-store-l7shared-ext-001-mr
+vary: Accept-Encoding
+expires: Mon, 29 Dec 2025 07:28:15 GMT
+cache-control: max-age=0, no-cache
+pragma: no-cache
+date: Mon, 29 Dec 2025 07:28:15 GMT
+x-cache: TCP_MISS from a2-20-196-17.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-true-cache-key: [Filtered]
+connection: keep-alive
+x-cache-remote: TCP_MISS from a23-213-160-204.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-apple-partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [country]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}
+

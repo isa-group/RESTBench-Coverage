@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 67Ym79
+Content-Type: application/json
+Content-Length: 45
+Host: localhost:42371
+
+{"mobile": "\u00eb", "city": "xmlrpc_server"}

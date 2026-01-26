@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: W52WGb
+Content-Type: application/json
+Content-Length: 230
+Host: localhost:37143
+
+{"activity": {"favourites_count": 0, "\ud8d3\uddb0\ud850\udd0b\ud962\uddf8\ud82d\udfb4\u000f": [4.113697953589125e+16, "viewkeys", 1.2378035889506094e-42], "id": 11}, "\ud8d3\uddb0\ud850\udd0b\ud962\uddf8\ud82d\udfb4\u000f": null}

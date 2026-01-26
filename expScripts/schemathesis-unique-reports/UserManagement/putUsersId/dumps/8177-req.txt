@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: owkY1Y
+Content-Type: application/json
+Content-Length: 235
+Host: localhost:42371
+
+{"city": "-\udb7f\udf04\u008a\u009f\u00af", "X": ["\u00df\uda43\uddb9C\u00eb", "6", false], "linkedin": "\u00e8\u0090\udb07\udc51\uda8e\udd96", "dbm.gnu": [[[false], {"\uda8e\udde3\u00f4": true}, ""], {"\uda8e\udde3\u00f4": true}, []]}

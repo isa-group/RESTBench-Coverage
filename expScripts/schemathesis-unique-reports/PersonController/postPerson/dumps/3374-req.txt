@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 5MWM3Z
+Content-Type: application/json
+Content-Length: 100
+Host: localhost:34113
+
+{"address": {"postcode": "\u0091rt\udb87\udfe4\uda94\udc8a", "number": 5, "city": null}, "cars": []}

@@ -1,0 +1,16 @@
+HTTP/1.1 400 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"1a4-oRdptkoEP6QOBJsmHqD+BHNi8U8"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjonfpo3adr86kvre0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 4e6a94aa-ddf3-4ad0-5295-3e6f1bd80fc0
+
+{"errors":[{"status":400,"links":{"about":{"href":"https://pfabankapi.app.cloud.gov/docs","meta":{"section":"Filter Syntax"}}},"title":"Invalid request input, please double check your search query syntax","detail":"search_phase_execution_exception: [query_shard_exception] Reason: No mapping found for [testhttpmut] in order to sort on","source":{"parameter":"filters"},"meta":{"timestamp":"2025-10-13T09:40:36.518Z"}}]}

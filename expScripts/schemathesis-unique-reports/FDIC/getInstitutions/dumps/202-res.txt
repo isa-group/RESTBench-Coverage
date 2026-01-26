@@ -1,0 +1,17 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 05:31:07 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 434
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"1b2-Pp6P4LH5zvv5S0qCuBlw5AEaIho"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdmuhduo1kc2c3ctd8g
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: 353486cb-d768-4dfb-5412-1b24cf2ae12f
+x-frame-options: DENY
+
+{"errors":[{"status":400,"links":{"about":{"href":"https://pfabankapi.app.cloud.gov/docs","meta":{"section":"Filter Syntax"}}},"title":"Invalid request input, please double check your search query syntax","detail":"illegal_argument_exception: [illegal_argument_exception] Reason: Failed to parse int parameter [from] with value [8369844623534961744]","source":{"parameter":"filters"},"meta":{"timestamp":"2025-12-30T05:31:07.404Z"}}]}

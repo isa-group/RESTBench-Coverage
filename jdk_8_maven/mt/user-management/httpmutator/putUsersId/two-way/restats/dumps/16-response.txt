@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":7,"username":"alice1985","name":"Alice","surname":"Smith","gender":"MALE","birthDate":"1990-05-20","enabled":true,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":"+1-202-555-0189","skype":"john.doe.skype","facebook":null,"linkedin":null,"website":null,"contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":"123 Main Street","address2":"Suite 210","city":null,"country":"China","zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

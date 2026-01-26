@@ -1,0 +1,22 @@
+HTTP/1.1 400 
+date: Mon, 29 Dec 2025 06:06:36 GMT
+server: Apache/2.4.58 (Ubuntu)
+strict-transport-security: max-age=63072000; includeSubdomains;
+access-control-allow-origin: *
+access-control-allow-methods: POST, GET
+access-control-max-age: 3600
+access-control-allow-credentials: [Filtered]
+access-control-allow-headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization
+cache-control: no-cache, no-store, must-revalidate
+vary: accept-encoding
+content-encoding: gzip
+Content-Type: application/json
+connection: close
+transfer-encoding: chunked
+
+{
+  "timestamp" : "2025-12-29T06:06:36.049505694",
+  "status" : 400,
+  "message" : "Your provided boundary parameter (bboxes, bcircles, or bpolys) does not fit its format, or you defined more than one boundary parameter.",
+  "requestUrl" : "https://api.ohsome.org/v1/elements/perimeter?timeout=88&bboxes=&showMetadata=&filter=&bcircles=ì¸¼𬿆ì1𦭓@ÇGÒ&bpolys=__code__&time="
+}

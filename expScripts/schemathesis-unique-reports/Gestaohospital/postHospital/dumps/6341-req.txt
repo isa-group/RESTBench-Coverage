@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: A4PPMP
+Content-Type: application/json
+Content-Length: 136
+Host: localhost:38545
+
+{"beds": -11702, "\udaa8\udd5d\u0014\ud95c\udfe3\u0096\u00e3s\ud831\udf93\u00aa\ud901\udd31\u00a6\u0092\u00e67": [[], {"": null}, null]}

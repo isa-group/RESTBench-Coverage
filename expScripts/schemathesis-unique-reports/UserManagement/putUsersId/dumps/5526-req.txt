@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: sn50xW
+Content-Type: application/json
+Content-Length: 157
+Host: localhost:42371
+
+{"999999999999999999999999999999": 1234891464, "gender": "\ud83c\udffb\ud83d\udc4d\ud83c\udffb", "password": "\u00ea\u00ab\u008f\uda77\udce8", "address": ""}

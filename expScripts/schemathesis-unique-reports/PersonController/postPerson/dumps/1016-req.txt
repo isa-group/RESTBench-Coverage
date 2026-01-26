@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: bnDxnO
+Content-Type: application/json
+Content-Length: 174
+Host: localhost:34113
+
+[{}, {}, {"\u00aa": false, ".l\u00c3": [[]], "\u00dbp\u0090": [[[false, null], [false, "n\u001f\u00a625\u00a3\ud9c3\udcfd\u001f\udb45\udd6a", true], 9.328388342248831e-57]]}]

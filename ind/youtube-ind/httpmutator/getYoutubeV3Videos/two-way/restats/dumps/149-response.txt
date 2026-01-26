@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"y66tdwzmt0yphljQgFXknUiRAmI","items":[{"kind":"youtube#video","etag":"laLat4BJgLZ_VZxkBeqYCrE2gNc","id":"CklByQftO3Q","contentDetails":{"duration":"PT5M55S","dimension":"2d","definition":"hd","caption":"false","licensedContent":true,"contentRating":{},"projection":"rectangular"}},{"kind":"youtube#video","etag":"CHyHsNlL8cLNfjHik8xJ1np_WcU","id":"TgeziSZE7rk","contentDetails":{"duration":"PT2M22S","dimension":"2d","definition":"hd","caption":"false","licensedContent":false,"contentRating":{},"projection":"rectangular"}},{"kind":"youtube#video","etag":"eXdLCvm4ORnskpvqGiUU54nFHLs","id":"T2dMVNuOLsE","contentDetails":{"duration":"PT1H4M57S","dimension":"2d","definition":"hd","caption":"false","licensedContent":true,"contentRating":{},"projection":"rectangular"}},{"kind":"youtube#video","etag":"P1Vl4whL84BrTtmxGA9ijOCqGrI","id":"EN1tMeXQii0","contentDetails":{"duration":"PT3M12S","dimension":"2d","definition":"hd","caption":"true","licensedContent":true,"regionRestriction":{"blocked":["BY","RU"]},"contentRating":{},"projection":"rectangular"},"liveStreamingDetails":{"actualStartTime":"2025-10-10T04:00:06Z","actualEndTime":"2025-10-10T04:05:33Z","scheduledStartTime":"2025-10-10T04:00:00Z"}},{"kind":"youtube#video","etag":"HL4Q6YgaAdyxQylTAxhRUR_Gjo4","id":"NnmvQII89YU","contentDetails":{"duration":"PT17M3S","dimension":"2d","definition":"hd","caption":"false","licensedContent":true,"contentRating":{},"projection":"rectangular"}}],"nextPageToken":"CAUQAA","pageInfo":{"totalResults":200,"resultsPerPage":5}}

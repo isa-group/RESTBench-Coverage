@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: UM69j9
+Content-Type: application/json
+Content-Length: 76
+Host: localhost:34113
+
+{"insurance": true, "createdAt": "6505-10-20T02:05:36.453229Z", "age": 4144}

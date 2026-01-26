@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":6,"username":"testuser123","name":"Bob","surname":null,"gender":"FEMALE","birthDate":null,"enabled":true,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":null,"skype":"john.doe.skype","facebook":"https://facebook.com/test.user","linkedin":"https://linkedin.com/in/testuser","website":"https://alicesmith.me","contactNote":"Call after 6pm"},"addressDTO":{"address":"123 Main Street","address2":"Suite 210","city":"Beijing","country":"UK","zipCode":"100000"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"330-YknIY1jmgsSdho/SVvD+goypmEQ"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjt1maje00l339el3g
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 8bdff694-7392-47ce-7e57-46baee0d058f
+
+{"meta":{"total":2,"parameters":{"filters":"STNAME: Colorado","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC,DEP,DEPDOM,ROE,ROA,DATEUPDT,OFFICES","limit":"1","offset":"0","search":"NAME: Lake"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"80021","ACTIVE":0,"ROA":4.599076962031144,"DEPDOM":145879,"DATEUPDT":"08/12/1998","ROE":71.6,"STNAME":"Colorado","ASSET":157209,"NETINC":2664,"DEP":145879,"NAME":"Norwest National Bank","CBSA":"Denver-Aurora-Lakewood, CO","CITY":"Westminster","OFFDOM":1,"CERT":25716,"STALP":"CO","COUNTY":"Jefferson","ID":"25716"},"score":26.83369,"highlight":{"PRIORNAME2.raw":["<em>Norwest</em> <em>Bank</em> <em>Standley</em> <em>Lake</em>, National Association"]}}],"totals":{"count":2}}

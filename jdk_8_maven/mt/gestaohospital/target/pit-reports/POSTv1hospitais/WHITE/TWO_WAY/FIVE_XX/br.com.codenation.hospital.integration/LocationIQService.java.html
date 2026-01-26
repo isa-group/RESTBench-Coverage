@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>LocationIQService.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package br.com.codenation.hospital.integration;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.BufferedReader;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.InputStreamReader;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.net.HttpURLConnection;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.net.MalformedURLException;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.net.URL;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.net.URLEncoder;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.Logger;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.LoggerFactory;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.springframework.stereotype.Service;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.core.type.TypeReference;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.fasterxml.jackson.databind.ObjectMapper;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import br.com.codenation.hospital.resource.ProductResource;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@Service</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class LocationIQService {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;private static final Logger LOGGER = LoggerFactory.getLogger(LocationIQService.class);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;private final String locationKey = &#34;43b382813d8baa&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;private final String locationFormat = &#34;json&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;private final String locationUrl = &#34;https://us1.locationiq.com/v1/search.php&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;public LocationIQService() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public List&#60;LocationIQResponse&#62; getLocationIQResponse(String search) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_34'/>
+34
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_34'>1</a>
+<span>
+1. getLocationIQResponse : replaced return value with Collections.emptyList for br/com/codenation/hospital/integration/LocationIQService::getLocationIQResponse &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return CallLocationIQAPI(search);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;private List&#60;LocationIQResponse&#62; CallLocationIQAPI(String search) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;ArrayList&#60;LocationIQResponse&#62; locationsResponse = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;try {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_41'/>
+41
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_41'>1</a>
+<span>
+1. CallLocationIQAPI : removed call to java/lang/Thread::sleep &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;Thread.sleep(1000);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;URL url = new URL(locationUrl + &#34;?key=&#34; + locationKey + &#34;&#38;q=&#34; + URLEncoder.encode(search, &#34;UTF-8&#34;) + &#34;&#38;format=&#34; + locationFormat);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;HttpURLConnection conn = (HttpURLConnection) url.openConnection();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_45'/>
+45
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_45'>1</a>
+<span>
+1. CallLocationIQAPI : removed call to java/net/HttpURLConnection::setRequestMethod &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;conn.setRequestMethod(&#34;GET&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_46'/>
+46
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_46'>1</a>
+<span>
+1. CallLocationIQAPI : removed call to java/net/HttpURLConnection::setRequestProperty &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;conn.setRequestProperty(&#34;Accept&#34;, &#34;application/json&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;BufferedReader br;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_49'/>
+49
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_49'>4</a>
+<span>
+1. CallLocationIQAPI : changed conditional boundary &rarr; SURVIVED<br/>
+2. CallLocationIQAPI : changed conditional boundary &rarr; SURVIVED<br/>
+3. CallLocationIQAPI : negated conditional &rarr; SURVIVED<br/>
+4. CallLocationIQAPI : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;if (200 &#60;= conn.getResponseCode() &#38;&#38; conn.getResponseCode() &#60;= 299) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;    br = new BufferedReader(new InputStreamReader(conn.getInputStream()));</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;} else {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9;    br = new BufferedReader(new InputStreamReader(conn.getErrorStream()));</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;StringBuilder sb = new StringBuilder();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;String output;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_57'/>
+57
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_57'>1</a>
+<span>
+1. CallLocationIQAPI : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;while ((output = br.readLine()) != null) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;  sb.append(output);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_61'/>
+61
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_61'>1</a>
+<span>
+1. CallLocationIQAPI : negated conditional &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;if (conn.getResponseCode() != 200) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9;&#9;LOGGER.error(&#34;Failed : HTTP error - Error with message: {}&#34;, sb.toString());</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9;&#9;throw new RuntimeException(&#34;Failed : HTTP error code : &#34; + conn.getResponseCode());</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_66'/>
+66
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_66'>1</a>
+<span>
+1. CallLocationIQAPI : removed call to java/net/HttpURLConnection::disconnect &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;&#9;conn.disconnect();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;locationsResponse = new ObjectMapper()</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;.readValue(sb.toString(), new TypeReference&#60;ArrayList&#60;LocationIQResponse&#62;&#62;() {});</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;  } catch (MalformedURLException e) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9; LOGGER.error(&#34;getLocationIQResponse - MalformedURLException - Error with message: {}&#34;, e.getMessage());</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;  } catch (IOException e) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9; LOGGER.error(&#34;getLocationIQResponse - IOException - Error with message: {}&#34;, e.getMessage());</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;  } catch (InterruptedException e) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>&#9;&#9;&#9;  LOGGER.error(&#34;getLocationIQResponse - InterruptedException - Error with message: {}&#34;, e.getMessage());</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_79'/>
+79
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_79'>1</a>
+<span>
+1. CallLocationIQAPI : replaced return value with Collections.emptyList for br/com/codenation/hospital/integration/LocationIQService::CallLocationIQAPI &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;return locationsResponse;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@56d4481f_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_34'>34</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_34'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getLocationIQResponse<br/><b>Killed by : </b>none</span></span> replaced return value with Collections.emptyList for br/com/codenation/hospital/integration/LocationIQService::getLocationIQResponse &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=getLocationIQResponse,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=getLocationIQResponse,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=getLocationIQResponse,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[6],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_41'>41</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_41'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> removed call to java/lang/Thread::sleep &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[10],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_45'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> removed call to java/net/HttpURLConnection::setRequestMethod &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[41],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[41],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[41],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_46'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> removed call to java/net/HttpURLConnection::setRequestProperty &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[47],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[47],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[47],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_49'>49</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_49'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[53],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[53],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[53],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[57],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> <p class='SURVIVED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[53],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[53],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[53],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_57'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[98],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[98],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[98],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_61'>61</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_61'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[112],-mutator=org.pitest.mutationtest.engine.gregor.mutators.NegateConditionalsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_66'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> removed call to java/net/HttpURLConnection::disconnect &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[139],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[139],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[139],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@56d4481f_79'>79</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@56d4481f_79'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>CallLocationIQAPI<br/><b>Killed by : </b>none</span></span> replaced return value with Collections.emptyList for br/com/codenation/hospital/integration/LocationIQService::CallLocationIQAPI &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[202],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[202],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=br.com.codenation.hospital.integration.LocationIQService,-method=CallLocationIQAPI,-methodDesc=(Ljava/lang/String;)Ljava/util/List;],-indexes=[202],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8] (2167 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7] (2183 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9] (2197 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13] (2208 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17] (6350 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15] (6352 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14] (6354 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18] (6370 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10] (6411 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12] (6437 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11] (6437 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16] (6528 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5] (6547 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4] (6612 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6] (6730 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3] (6787 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2] (7480 ms)</li><li>mt.br.com.codenation.hospital.GestaohosiptalEndpointTest.[engine:junit-jupiter]/[class:mt.br.com.codenation.hospital.GestaohosiptalEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1] (11436 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.1
+
+</body>
+</html>

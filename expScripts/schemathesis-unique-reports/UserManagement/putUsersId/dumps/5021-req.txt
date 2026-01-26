@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: LOvwIq
+Content-Type: application/json
+Content-Length: 111
+Host: localhost:42371
+
+{"T\u00c8\ud8a7\udd1cV,\u00b5": {"\ud98d\udda6": [[{"FTPHandler": 3.6958873340337944e+16}, {}, {}]]}, "": null}

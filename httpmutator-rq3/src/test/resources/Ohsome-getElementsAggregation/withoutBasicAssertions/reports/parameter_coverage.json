@@ -1,0 +1,28 @@
+{
+	"documentedAndTested": {
+		"/elements/{aggregation}": {
+			"get": [
+				"bboxes",
+				"bcircles",
+				"bpolys",
+				"timeout",
+				"time",
+				"filter",
+				"showMetadata"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/elements/{aggregation}": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/elements/{aggregation}": {
+			"get": [
+				"Host",
+				"Accept"
+			]
+		}
+	}
+}

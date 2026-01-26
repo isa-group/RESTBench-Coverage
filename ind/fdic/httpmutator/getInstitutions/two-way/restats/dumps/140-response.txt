@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"6d3-YW80VnwAyXLBA1PpwcwHZ6gzml4"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjt8afqqtqnlhr2mm0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 2a06fbcd-5cb7-440a-646a-f85ded6ac88e
+
+{"meta":{"total":4,"parameters":{"filters":"","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC,DEP,DEPDOM,ROE,ROA,DATEUPDT,OFFICES","limit":"50","search":"NAME: Early"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"50535","ACTIVE":0,"ROA":-4.8636964036184445,"DEPDOM":11935,"DATEUPDT":"10/04/1990","ROE":-60.87,"STNAME":"Iowa","ASSET":12890,"NETINC":-496,"DEP":11935,"NAME":"Early Savings Bank","CITY":"Early","OFFDOM":1,"CERT":10116,"STALP":"IA","COUNTY":"Sac","ID":"10116"},"score":409.61362},{"data":{"ZIP":"76802","ACTIVE":0,"ROA":-5.404094119043379,"DEPDOM":15130,"DATEUPDT":"10/04/1990","ROE":-105.19,"STNAME":"Texas","ASSET":15846,"NETINC":-683,"DEP":15130,"NAME":"The Early Bank","CBSA":"Brownwood, TX","CITY":"Early","OFFDOM":1,"CERT":23024,"STALP":"TX","COUNTY":"Brown","ID":"23024"},"score":409.61362,"highlight":{"NAME.raw":["<em>The</em> <em>Early</em> Bank"]}},{"data":{"ZIP":"31210","ACTIVE":0,"ROA":-0.9518323006924768,"DEPDOM":174175,"DATEUPDT":"10/02/2024","ROE":-8.8,"STNAME":"Georgia","ASSET":204076,"NETINC":-506,"DEP":174175,"NAME":"OneSouth Bank","CBSA":"Macon-Bibb County, GA","CITY":"Macon","OFFDOM":4,"CERT":15813,"STALP":"GA","COUNTY":"Bibb","ID":"15813"},"score":52.500298,"highlight":{"PRIORNAME1.raw":["<em>Bank</em> <em>of</em> <em>Early</em>"]}},{"data":{"ZIP":"72331","ACTIVE":0,"ROA":0.7132887174071105,"DEPDOM":85314,"DATEUPDT":"05/09/1996","ROE":9.76,"STNAME":"Arkansas","ASSET":92735,"NETINC":168,"DEP":85314,"NAME":"Union Planters Bank of East Arkansas","CBSA":"Memphis, TN-MS-AR","CITY":"Earle","OFFDOM":7,"CERT":16588,"STALP":"AR","COUNTY":"Crittenden","ID":"16588"},"score":13.981854}],"totals":{"count":4}}

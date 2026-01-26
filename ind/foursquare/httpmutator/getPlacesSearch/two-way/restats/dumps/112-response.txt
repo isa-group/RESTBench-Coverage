@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+accept-ranges: bytes
+content-type: application/json; charset=utf-8
+server: Finatra
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-ratelimit-limit: 0
+x-ratelimit-path: /v3/places/search
+x-ratelimit-remaining: 0
+x-served-by: cache-toj-leto2350056-TOJ
+
+{"results":[{"fsq_place_id":"688d8acdc13c4c1006d849d7","latitude":37.38315,"longitude":-5.993609,"categories":[{"fsq_category_id":"4bf58dd8d48988d1e0931735","name":"Coffee Shop","short_name":"Coffee Shop","plural_name":"Coffee Shops","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_","suffix":".png"}},{"fsq_category_id":"4bf58dd8d48988d116941735","name":"Bar","short_name":"Bar","plural_name":"Bars","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_","suffix":".png"}},{"fsq_category_id":"4d4b7105d754a06374d81259","name":"Restaurant","short_name":"Restaurant","plural_name":"Restaurants","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/default_","suffix":".png"}}],"location":{"address":"Avenida de la Constitución, 30","locality":"Sevilla","region":"Andalucía","postcode":"41001","country":"ES","formatted_address":"Avenida de la Constitución, 30, 41001 Sevilla Andalucía"},"name":"Cafetería la Ibense"},{"fsq_place_id":"4e9fddd89adf2bdff86cb9a2","latitude":37.37919027764814,"longitude":-5.997563345997503,"categories":[{"fsq_category_id":"4bf58dd8d48988d1e0931735","name":"Coffee Shop","short_name":"Coffee Shop","plural_name":"Coffee Shops","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_","suffix":".png"}}],"location":{"address":"C. Asunción, 3","locality":"Sevilla","region":"Andalucía","postcode":"41011","admin_region":"Andalucía","country":"ES","formatted_address":"C. Asunción, 3 (Plaza de Cuba), 41011 Sevilla Andalucía"},"name":"Cafeteria Asunción 3"}],"context":{"geo_bounds":{"circle":{"center":{"latitude":37.39125,"longitude":-5.9871},"radius":2317}}}}

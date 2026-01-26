@@ -1,0 +1,11 @@
+PUT /users/4 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: e693I4
+Content-Type: application/json
+Content-Length: 97
+Host: localhost:42371
+
+{"gender": "", "NULL": -2.910298685489285e-263, "\u009e\uda75\udd20\udacf\udc0a": [{}, 26, null]}

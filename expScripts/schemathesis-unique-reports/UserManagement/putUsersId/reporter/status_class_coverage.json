@@ -1,0 +1,23 @@
+{
+	"documentedAndTested": {
+		"/users/{id}": {
+			"put": [
+				"4"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/users/{id}": {
+			"put": [
+				"2"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/users/{id}": {
+			"put": [
+				"4"
+			]
+		}
+	}
+}

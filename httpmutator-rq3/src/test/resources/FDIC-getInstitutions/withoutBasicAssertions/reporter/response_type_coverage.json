@@ -1,0 +1,16 @@
+{
+	"documentedAndTested": {
+		"/institutions": {
+			"get": [
+				"application/json",
+				"text/csv"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/institutions": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {}
+}

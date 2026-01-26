@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"113-34hocUAvhuCGa1RD2go0q5ftnxs"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjtctkkg5clnph0tt0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: b246def2-e601-42f1-73ab-0359cf1f9c4d
+
+{"meta":{"total":0,"parameters":{"filters":"STNAME: Hawaii","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP","limit":"1","offset":"10","search":"NAME: NBG"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[],"totals":{"count":0}}

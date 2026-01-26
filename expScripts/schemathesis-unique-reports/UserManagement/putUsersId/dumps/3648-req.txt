@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: r4VmHI
+Content-Type: application/json
+Content-Length: 214
+Host: localhost:42371
+
+{"\u00e1\u00a5\u00d6\u000f\udb61\ude5a3O\u00c7": [[true], [true]], "secured": false, "city": "", "address2": "\u001dIC", "surname": "\u001fZS<$`\u0098", "password": "n$W8\u00b5\ud930\udeb6\u00aa\u0094\uda3e\udc88"}

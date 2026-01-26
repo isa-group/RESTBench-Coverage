@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: iobso2
+Content-Type: application/json
+Content-Length: 267
+Host: localhost:42371
+
+{"username": "\u0013\udbcf\ude13\u00de", "zipCode": "S,m\u00b7", "email": "", "contactNote": "\u009c\uda1f\uddea", "\udb8f\udeda\u00cb\uda48\udc67\u0019\u00c4\ud90b\ude96\u0010\ud8f5\udc07\u0012[\u00e1": [], "address": "unquote_to_bytes", "\udae9\udccc\u0007o|=": []}

@@ -1,0 +1,11 @@
+POST /request/register HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: lclaOT
+Content-Type: application/json
+Content-Length: 73
+Host: localhost:41773
+
+{"managerUsername": "\u00a1\u00e5J3\u00bc(", "pShopNIF": "\u0095\u00fbw"}

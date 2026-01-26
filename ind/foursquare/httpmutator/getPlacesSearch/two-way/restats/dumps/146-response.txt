@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+accept-ranges: bytes
+content-type: application/json; charset=utf-8
+server: Finatra
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-ratelimit-limit: 0
+x-ratelimit-path: /v3/places/search
+x-ratelimit-remaining: 0
+x-served-by: cache-toj-leto2350025-TOJ
+
+{"results":[{"fsq_place_id":"4a8edc42f964a520ee1220e3","latitude":33.787316925777944,"longitude":-84.35544373893487,"categories":[{"fsq_category_id":"4bf58dd8d48988d1e0931735","name":"Coffee Shop","short_name":"Coffee Shop","plural_name":"Coffee Shops","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_","suffix":".png"}},{"fsq_category_id":"4bf58dd8d48988d1e2931735","name":"Art Gallery","short_name":"Art Gallery","plural_name":"Art Galleries","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/artgallery_","suffix":".png"}}],"distance":2157545,"email":"sfcoffee@bellsouth.net","link":"/places/4a8edc42f964a520ee1220e3","location":{"address":"1192 N Highland Ave NE","locality":"Atlanta","region":"GA","postcode":"30306","country":"US","formatted_address":"1192 N Highland Ave NE (at Amsterdam Ave NE), Atlanta, GA 30306"},"name":"Apotheos Roastery","placemaker_url":"https://foursquare.com/placemakers/review-place/4a8edc42f964a520ee1220e3","social_media":{"facebook_id":"110885102309228","instagram":"apotheosatlanta","twitter":"sanfrancoffeerc"},"tel":"(404) 876-8816","website":"http://www.mysfcoffee.com"},{"fsq_place_id":"4a3ba365f964a520aca01fe3","latitude":33.76240419860106,"longitude":-84.3334068928446,"categories":[{"fsq_category_id":"4bf58dd8d48988d1e0931735","name":"Coffee Shop","short_name":"Coffee Shop","plural_name":"Coffee Shops","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/coffeeshop_","suffix":".png"}},{"fsq_category_id":"4bf58dd8d48988d1e2931735","name":"Art Gallery","short_name":"Art Gallery","plural_name":"Art Galleries","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/artgallery_","suffix":".png"}},{"fsq_category_id":"4bf58dd8d48988d1dc931735","name":"Tea Room","short_name":"Tea Room","plural_name":"Tea Rooms","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/tearoom_","suffix":".png"}}],"distance":2155934,"email":"sfcoffee@bellsouth.net","link":"/places/4a3ba365f964a520aca01fe3","location":{"address":"1660 Dekalb Ave NE","locality":"Atlanta","region":"GA","postcode":"30307","country":"US","formatted_address":"1660 Dekalb Ave NE (Clifton Rd), Atlanta, GA 30307"},"name":"San Francisco Coffee Roasting Co.","placemaker_url":"https://foursquare.com/placemakers/review-place/4a3ba365f964a520aca01fe3","social_media":{"facebook_id":"138465522861203","twitter":"sanfrancoffeerc"},"tel":"(404) 377-2588","website":"http://sanfranciscocoffeeroastingco.com"}],"context":{"geo_bounds":{"circle":{"center":{"latitude":34.370498,"longitude":-60.872534},"radius":4725944}}}}

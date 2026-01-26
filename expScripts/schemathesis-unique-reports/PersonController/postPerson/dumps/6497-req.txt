@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: sPHX6e
+Content-Type: application/json
+Content-Length: 63
+Host: localhost:34113
+
+{"cars": [{"~5\u00f1\u0080\u00f3\u00e2": [], "model": ""}, {}]}

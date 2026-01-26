@@ -1,0 +1,232 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>es.us.isa.httpmutator.experiment.services</groupId>
+    <artifactId>httpmutator-benchmark</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>jdk_8_maven</module>
+        <module>jdk_11_maven</module>
+        <module>ind</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <slf4j.version>1.7.36</slf4j.version>
+        <log4j.version>2.24.3</log4j.version>
+        <junit-jupiter.version>5.9.1</junit-jupiter.version>
+        <testcontainers.version>1.16.3</testcontainers.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- SLF4J API -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>org.testcontainers</groupId>-->
+            <!--                <artifactId>testcontainers</artifactId>-->
+            <!--                <version>${testcontainers.version}</version>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>es.us.isa.httpmutator.experiment</groupId>
+            <artifactId>endpoint-test</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit Jupiter engine for running JUnit 5 tests -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.slf4j</groupId>-->
+        <!--            <artifactId>slf4j-api</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.logging.log4j</groupId>-->
+        <!--            <artifactId>log4j-slf4j-impl</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.logging.log4j</groupId>-->
+        <!--            <artifactId>log4j-core</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.logging.log4j</groupId>-->
+        <!--            <artifactId>log4j-api</artifactId>-->
+        <!--        </dependency>-->
+    </dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!--
+                  Maven Surefire Plugin
+                  - version 3.0.0-M7 supports JUnit 5 natively
+                  - exclude the vintage engine to avoid JUnit 4/Vintage errors
+                  - inject httpmutator system properties for test extensions
+                  - optionally include only a single test class
+                -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M7</version>
+                    <configuration>
+                        <properties>
+                            <!-- do not load JUnit Vintage engine -->
+                            <excludeEngines>junit-vintage</excludeEngines>
+                        </properties>
+                        <systemPropertyVariables>
+                            <httpmut.operationPath>${httpmut.operationPath}</httpmut.operationPath>
+                            <httpmut.httpMethod>${httpmut.httpMethod}</httpmut.httpMethod>
+                            <httpmut.oas>${httpmut.oas}</httpmut.oas>
+                            <httpmut.pictModelFile>${httpmut.pictModelFile}</httpmut.pictModelFile>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <httpmut.csvMapper>${httpmut.csvMapper}</httpmut.csvMapper>
+                            <!--suppress UnresolvedMavenProperty -->
+                            <httpmut.removedJsonPaths>${httpmut.removedJsonPaths}</httpmut.removedJsonPaths>
+                            <httpmut.removedJsonNodes>${httpmut.removedJsonNodes}</httpmut.removedJsonNodes>
+                            <httpmut.level>${httpmut.level}</httpmut.level>
+                            <httpmut.strength>${httpmut.strength}</httpmut.strength>
+                            <httpmut.testmode>${httpmut.testmode}</httpmut.testmode>
+                            <httpmut.workingDir>${httpmut.workingDir}</httpmut.workingDir>
+                            <httpmut.java17Exec>${httpmut.java17Exec}</httpmut.java17Exec>
+                            <httpmut.postmanAssertifyJar>${httpmut.postmanAssertifyJar}</httpmut.postmanAssertifyJar>
+                            <httpmut.newmanJsFile>${httpmut.newmanJsFile}</httpmut.newmanJsFile>
+                            <httpmut.exclusiveAssertions>${httpmut.exclusiveAssertions}</httpmut.exclusiveAssertions>
+
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+
+                <!--
+                  PIT Mutation Testing Plugin
+                  - bound to the verify phase to generate reports
+                  - uses the JUnit5 plugin for mutation analysis
+                  - output in CSV format under pitest.reportDir
+                -->
+                <plugin>
+                    <groupId>org.pitest</groupId>
+                    <artifactId>pitest-maven</artifactId>
+                    <version>1.19.1</version>
+                    <dependencies>
+                        <!-- Plugin to allow JUnit5 tests in mutation analysis -->
+                        <dependency>
+                            <groupId>org.pitest</groupId>
+                            <artifactId>pitest-junit5-plugin</artifactId>
+                            <version>1.2.1</version>
+                        </dependency>
+                        <!-- <dependency>
+                            <groupId>com.arcmutate</groupId>
+                            <artifactId>arcmutate-spring</artifactId>
+                            <version>1.1.1</version>
+                        </dependency> -->
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>mutation-coverage</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>mutationCoverage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <jvmArgs>
+                            <jvmArg>-Xmx5g</jvmArg>
+                            <jvmArg>-Xms1g</jvmArg>
+
+                            <param>-Dhttpmut.operationPath=${httpmut.operationPath}</param>
+                            <param>-Dhttpmut.httpMethod=${httpmut.httpMethod}</param>
+                            <param>-Dhttpmut.oas=${httpmut.oas}</param>
+                            <!-- <param>-Dhttpmut.pictModelFile=${httpmut.pictModelFile}</param> -->
+
+                            <param>-Dhttpmut.level=${httpmut.level}</param>
+                            <param>-Dhttpmut.strength=${httpmut.strength}</param>
+                            <param>-Dhttpmut.testmode=${httpmut.testmode}</param>
+
+                            <param>-Dhttpmut.csvMapper=${httpmut.csvMapper}</param>
+
+                            <param>-Dhttpmut.removedJsonPaths=${httpmut.removedJsonPaths}</param>
+                            <param>-Dhttpmut.removedJsonNodes=${httpmut.removedJsonNodes}</param>
+                            <param>-Dhttpmut.removedHeaderFields=${httpmut.removedHeaderFields}</param>
+
+                            <param>-Dhttpmut.workingDir=${httpmut.workingDir}</param>
+
+                            <param>-Dhttpmut.java17Exec=${httpmut.java17Exec}</param>
+                            <param>-Dhttpmut.postmanAssertifyJar=${httpmut.postmanAssertifyJar}</param>
+                            <param>-Dhttpmut.newmanJsFile=${httpmut.newmanJsFile}</param>
+                            <param>-Dhttpmut.invariantNullValues=${httpmut.invariantNullValues}</param>
+                            <param>-Dhttpmut.invariantsPath=${httpmut.invariantsPath}</param>
+                            <param>-Dhttpmut.exclusiveAssertions=${httpmut.exclusiveAssertions}</param>
+                        </jvmArgs>
+
+                        <!-- force pitest to ignore -DskipTests -->
+                        <skipTests>false</skipTests>
+                        <crossModule>true</crossModule>
+                        <reportsDirectory>${pitest.reportDir}</reportsDirectory>
+                        <outputFormats>
+                            <param>CSV</param>
+                            <param>HTML</param>
+                            <param>XML</param>
+                        </outputFormats>
+                        <threads>12</threads>
+                        <features>
+                            <feature>+auto_threads</feature>
+                            <!-- <feature>+CLASSLIMIT(limit[50])</feature> -->
+                        </features>
+                        <timeoutConstant>60000</timeoutConstant>
+                        <timeoutFactor>5000</timeoutFactor>
+                        <verbose>true</verbose>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

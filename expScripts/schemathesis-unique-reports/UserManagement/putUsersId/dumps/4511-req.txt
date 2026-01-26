@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: cEiGnc
+Content-Type: application/json
+Content-Length: 57
+Host: localhost:42371
+
+{"password": "\u00a9\u00c2\udac0\udf02G'", "zipCode": ""}

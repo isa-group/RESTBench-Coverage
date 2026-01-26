@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: PBmCoZ
+Content-Type: application/json
+Content-Length: 139
+Host: localhost:42371
+
+{"password": "\u00c8\u00db\uda3f\udfd8>\ud9e2\udd6e\uda6d\udf26", "birthDate": "4330-07-18", "7\uda6e\uded7\udb33\udc27": [], "gender": ""}

@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: TvXBKV
+Content-Type: application/json
+Content-Length: 273
+Host: localhost:37143
+
+{"featured": true, "\u00c6\u00ae": {"\u001c\u0001\u0085\u00f1\ud8b4\ude26!:\ud9c3\udf1a": {}}, "author": {"authorization_level": 1, "\u00c6\u00ae": {"\u001c\u0001\u0085\u00f1\ud8b4\ude26!:\ud9c3\udf1a": {}}, "identities": [{}]}, "date_created": "2000-01-01T00:14:00+00:00"}

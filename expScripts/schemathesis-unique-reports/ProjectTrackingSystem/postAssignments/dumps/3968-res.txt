@@ -1,0 +1,19 @@
+HTTP/1.1 400 
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-frame-options: SAMEORIGIN
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:14:30 GMT
+connection: close
+
+{
+  "msg" : "JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String \"\uDABB\uDCEBdd-MM-yyyyHH:mm:ss\uD835\uDD4B\uD835\uDD59\uD835\uDD56 \uD835\uDD62\uD835\uDD66\uD835\uDD5A\uD835\uDD54\uD835\uDD5C \uD835\uDD53\uD835\uDD63\uD835\uDD60\uD835\uDD68\uD835\uDD5F \uD835\uDD57\uD835\uDD60\uD835\uDD69 \uD835\uDD5B\uD835\uDD66\uD835\uDD5E\uD835\uDD61\uD835\uDD64 \uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63 \uD835\uDD65\uD835\uDD59\uD835\uDD56 \uD835\uDD5D\uD835\uDD52\uD835\uDD6B\uD835\uDD6A \uD835\uDD55\uD835\uDD60\uD835\uDD58\": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '\uDABB\uDCEBdd-MM-yyyyHH:mm:ss\uD835\uDD4B\uD835\uDD59\uD835\uDD56 \uD835\uDD62\uD835\uDD66\uD835\uDD5A\uD835\uDD54\uD835\uDD5C \uD835\uDD53\uD835\uDD63\uD835\uDD60\uD835\uDD68\uD835\uDD5F \uD835\uDD57\uD835\uDD60\uD835\uDD69 \uD835\uDD5B\uD835\uDD66\uD835\uDD5E\uD835...' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String \"\uDABB\uDCEBdd-MM-yyyyHH:mm:ss\uD835\uDD4B\uD835\uDD59\uD835\uDD56 \uD835\uDD62\uD835\uDD66\uD835\uDD5A\uD835\uDD54\uD835\uDD5C \uD835\uDD53\uD835\uDD63\uD835\uDD60\uD835\uDD68\uD835\uDD5F \uD835\uDD57\uD835\uDD60\uD835\uDD69 \uD835\uDD5B\uD835\uDD66\uD835\uDD5E\uD835\uDD61\uD835\uDD64 \uD835\uDD60\uD835\uDD67\uD835\uDD56\uD835\uDD63 \uD835\uDD65\uD835\uDD59\uD835\uDD56 \uD835\uDD5D\uD835\uDD52\uD835\uDD6B\uD835\uDD6A \uD835\uDD55\uD835\uDD60\uD835\uDD58\": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '\uDABB\uDCEBdd-MM-yyyyHH:mm:ss\uD835\uDD4B\uD835\uDD59\uD835\uDD56 \uD835\uDD62\uD835\uDD66\uD835\uDD5A\uD835\uDD54\uD835\uDD5C \uD835\uDD53\uD835\uDD63\uD835\uDD60\uD835\uDD68\uD835\uDD5F \uD835\uDD57\uD835\uDD60\uD835\uDD69 \uD835\uDD5B\uD835\uDD66\uD835\uDD5E\uD835...' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 176] (through reference chain: com.pfa.pack.model.entity.Assignment[\"commitDate\"])",
+  "throwable" : null,
+  "status" : "BAD_REQUEST",
+  "timestamp" : "28-12-202511:14:31"
+}

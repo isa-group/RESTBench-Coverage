@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: EzlYtV
+Content-Type: application/json
+Content-Length: 234
+Host: localhost:34113
+
+{"cars": [], "id": {"FALSE": [62], "": {}}, "lastName": "\u00f3\u00e5\u00f8p\ud97f\udc98!\u000e\ud8d2\udd92\u0092\u00ea\uda39\udc73\u00ed\udb27\udc29X\u00b4\u00c8", "\u0015^": {"": []}, "createdAt": "1069-07-11T18:21:35.904774+00:30"}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: z90Sgz
+Content-Type: application/json
+Content-Length: 331
+Host: localhost:34113
+
+{"lorem \u0644\u0627 \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 ipsum \u4f60\u597d1234\u4f60\u597d": [], "cars": [{"brand": "E\ud8b6\udee4", "model": null, "lorem \u0644\u0627 \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 ipsum \u4f60\u597d1234\u4f60\u597d": -30244, "\f\ud8d6\udcb1\u00ddK": {}, "maxSpeedKmH": null, "": null}, {}]}

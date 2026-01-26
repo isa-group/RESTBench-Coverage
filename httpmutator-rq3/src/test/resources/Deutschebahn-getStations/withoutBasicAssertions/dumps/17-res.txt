@@ -1,0 +1,10 @@
+HTTP/1.1 401 Unauthorized
+Date: Thu, 01 Jan 2026 12:18:04 GMT
+Content-Type: application/json
+Connection: keep-alive
+X-Global-Transaction-ID: ea4110e9695665fc026e2eb0
+Strict-Transport-Security: max-age=16070400; includeSubDomains
+Set-Cookie: TS0175c551=010cd174158b6dd7db4172c39052bb4ff9beadacbb3d8d2063dd8ca2c41b00cf9a4525c3fd5bae6f09455b927ba10fe7457ad5dc85; Path=/; Domain=.apis.deutschebahn.com; Secure; HttpOnly
+Transfer-Encoding: chunked
+
+{"httpCode":"401","httpMessage":"Unauthorized","moreInformation":"Invalid client id or secret."}

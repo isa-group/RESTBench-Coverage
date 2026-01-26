@@ -1,0 +1,26 @@
+{
+	"documentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": {
+				"hideClosedLocations": [
+					"true",
+					"false"
+				]
+			}
+		}
+	},
+	"documentedAndNotTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": {
+				"hideClosedLocations": []
+			}
+		}
+	},
+	"notDocumentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": {
+				"hideClosedLocations": []
+			}
+		}
+	}
+}

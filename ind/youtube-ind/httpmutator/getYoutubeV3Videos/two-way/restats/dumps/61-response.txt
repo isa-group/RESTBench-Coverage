@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"5_0t5T896JIQGnRx-rk2pwP-DD0","items":[{"kind":"youtube#video","etag":"7Q7sTqnfyatAbs2u1WI8HAH5mMw","id":"aGm2Ymk7_NA"}],"nextPageToken":"CAEQAA","pageInfo":{"totalResults":194,"resultsPerPage":1}}

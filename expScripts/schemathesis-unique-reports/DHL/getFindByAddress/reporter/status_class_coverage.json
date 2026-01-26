@@ -1,0 +1,24 @@
+{
+	"documentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"4",
+				"2"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"5"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"4"
+			]
+		}
+	}
+}

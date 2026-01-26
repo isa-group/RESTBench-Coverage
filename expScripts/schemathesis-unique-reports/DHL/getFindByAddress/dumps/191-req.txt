@@ -1,0 +1,9 @@
+GET /location-finder/v1/find-by-address?countryCode=J%C2%81&serviceType=parcel%3Adrop-off-unregistered&serviceType=parcel%3Adrop-off-return-unlabeled&serviceType=parcel%3Adrop-off-unregistered&serviceType=parcel%3Adrop-off-unregistered&serviceType=parcel%3Adrop-off-firstmile-unlabeled&hideClosedLocations=false&addressLocality= HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+DHL-API-Key: [Filtered]
+X-Schemathesis-TestCaseId: AdASQI
+Host: api.dhl.com
+

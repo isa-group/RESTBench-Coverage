@@ -1,0 +1,17 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 05:44:30 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 206
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"ce-Kk9Qv+bbGZvEQR3oT6QDv9Rs9h4"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdn4ljesrrpbhtqrf0g
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: 7e8be802-5318-4162-49b6-0cb24735b49b
+x-frame-options: DENY
+
+{"errors":[{"status":400,"code":"validate:inclusion","title":"Invalid field data","detail":"É is not included in the list","source":{"parameter":"format"},"meta":{"timestamp":"2025-12-30T05:44:30.917Z"}}]}

@@ -1,0 +1,4 @@
+POST /api/v1/activities HTTP/1.1
+Authorization: ApiKey administrator
+
+{"name":"hiking","date_published":"2025-06-16T09:00:00.000Z","date_updated":"2025-06-18T09:00:00.000Z","description_introduction":"an introduction","description_prepare":"a preparation","description_safety":"the descp of safety","description_notes":"a note","participants_max":100,"time_min":2,"featured":true,"tags":[{"id":4}],"author":{"id":2},"media_files":[{"uri":"https://example.com/forest.jpg","mime_type":"image/jpeg","name":"forest hunt"}]}

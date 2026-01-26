@@ -1,0 +1,19 @@
+HTTP/1.1 401 Unauthorized
+Connection: keep-alive
+Content-Length: 62
+Content-Type: application/json;charset=utf-8
+X-Fsq-Request-ID: 69319f5d66237a4f07ca99da
+Access-Control-Allow-Origin: https://e03bbe16-27cd-48ab-a395-e7556c4311d8-00-3293beqlfw2hr.spock.replit.dev
+Access-Control-Expose-Headers: Link
+Access-Control-Allow-Credentials: true
+content-encoding: gzip
+Accept-Ranges: bytes
+Date: Thu, 04 Dec 2025 14:49:01 GMT
+Via: 1.1 varnish
+X-Served-By: cache-fra-etou8220177-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1764859741.678391,VS0,VE400
+Vary: Origin
+
+{"message":"Invalid request token."}

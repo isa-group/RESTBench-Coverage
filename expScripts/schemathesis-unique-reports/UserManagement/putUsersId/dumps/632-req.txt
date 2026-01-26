@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ZQa11j
+Content-Type: application/json
+Content-Length: 83
+Host: localhost:42371
+
+{"": {}, "birthDate": "8077-08-14", "\u00e1\u00ad": {"\u00e3\u001a8h\u0015": null}}

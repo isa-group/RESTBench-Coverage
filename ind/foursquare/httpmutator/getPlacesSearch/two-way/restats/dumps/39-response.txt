@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+accept-ranges: bytes
+content-type: application/json; charset=utf-8
+server: Finatra
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-ratelimit-limit: 0
+x-ratelimit-path: /v3/places/search
+x-ratelimit-remaining: 0
+x-served-by: cache-toj-leto2350056-TOJ
+
+{"results":[],"context":{"geo_bounds":{"circle":{"center":{"latitude":37.3775,"longitude":-5.9713},"radius":5000}}}}

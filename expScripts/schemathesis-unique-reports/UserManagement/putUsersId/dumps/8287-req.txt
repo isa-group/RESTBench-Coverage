@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 2llFIl
+Content-Type: application/json
+Content-Length: 410
+Host: localhost:42371
+
+{"-\u00a0\u00de\u0017\u00f4\udb43\udf07\udaa9\udc85\uda5d\ude24f": {"lorem \u0644\u0627 \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 ipsum \u4f60\u597d1234\u4f60\u597d": {"\u00e7": [-26956, "/\u00e9\u009cs"]}}, "gender": "", "": [], "\udaf4\udc01\u00cc\u00ac\u0017\ud879\uddc5C5\ud81a\udca7\udae9\udf03\u00cb": {"\uda3c\udf26b": false, "\ud9e7\udffc\u009a": [null, "\udb4a\udf6b", null], "\ud856\udf67/": null}}

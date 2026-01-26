@@ -1,0 +1,24 @@
+{
+	"documentedAndTested": {
+		"/shopping/hotel-offers": {
+			"get": [
+				"2",
+				"4"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/shopping/hotel-offers": {
+			"get": [
+				"5"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/shopping/hotel-offers": {
+			"get": [
+				"4"
+			]
+		}
+	}
+}

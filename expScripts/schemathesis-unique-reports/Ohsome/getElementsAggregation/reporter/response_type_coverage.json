@@ -1,0 +1,22 @@
+{
+	"documentedAndTested": {
+		"/elements/{aggregation}": {
+			"get": [
+				"application/json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/elements/{aggregation}": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/elements/{aggregation}": {
+			"get": [
+				"application/octet-stream",
+				"text/html"
+			]
+		}
+	}
+}

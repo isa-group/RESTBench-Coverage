@@ -1,0 +1,3 @@
+POST /api/person HTTP/1.1
+
+{"age":28,"firstName":"Alice","lastName":"Smith","createdAt":"2025-08-17T13:05:33Z","insurance":false,"address":{"city":"Madrid","country":"Россия","number":10,"street":"Prospekt Lenina"},"cars":[{"brand":"Renault","maxSpeedKmH":180.5,"model":"Corolla"}]}

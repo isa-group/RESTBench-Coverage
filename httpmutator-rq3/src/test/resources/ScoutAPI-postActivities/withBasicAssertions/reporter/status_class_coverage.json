@@ -1,0 +1,22 @@
+{
+	"documentedAndTested": {
+		"/v1/activities": {
+			"post": [
+				"2",
+				"4"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/v1/activities": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/v1/activities": {
+			"post": [
+				"5"
+			]
+		}
+	}
+}

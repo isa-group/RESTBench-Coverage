@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: GOLLQ3
+Content-Type: application/json
+Content-Length: 161
+Host: localhost:38545
+
+{"address": "Inf", "longitude": "\u00ee\u001c\u00a9\u00ec\u00e8\u0018", "\u00a7j\udbc6\udc4b+\u00dcw<W\u008c\u00cbge\u0015\u008d\u0085d": {}, "availableBeds": 1}

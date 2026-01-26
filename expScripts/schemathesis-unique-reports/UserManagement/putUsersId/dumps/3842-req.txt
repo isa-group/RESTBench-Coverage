@@ -1,0 +1,11 @@
+PUT /users/4 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: nPigPA
+Content-Type: application/json
+Content-Length: 80
+Host: localhost:42371
+
+{"\u0090\u000f1\ud8e9\udf29,\u00a4\u00b1<": [], "secured": false, "address": ""}

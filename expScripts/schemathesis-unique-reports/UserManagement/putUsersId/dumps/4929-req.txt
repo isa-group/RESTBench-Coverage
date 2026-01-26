@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 0eOxn1
+Content-Type: application/json
+Content-Length: 208
+Host: localhost:42371
+
+{"password": "s\u0087\u00bf0", "username": "\u0019", "0/0": {"\u00e9": "t7K#\udbc8\ude36", "": -4258370682457524024, "$\u0093\u00ac\u00c8I": null}, "\u00cd\u00de\u009a": {}, "country": "\b\ue480\u0006\u00dc"}

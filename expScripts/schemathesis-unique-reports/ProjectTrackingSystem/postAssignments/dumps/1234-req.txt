@@ -1,0 +1,11 @@
+POST /app/api/assignments HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: D53ptQ
+Content-Type: application/json
+Content-Length: 149
+Host: localhost:37971
+
+{"employeeId": 1, "a\u00949\u00fd=": {"\u00a8\thn\u00f5": -699933006, "\u00acr\u001f\u001b": null, "U\u001b\u00fa": 8138}, "commitMgrDesc": "\u023e"}

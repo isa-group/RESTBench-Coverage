@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"759-FEM5OoN96/paZHf3kTY13L4M6Nk"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprju2v2sr347dc5q5m0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 0b3895d4-6098-4c3c-7bee-629286444c6b
+
+{"meta":{"total":4,"parameters":{"filters":"STNAME: California","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC","limit":"100","search":"NAME: Springs"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"91942","CBSA":"San Diego-Chula Vista-Carlsbad, CA","CITY":"La Mesa","ACTIVE":0,"OFFDOM":4,"STNAME":"California","ASSET":141708,"CERT":24080,"NETINC":940,"STALP":"CA","COUNTY":"San Diego","NAME":"Borrego Springs Bank, National Association","ID":"24080"},"score":263.57715,"highlight":{"PRIORNAME1.raw":["<em>Borrego</em> <em>Springs</em> Bank"],"NAME.raw":["<em>Borrego</em> <em>Springs</em> Bank, National Association"]}},{"data":{"ZIP":"94104","CBSA":"San Francisco-Oakland-Berkeley, CA","CITY":"San Francisco","ACTIVE":0,"OFFDOM":297,"STNAME":"California","ASSET":99963823,"CERT":22826,"NETINC":287865,"STALP":"CA","COUNTY":"San Francisco","NAME":"MUFG Union Bank, National Association","ID":"22826"},"score":41.367485,"highlight":{"PRIORNAME1.raw":["<em>Bank</em> <em>of</em> <em>Palm</em> <em>Springs</em>"]}},{"data":{"ZIP":"92262","CBSA":"Riverside-San Bernardino-Ontario, CA","CITY":"Palm Springs","ACTIVE":0,"OFFDOM":4,"STNAME":"California","ASSET":187327,"CERT":32086,"NETINC":623,"STALP":"CA","COUNTY":"Riverside","NAME":"PALM SPRINGS SAVINGS BANK, F.S.B.","ID":"32086"},"score":258.95242,"highlight":{"PRIORNAME1.raw":["<em>Palm</em> <em>Springs</em> Savings Bank"],"NAME.raw":["<em>PALM</em> <em>SPRINGS</em> SAVINGS BANK, F.S.B."]}},{"data":{"ZIP":"92262","CBSA":"Riverside-San Bernardino-Ontario, CA","CITY":"Palm Springs","ACTIVE":0,"STNAME":"California","CERT":19051,"STALP":"CA","COUNTY":"Riverside","NAME":"Palm Springs National Bank","ID":"19051"},"score":289.39178,"highlight":{"NAME.raw":["<em>Palm</em> <em>Springs</em> National Bank"]}}],"totals":{"count":4}}

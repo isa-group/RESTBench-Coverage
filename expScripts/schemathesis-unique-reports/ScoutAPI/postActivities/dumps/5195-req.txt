@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: r72Npi
+Content-Type: application/json
+Content-Length: 176
+Host: localhost:37143
+
+{"name": "*\u00cd\u00a7\udab6\udcf9\udb68\udfb5\u000b\u0019\u00d9\udb7d\udce6", "source": "\u008b\u00b1", "tags": [{"activities_count": 0, "": null, "id": 0, "group": ""}, {}]}

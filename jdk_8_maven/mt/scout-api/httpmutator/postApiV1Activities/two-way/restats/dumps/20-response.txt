@@ -1,0 +1,4 @@
+HTTP/1.1 200 
+content-type: application/json
+
+{"id":1,"properties_revisions":[{"id":1,"name":"hiking","description_material":"an activity","description_safety":"the descp of safety","age_min":50,"age_max":0,"participants_min":50,"participants_max":0,"featured":false,"source":"https://example.com/example","media_files":[{"id":1,"mime_type":"image/jpeg","uri":"https://example.com/forest.jpg","name":"forest hunt"}],"author":{"id":2,"authorization_level":0,"identities":[]}}],"ratings_count":0,"ratings_sum":0,"favourites_count":0,"ratings_average":-1.0,"properties":{"id":1,"name":"hiking","description_material":"an activity","description_safety":"the descp of safety","age_min":50,"age_max":0,"participants_min":50,"participants_max":0,"featured":false,"source":"https://example.com/example","media_files":[{"id":1,"mime_type":"image/jpeg","uri":"https://example.com/forest.jpg","name":"forest hunt"}],"author":{"id":2,"authorization_level":0,"identities":[]}}}

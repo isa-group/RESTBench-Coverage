@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: AirfY4
+Content-Type: application/json
+Content-Length: 92
+Host: localhost:42371
+
+{"facebook": "LE\u00c5\u008f\u00c3!\u008a\r\uda7a\udf8aT\u00cf- \u0004\udafe\udebb/%\u0088"}

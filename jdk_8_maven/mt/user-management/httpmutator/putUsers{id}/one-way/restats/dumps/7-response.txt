@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":2,"username":"alice1985","name":"Alice","surname":null,"gender":"FEMALE","birthDate":"2000-07-15","enabled":true,"note":"VIP customer","loginDt":null,"secured":false,"contactDTO":{"email":"user123@demo.net","phone":"+44-7700-900123","skype":null,"facebook":"https://facebook.com/john.doe","linkedin":null,"website":"https://alicesmith.me","contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":null,"address2":"Suite 210","city":"New York","country":"UK","zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

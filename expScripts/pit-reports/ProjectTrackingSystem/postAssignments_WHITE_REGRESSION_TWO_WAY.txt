@@ -1,0 +1,21 @@
+===== API: ProjectTrackingSystem =====
+===== Operation: postAssignments =====
+===== Mode: WHITE =====
+===== Level: REGRESSION =====
+===== Strength: TWO_WAY =====
+
+===== Pitest Timings =====
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 2 minutes and 53 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 24 minutes and 35 seconds
+> Total  : 27 minutes and 28 seconds
+
+===== Pitest Statistics =====
+>> Line Coverage (for mutated classes only): 221/283 (78%)
+>> 1 tests examined
+>> Generated 60 mutations Killed 41 (68%)
+>> Mutations with no coverage 6. Test strength 76%
+>> Ran 600 tests (10 tests per mutation)
+

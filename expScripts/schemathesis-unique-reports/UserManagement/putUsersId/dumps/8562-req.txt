@@ -1,0 +1,11 @@
+PUT /users/24753 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: Wi7TnE
+Content-Type: application/json
+Content-Length: 76
+Host: localhost:42371
+
+{"skype": true, "country": "\ud800\uddbe\u00ec\u00f3\u00bc~", "address": ""}

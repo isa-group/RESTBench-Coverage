@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":1,"username":"johndoe90","name":"John","surname":"Zhang","gender":"MALE","birthDate":"2000-07-15","enabled":false,"note":"Frequent buyer","loginDt":null,"secured":true,"contactDTO":{"email":"john.doe@example.com","phone":"+1-202-555-0189","skype":"john.doe.skype","facebook":"https://facebook.com/test.user","linkedin":null,"website":null,"contactNote":"Urgent contact only"},"addressDTO":{"address":"123 Main Street","address2":"Suite 210","city":"Beijing","country":null,"zipCode":"10001"},"roles":["USER","ADMINISTRATOR"],"permissions":["LOGIN","VIEW_PROFILE","ADMIN_USER_DATA"]}

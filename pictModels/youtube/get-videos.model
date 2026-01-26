@@ -1,0 +1,39 @@
+############################################################
+#  YouTube Data API v3 - videos.list (GET /youtube/v3/videos)
+############################################################
+
+part: contentDetails,id,liveStreamingDetails*localizations,paidProductPlacementDetails,player*recordingDetails,snippet,statistics,status,topicDetails*NULL
+
+chart: mostPopular * NULL
+id: zZa8PFYtWr4,TUJWx7vo44c,eVIozKR9p50,7m-NPuXPBqM*yDgLFOxnQ8Y,9bZkp7q19f0,yuD34tEpRFw,t22flliJLTQ*5kUu97Vkwj4,TH7m9c72TKA,lL-RfE-ioJ8,pnxol_9jYuU*NULL
+myRating: like * dislike * NULL
+hl: en-GB * en * es * NULL
+maxHeight: 72 * 1080 * 8192 * NULL
+maxWidth: 72 * 1920 * 8192 * NULL
+maxResults: 1 * 5 * 50 * NULL
+# onBehalfOfContentOwner: Set * NULL
+# pageToken: Set * NULL
+regionCode: US * PT * FI * NO * JP * HU * ES * AR * AU * AT * BR * BG * CA * CL * CO * DO * EC * SV * FR * DE * GR * HK * IN * IT * KR * MX * MA * NZ * PE * PL * RO * SG * CH * TH * TR * UA * GB * UY * NULL
+# videoCategoryId: 0 * 1 * 2 * 10 * 15 * 17 * 18 * 19 * 20 * 21 * 22 * 23 * 24 * 25 * 26 * 27 * 28 * 30 * 31 * 32 * 33 * 34 * 35 * 36 * 37 * 38 * 39 * 40 * 41 * 42 * 43 * 44 * NULL
+videoCategoryId: 1 * 10 * 17 * 20 * 22 * 23 * 24 *NULL
+
+############################################################
+# Constraints
+############################################################
+
+# ---- 1. Exactly one of chart / id / myRating must be set ----
+IF [chart] <> "NULL" THEN [id] = "NULL" AND [myRating] = "NULL";
+IF [id] <> "NULL" THEN [chart] = "NULL" AND [myRating] = "NULL";
+IF [myRating] <> "NULL" THEN [chart] = "NULL" AND [id] = "NULL";
+
+# ---- 2. If id is used, maxResults and pageToken cannot be used ----
+# IF [id] <> "NULL" THEN [maxResults] = "NULL" AND [pageToken] = "NULL";
+
+# ---- 3. pageToken only supported with myRating ----
+# IF [myRating] = "NULL" THEN [pageToken] = "NULL";
+
+# ---- 4. regionCode only valid with chart ----
+IF [regionCode] <> "NULL" THEN [chart] <> "NULL";
+
+# ---- 5. videoCategoryId only valid with chart ----
+IF [videoCategoryId] <> "NULL" THEN [chart] <> "NULL";

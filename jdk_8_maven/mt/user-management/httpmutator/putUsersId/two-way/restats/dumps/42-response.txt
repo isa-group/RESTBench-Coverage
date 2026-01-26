@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":5,"username":"testuser123","name":"Alice","surname":"Zhang","gender":"MALE","birthDate":"1990-05-20","enabled":false,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":"+1-202-555-0189","skype":"john.doe.skype","facebook":null,"linkedin":"https://linkedin.com/in/johndoe","website":"https://example.org","contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":"456 High Road","address2":"Building 5","city":null,"country":"UK","zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

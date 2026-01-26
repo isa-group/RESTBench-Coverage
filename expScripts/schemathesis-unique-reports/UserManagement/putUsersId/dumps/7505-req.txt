@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: fDVsNn
+Content-Type: application/json
+Content-Length: 130
+Host: localhost:42371
+
+{"linkedin": "\u00ca\u00c3\udba1\udc9f\u009e\u00fc\uda3c\ude61\u00e0\u0003/\u0005\t", "country": "\u0082\ud923\udf89\u00b7\u00ca"}

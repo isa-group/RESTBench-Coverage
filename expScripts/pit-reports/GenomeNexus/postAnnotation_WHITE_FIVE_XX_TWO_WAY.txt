@@ -1,0 +1,21 @@
+===== API: GenomeNexus =====
+===== Operation: postAnnotation =====
+===== Mode: WHITE =====
+===== Level: FIVE_XX =====
+===== Strength: TWO_WAY =====
+
+===== Pitest Timings =====
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 16 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 1 hours, 24 minutes and 24 seconds
+> Total  : 1 hours, 24 minutes and 42 seconds
+
+===== Pitest Statistics =====
+>> Line Coverage (for mutated classes only): 1553/2882 (54%)
+>> 1 tests examined
+>> Generated 873 mutations Killed 18 (2%)
+>> Mutations with no coverage 158. Test strength 3%
+>> Ran 15997 tests (18.32 tests per mutation)
+

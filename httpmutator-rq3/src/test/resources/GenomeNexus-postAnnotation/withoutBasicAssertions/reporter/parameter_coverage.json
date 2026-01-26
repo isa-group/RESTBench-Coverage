@@ -1,0 +1,25 @@
+{
+	"documentedAndTested": {
+		"/annotation": {
+			"post": [
+				"isoformOverrideSource",
+				"token",
+				"fields"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/annotation": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/annotation": {
+			"post": [
+				"Host",
+				"Accept",
+				"Content-Type"
+			]
+		}
+	}
+}

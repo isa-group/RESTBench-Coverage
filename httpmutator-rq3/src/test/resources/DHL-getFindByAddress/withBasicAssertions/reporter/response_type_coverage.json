@@ -1,0 +1,16 @@
+{
+	"documentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"application/json",
+				"application/problem+json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {}
+}

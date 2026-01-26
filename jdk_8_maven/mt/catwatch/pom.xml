@@ -1,0 +1,184 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>es.us.isa.httpmutator.experiment.services</groupId>
+        <artifactId>mt_jdk8</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>mt-catwatch</artifactId>
+    <packaging>jar</packaging>
+
+    <name>mt-catwatch</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>2.12.7</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>1.5.4.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.zalando</groupId>
+            <artifactId>catwatch-backend</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>1.6.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- API（可与 2.3.1/2.3.3 任选其一；见说明） -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+        <!-- 实现（一定要有这个，否则只剩接口没有实现） -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.8</version>
+        </dependency>
+
+        <!-- Activation（JAXB 2.x 依赖它） -->
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>javax.activation-api</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>get-projects</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-maven</artifactId>
+                        <configuration>
+                            <targetTests>
+                                <param>mt.org.zalando.catwatch.backend.CatwatchEndpointTest</param>
+                            </targetTests>
+                            <targetClasses>
+                                <param>org.zalando.catwatch.backend.*</param>
+                            </targetClasses>
+                            <!-- <jvm>/usr/lib/jvm/java-8-openjdk-amd64/bin/java</jvm> -->
+                            <excludedClasses>
+                                <excludedClass>org.zalando.catwatch.backend.DebugBean</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.github.OrganizationWrapper</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.github.RepositoryWrapper</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.github.Snapshot</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.github.TakeSnapshotTask</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.mail.MailSender</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.model.CatwatchYaml</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.model.Language</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.model.QStatistics</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.model.util.JsonDateDeserializer</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.model.util.Scorer</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.repo.ContributorRepositoryImpl</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.repo.StatisticsRepositoryImpl</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.scheduler.CronConfig</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.scheduler.CronConfig$1</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.scheduler.CronConfig$CustomExitCodeGenerator</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.scheduler.Fetcher</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.scheduler.RetryableFetcher</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.scheduler.TaskScheduler</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.service.LanguageService</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.service.StatisticsService</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.service.comparator.ProjectCommitComparator</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.service.comparator.ProjectContributorComparator</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.service.comparator.ProjectForkComparator</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.service.comparator.ProjectScoreComparator</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.service.comparator.ProjectStarComparator</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.util.ContributorStats</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.util.JavaScriptExecutor</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.util.JsonDateListSerializer</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.util.LanguageStats</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.util.ProjectStats</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.util.StringParser</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.ContributorsApi</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.LanguagesApi</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.LanguagesApi$LanguagePercentComparator</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.StatisticsApi</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.admin.AdminController</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.config.ConfigController</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.config.DateUtil</excludedClass>
+                                <excludedClass>org.zalando.catwatch.backend.web.fetch.FetchController</excludedClass>
+                            </excludedClasses>
+                            <excludedMethods>
+                                <excludedMethod>allContributersCount</excludedMethod>
+                                <excludedMethod>allSize</excludedMethod>
+                                <excludedMethod>description</excludedMethod>
+                                <excludedMethod>externalContributorsCount</excludedMethod>
+                                <excludedMethod>getLoginId</excludedMethod>
+                                <excludedMethod>getProject</excludedMethod>
+                                <excludedMethod>id</excludedMethod>
+                                <excludedMethod>languages</excludedMethod>
+                                <excludedMethod>lastPushed</excludedMethod>
+                                <excludedMethod>membersCount</excludedMethod>
+                                <excludedMethod>orgCommits</excludedMethod>
+                                <excludedMethod>orgProjects</excludedMethod>
+                                <excludedMethod>organizationId</excludedMethod>
+                                <excludedMethod>persCommits</excludedMethod>
+                                <excludedMethod>persProjects</excludedMethod>
+                                <excludedMethod>privateProjectCount</excludedMethod>
+                                <excludedMethod>programLanguagesCount</excludedMethod>
+                                <excludedMethod>randomLanguage</excludedMethod>
+                                <excludedMethod>randomProjectName</excludedMethod>
+                                <excludedMethod>setSnapshotDate</excludedMethod>
+                                <excludedMethod>tagsCount</excludedMethod>
+                                <excludedMethod>takeSnapshot</excludedMethod>
+                                <excludedMethod>teamsCount</excludedMethod>
+                                <excludedMethod>toString</excludedMethod>
+                                <excludedMethod>url</excludedMethod>
+                            </excludedMethods>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

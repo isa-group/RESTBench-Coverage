@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: U5gg73
+Content-Type: application/json
+Content-Length: 85
+Host: localhost:37143
+
+{"F": {"a\u0095": "", "u(\u00b8\u0012<\u00b0": {}}, "description_prepare": "*\u0016"}

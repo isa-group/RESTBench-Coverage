@@ -1,0 +1,54 @@
+{
+	"documentedAndTested": {
+		"/search": {
+			"get": {
+				"media": [
+					"musicVideo",
+					"podcast",
+					"software",
+					"tvShow",
+					"audiobook",
+					"shortFilm",
+					"ebook",
+					"all",
+					"music",
+					"movie"
+				],
+				"lang": [
+					"en_us",
+					"ja_jp"
+				],
+				"explicit": []
+			}
+		}
+	},
+	"documentedAndNotTested": {
+		"/search": {
+			"get": {
+				"media": [],
+				"lang": [],
+				"explicit": [
+					false,
+					true
+				]
+			}
+		}
+	},
+	"notDocumentedAndTested": {
+		"/search": {
+			"get": {
+				"media": [
+					"EVOMASTER"
+				],
+				"lang": [
+					"EVOMASTER"
+				],
+				"explicit": [
+					"true",
+					"false",
+					"EVOMASTER"
+				]
+			}
+		}
+	}
+}

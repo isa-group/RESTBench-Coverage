@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: yjjRwP
+Content-Type: application/json
+Content-Length: 85
+Host: localhost:42371
+
+{"skype": "T\u00c1\u00f8$a\u00aa\u00d4", "birthDate": "5229-09-19", "secured": false}

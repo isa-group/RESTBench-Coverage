@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: o396nx
+Content-Type: application/json
+Content-Length: 150
+Host: localhost:34113
+
+{"\u000e\udb2c\uddd0B\u0010\u00c7\u00caA\u00dc": [1.567534058109636e+16, 50], "\u001e": {"": 1.567534058109636e+16}, "lastName": "\u001e", "cars": []}

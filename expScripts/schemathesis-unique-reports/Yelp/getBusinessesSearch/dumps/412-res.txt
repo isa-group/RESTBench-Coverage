@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 1571
+Content-Type: application/json
+x-zipkin-id: 3f60857960d4875f3595bd6da83c6716
+server: envoy
+x-routing-service: routing-main--useast1-679fdcbd8b-9xhw5; site=public_api_v3
+x-mode: ro
+x-proxied: 10-65-90-142-useast1aprod
+x-extlb: 10-65-90-142-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 23:06:33 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220092-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "['\u00c4\u00cd\\ueeef\\x8fy!', 'r\\U000f1db2', '{\\'\\': {\\'\u00a4\u00f1\\\\U0005412aZ$\\\\U0009020b\u00d3Yc\\\\U00065926\\\\x14\\\\U000a3805\uc29d\\\\x1a\\\\U0007585a\u00c5\\\\x7f\\\\x9d\ub645\\\\x9a\\\\U000a69c8\\\\x8d<\"\\': 2.220446049250313e-16, \\'\\': False, \\'0\ud81d\udc8e?\u00a6\u00fa\\\\x15\\\\U000c176d\\': \\'\u00cf\\'}, \\'l5\\\\x8b\\': [None], \\'l\u00c4\\': {\\'\\': -5.27765528800473e+163, \\'\\\\U00084bc5nY\\\\U000e1e69\u00eb\\\\x0e\\\\x9b\u00c9\\\\U000dabba\u00a5\\\\x96\u00b1\\': 5.521365228203842e+16, \\'[@\\': None}}', '', 'refresh_token', ')\u00ef\\U0010b9e5\u00a6\\U000a198d', \"{'\u00dd\u00dakK\u00ec': {'\\\\U000800c7>': -31235, '\\\\U000eaf33\u00fb\u00e8\\\\U000c7458\\\\U00069497\\\\U0006b805v\\\\U00074ee1k': '\\\\U000ace80\\\\U0006dcd9'}}\"] is not of type 'number'", "field": "longitude", "instance": ["\u00c4\u00cd\ueeef\u008fy!", "r\udb87\uddb2", "{'': {'\u00a4\u00f1\\U0005412aZ$\\U0009020b\u00d3Yc\\U00065926\\x14\\U000a3805\uc29d\\x1a\\U0007585a\u00c5\\x7f\\x9d\ub645\\x9a\\U000a69c8\\x8d<\"': 2.220446049250313e-16, '': False, '0\ud81d\udc8e?\u00a6\u00fa\\x15\\U000c176d': '\u00cf'}, 'l5\\x8b': [None], 'l\u00c4': {'': -5.27765528800473e+163, '\\U00084bc5nY\\U000e1e69\u00eb\\x0e\\x9b\u00c9\\U000dabba\u00a5\\x96\u00b1': 5.521365228203842e+16, '[@': None}}", "", "refresh_token", ")\u00ef\udbee\udde5\u00a6\uda46\udd8d", "{'\u00dd\u00dakK\u00ec': {'\\U000800c7>': -31235, '\\U000eaf33\u00fb\u00e8\\U000c7458\\U00069497\\U0006b805v\\U00074ee1k': '\\U000ace80\\U0006dcd9'}}"]}}

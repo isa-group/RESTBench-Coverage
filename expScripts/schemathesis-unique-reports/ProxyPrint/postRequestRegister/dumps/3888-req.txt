@@ -1,0 +1,11 @@
+POST /request/register HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: i9yaXy
+Content-Type: application/json
+Content-Length: 78
+Host: localhost:41773
+
+{"a\u00c3\r ": 0, ",\u00f0\u008c\u00f9": [], "pShopDateRequestAccepted": null}

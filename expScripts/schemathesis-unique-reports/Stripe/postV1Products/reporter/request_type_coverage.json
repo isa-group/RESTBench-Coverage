@@ -1,0 +1,15 @@
+{
+	"documentedAndTested": {
+		"/v1/products": {
+			"post": [
+				"application/x-www-form-urlencoded"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/v1/products": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {}
+}

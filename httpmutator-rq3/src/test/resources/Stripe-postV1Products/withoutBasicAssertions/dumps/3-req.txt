@@ -1,0 +1,7 @@
+POST /v1/products HTTP/1.1
+Host: api.stripe.com
+Accept: application/json
+Authorization: Bearer sk_test_51SZb9aFp2AHz8iajQSy5t7xOhu59Z10TCzHc8p8sqGVod04osKiqOodKtKT0ALsZpYaJ3N544esaxS8M9VL8R5oX00NUvJDUo1
+Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+
+name=F84Qo7du&description=Zc&tax_code=P4dADXlp0LR2DUit&default_price_data=%7B%22currency%22%3A%22bVp8TrhvUytP%22%2C+%22recurring%22%3A%7B%22interval%22%3A%22year%22%2C+%22interval_count%22%3A466%7D%7D&images=%5B%22S_C0o4d3HaR%22%2C+%22d%22%5D&marketing_features=%5B%5D&statement_descriptor=0fQaqx_WnvFR

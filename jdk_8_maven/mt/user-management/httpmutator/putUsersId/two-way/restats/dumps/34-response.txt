@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":5,"username":"johndoe90","name":"Bob","surname":"Zhang","gender":"FEMALE","birthDate":"1985-12-01","enabled":false,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":null,"skype":"john.doe.skype","facebook":"https://facebook.com/john.doe","linkedin":null,"website":"https://alicesmith.me","contactNote":null},"addressDTO":{"address":null,"address2":"Suite 210","city":"London","country":"China","zipCode":"100000"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

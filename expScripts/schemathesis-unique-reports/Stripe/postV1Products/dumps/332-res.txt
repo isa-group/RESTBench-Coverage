@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+server: nginx
+date: Sun, 28 Dec 2025 13:20:48 GMT
+Content-Type: application/json
+content-length: 557
+connection: keep-alive
+access-control-allow-credentials: [Filtered]
+access-control-allow-methods: GET, HEAD, PUT, PATCH, POST, DELETE
+access-control-allow-origin: *
+access-control-expose-headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+access-control-max-age: 300
+cache-control: no-cache, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=NIWXyzour6qPe6jdQ1pcJmyncrM5m3FYhM3cUlHV0PE8r5yiWwei8kTuRaCM_PjTzKkkBJnpqizhYAQI
+idempotency-key: [Filtered]
+original-request: req_EbA7qrYr7DuJTw
+request-id: req_EbA7qrYr7DuJTw
+stripe-should-retry: false
+stripe-version: 2024-12-18.acacia
+vary: Origin
+x-stripe-priority-routing-enabled: true
+x-stripe-routing-context-priority-tier: api-testmode
+x-wc: ABGHIJ
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+
+{
+  "id": "prod_TghITpxgm0RhBB",
+  "object": "product",
+  "active": true,
+  "attributes": [],
+  "created": 1766928047,
+  "default_price": null,
+  "description": null,
+  "images": [],
+  "livemode": false,
+  "marketing_features": [],
+  "metadata": {},
+  "name": "\u0005\uDA97\uDE56}Wý\uD931\uDFF0`EQÄvÜ茲.HRÔÓí¯M\"\"\uDAD0\uDCDB¾\u0015ZS¡í8Ø$ß×",
+  "package_dimensions": null,
+  "shippable": null,
+  "statement_descriptor": null,
+  "tax_code": null,
+  "type": "service",
+  "unit_label": null,
+  "updated": 1766928047,
+  "url": null
+}

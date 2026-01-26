@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"76f-1wy/Cxz+q33jLBDQhrfyWHDfG6k"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjpbops4r4b3ufp3q0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 17b22df3-e755-4631-75c4-e6834529182a
+
+{"meta":{"total":3,"parameters":{"filters":"STNAME: Georgia","limit":"1","offset":"0","search":"NAME: NBG"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"30274","INSAGNT1":"BIF","BKCLASS":"NM","SASSER":0,"CHRTAGNT":"STATE","EFFDATE":"08/01/1983","SUPRV_FD":"","DATEUPDT":"10/04/1990","CONSERVE":"N","REGAGENT2":"","STNAME":"Georgia","INSAGNT2":"","TE05N528":"","TE05N529":"","INSDATE":"06/09/1969","FDICREGN":"Atlanta","TE06N528":"","TE06N529":"","WEBADDR":"","FDICDBS":5,"QBPRCOML":"2","COUNTY":"Clayton","DOCKET":"0","ULTCERT":"3511","OCCDIST":"","LAW_SASSER_FLG":"N","CFPBFLAG":0,"RISDATE":"06/30/2025","CBSA_METRO_FLG":"1","TE10N528":"","INSCOML":1,"CBSA_DIV_NO":"","RUNDATE":"10/10/2025","TE03N528":"","TE03N529":"","NAME":"NBG Clayton Bank","INSSAVE":0,"CHARTER":"0","MDI_STATUS_DESC":"NONE","CBSA_DIV":"","ADDRESS":"Highway 85","TE04N528":"","TE04N529":"","CERT":19970,"STALP":"GA","LATITUDE":0,"CFPBENDDTE":"9999-12-31","PROCDATE":"09/12/1983","INSSAIF":0,"CBSA_NO":"12060","ACTIVE":0,"CBSA_METRO_NAME":"Atlanta-Sandy Springs-Alpharetta, GA","CFPBEFFDTE":"9999-12-31","STCHRTR":1,"TE09N528":"","LONGITUDE":0,"IBA":0,"MDI_STATUS_CODE":"","CSA":"Atlanta-Athens-Clarke County-Sandy Springs, GA-AL","INSDIF":0,"TE01N529":"","INSBIF":1,"INSFDIC":1,"ENDEFYMD":"08/01/1983","OI":0,"STNUM":"13","OAKAR":0,"TE02N528":"","TE02N529":"","ADDRESS2":"","TE07N528":"","FDICSUPV":"","FED":"06","REGAGNT":"FDIC","PRIORNAME1":"Clayton County Bank","FED_RSSD":"713636","NEWCERT":11654,"CBSA_MICRO_FLG":"0","CSA_NO":"122","CBSA_METRO":"12060","UNINUM":"13712","TE01N528":"","STCNTY":"13063","CSA_FLG":"1","CBSA":"Atlanta-Sandy Springs-Alpharetta, GA","CITY":"Riverdale","CBSA_DIV_FLG":"0","TE08N528":"","CLCODE":"21","INACTIVE":1,"CHANGEC1":223,"ESTYMD":"06/09/1969","FEDCHRTR":0,"TRUST":"00","ID":"19970"},"score":423.87582}],"totals":{"count":3}}

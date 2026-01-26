@@ -1,0 +1,24 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 111
+Content-Type: application/json
+access-control-max-age: 1728000
+x-zipkin-id: c95c8744720c86067569ae0aaf90796e
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+access-control-allow-credentials: [Filtered]
+x-routing-service: routing-main--useast1-679fdcbd8b-8rkzd; site=public_api_v3
+server: envoy
+access-control-allow-origin: *
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+x-mode: ro
+x-proxied: 10-65-79-18-useast1aprod
+x-extlb: 10-65-79-18-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 22:48:34 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220089-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "Please specify a location or a latitude and longitude"}}

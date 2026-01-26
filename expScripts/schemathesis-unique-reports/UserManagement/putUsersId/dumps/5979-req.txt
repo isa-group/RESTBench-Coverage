@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: F6ADmw
+Content-Type: application/json
+Content-Length: 126
+Host: localhost:42371
+
+{"address": "\udb6b\ude32", "address2": "", "gender": "g", "zip": {}, "\u00b2\u000e\uc8e0": {"": {"": "q\u001d\u00ff\u0004"}}}

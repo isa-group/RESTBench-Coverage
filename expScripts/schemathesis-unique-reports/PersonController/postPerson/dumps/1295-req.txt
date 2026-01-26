@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: iBim63
+Content-Type: application/json
+Content-Length: 193
+Host: localhost:34113
+
+{"lastName": "\u0003\u009b\u0099\u00f1", "cars": [{"\u00dc\ud928\udee3\ud8d6\udff3": [{"a\ud8f9\udcfeH\udac7\udfdfX\u00d9": {"a\ud8f9\udcfeH\udac7\udfdfX\u00d9": 0, "": null}}], "": null}, {}]}

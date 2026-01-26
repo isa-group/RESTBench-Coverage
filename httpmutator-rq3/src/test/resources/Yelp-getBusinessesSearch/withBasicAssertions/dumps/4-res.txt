@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json
+access-control-max-age: 1728000
+ratelimit-remaining: 299
+x-zipkin-id: a20d4a8a16adf1f33f511d47ba494f1e
+access-control-allow-origin: *
+access-control-allow-credentials: true
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+x-routing-service: routing-main--uswest2-b575679b6-7959w; site=public_api_v3
+ratelimit-dailylimit: 300
+ratelimit-resettime: 2026-01-20T00:00:00+00:00
+x-ctx-guv: p|yjXa9yntBcv5ZluJWxB8MA|985f579d-9bb7-4d3e-8d7f-fd703cb99e30
+server: envoy
+set-cookie: pid=; Domain=.yelp.com; Max-Age=0; Path=/; expires=Wed, 31-Dec-97 23:59:59 GMT
+content-encoding: gzip
+x-mode: ro
+x-proxied: 10-69-179-238-uswest2bprod
+x-extlb: 10-69-179-238-uswest2bprod
+cache-control: max-age=0, no-store, private, no-transform
+Accept-Ranges: bytes
+Date: Mon, 19 Jan 2026 11:49:38 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sjc10056-SJC
+X-Cache: MISS
+X-Cache-Hits: 0
+Vary: Accept-Encoding
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+transfer-encoding: chunked
+
+{"businesses": [], "total": 0, "region": {"center": {"longitude": 0.8379820898841539, "latitude": 0.1927111030108256}}}

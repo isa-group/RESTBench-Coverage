@@ -1,0 +1,7 @@
+HTTP/1.1 400
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 31 Dec 2025 12:04:21 GMT
+Connection: close
+
+{"timestamp":"2025-12-31T12:04:21.380+00:00","status":400,"error":"Bad Request","message":"JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \"2057-00-09\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2057-00-09' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \"2057-00-09\": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2057-00-09' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 0\n at [Source: (PushbackInputStream); line: 1, column: 41] (through reference chain: com.giassi.microservice.demo2.rest.users.dtos.requests.CreateOrUpdateUserDTO[\"birthDate\"])","path":"/users/8"}

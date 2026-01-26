@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+content-length: 225
+x-apple-jingle-correlation-key: [Filtered]
+x-apple-request-uuid: 1ad56ca9-d3bb-3a0a-9195-39f8ef4d1614
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?country=%2C3&term=%C2%86%0Ax&lang=en_us&media=software&attribute=&entity=V%C3%942%C2%8A%C2%AF&limit=85&urlDesc=
+apple-tk: false
+x-b3-spanid: 100a645273ef2b51
+b3: 1ad56ca9d3bb3a0a919539f8ef4d1614-100a645273ef2b51
+x-b3-traceid: 1ad56ca9d3bb3a0a919539f8ef4d1614
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6502222:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-mr.itunes.apple.com/search?country=%2C3&term=%C2%86%0Ax&lang=en_us&media=software&attribute=&entity=V%C3%942%C2%8A%C2%AF&limit=85
+x-apple-application-site: MR22
+apple-timing-app: 2 ms
+x-apple-application-instance: 6502222
+x-daiquiri-instance: daiquiri:17317003:mr85p00it-hyhk03164601:7987:25HOTFIX33:daiquiri-amp-store-shared-int-001-mr, daiquiri:12282006:mr47p00it-qujn05121902:7987:25HOTFIX33:daiquiri-amp-store-l7shared-ext-001-mr
+vary: Accept-Encoding
+expires: Mon, 29 Dec 2025 06:54:14 GMT
+cache-control: max-age=0, no-cache
+pragma: no-cache
+date: Mon, 29 Dec 2025 06:54:14 GMT
+x-cache: TCP_MISS from a2-20-196-17.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-true-cache-key: [Filtered]
+connection: keep-alive
+x-cache-remote: TCP_MISS from a23-36-160-140.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-apple-partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [country]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}
+

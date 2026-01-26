@@ -1,0 +1,22 @@
+{
+	"documentedAndTested": {
+		"/institutions": {
+			"get": [
+				"application/json",
+				"text/csv"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/institutions": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/institutions": {
+			"get": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

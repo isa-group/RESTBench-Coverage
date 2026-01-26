@@ -1,0 +1,8 @@
+GET /location-finder/v1/find-by-address?countryCode=DE&addressLocality=Bonn&postalCode=53113&streetAddress=Charles-de-Gaulle-Str.+20&radius=2500&limit=20&currentDate=24-01-2023 HTTP/1.1
+User-Agent: schemathesis/4.5.4
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: d1sQw3
+Host: api.dhl.com
+

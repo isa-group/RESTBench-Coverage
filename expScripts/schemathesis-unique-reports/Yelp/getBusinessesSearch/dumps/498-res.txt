@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 120
+Content-Type: application/json
+x-zipkin-id: 73e64bda1d3c2efccb0fdd9b74c90176
+server: envoy
+x-routing-service: routing-main--useast1-679fdcbd8b-fbxnf; site=public_api_v3
+x-mode: ro
+x-proxied: 10-65-90-142-useast1aprod
+x-extlb: 10-65-90-142-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 23:14:36 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220193-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "0 is less than the minimum of 1", "field": "[0]", "instance": 0}}

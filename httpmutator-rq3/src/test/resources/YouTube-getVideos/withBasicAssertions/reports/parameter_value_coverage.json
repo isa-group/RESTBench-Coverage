@@ -1,0 +1,35 @@
+{
+	"documentedAndTested": {
+		"/youtube/v3/videos": {
+			"get": {
+				"chart": [
+					"mostPopular"
+				],
+				"myRating": [
+					"like",
+					"dislike"
+				]
+			}
+		}
+	},
+	"documentedAndNotTested": {
+		"/youtube/v3/videos": {
+			"get": {
+				"chart": [],
+				"myRating": []
+			}
+		}
+	},
+	"notDocumentedAndTested": {
+		"/youtube/v3/videos": {
+			"get": {
+				"chart": [
+					"EVOMASTER"
+				],
+				"myRating": [
+					"EVOMASTER"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+HTTP/1.1 200 
+access-control-allow-credentials: true
+access-control-allow-headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization
+access-control-allow-methods: POST, GET
+access-control-allow-origin: *
+access-control-max-age: 3600
+cache-control: no-transform, public, max-age=31556926
+content-type: application/json
+server: Apache/2.4.58 (Ubuntu)
+strict-transport-security: max-age=63072000; includeSubdomains;
+vary: accept-encoding
+
+{"attribution":{"url":"https://ohsome.org/copyrights","text":"© OpenStreetMap contributors"},"apiVersion":"1.10.4","metadata":{"executionTime":1728,"description":"Total perimeter of items in meters.","requestUrl":"https://api.ohsome.org/v1/elements/perimeter?filter=type%3Away&showMetadata=yes&time=2008-01-01T00%3A00%3A00Z&bpolys=12.6375156814601%2C45.8300160562411%2C12.6375156814601%2C45.9234216162411%2C12.7165156814601%2C45.9234216162411%2C12.6375156814601%2C45.8300160562411&timeout=120"},"result":[{"timestamp":"2008-01-01T00:00:00Z","value":0.0}]}

@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: hegPam
+Content-Type: application/json
+Content-Length: 137
+Host: localhost:34113
+
+{"insurance": false, "age": 22307, "firstName": "\u00af$\u00fa\u00e0\";\u00ac\u91a8x\u00ea\ud8f9\ude31\ud9da\ude14~o\u00b0m", "cars": []}

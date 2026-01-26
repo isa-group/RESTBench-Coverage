@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 140
+Content-Type: application/json
+server: envoy
+x-routing-service: routing-main--useast1-679fdcbd8b-4z4wg; site=public_api_v3
+x-zipkin-id: a054b6b3e212b660fd7029a4ba5685f1
+x-mode: ro
+x-proxied: 10-65-79-18-useast1aprod
+x-extlb: 10-65-79-18-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 22:26:34 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220148-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "Authorization is a required parameter.", "field": "Authorization", "instance": null}}

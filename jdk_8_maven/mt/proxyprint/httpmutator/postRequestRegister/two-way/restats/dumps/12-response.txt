@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json;charset=UTF-8
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+x-application-context: application:0
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+
+{"id":1,"managerName":"Jean-Luc Wei","managerUsername":"bob_smith","managerEmail":"bob@example.org","managerPassword":"password123","pShopAddress":"Springfield","pShopLatitude":37.7749,"pShopLongitude":-118.2437,"pShopNIF":"987654321","pShopName":"Alice Print Shop","pShopDateRequestAccepted":"19/08/2025 12:00"}

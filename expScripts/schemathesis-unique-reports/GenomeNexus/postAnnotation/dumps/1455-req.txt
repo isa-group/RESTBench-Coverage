@@ -1,0 +1,11 @@
+POST /annotation HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 70hCUT
+Content-Type: application/json
+Content-Length: 129
+Host: localhost:34841
+
+["^\u00e8\udabe\udcdcw\u00cd\ud8d8\udcb8\u0010\u0011\udb3a\udfc8\u00c6\udb91\udef4\u009e", "\u00e5\ud810\udd2d", "B\u001a\u00d0"]

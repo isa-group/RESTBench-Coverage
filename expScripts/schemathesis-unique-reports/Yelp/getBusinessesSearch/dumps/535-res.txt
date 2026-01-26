@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 138
+Content-Type: application/json
+x-routing-service: routing-main--useast1-679fdcbd8b-qvbpg; site=public_api_v3
+server: envoy
+x-zipkin-id: b896a2f0dfafa0b4104dd022999856fd
+x-mode: ro
+x-proxied: 10-65-116-236-useast1aprod
+x-extlb: 10-65-116-236-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 23:18:35 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220043-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'ue_MG' is not a 'yelp-supported-locale'", "field": "locale", "instance": "ue_MG"}}

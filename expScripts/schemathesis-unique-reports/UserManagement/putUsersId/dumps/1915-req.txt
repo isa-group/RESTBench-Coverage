@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: gWDnFA
+Content-Type: application/json
+Content-Length: 102
+Host: localhost:42371
+
+{"country": "\u00fe\uda8b\ude87\ud983\uddfe\u00ea", "name": "\u0018\u00c5", "birthDate": "0004-01-01"}

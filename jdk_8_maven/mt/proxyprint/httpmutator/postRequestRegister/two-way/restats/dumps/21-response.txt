@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json;charset=UTF-8
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+x-application-context: application:0
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+
+{"id":1,"managerName":"Alice Manager","managerUsername":"alice123","managerEmail":"bob@example.org","managerPassword":"password123","pShopAddress":"San Francisco","pShopLatitude":40.7128,"pShopLongitude":-74.006,"pShopNIF":"987654321","pShopName":"Alice Print Shop","pShopDateRequestAccepted":"18/08/2025 12:00"}

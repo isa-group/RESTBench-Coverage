@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: kX8p51
+Content-Type: application/json
+Content-Length: 177
+Host: localhost:37143
+
+{"\u00f3\u00fb": {"\ud8dd\udd35\uda40\udd12\udb16\udce1\uda03\udea1,8A\\\ufd91\u001d": [14, null, -1.7976931348623157e+308]}, "date_created": "9555-03-24T07:00:27.165176+00:37"}

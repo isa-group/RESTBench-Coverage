@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: C6tvsN
+Content-Type: application/json
+Content-Length: 364
+Host: localhost:42371
+
+{"email": "\u00b5", "mobile": "", "_\u00ed\ud9d0\udfec\u00da": {"\u009c\ufc63\u00f4\u00a1! \u00ad\u0018\u00c9\u00e3&": {"": true}, "": [{}], "\u00f5\uda87\udff4\u0098\ud9b7\uddf1\ud99c\udedaG\u00bc|u\uadaf\ud8e2\udc83\u0082": {"": ""}}, "zipCode": "#\u00c6\u0000&\u00e8\ud9fa\udc2cU", "&": [], "contactNote": "\u0019\u0012|\ud822\udc74?\u00bc\u00d8", "gender": ""}

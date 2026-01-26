@@ -1,0 +1,29 @@
+{
+	"documentedAndTested": {
+		"/projects": {
+			"get": [
+				"organizations",
+				"limit",
+				"offset",
+				"q",
+				"start_date",
+				"end_date",
+				"language",
+				"sortBy"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/projects": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/projects": {
+			"get": [
+				"Host",
+				"Accept"
+			]
+		}
+	}
+}

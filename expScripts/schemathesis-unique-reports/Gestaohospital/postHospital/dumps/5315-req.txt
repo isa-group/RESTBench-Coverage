@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 7sQuJM
+Content-Type: application/json
+Content-Length: 216
+Host: localhost:38545
+
+{"latitude": "\u00c0\u00a5d\u00cc\ud9f6\udc64s", "address": "COM1", "longitude": "\udaad\udd06", "name": "", "!(\u007f\tx'": [[]], "availableBeds": 125, "id": "\u00d0\u0083\u0018F\u0084", "beds": 2532591790450506605}

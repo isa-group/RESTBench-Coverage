@@ -1,0 +1,13 @@
+HTTP/1.1 406 
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:39:47 GMT
+keep-alive: timeout=60
+connection: keep-alive
+
+{"message":"Argument validation error","description":"uri=/register","entityName":"userDTO","fieldErrors":[{"field":"name","message":"The value shall not be empty"},{"field":"address","message":"The value shall not be empty"},{"field":"phone","message":"The value shall not be empty"},{"field":"email","message":"The value shall not be empty"}]}

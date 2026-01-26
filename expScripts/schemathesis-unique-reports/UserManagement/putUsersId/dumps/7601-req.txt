@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: RsVERH
+Content-Type: application/json
+Content-Length: 143
+Host: localhost:42371
+
+{"website": "", "surname": "", "city": "%=\ud913\udca7\u00e4_\u00f7x\u009d\u00cc\u001b\u00e9$\u0018h\u00bb\u00f4+\u00ef\u00a4k\r", "skype": ""}

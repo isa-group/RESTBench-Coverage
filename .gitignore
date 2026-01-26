@@ -1,0 +1,134 @@
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Maven
+**/target/**
+!**/target/pit-reports/
+!**/target/pit-reports/**
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle - IDEA
+.idea/
+**/.idea
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+bin/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# IntelliJ
+out/
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.swp
+*.tmp
+*.bak
+*.orig
+
+# IDE scratch files
+*.sublime-workspace
+*.sublime-project
+
+# Other
+coverage/
+*.coverprofile
+
+.vscode/
+# private-m2/
+expScripts/pit-reports.txt
+expScripts/.env
+!private-m2/**/*.jar
+!private-m2/*.jar
+!expScripts/tools/PostmanAssertify.jar
+!expScripts/tools/jacocoagent.jar
+!expScripts/tools/jacococli.jar
+
+**/agora/postman_workspace/
+
+#**/one-way/*
+#**/two-way/*
+#**/one-way-reduced/*
+#
+#!**/one-way/httpMutatorInput.jsonl
+#!**/one-way/testcase.csv
+#!**/two-way/httpMutatorInput.jsonl
+#!**/two-way/testcase.csv
+#!**/one-way-reduced/httpMutatorInput.jsonl
+#!**/one-way-reduced/testcase.csv
+
+**/__pycache__/
+
+.env
+expScripts/evo/
+ind/itunes/httpmutator/getSearch/two-way/5xx/metrics/assertionResults.csv
+jdk_8_maven/mt/genome-nexus/httpmutator/postAnnotation/one-way-reduced/5xx/metrics/mutants.jsonl
+jdk_8_maven/mt/genome-nexus/httpmutator/postAnnotation/one-way/5xx/metrics/mutants.jsonl
+jdk_8_maven/mt/genome-nexus/httpmutator/postAnnotation/two-way/REG/metrics/assertionResults.csv
+jdk_8_maven/mt/genome-nexus/httpmutator/postAnnotation/two-way/REG/metrics_random/assertionResults.csv
+jdk_8_maven/mt/genome-nexus/httpmutator/postAnnotation/two-way/INV/metrics/assertionResults.csv
+**/mutants.jsonl
+!expScripts/**/mutants.jsonl
+em.yaml
+expScripts/em.yaml
+
+.hypothesis/
+
+# Explicitly ignore oversized Schemathesis artifacts
+expScripts/schemathesis-unique-reports/FDIC/getInstitutions/junit-*.xml
+expScripts/schemathesis-unique-reports/FDIC/getInstitutions/vcr-*.yaml
+expScripts/schemathesis-unique-reports/FDIC/getInstitutions/har-*.json
+expScripts/schemathesis-unique-reports/Deutschebahn/getStations/har-*.json
+expScripts/schemathesis-unique-reports/Deutschebahn/getStations/vcr-*.yaml
+expScripts/schemathesis-unique-reports/FDIC/getInstitutions/mutants.jsonl
+
+expScripts/schemathesis-unique-reports/Deutschebahn/getStations/mutants.jsonl
+expScripts/schemathesis-unique-reports/iTunes/getSearch/mutants.jsonl

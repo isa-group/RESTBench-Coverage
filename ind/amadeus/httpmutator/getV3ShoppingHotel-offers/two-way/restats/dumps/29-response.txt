@@ -1,0 +1,10 @@
+HTTP/1.1 400 
+access-control-allow-headers: Ama-Client-Ref, Accept, Content-Type,origin, x-requested-with, accept, Content-Type, Authorization
+access-control-allow-methods: *
+access-control-allow-origin: *
+access-control-max-age: 3628800
+content-type: application/vnd.amadeus+json
+server: Amadeus
+transfer-encoding: chunked
+
+{"errors":[{"status":400,"code":12247,"title":"NO RATE FOR REQUESTED OCCUPANCY - RE-ENTER WITH LOWER OCCUPANCY","detail":"Amadeus Error - NO RATE FOR REQUESTED OCCUPANCY - RE-ENTER WITH LOWER OCCUPANCY"}]}

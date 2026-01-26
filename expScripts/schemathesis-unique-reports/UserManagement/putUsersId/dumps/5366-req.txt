@@ -1,0 +1,11 @@
+PUT /users/4 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: Yq96xJ
+Content-Type: application/json
+Content-Length: 137
+Host: localhost:42371
+
+{"s\u00a5": {"\ud93d\udc2e\u0012\u00f2\u0018=": 1.175494351e-38}, "note": "e\u00c0f=W\u0083\ud940\udfbf\u001csd\u000f\u001cA", "": false}

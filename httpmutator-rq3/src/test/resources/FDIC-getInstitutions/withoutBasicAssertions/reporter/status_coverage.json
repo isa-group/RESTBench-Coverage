@@ -1,0 +1,22 @@
+{
+	"documentedAndTested": {
+		"/institutions": {
+			"get": [
+				"200",
+				"400"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/institutions": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/institutions": {
+			"get": [
+				"403"
+			]
+		}
+	}
+}

@@ -1,0 +1,11 @@
+POST /annotation?fields=%C2%B3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: lKDsko
+Content-Type: application/json
+Content-Length: 24
+Host: localhost:34841
+
+["h\u0093H\u00ee\u00af"]

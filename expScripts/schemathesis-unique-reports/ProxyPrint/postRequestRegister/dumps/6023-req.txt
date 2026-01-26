@@ -1,0 +1,11 @@
+POST /request/register HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ScotWW
+Content-Type: application/json
+Content-Length: 229
+Host: localhost:41773
+
+{"id": -105, "pShopLatitude": 1.7976931348623157e+308, "managerUsername": "\udbe6\udc25e", "pShopAddress": "I\u00cc", "pShopNIF": "\u00c4", "managerName": "\u008b", "managerEmail": "\ud85d\ude18", "managerPassword": "", "": null}

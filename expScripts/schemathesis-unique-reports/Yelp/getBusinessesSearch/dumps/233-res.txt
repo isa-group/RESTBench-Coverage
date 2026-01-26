@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 140
+Content-Type: application/json
+x-routing-service: routing-main--useast1-679fdcbd8b-bnc6r; site=public_api_v3
+x-zipkin-id: 90cacfe2b44ef617258773a84e7d193b
+server: envoy
+x-mode: ro
+x-proxied: 10-65-135-77-useast1bprod
+x-extlb: 10-65-135-77-useast1bprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 22:48:32 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220105-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'wip_MA' is not a 'yelp-supported-locale'", "field": "locale", "instance": "wip_MA"}}

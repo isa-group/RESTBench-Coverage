@@ -1,0 +1,4 @@
+POST /api/v1/activities HTTP/1.1
+Authorization: ApiKey administrator
+
+{"description_material":"an activity","description_main":"the main part","age_min":100,"age_max":50,"participants_min":50,"time_max":6,"featured":true,"tags":[{"id":4}],"source":"https://example.com/example"}

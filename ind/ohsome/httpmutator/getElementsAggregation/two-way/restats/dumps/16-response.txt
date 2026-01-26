@@ -1,0 +1,13 @@
+HTTP/1.1 200 
+access-control-allow-credentials: true
+access-control-allow-headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization
+access-control-allow-methods: POST, GET
+access-control-allow-origin: *
+access-control-max-age: 3600
+cache-control: no-transform, public, max-age=31556926
+content-type: application/json
+server: Apache/2.4.58 (Ubuntu)
+strict-transport-security: max-age=63072000; includeSubdomains;
+vary: accept-encoding
+
+{"attribution":{"url":"https://ohsome.org/copyrights","text":"© OpenStreetMap contributors"},"apiVersion":"1.10.4","metadata":{"executionTime":28510,"description":"Total area of items in square meters.","requestUrl":"https://api.ohsome.org/v1/elements/area?showMetadata=yes&time=2015-06-15&timeout=125&bcircles=-5.747920000000001%2C37.407009900000006%2C1193"},"result":[{"timestamp":"2015-06-15T00:00:00Z","value":2.298283032E7}]}

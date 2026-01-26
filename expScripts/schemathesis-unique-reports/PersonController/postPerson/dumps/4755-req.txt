@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 5xBDpv
+Content-Type: application/json
+Content-Length: 111
+Host: localhost:34113
+
+{"insurance": true, "firstName": "\u00a1y\ud9f8\uddff\ud8a2\udfc2\u0095\u0095\udb83\udc09\u0000", "8w": [null]}

@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+content-length: 225
+x-apple-jingle-correlation-key: [Filtered]
+x-apple-request-uuid: 3ae75b0e-9e21-689d-78d6-8c980758e7b1
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?explicit=%F4%84%BE%90%C2%BF%C2%A4%C3%B7%C2%89B%C3%A7&term=%F0%AB%A5%9Bu%C2%AC%C3%91%C2%8B%F1%B8%90%B6%F0%AA%B0%ACX%28f%C2%80%C2%8C%14&entity=%C3%8F6%0E&%C3%AF%2F%F3%96%9A%B2%3F%19%C3%BF%C2%AD%C3%8E%C2%99%F0%91%83%9B=20073&%F2%A7%9E%B3%F1%AA%AF%8AU%C3%ACc%F0%BB%91%BB%F3%AE%90%99%F1%BC%A7%9E%C3%B1%03=.moves.urllib_parse&%26%03%F2%A6%A8%9C=&=%0F%0F%08%C3%84Y%F3%99%87%83%C2%9A%C3%83-%C2%B0k&country=undefined&%C3%B31=20073&attribute=%F1%89%B7%87&urlDesc=
+apple-tk: false
+x-b3-spanid: 4b81c104381fa260
+b3: 3ae75b0e9e21689d78d68c980758e7b1-4b81c104381fa260
+x-b3-traceid: 3ae75b0e9e21689d78d68c980758e7b1
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6001721:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+content-encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-st.itunes.apple.com/search?explicit=%F4%84%BE%90%C2%BF%C2%A4%C3%B7%C2%89B%C3%A7&term=%F0%AB%A5%9Bu%C2%AC%C3%91%C2%8B%F1%B8%90%B6%F0%AA%B0%ACX%28f%C2%80%C2%8C%14&entity=%C3%8F6%0E&%C3%AF%2F%F3%96%9A%B2%3F%19%C3%BF%C2%AD%C3%8E%C2%99%F0%91%83%9B=20073&%F2%A7%9E%B3%F1%AA%AF%8AU%C3%ACc%F0%BB%91%BB%F3%AE%90%99%F1%BC%A7%9E%C3%B1%03=%E5%B3%96%F2%B7%B9%B2n%F4%8C%91%A3%26J%F3%81%B2%9F%C2%BF&%F2%A7%9E%B3%F1%AA%AF%8AU%C3%ACc%F0%BB%91%BB%F3%AE%90%99%F1%BC%A7%9E%C3%B1%03=%F0%A0%BA%80%05%F4%86%BD%A6a%C3%8A&%F2%A7%9E%B3%F1%AA%AF%8AU%C3%ACc%F0%BB%91%BB%F3%AE%90%99%F1%BC%A7%9E%C3%B1%03=.moves.urllib_parse&%26%03%F2%A6%A8%9C=&=6%1B%7C%F3%80%94%98%C3%80%F3%A3%B0%81%C2%8ED%C2%93%C2%A9K&=S&=h%F3%AF%AD%85%7D%C2%9BgX&=%0F%0F%08%C3%84Y%F3%99%87%83%C2%9A%C3%83-%C2%B0k&country=undefined&%C3%B31=20073&attribute=%F1%89%B7%87
+x-apple-application-site: ST11
+apple-timing-app: 2 ms
+x-apple-application-instance: 6001721
+x-daiquiri-instance: daiquiri:47317002:st44p00it-hyhk15114801:7987:25HOTFIX33:daiquiri-amp-store-shared-int-001-st, daiquiri:42282006:st53p00it-qujn15040502:7987:25HOTFIX33:daiquiri-amp-store-l7shared-ext-001-st
+vary: Accept-Encoding
+expires: Mon, 29 Dec 2025 06:37:10 GMT
+cache-control: max-age=0, no-cache
+pragma: no-cache
+date: Mon, 29 Dec 2025 06:37:10 GMT
+x-cache: TCP_MISS from a2-20-196-17.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-true-cache-key: [Filtered]
+connection: keep-alive
+x-cache-remote: TCP_MISS from a2-20-179-22.deploy.akamaitechnologies.com (AkamaiGHost/22.3.3.1-71e9d5dfbd3c1d9c60c216bbd0edd340) (-)
+x-apple-partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [country]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}
+

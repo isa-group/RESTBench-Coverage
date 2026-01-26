@@ -1,0 +1,3 @@
+testCaseId,operationId,path,httpMethod,queryParameters,headerParameters,pathParameters,formParameters,bodyParameter,statusCode,responseHeaders,responseBody
+00000002,postApiV1Users,/api/v1/users,POST,,Authorization=ApiKey administrator,,,"{""name"":""USER2"",""email_address"":""USER2@gmail.com"",""authorization_level"":10}",200,content-type=application/json,"{""id"":4,""name"":""USER2"",""email_address"":""USER2@gmail.com"",""authorization_level"":10,""identities"":[]}"
+00000005,postApiV1Users,/api/v1/users,POST,,Authorization=ApiKey administrator,,,"{""name"":""user1"",""email_address"":""USER2@gmail.com USER3@gmail.com"",""authorization_level"":""dd""}",400,content-type=application/json,"{""code"":400,""message"":""Unable to process JSON""}"

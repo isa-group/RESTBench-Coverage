@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: JkprTa
+Content-Type: application/json
+Content-Length: 123
+Host: localhost:42371
+
+{"password": "\ud92e\ude3f{\u00ae\u00e4\u00d4\u00c0C\u00b8}-", "website": "\ud92e\ude3f{\u00ae\u00e4\u00d4\u00c0C\u00b8}-"}

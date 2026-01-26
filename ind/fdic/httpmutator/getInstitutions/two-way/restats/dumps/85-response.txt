@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"1ed-W994lHAC01wYDQa1zCpCcHut7Ig"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjrl9ivungrkdp88a0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: d6b3d69e-f3cf-4d96-5259-a6e0b5041664
+
+{"meta":{"total":1,"parameters":{"filters":"STNAME: Georgia","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP","limit":"100","offset":"0","search":"NAME: Hancock"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"31087","CITY":"Sparta","OFFDOM":1,"STNAME":"Georgia","STALP":"GA","COUNTY":"Hancock","ID":"10057"},"score":488.74078,"highlight":{"NAME.raw":["<em>Bank</em> <em>of</em> <em>Hancock</em> County"]}}],"totals":{"count":1}}

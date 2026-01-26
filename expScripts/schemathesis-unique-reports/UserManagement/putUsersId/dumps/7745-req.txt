@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ds73dP
+Content-Type: application/json
+Content-Length: 310
+Host: localhost:42371
+
+{"country": "\u0016\u008e", "secured": false, "gender": "F\u00eeq\ud829\udce1", "address": ">\u000e\u00d5\u00d5", "contactNote": "", "enabled": false, "username": "", "city": "_=", "facebook": "\udaeb\udd8f", "password": "(A\u009c", "\u0092": [[false]], "\uf84a": [[false]], "address2": "\u00ff)!\udb07\udd44"}

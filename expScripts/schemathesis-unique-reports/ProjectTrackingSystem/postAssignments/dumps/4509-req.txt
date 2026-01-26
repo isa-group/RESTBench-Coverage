@@ -1,0 +1,11 @@
+POST /app/api/assignments HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ptMkG8
+Content-Type: application/json
+Content-Length: 101
+Host: localhost:37971
+
+{"employeeId": 7, "commitDate": "\u0081\ud88a\udfc5L\udb0b\udf1eEdd-MM-yyyyHH:mm:ss", "projectId": 2}

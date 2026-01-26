@@ -1,0 +1,11 @@
+PUT /users/6 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: PhGWsX
+Content-Type: application/json
+Content-Length: 144
+Host: localhost:42371
+
+{"\u00ae\u00d4": {"\u0094\u00cb\u00abz": "\u81d3\u00cf7\u00d1\udaba\udf4bJ\uda55\udef1", "\u0019\u00bd\u00df": "", "": 1.7976931348623157e+308}}

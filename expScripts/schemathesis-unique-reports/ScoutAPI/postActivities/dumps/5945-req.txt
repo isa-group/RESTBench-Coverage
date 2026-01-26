@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: 6xfYui
+Content-Type: application/json
+Content-Length: 40
+Host: localhost:37143
+
+{"time_max": 10481, "media_files": [{}]}

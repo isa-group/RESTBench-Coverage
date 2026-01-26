@@ -1,0 +1,21 @@
+===== API: ScoutAPI =====
+===== Operation: postActivities =====
+===== Mode: WHITE =====
+===== Level: REGRESSION =====
+===== Strength: TWO_WAY =====
+
+===== Pitest Timings =====
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 1 minutes and 58 seconds
+> build mutation tests : < 1 second
+> run mutation analysis : 1 hours, 38 minutes and 22 seconds
+> Total  : 1 hours, 40 minutes and 20 seconds
+
+===== Pitest Statistics =====
+>> Line Coverage (for mutated classes only): 496/1108 (45%)
+>> 1 tests examined
+>> Generated 317 mutations Killed 142 (45%)
+>> Mutations with no coverage 97. Test strength 65%
+>> Ran 2474 tests (7.8 tests per mutation)
+

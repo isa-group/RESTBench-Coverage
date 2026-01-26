@@ -1,0 +1,14 @@
+HTTP/1.1 200 
+access-control-allow-credentials: true
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-origin: *
+access-control-max-age: 1728000
+cache-control: max-age=0, no-store, private, no-transform
+content-type: application/json
+ratelimit-dailylimit: 300
+server: envoy
+vary: Accept-Encoding
+x-mode: ro
+
+{"businesses":[{"id":"dq2iOFVVdwYFzQJ629ICjg","alias":"sol-agave-los-angeles-12","name":"Sol Agave","image_url":"https://s3-media0.fl.yelpcdn.com/bphoto/HO7ACpgFfrQ9FDdav-b5gg/o.jpg","is_closed":false,"url":"https://www.yelp.com/biz/sol-agave-los-angeles-12?adjust_creative=hbkNBOyFKhZhx0x1aJM8kQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=hbkNBOyFKhZhx0x1aJM8kQ","review_count":972,"categories":[{"alias":"newmexican","title":"New Mexican Cuisine"}],"rating":4.3,"coordinates":{"latitude":34.045021464745375,"longitude":-118.2649805036731},"transactions":["pickup","restaurant_reservation"],"price":"$$$","location":{"address1":"800 W Olympic Blvd","address2":"Ste A130","address3":null,"city":"Los Angeles","zip_code":"90015","country":"US","state":"CA","display_address":["800 W Olympic Blvd","Ste A130","Los Angeles, CA 90015"]},"phone":"+12135365287","display_phone":"(213) 536-5287","distance":2116.872994514096,"business_hours":[{"open":[{"is_overnight":false,"start":"1100","end":"2200","day":0},{"is_overnight":false,"start":"1100","end":"2200","day":1},{"is_overnight":false,"start":"1100","end":"2200","day":2},{"is_overnight":false,"start":"1100","end":"2200","day":3},{"is_overnight":false,"start":"1100","end":"2300","day":4},{"is_overnight":false,"start":"1000","end":"2300","day":5},{"is_overnight":false,"start":"1000","end":"2200","day":6}],"hours_type":"REGULAR","is_open_now":false}],"attributes":{"business_temp_closed":null,"menu_url":null,"open24_hours":null,"waitlist_reservation":true}}],"total":1,"region":{"center":{"longitude":-118.2437,"latitude":34.0522}}}

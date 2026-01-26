@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: HHzLSO
+Content-Type: application/json
+Content-Length: 241
+Host: localhost:34113
+
+{"address": {"street": null, "false": {"\u00b0": {"\u001b\u0002g\ud80f\udfa83N\u00c9'": {"\udaf0\udc28": 123, "\u008c": false, "\u00ad9\udb13\udc80": null}, "Z": {}}, "\u00f2n*\u00f1\u00bfX": true}}, "createdAt": "2000-01-01T00:01:00-00:00"}

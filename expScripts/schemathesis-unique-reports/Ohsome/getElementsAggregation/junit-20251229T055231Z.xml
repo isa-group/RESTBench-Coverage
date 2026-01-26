@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="5105.083751040511">
+	<testsuite disabled="0" errors="0" failures="1" name="schemathesis" skipped="1" tests="1" time="5105.083751040511" hostname="c8b8913eebcf">
+		<testcase name="GET /elements/{aggregation}" time="5105.083751">
+			<failure type="failure" message="1. Test Case ID: gXiq4k
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{
+      &quot;timestamp&quot; : &quot;2025-12-29T04:52:32.346806766&quot;,
+      &quot;status&quot; : 400,
+      &quot;message&quot; : &quot;You need to define one of the boundary parameters (bboxes, bcircles, bpolys).&quot;,
+      &quot;requestUrl&quot; : &quot;https://api.ohsome.org/v1/elements/area?timeout=0&quot;
+    }`
+
+Reproduce with: 
+
+    curl -X GET 'https://api.ohsome.org/v1/elements/area?timeout=0'
+
+2. Test Case ID: n5Lt98
+
+- Undocumented HTTP status code
+
+    Received: 404
+    Documented: 200, 400
+
+[404] Not Found:
+
+    `{
+      &quot;timestamp&quot; : &quot;2025-12-29T04:55:33.534+00:00&quot;,
+      &quot;status&quot; : 404,
+      &quot;error&quot; : &quot;Not Found&quot;,
+      &quot;path&quot; : &quot;/elements/X%C3%A4%C3%A3%F2%B5%84%AAM%C2%BA%09&quot;
+    }`
+
+Reproduce with: 
+
+    curl -X GET 'https://api.ohsome.org/v1/elements/X%C3%A4%C3%A3%F2%B5%84%AAM%C2%BA%09?=%C2%8E%F1%9F%B4%9B%1E%C3%A4%C3%BB%F0%A6%9E%A2%C3%A3&amp;=%C3%A2m%C2%8Bzs%F3%94%8B%83%14%0A%C3%B3%F2%93%A8%9C-C&amp;=%F2%94%B1%90&amp;filter=%16%5B&amp;%C3%AD%C3%82%C2%B1%F0%BA%95%AC8%F0%91%B0%8EH%F3%A1%93%BBLw%C2%A3%C2%A4q%01%C3%BD%C3%83%C3%95%5Es%C3%AD=X&amp;%C3%AD%C3%82%C2%B1%F0%BA%95%AC8%F0%91%B0%8EH%F3%A1%93%BBLw%C2%A3%C2%A4q%01%C3%BD%C3%83%C3%95%5Es%C3%AD=%F1%AF%AB%8C%C2%AAl&amp;time=%C3%BE%C3%B0hq%F3%96%97%8C%F1%B6%95%90%C3%BF%C2%AC%C3%BB%C2%B4%C3%BANV&amp;bcircles=%C3%B7%F3%93%8A%AF%C2%8C%C3%9C%24&amp;bpolys=%C3%ABsY%40%C3%B3%F1%98%93%B9%C2%A9%2A'
+
+3. Test Case ID: ovuzzu
+
+- Undocumented Content-Type
+
+    Received: text/html;charset=utf-8
+    Documented: application/json
+
+[400] Bad Request:
+
+    `&lt;!doctype html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;title&gt;HTTP Status 400 – Bad Request&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;HTTP Status 400 – Bad Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;`
+
+Reproduce with: 
+
+    curl -X GET 'https://api.ohsome.org/v1/elements/%F1%92%8B%84%C3%B7%5C%3E?bboxes=r&amp;showMetadata=%7F%C3%85K%C3%B0'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

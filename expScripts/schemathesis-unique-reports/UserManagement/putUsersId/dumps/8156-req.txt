@@ -1,0 +1,11 @@
+PUT /users/8 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: TBNm3e
+Content-Type: application/json
+Content-Length: 65
+Host: localhost:42371
+
+{"mobile": "\u00ef\ud94d\udc43\u00a5", "birthDate": "3158-10-05"}

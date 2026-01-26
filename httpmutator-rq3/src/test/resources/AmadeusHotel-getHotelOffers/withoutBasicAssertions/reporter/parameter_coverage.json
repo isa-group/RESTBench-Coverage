@@ -1,0 +1,35 @@
+{
+	"documentedAndTested": {
+		"/shopping/hotel-offers": {
+			"get": [
+				"hotelIds",
+				"adults",
+				"checkInDate",
+				"checkOutDate",
+				"roomQuantity",
+				"priceRange",
+				"currency",
+				"paymentPolicy",
+				"boardType",
+				"includeClosed",
+				"bestRateOnly",
+				"countryOfResidence",
+				"lang"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/shopping/hotel-offers": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/shopping/hotel-offers": {
+			"get": [
+				"Host",
+				"Accept",
+				"Authorization"
+			]
+		}
+	}
+}

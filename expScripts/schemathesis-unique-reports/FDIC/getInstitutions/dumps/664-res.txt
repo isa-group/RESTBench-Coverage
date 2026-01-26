@@ -1,0 +1,17 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 05:46:42 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 413
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"19d-2R/zYAQlIHKYs7Rmj1qYTviUy5g"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdn5lqlfm1egs3k1s8g
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: 3901cd78-37f2-4979-605a-f9cf740adb94
+x-frame-options: DENY
+
+{"errors":[{"status":400,"links":{"about":{"href":"https://pfabankapi.app.cloud.gov/docs","meta":{"section":"Filter Syntax"}}},"title":"Invalid request input, please double check your search query syntax","detail":"x_content_parse_exception: [x_content_parse_exception] Reason: [1:624] [field_sort] failed to parse field [order]","source":{"parameter":"filters"},"meta":{"timestamp":"2025-12-30T05:46:42.920Z"}}]}

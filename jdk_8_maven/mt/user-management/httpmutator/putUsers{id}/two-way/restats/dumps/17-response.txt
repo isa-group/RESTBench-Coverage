@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":5,"username":"alice1985","name":"Alice","surname":null,"gender":"FEMALE","birthDate":"1985-12-01","enabled":false,"note":null,"loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":"+44-7700-900123","skype":"alice.smith.skype","facebook":null,"linkedin":"https://linkedin.com/in/testuser","website":null,"contactNote":"Call after 6pm"},"addressDTO":{"address":"123 Main Street","address2":"Apt. 4B","city":"London","country":"USA","zipCode":"10001"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

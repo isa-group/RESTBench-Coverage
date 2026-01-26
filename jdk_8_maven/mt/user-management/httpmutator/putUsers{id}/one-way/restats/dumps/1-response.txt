@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":3,"username":"testuser123","name":"John","surname":"Smith","gender":"FEMALE","birthDate":null,"enabled":false,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":"+86-13800138000","skype":"user123.skype","facebook":"https://facebook.com/test.user","linkedin":"https://linkedin.com/in/testuser","website":"https://example.org","contactNote":"Urgent contact only"},"addressDTO":{"address":null,"address2":"Suite 210","city":"Beijing","country":"USA","zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

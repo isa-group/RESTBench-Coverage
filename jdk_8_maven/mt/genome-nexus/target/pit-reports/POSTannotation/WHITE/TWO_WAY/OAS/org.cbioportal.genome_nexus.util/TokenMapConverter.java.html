@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>TokenMapConverter.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.cbioportal.genome_nexus.util;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.*;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.gson.Gson;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.gson.JsonParseException;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class TokenMapConverter {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Map&#60;String, String&#62; convertToMap(String token) {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        Gson gson = new Gson();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        Map&#60;String, String&#62; tokenMap = new HashMap&#60;String, String&#62;();</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        try {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            tokenMap = gson.fromJson(token, Map.class);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        catch (JsonParseException e) {</span></pre></td></tr>
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_18'/>
+18
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_18'>1</a>
+<span>
+1. convertToMap : removed call to java/io/PrintStream::println &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>            System.out.println(&#34;The format of token is invalid. For example {\&#34;source1\&#34;:\&#34;put-your-token1-here\&#34;,\&#34;source2\&#34;:\&#34;put-your-token2-here\&#34;}&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        }</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_20'/>
+20
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_20'>1</a>
+<span>
+1. convertToMap : replaced return value with Collections.emptyMap for org/cbioportal/genome_nexus/util/TokenMapConverter::convertToMap &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return tokenMap;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6a9659ae_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6a9659ae_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_18'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertToMap<br/><b>Killed by : </b>none</span></span> removed call to java/io/PrintStream::println &rarr; NO_COVERAGE</span>
+</div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6a9659ae_20'>20</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6a9659ae_20'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertToMap<br/><b>Killed by : </b>none</span></span> replaced return value with Collections.emptyMap for org/cbioportal/genome_nexus/util/TokenMapConverter::convertToMap &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=org.cbioportal.genome_nexus.util.TokenMapConverter,-method=convertToMap,-methodDesc=(Ljava/lang/String;)Ljava/util/Map;],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=org.cbioportal.genome_nexus.util.TokenMapConverter,-method=convertToMap,-methodDesc=(Ljava/lang/String;)Ljava/util/Map;],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=org.cbioportal.genome_nexus.util.TokenMapConverter,-method=convertToMap,-methodDesc=(Ljava/lang/String;)Ljava/util/Map;],-indexes=[37],-mutator=org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28] (18 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29] (20 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13] (24 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8] (24 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4] (40 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20] (35 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40] (38 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26] (31 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35] (43 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32] (47 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27] (39 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12] (41 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14] (53 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5] (89 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25] (30 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24] (31 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31] (36 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16] (42 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37] (46 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17] (57 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21] (57 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11] (66 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7] (82 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19] (62 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3] (147 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2] (238 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34] (373 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39] (380 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22] (380 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9] (398 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36] (391 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10] (405 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30] (424 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15] (449 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33] (461 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23] (568 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1] (692 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38] (860 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18] (1095 ms)</li><li>mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest.[engine:junit-jupiter]/[class:mt.org.cbioportal.genome_nexus.web.GenomeNexusEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6] (1537 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.1
+
+</body>
+</html>

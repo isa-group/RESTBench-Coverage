@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"fd-Ha24pRdADSrzWcv8kP8Fuj0at4g"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjqh0690q6u9um9n40
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 921dc6c6-a544-41e3-7a3b-87acff01f82e
+
+{"meta":{"total":0,"parameters":{"filters":"STNAME: Alaska","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP","search":"NAME: Hancock"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[],"totals":{"count":0}}

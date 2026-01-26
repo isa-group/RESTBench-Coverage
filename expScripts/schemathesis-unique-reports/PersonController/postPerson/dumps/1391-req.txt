@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: pBISPH
+Content-Type: application/json
+Content-Length: 424
+Host: localhost:34113
+
+{"firstName": "", "=\u00be\ud957\ude33\ud8a0\udd72\u00bf)\udb10\udd37\uda7f\udc25\u0084\u0081\u00c5\u00b9\u00ae": {}, "__func__": [true, null], "": [[2.3959047162978073e-28, "\ue5631Q\u00b1\u0088\ud8d4\uddd6\u00f9Z\ud8a1\udff5\u00e1\u00ef_"], null, {}], "cars": [], "address": {"": -1217}, "lastName": "A\u00a2\u000e\u0017\u008d\u00e4\u00fe\uda49\uddcb\u00f0", "age": -20856, "createdAt": "2464-12-23T04:48:00.547114+04:48"}

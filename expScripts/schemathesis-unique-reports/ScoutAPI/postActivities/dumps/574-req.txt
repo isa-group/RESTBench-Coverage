@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: XsdEFu
+Content-Type: application/json
+Content-Length: 140
+Host: localhost:37143
+
+{"\ud88c\uddd2\u00c5\u00ed\u0016@": {"\u00a1\udbec\udeee": [["Scunthorpe", "\u0082", false], null, {"\u00a1\udbec\udeee": null, "": null}]}}

@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"66e-RyeShlhrDnAG/2RZCxnXY9IPNv8"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjrid8o47gs4at82c0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: b225cfce-7dec-4bd3-6f46-a40052fd03e2
+
+{"meta":{"total":4,"parameters":{"filters":"STNAME: Arkansas","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC","limit":"100","search":"NAME: Lake"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"71653","CITY":"Lake Village","ACTIVE":1,"OFFDOM":2,"STNAME":"Arkansas","ASSET":84489,"CERT":15547,"NETINC":745,"STALP":"AR","COUNTY":"Chicot","NAME":"Bank of Lake Village","ID":"15547"},"score":396.16675,"highlight":{"NAME.raw":["<em>Bank</em> <em>of</em> <em>Lake</em> Village"]}},{"data":{"ZIP":"72543","CITY":"Heber Springs","ACTIVE":0,"OFFDOM":4,"STNAME":"Arkansas","ASSET":63517,"CERT":33471,"NETINC":281,"STALP":"AR","COUNTY":"Cleburne","NAME":"Greers Ferry Lake State Bank","ID":"33471"},"score":220.90784,"highlight":{"NAME.raw":["<em>Greers</em> <em>Ferry</em> <em>Lake</em> State Bank"]}},{"data":{"ZIP":"71653","CITY":"Lake Village","ACTIVE":0,"OFFDOM":5,"STNAME":"Arkansas","ASSET":188789,"CERT":18590,"NETINC":1137,"STALP":"AR","COUNTY":"Chicot","NAME":"Simmons First Bank of South Arkansas","ID":"18590"},"score":25.248112,"highlight":{"PRIORNAME1.raw":["First <em>State</em> <em>Bank</em> <em>of</em> <em>Lake</em> Village"],"PRIORNAME3.raw":["Simmons <em>First</em> <em>Bank</em> <em>of</em> <em>Lake</em> Village"]}},{"data":{"ZIP":"72634","CITY":"Flippin","ACTIVE":0,"OFFDOM":3,"STNAME":"Arkansas","ASSET":125516,"CERT":15880,"NETINC":1449,"STALP":"AR","COUNTY":"Marion","NAME":"Twin Lakes Community Bank","ID":"15880"},"score":24.416828,"highlight":{"NAME.raw":["<em>Twin</em> <em>Lakes</em> Community Bank"]}}],"totals":{"count":4}}

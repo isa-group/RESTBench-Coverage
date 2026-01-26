@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Date: Wed, 03 Dec 2025 17:09:14 GMT
+Content-Type: application/json
+Content-Length: 413
+Connection: keep-alive
+Host: test.api.amadeus.com
+X-Forwarded-For: 79.117.251.183
+X-Forwarded-Port: 443
+X-Forwarded-Proto: https
+Accept: */*
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+Accept-Encoding: gzip,deflate
+Ama-Gateway-Request-Id: rrt-00b5b97bcf5132b34-a-de-424732-279341252-1
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: origin, x-requested-with, accept, Content-Type
+Access-Control-Max-Age: 3628800
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Server: Amadeus
+
+
+        {
+            "type": "amadeusOAuth2Token",
+            "username": "n51eq@comfythings.com",
+            "application_name": "httpmutator",
+            "client_id": "WApa8t7xQafqfTyrHppowJFOGgIiuE67",
+            "token_type": "Bearer",
+            "access_token": "f0O32ROpnA57APLGIGORDAXCq1xn",
+            "expires_in": 1799,
+            "state": "approved",
+            "scope": ""
+        }
+        

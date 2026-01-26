@@ -1,0 +1,11 @@
+PUT /users/-4874 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: bvI68u
+Content-Type: application/json
+Content-Length: 160
+Host: localhost:42371
+
+{"city": {"\u00f6\u00cf\r": [true, {"\u0086": null, ",./;'[]\\-=<>?:\"{}|_+!@#$%^&*()`~": -13247, "\u00a8\u00a7\u92c1": -6.808671414402843e+16}, {}], "": null}}

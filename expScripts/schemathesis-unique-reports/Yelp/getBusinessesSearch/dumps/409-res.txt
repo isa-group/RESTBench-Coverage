@@ -1,0 +1,24 @@
+HTTP/1.1 500 Internal Server Error
+connection: keep-alive
+content-length: 112
+Content-Type: application/json
+access-control-allow-credentials: [Filtered]
+access-control-max-age: 1728000
+server: envoy
+x-zipkin-id: 0600d377bc5570fca1c4732ccec1e22c
+access-control-allow-origin: *
+x-routing-service: routing-main--useast1-679fdcbd8b-gvgwr; site=public_api_v3
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+x-mode: ro
+x-proxied: 10-65-171-28-useast1bprod
+x-extlb: 10-65-171-28-useast1bprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 23:05:37 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220106-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "INTERNAL_ERROR", "description": "Something went wrong internally, please try again later."}}

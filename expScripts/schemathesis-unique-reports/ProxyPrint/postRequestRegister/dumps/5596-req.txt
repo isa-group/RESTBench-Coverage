@@ -1,0 +1,11 @@
+POST /request/register HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: TwYus8
+Content-Type: application/json
+Content-Length: 82
+Host: localhost:41773
+
+{"Wc\u00ff\u00a9\u00ac\ud838\udedd4": {"Wc\u00ff\u00a9\u00ac\ud838\udedd4": null}}

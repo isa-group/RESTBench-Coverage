@@ -1,0 +1,19 @@
+HTTP/1.1 200 
+access-control-allow-credentials: true
+access-control-allow-methods: GET, HEAD, PUT, PATCH, POST, DELETE
+access-control-allow-origin: *
+access-control-expose-headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+access-control-max-age: 300
+cache-control: no-cache, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=36TquQW9RSq7hcAZj4NFtjhU1n1dvzr6QR_sB9aMUHFWNZn4YkPzJWVOoUiJ9ljQo3cW8cWcnXwsq1CH
+content-type: application/json
+server: nginx
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+stripe-should-retry: false
+stripe-version: 2025-09-30.clover
+vary: Origin
+x-stripe-priority-routing-enabled: true
+x-stripe-routing-context-priority-tier: api-testmode
+x-wc: ABGHIJ
+
+{"object":"product","active":false,"attributes":[],"description":"desc_short","images":["https://cdn.stripe.test/images/0","https://cdn.stripe.test/images/1","https://cdn.stripe.test/images/2","https://cdn.stripe.test/images/3","https://cdn.stripe.test/images/4","https://cdn.stripe.test/images/5","https://cdn.stripe.test/images/6"],"livemode":false,"marketing_features":[],"metadata":{},"package_dimensions":{"height":9.8,"length":2.1,"weight":8.2,"width":1.0},"shippable":false,"statement_descriptor":"sd_ref","tax_code":null,"type":"service","unit_label":"license","url":"https://store/item"}

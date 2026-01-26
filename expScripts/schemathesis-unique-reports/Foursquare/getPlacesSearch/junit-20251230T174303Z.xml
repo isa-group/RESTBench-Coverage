@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="1" failures="0" tests="1" time="10.884652772918344">
+	<testsuite disabled="0" errors="1" failures="0" name="schemathesis" skipped="1" tests="1" time="10.884652772918344" hostname="VM-0-2-ubuntu">
+		<testcase name="GET /places/search" time="10.884653">
+			<error type="error">Network Error
+
+Connection failed
+
+    HTTPSConnectionPool(host='places-api.foursquare.com', port=443): Read timed out.</error>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

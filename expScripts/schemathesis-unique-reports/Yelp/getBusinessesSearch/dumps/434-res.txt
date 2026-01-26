@@ -1,0 +1,24 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 182
+Content-Type: application/json
+access-control-max-age: 1728000
+x-zipkin-id: 2b268e84b828f5cb02f3e3a318bfe15d
+x-routing-service: routing-main--useast1-679fdcbd8b-ksxg5; site=public_api_v3
+access-control-allow-credentials: [Filtered]
+access-control-allow-origin: *
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+server: envoy
+x-mode: ro
+x-proxied: 10-65-90-142-useast1aprod
+x-extlb: 10-65-90-142-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 23:08:33 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220154-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "Not all of the required parameters were passed in: dict_keys(['reservation_date', 'reservation_time', 'reservation_covers'])"}}

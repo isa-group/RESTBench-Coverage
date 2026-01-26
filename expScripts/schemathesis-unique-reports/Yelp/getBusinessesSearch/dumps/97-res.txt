@@ -1,0 +1,19 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 207
+Content-Type: application/json
+x-routing-service: routing-main--useast1-679fdcbd8b-c6xbj; site=public_api_v3
+x-zipkin-id: feda2bc3f73d4dd02afbbbd982d4c4c6
+server: envoy
+x-mode: ro
+x-proxied: 10-65-90-142-useast1aprod
+x-extlb: 10-65-90-142-useast1aprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 22:34:33 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220112-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "'\\U00077577\u00d4\u00ca>\\xa0\\x8fI-\u00e0' is not of type 'integer'", "field": "offset", "instance": "\ud99d\udd77\u00d4\u00ca>\u00a0\u008fI-\u00e0"}}

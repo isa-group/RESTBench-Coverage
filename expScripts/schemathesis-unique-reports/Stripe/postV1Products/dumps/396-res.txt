@@ -1,0 +1,34 @@
+HTTP/1.1 400 Bad Request
+server: nginx
+date: Sun, 28 Dec 2025 13:21:51 GMT
+Content-Type: application/json
+content-length: 513
+connection: keep-alive
+access-control-allow-credentials: [Filtered]
+access-control-allow-methods: GET, HEAD, PUT, PATCH, POST, DELETE
+access-control-allow-origin: *
+access-control-expose-headers: Request-Id, Stripe-Manage-Version, Stripe-Should-Retry, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required
+access-control-max-age: 300
+cache-control: no-cache, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self'; script-src 'self' 'report-sample'; style-src 'self'; worker-src 'none'; upgrade-insecure-requests; report-uri https://q.stripe.com/csp-violation?q=OSfDLgTylDObkArroIuNhWzTmhr3RH8z7fBSvXiY5R3DMPH1ZS-YCcyMf1zIdetQS40qVydk42N3cJCS
+idempotency-key: [Filtered]
+original-request: req_NxgoBckDTt7586
+request-id: req_NxgoBckDTt7586
+stripe-version: 2024-12-18.acacia
+vary: Origin
+x-stripe-priority-routing-enabled: true
+x-stripe-routing-context-priority-tier: api-testmode
+x-wc: ABGHIJ
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+
+{
+  "error": {
+    "code": "parameter_invalid_empty",
+    "doc_url": "https://stripe.com/docs/error-codes/parameter-invalid-empty",
+    "message": "You passed an empty string for 'name'. We assume empty values are an attempt to unset a parameter; however 'name' cannot be unset. You should remove 'name' from your request or supply a non-empty value.",
+    "param": "name",
+    "request_log_url": "https://dashboard.stripe.com/test/logs/req_NxgoBckDTt7586?t=1766928111",
+    "type": "invalid_request_error"
+  }
+}
+

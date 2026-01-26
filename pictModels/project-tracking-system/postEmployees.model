@@ -1,0 +1,13 @@
+credential: 1* 2* 3
+department: 6* NULL
+email: email@email.com
+employeeId: 13* 25* NULL
+firstName: Alice
+hiredate: 14-06-2025* NULL
+job: Analyst 
+lastName: Smith
+manager: 11
+phone: 010-1234-5678* EMPTY
+salary: 0* 8000
+
+IF ([employeeId] <> "13") THEN [credential] = 3;

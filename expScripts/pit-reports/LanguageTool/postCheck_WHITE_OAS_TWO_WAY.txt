@@ -1,0 +1,21 @@
+===== API: LanguageTool =====
+===== Operation: postCheck =====
+===== Mode: WHITE =====
+===== Level: OAS =====
+===== Strength: TWO_WAY =====
+
+===== Pitest Timings =====
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : 28 seconds
+> build mutation tests : 2 seconds
+> run mutation analysis : 4 hours, 10 minutes and 43 seconds
+> Total  : 4 hours, 11 minutes and 14 seconds
+
+===== Pitest Statistics =====
+>> Line Coverage (for mutated classes only): 12664/22064 (57%)
+>> 1 tests examined
+>> Generated 9041 mutations Killed 992 (11%)
+>> Mutations with no coverage 3604. Test strength 18%
+>> Ran 54802 tests (6.06 tests per mutation)
+

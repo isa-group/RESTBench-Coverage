@@ -1,0 +1,11 @@
+PUT /users/2 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: qem8TC
+Content-Type: application/json
+Content-Length: 405
+Host: localhost:42371
+
+{"surname": "\u0004", "linkedin": "\u00ae\u0018\u0011\u00fb]", "\ud992\udd8d\ud8a3\udc4f\u00be\ud91a\uddee\u0099\ud890\udee7\u00bdJ\ud918\udcb3\u00d4\u00ec\u0091\u00c7c\uc4f1\u00e9\udbda\udcbbh": {"\u00b6\u91ce": {"": "\u00a9\u00e5\uda6a\udd5a\u00a3", "\u0004E\u0092\u008f\uda05\udcf1": true}, "\u00f2": 7793063859703644022, "0\u00fe\u00a6\u00ec\u0089\u00e9A\ud842\udf85\udb09\udf71N\u0018#\u00b3": null}}

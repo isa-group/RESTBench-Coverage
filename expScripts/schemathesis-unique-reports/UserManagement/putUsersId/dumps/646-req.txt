@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ZJijLx
+Content-Type: application/json
+Content-Length: 169
+Host: localhost:42371
+
+{"\u00c3\u00a4\u001d": 0.0, "website": "| \u00ffQe\"\ud818\udcf8^\udb88\udda2", "birthDate": "0961-01-24", "city": "6", "\ud8ce\udecfg\u0003Z": [], "U\udbb0\uddf0": 0.0}

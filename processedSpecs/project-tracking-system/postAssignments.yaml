@@ -1,0 +1,356 @@
+---
+swagger: '2.0'
+info:
+  description: "Manage and track commits transactions by Employees and their Managers
+    on a specific project.\n- Employees can be assigned to projects created and managed
+    by their managers, can add a new commits to a specific project so manager can
+    track its progression\n- Managers can create, edit & delete projects, also assign
+    them to their employees and track them efficiently & easily\n- Admin manages all
+    Employees as well as their credentials & departments\nFor more, you can check
+    more on our GitHub repositories : \n- Selim Horri : https://github.com/SelimHorri?tab=repositories
+    \n- Imen Toukebri : https://github.com/imen1012?tab=repositories \n- Bader Idoudi
+    : https://github.com/Bader1996?tab=repositories \n"
+  version: '1.0'
+  title: Project-Tracker-System
+  termsOfService: Terms of service
+  contact:
+    name: Selim Horri, Imen Touk, Badr Idoudi
+    url: https://github.com/SelimHorri/Project-Tracking-System
+    email: springabcxyz@gmail.com
+  license:
+    name: Apache Licence version 2.0
+    url: https://apache.org/license.html
+host: localhost:50118
+schemes:
+- http
+basePath: "/"
+tags:
+- name: assignment-resource
+  description: Assignment Resource
+- name: authentication-resource
+  description: Authentication Resource
+- name: credential-resource
+  description: Credential Resource
+- name: department-resource
+  description: Department Resource
+- name: employee-resource
+  description: Employee Resource
+- name: location-resource
+  description: Location Resource
+- name: project-resource
+  description: Project Resource
+paths:
+  "/app/api/assignments":
+    post:
+      tags:
+      - assignment-resource
+      summary: save
+      operationId: saveUsingPOST
+      consumes:
+      - application/json
+      produces:
+      - "*/*"
+      parameters:
+      - in: body
+        name: assignment
+        description: assignment
+        required: true
+        schema:
+          "$ref": "#/definitions/Assignment"
+      responses:
+        '200':
+          description: OK
+          schema:
+            "$ref": "#/definitions/Assignment"
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+          schema:
+            type: object
+            required:
+              - msg
+              - status
+            properties:
+              msg:
+                type: string
+                description: Error message
+                example: >
+                  JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "dd": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'dd' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String "dd": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'dd' could not be parsed at index 0
+                   at [Source: (PushbackInputStream); line: 4, column: 19] (through reference chain: com.pfa.pack.model.entity.Assignment["commitDate"])
+              throwable:
+                type: string
+                nullable: true
+                x-nullable: true
+                description: Underlying throwable class/name if present
+                example: null
+              status:
+                type: string
+                description: HTTP error status
+                enum: [ BAD_REQUEST ]
+                example: BAD_REQUEST
+              timestamp:
+                type: string
+                description: Date-time formatted as dd-MM-yyyyHH:mm:ss
+                example: '07-09-202510:20:24'
+        '405':
+          description: Method Not Allowed
+          schema:
+            type: string
+            example: ""
+      deprecated: false
+definitions:
+  Assignment:
+    type: object
+    properties:
+      commitDate:
+        type: string
+        x-nullable: true
+        pattern: dd-MM-yyyyHH:mm:ss
+      commitEmpDesc:
+        x-nullable: true
+        type: string
+      commitMgrDesc:
+        x-nullable: true
+        type: string
+      employee:
+        "$ref": "#/definitions/Employee"
+      employeeId:
+        type: integer
+        format: int32
+        enum: [1, 2, 3, 4, 7, 14]
+      project:
+        "$ref": "#/definitions/Project"
+      projectId:
+        type: integer
+        format: int32
+        enum: [1, 2, 3] # to restrict to existing projects only for evomaster
+    title: Assignment
+  AuthenticationRequest:
+    type: object
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    title: AuthenticationRequest
+  AuthenticationResponse:
+    type: object
+    properties:
+      isEligible:
+        type: boolean
+      username:
+        type: string
+    title: AuthenticationResponse
+  Credential:
+    type: object
+    properties:
+      credentialId:
+        type: integer
+        format: int32
+      enabled:
+        type: boolean
+      password:
+        type: string
+      role:
+        type: string
+      username:
+        type: string
+    title: Credential
+  Department:
+    type: object
+    x-nullable: true
+    properties:
+      departmentId:
+        type: integer
+        format: int32
+      departmentName:
+        type: string
+      location:
+        "$ref": "#/definitions/Location"
+    title: Department
+  DtoCollection«Assignment»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/Assignment"
+    title: DtoCollection«Assignment»
+  DtoCollection«Credential»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/Credential"
+    title: DtoCollection«Credential»
+  DtoCollection«Department»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/Department"
+    title: DtoCollection«Department»
+  DtoCollection«EmployeeProjectData»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/EmployeeProjectData"
+    title: DtoCollection«EmployeeProjectData»
+  DtoCollection«Employee»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/Employee"
+    title: DtoCollection«Employee»
+  DtoCollection«Location»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/Location"
+    title: DtoCollection«Location»
+  DtoCollection«ManagerProjectData»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/ManagerProjectData"
+    title: DtoCollection«ManagerProjectData»
+  DtoCollection«ProjectCommit»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/ProjectCommit"
+    title: DtoCollection«ProjectCommit»
+  DtoCollection«Project»:
+    type: object
+    properties:
+      collection:
+        type: array
+        items:
+          "$ref": "#/definitions/Project"
+    title: DtoCollection«Project»
+  Employee:
+    type: object
+    x-nullable: true
+    properties:
+      credential:
+        "$ref": "#/definitions/Credential"
+      department:
+        "$ref": "#/definitions/Department"
+      email:
+        type: string
+      employeeId:
+        type: integer
+        format: int32
+      firstName:
+        type: string
+      hiredate:
+        type: string
+        x-nullable: true
+        example: dd-MM-yyyy
+      job:
+        type: string
+      lastName:
+        type: string
+      manager:
+        "$ref": "#/definitions/Employee"
+      phone:
+        type: string
+      salary:
+        type: number
+        format: double
+    title: Employee
+  EmployeeProjectData:
+    type: object
+    properties:
+      endDate:
+        type: string
+      projectId:
+        type: integer
+        format: int32
+      startDate:
+        type: string
+      status:
+        type: string
+      title:
+        type: string
+    title: EmployeeProjectData
+  Location:
+    type: object
+    properties:
+      adr:
+        type: string
+      city:
+        type: string
+      locationId:
+        type: integer
+        format: int32
+      postalCode:
+        type: string
+    title: Location
+  ManagerProjectData:
+    type: object
+    properties:
+      endDate:
+        type: string
+      projectId:
+        type: integer
+        format: int32
+      startDate:
+        type: string
+      status:
+        type: string
+      title:
+        type: string
+    title: ManagerProjectData
+  Project:
+    type: object
+    x-nullable: true
+    properties:
+      endDate:
+        type: string
+        example: dd-MM-yyyy
+      projectId:
+        type: integer
+        format: int32
+      startDate:
+        type: string
+        example: dd-MM-yyyy
+      status:
+        type: string
+      title:
+        type: string
+    title: Project
+  ProjectCommit:
+    type: object
+    properties:
+      commitDate:
+        type: string
+        format: date-time
+      commitEmpDesc:
+        type: string
+      commitMgrDesc:
+        type: string
+      employeeId:
+        type: integer
+        format: int32
+      firstName:
+        type: string
+      lastName:
+        type: string
+      projectId:
+        type: integer
+        format: int32
+    title: ProjectCommit

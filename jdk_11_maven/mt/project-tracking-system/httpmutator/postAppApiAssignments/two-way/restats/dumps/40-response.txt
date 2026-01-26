@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+{"employeeId":1,"projectId":4,"commitDate":"13-06-202517:30:00","commitEmpDesc":"","commitMgrDesc":null,"employee":{"employeeId":14,"firstName":"admin","lastName":"admin","email":"springabcxyzboot@gmail.com","phone":"22125144","hiredate":null,"job":"RH","salary":5000.0,"manager":null,"department":null,"credential":{"credentialId":4,"username":"admin","password":"$2y$04$HLi44N6cb6xmLYHdABF/euCgpk0LofYk4VdIeO1DAn.Ol1Bnaj3vW","enabled":true,"role":"ROLE_ADMIN"}},"project":{"projectId":4,"title":"MACHYA_RANDONNEE","startDate":"29-01-2021","endDate":"30-04-2021","status":"NOT_STARTED"}}

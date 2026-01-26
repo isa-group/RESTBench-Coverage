@@ -1,0 +1,60 @@
+name: 1
+active: true * false * NULL
+description: NULL*desc_short*desc_medium*desc_long
+id: NULL * 1
+taxCode: NULL*0*1*2*3*4*5*6*7*8*9
+currency: NULL*0*1*2*3*4*5*6*7*8*9
+recurringInterval: NULL*day*week*month*year
+recurringIntervalCount: NULL*1*3*12
+taxBehavior: NULL*exclusive*inclusive*unspecified
+unitAmount: NULL*100*250*9999
+unitAmountDecimal: NULL*100.1*250.2*9999.3
+customEnabled: NULL*true
+customMaximum: NULL*1000*5000*999999
+customMinimum: NULL*1*50*100
+customPreset: NULL*5*20*200
+images: NULL*1*2*3*4*5*6*7*8
+marketingFeatures: NULL*1*2*3*4*5*6*7*8*9*10*11*12*13*14*15
+packageHeight: NULL*1.2*5.5*9.8
+packageLength: NULL*2.1*6.4*10.0
+packageWeight: NULL*0.3*3.5*8.2
+packageWidth:  NULL*1.0*4.0*7.5
+shippable: NULL*true*false
+stateDescr: NULL*sd_short*sd_label*sd_ref
+unitLabel: NULL*seat*license*unit
+url: NULL*https://example.com/p*https://store/item*https://stripe.test/x
+
+IF ([packageHeight] = "NULL") THEN ([packageLength] = "NULL" AND [packageWeight] = "NULL" AND [packageWidth] = "NULL");
+IF ([packageHeight] <> "NULL") THEN ([packageLength] <> "NULL" AND [packageWeight] <> "NULL" AND [packageWidth] <> "NULL");
+
+IF ([unitAmount] <> "NULL") THEN
+  ([unitAmountDecimal] = "NULL" AND
+   [customEnabled] = "NULL" AND [customMaximum] = "NULL" AND [customMinimum] = "NULL" AND [customPreset] = "NULL");
+IF ([unitAmountDecimal] <> "NULL") THEN
+  ([unitAmount] = "NULL" AND
+   [customEnabled] = "NULL" AND [customMaximum] = "NULL" AND [customMinimum] = "NULL" AND [customPreset] = "NULL");
+IF ([customEnabled] <> "NULL" OR [customMaximum] <> "NULL" OR [customMinimum] <> "NULL" OR [customPreset] <> "NULL") THEN
+  ([unitAmount] = "NULL" AND [unitAmountDecimal] = "NULL");
+
+IF ([customEnabled] <> "true") THEN
+  ([customMaximum] = "NULL" AND [customMinimum] = "NULL" AND [customPreset] = "NULL");
+
+IF ([recurringInterval] <> "NULL" OR [recurringIntervalCount] <> "NULL") THEN
+  ([customEnabled] = "NULL" AND [customMaximum] = "NULL" AND [customMinimum] = "NULL" AND [customPreset] = "NULL");
+
+# The interval_count for yearly prices can't be greater than 3
+IF [recurringInterval] = "year" THEN [recurringIntervalCount] <> "12";
+
+# R1: If default_price_data or any of its subfields are present, currency is required
+IF ([unitAmount] <> "NULL" OR
+    [unitAmountDecimal] <> "NULL" OR
+    [customEnabled] <> "NULL" OR
+    [customMaximum] <> "NULL" OR
+    [customMinimum] <> "NULL" OR
+    [customPreset] <> "NULL" OR
+    [recurringInterval] <> "NULL" OR
+    [recurringIntervalCount] <> "NULL" OR
+    [taxBehavior] <> "NULL") THEN
+    [currency] <> "NULL";
+
+IF ([recurringIntervalCount] <> "NULL") THEN ([recurringInterval] <> "NULL");

@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":1,"username":"alice1985","name":"Bob","surname":null,"gender":"MALE","birthDate":null,"enabled":false,"note":"Handle with care","loginDt":null,"secured":true,"contactDTO":{"email":"user123@demo.net","phone":"+86-13800138000","skype":null,"facebook":"https://facebook.com/john.doe","linkedin":"https://linkedin.com/in/alicesmith","website":"https://johndoe.dev","contactNote":"Urgent contact only"},"addressDTO":{"address":"456 High Road","address2":"Apt. 4B","city":null,"country":"UK","zipCode":"10001"},"roles":["USER","ADMINISTRATOR"],"permissions":["LOGIN","VIEW_PROFILE","ADMIN_USER_DATA"]}

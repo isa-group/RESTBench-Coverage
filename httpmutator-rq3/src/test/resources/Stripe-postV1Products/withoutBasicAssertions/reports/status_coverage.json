@@ -1,0 +1,17 @@
+{
+	"documentedAndTested": {
+		"/v1/products": {
+			"post": [
+				"200",
+				"400",
+				"401"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/v1/products": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {}
+}

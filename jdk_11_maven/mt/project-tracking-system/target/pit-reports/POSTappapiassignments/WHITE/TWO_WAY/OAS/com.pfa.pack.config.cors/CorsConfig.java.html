@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>CorsConfig.java</h1>
+
+<table class="src">
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.pfa.pack.config.cors;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Arrays;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.Logger;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.slf4j.LoggerFactory;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.springframework.context.annotation.Bean;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.springframework.context.annotation.Configuration;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.springframework.web.cors.CorsConfiguration;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.springframework.web.cors.UrlBasedCorsConfigurationSource;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.springframework.web.filter.CorsFilter;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>@Configuration</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class CorsConfig {</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;// public static final String allowedOrigin = &#34;http://localhost:4200&#34;;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;private static final Logger logger = LoggerFactory.getLogger(CorsConfig.class);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;static {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;logger.info(&#34;************ entering &#34; + CorsConfig.class.getName() + &#34; ************&#34;);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;@Bean</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;public CorsFilter corsFilter() {</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;CorsConfiguration corsConfiguration = new CorsConfiguration();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_26'/>
+26
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_26'>1</a>
+<span>
+1. corsFilter : removed call to org/springframework/web/cors/CorsConfiguration::setAllowCredentials &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;corsConfiguration.setAllowCredentials(true);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_27'/>
+27
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_27'>1</a>
+<span>
+1. corsFilter : removed call to org/springframework/web/cors/CorsConfiguration::setAllowedOrigins &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;corsConfiguration.setAllowedOrigins(Arrays.asList(&#34;http://localhost:4200&#34;, &#34;http://localhost:4200/&#34;));</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_28'/>
+28
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_28'>1</a>
+<span>
+1. corsFilter : removed call to org/springframework/web/cors/CorsConfiguration::setAllowedHeaders &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;corsConfiguration.setAllowedHeaders(Arrays.asList(&#34;Origin&#34;, &#34;Access-Control-Allow-Origin&#34;, &#34;Content-Type&#34;,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#34;Accept&#34;, &#34;Authorization&#34;, &#34;Origin, Accept&#34;, &#34;X-Requested-With&#34;,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#34;Access-Control-Request-Method&#34;, &#34;Access-Control-Request-Headers&#34;));</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_31'/>
+31
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_31'>1</a>
+<span>
+1. corsFilter : removed call to org/springframework/web/cors/CorsConfiguration::setExposedHeaders &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;corsConfiguration.setExposedHeaders(Arrays.asList(&#34;Origin&#34;, &#34;Content-Type&#34;, &#34;Accept&#34;, &#34;Authorization&#34;,</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#34;Access-Control-Allow-Origin&#34;, &#34;Access-Control-Allow-Origin&#34;, &#34;Access-Control-Allow-Credentials&#34;));</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_33'/>
+33
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_33'>1</a>
+<span>
+1. corsFilter : removed call to org/springframework/web/cors/CorsConfiguration::setAllowedMethods &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;corsConfiguration.setAllowedMethods(Arrays.asList(&#34;GET&#34;, &#34;POST&#34;, &#34;PUT&#34;, &#34;DELETE&#34;, &#34;OPTIONS&#34;));</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;&#9;</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>&#9;&#9;UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_36'/>
+36
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_36'>1</a>
+<span>
+1. corsFilter : removed call to org/springframework/web/cors/UrlBasedCorsConfigurationSource::registerCorsConfiguration &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>&#9;&#9;urlBasedCorsConfigurationSource.registerCorsConfiguration(&#34;/**&#34;, corsConfiguration);</span></pre></td></tr>
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_37'/>
+37
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_37'>1</a>
+<span>
+1. corsFilter : replaced return value with null for com/pfa/pack/config/cors/CorsConfig::corsFilter &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>&#9;&#9;return new CorsFilter(urlBasedCorsConfigurationSource);</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>&#9;</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@659e003e_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@659e003e_26'>26</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_26'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>corsFilter<br/><b>Killed by : </b>none</span></span> removed call to org/springframework/web/cors/CorsConfiguration::setAllowCredentials &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[12],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@659e003e_27'>27</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_27'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>corsFilter<br/><b>Killed by : </b>none</span></span> removed call to org/springframework/web/cors/CorsConfiguration::setAllowedOrigins &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[27],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@659e003e_28'>28</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_28'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>corsFilter<br/><b>Killed by : </b>none</span></span> removed call to org/springframework/web/cors/CorsConfiguration::setAllowedHeaders &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[70],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[70],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[70],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@659e003e_31'>31</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_31'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>corsFilter<br/><b>Killed by : </b>none</span></span> removed call to org/springframework/web/cors/CorsConfiguration::setExposedHeaders &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[105],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[105],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[105],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@659e003e_33'>33</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_33'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>corsFilter<br/><b>Killed by : </b>none</span></span> removed call to org/springframework/web/cors/CorsConfiguration::setAllowedMethods &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[132],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[132],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[132],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@659e003e_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_36'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>corsFilter<br/><b>Killed by : </b>none</span></span> removed call to org/springframework/web/cors/UrlBasedCorsConfigurationSource::registerCorsConfiguration &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[144],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[144],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=com.pfa.pack.config.cors.CorsConfig,-method=corsFilter,-methodDesc=()Lorg/springframework/web/filter/CorsFilter;],-indexes=[144],-mutator=org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2]</li> <li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1]</li> 
+</ul>
+</div></div> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@659e003e_37'>37</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@659e003e_37'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>corsFilter<br/><b>Killed by : </b>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33]</span></span> replaced return value with null for com/pfa/pack/config/cors/CorsConfig::corsFilter &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+<li class='mutator'>EMPTY_RETURNS</li>
+<li class='mutator'>FALSE_RETURNS</li>
+<li class='mutator'>INCREMENTS</li>
+<li class='mutator'>INVERT_NEGS</li>
+<li class='mutator'>MATH</li>
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+<li class='mutator'>NULL_RETURNS</li>
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+<li class='mutator'>TRUE_RETURNS</li>
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#33] (808 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#34] (844 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#32] (872 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#31] (882 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#18] (879 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#44] (887 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#35] (898 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#39] (921 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#22] (925 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#26] (939 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#28] (933 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#21] (935 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#38] (943 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#25] (946 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#19] (947 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#20] (963 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#17] (963 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#40] (979 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#30] (977 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#41] (979 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#36] (985 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#43] (1002 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#29] (997 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#12] (1034 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#14] (1035 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#24] (1036 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#42] (1046 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#10] (1043 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#16] (1050 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#27] (1051 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#37] (1054 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#15] (1085 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#9] (1087 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#13] (1091 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#23] (1111 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#11] (1130 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#7] (1152 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#6] (1166 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#8] (1219 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#5] (1289 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#4] (1600 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#3] (1759 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#2] (2163 ms)</li><li>mt.com.pfa.ProjectTrackingSystemEndpointTest.[engine:junit-jupiter]/[class:mt.com.pfa.ProjectTrackingSystemEndpointTest]/[test-template:test(es.us.isa.httpmutator.experiment.endpoint.test.model.LogRecord)]/[test-template-invocation:#1] (10094 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.19.1
+
+</body>
+</html>

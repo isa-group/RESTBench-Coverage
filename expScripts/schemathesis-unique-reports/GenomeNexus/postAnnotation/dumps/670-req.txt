@@ -1,0 +1,11 @@
+POST /annotation?isoformOverrideSource=print HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 1lTBwN
+Content-Type: application/json
+Content-Length: 34
+Host: localhost:34841
+
+["print", "\u00a6", "http.client"]

@@ -1,0 +1,11 @@
+POST /app/api/assignments HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: nxwrLA
+Content-Type: application/json
+Content-Length: 64
+Host: localhost:37971
+
+{"\u00d9": [1.175494351e-38], "\ud943\udfe0 =\uda6a\uded3h": []}

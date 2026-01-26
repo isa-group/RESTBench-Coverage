@@ -1,0 +1,17 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 05:42:39 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 199
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"c7-Fu0+YcckDYObhJCl0zpLJ4gcObc"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdn3qe1liv13ench560
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: 4eabbf33-6cb7-4934-4de2-6e9144c43b6d
+x-frame-options: DENY
+
+{"errors":[{"status":400,"code":"validate:numericality","title":"Invalid field data","detail":"Limit is not a number","source":{"parameter":"limit"},"meta":{"timestamp":"2025-12-30T05:42:39.956Z"}}]}

@@ -1,0 +1,18 @@
+{
+	"documentedAndTested": {
+		"/check": {
+			"post": [
+				"400",
+				"500"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/check": {
+			"post": [
+				"200"
+			]
+		}
+	},
+	"notDocumentedAndTested": {}
+}

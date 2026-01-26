@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: OVSoJN
+Content-Type: application/json
+Content-Length: 172
+Host: localhost:34113
+
+{"id": {"'n\u00ce\u0016": [[[], [-9059, -133257164221775039270074733452579165255]], true, [[null, ",=J,Q5.", 7317], 3.0860834769530283e-30]], "f": [20823, null], "": null}}

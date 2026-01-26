@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: 47rxzX
+Content-Type: application/json
+Content-Length: 308
+Host: localhost:37143
+
+{"1/0": [[[1.6356171903980868e-227, null]], 10271, [{}, {"\udb29\udeb7\u00a9\ud867\uddcd": null}, {"False": [-1.7976931348623157e+308, -5.818697933568028e-75, ""], "o\u00d4R.": {"\u0011V": "y\u00e7{\u0081\u00f2\u00fd\u00fa\u0085\u00b3\u00e0"}, "\u00a2\u00d8,\ud841\udfe9S": "%\udb0e\udf36B\u00bb@/\uffb3"}]]}

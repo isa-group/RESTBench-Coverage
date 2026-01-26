@@ -1,0 +1,11 @@
+PUT /users/7 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: EfyCIS
+Content-Type: application/json
+Content-Length: 116
+Host: localhost:42371
+
+{"\u00ac\udaac\ude89\ud802\udeb3:Q\u0092\u008b\udb08\udfdb\ud808\udf0d\uda6c\udf4e*\u00f4\ud819\udc6b": {}, "": 0.0}

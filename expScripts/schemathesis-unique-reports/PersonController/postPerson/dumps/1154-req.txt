@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 1i3vgo
+Content-Type: application/json
+Content-Length: 165
+Host: localhost:34113
+
+{"lastName": "\udafe\udece", "insurance": true, "address": {}, "": null, "age": 1395, "\u00e1": [false, 2.0249549872249704e+16, 6.9052465060636015e+236], "cars": []}

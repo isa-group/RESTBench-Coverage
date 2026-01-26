@@ -1,0 +1,23 @@
+HTTP/1.1 404
+Date: Thu, 04 Dec 2025 15:10:15 GMT
+Server: Apache/2.4.58 (Ubuntu)
+Strict-Transport-Security: max-age=63072000; includeSubdomains;
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: Origin,Accept,X-Requested-With,Content-Type,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization
+Cache-Control: no-cache, no-store, must-revalidate
+vary: accept-encoding
+Content-Encoding: gzip
+Content-Type: application/json
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+
+{
+  "timestamp" : "2025-12-04T15:10:16.248+00:00",
+  "status" : 404,
+  "error" : "Not Found",
+  "path" : "/elements/EVOMASTER"
+}

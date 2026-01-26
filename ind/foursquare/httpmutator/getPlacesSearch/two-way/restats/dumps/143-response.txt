@@ -1,0 +1,15 @@
+HTTP/1.1 200 
+accept-ranges: bytes
+content-type: application/json; charset=utf-8
+link: <https://places-api.foursquare.com/places/search?max_price=4&cursor=c3I6MQ&radius=10000&ll=37.3775%2C-5.9713&fields=fsq_place_id%2Cname%2Ccategories%2Clocation%2Clatitude%2Clongitude%2Cdistance%2Ctel%2Cemail&tel_format=NATIONAL&exclude_all_chains=false&sort=RATING&exclude_fsq_chain_ids=556f3bfabd6a8104863beb14&limit=1&open_at=2T0701&min_price=2>; rel="next"
+server: Finatra
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-ratelimit-limit: 0
+x-ratelimit-path: /v3/places/search
+x-ratelimit-remaining: 0
+x-served-by: cache-toj-leto2350025-TOJ
+
+{"results":[{"fsq_place_id":"4b9a203bf964a52018a035e3","latitude":37.38379179619707,"longitude":-5.994093418121338,"categories":[{"fsq_category_id":"4bf58dd8d48988d150941735","name":"Spanish Restaurant","short_name":"Spanish","plural_name":"Spanish Restaurants","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/spanish_","suffix":".png"}},{"fsq_category_id":"4bf58dd8d48988d1db931735","name":"Tapas Restaurant","short_name":"Tapas","plural_name":"Tapas Restaurants","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/tapas_","suffix":".png"}}],"distance":2130,"email":"info@bodeguitacasablanca.com","location":{"address":"C. Adolfo Rodriguez Jurado, 12","locality":"Sevilla","region":"Andalucía","postcode":"41001","admin_region":"Andalucía","country":"ES","formatted_address":"C. Adolfo Rodriguez Jurado, 12, 41001 Sevilla Andalucía"},"name":"Bodeguita Casablanca","tel":"954 22 41 14"}],"context":{"geo_bounds":{"circle":{"center":{"latitude":37.3775,"longitude":-5.9713},"radius":10000}}}}

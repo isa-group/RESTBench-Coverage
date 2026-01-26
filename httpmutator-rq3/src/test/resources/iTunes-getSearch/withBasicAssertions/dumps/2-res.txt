@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+Server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+Content-Length: 225
+x-apple-jingle-correlation-key: MWOYSEUAJLPPFDW34AXG4OZZUY
+x-apple-request-uuid: 659d8912-804a-def2-8edb-e02e6e3b39a6
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?term=cu&country=US&media=musicVideo&entity=rI&attribute=&limit=166&lang=EVOMASTER&explicit=false&urlDesc=
+apple-tk: false
+x-b3-spanid: df94b86ff4afe058
+b3: 659d8912804adef28edbe02e6e3b39a6-df94b86ff4afe058
+x-b3-traceid: 659d8912804adef28edbe02e6e3b39a6
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6002544:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+Content-Encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-st.itunes.apple.com/search?term=cu&country=US&media=musicVideo&entity=rI&attribute=&limit=166&lang=EVOMASTER&explicit=false
+x-apple-application-site: ST11
+apple-timing-app: 2 ms
+x-apple-application-instance: 6002544
+x-daiquiri-instance: daiquiri:47317005:st44p00it-hyhk16054701:7987:25RELEASE148:daiquiri-amp-store-shared-int-001-st
+x-daiquiri-instance: daiquiri:42282005:st53p00it-qujn14050102:7987:25RELEASE148:daiquiri-amp-store-l7shared-ext-001-st
+Vary: Accept-Encoding
+Expires: Thu, 04 Dec 2025 15:03:28 GMT
+Cache-Control: max-age=0, no-cache
+Pragma: no-cache
+Date: Thu, 04 Dec 2025 15:03:28 GMT
+X-Cache: TCP_MISS from a2-18-28-203.deploy.akamaitechnologies.com (AkamaiGHost/22.3.2.1-811eb0bc095268e0c68e3c1c2197f35a) (-)
+X-True-Cache-Key: /L/itunes.apple.com/search vcd=2897 ci2=attribute=&country=US&entity=rI&explicit=false&lang=EVOMASTER&limit=166&media=musicVideo&term=cu///
+Connection: keep-alive
+X-Cache-Remote: TCP_MISS from a23-213-160-216.deploy.akamaitechnologies.com (AkamaiGHost/22.3.2.1-811eb0bc095268e0c68e3c1c2197f35a) (-)
+X-Apple-Partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [language]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}

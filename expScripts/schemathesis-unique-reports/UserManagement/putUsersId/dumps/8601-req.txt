@@ -1,0 +1,11 @@
+PUT /users/3 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: h4XYVQ
+Content-Type: application/json
+Content-Length: 202
+Host: localhost:42371
+
+{"surname": "c\u0007", "enabled": true, "birthDate": "6146-12-14", "": {}, "\u008dr\u00f3": [], "X\u001a": {}, "country": "\u00dc", "\udaad\udedb\u0017@\ud93a\udf81L\u00cc\udb5f\udf80i\u001e\u00e8": []}

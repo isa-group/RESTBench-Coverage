@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="4207.100728760473">
+	<testsuite disabled="0" errors="0" failures="1" name="schemathesis" skipped="1" tests="1" time="4207.100728760473" hostname="VM-0-2-ubuntu">
+		<testcase name="GET /businesses/search" time="4207.100729">
+			<failure type="failure" message="1. Test Case ID: 1Z7ROn
+
+- Undocumented Content-Type
+
+    Received: text/plain; charset=utf-8
+    Documented: application/json
+
+[400] Bad Request:
+
+    `Bad Request`
+
+Reproduce with: 
+
+    curl -X GET -H 'yS94'&quot;'&quot;'DL: ó' -H 'mg;' -H $'Q: î\x17\x0e&lt;' -H $'f~CLAEbXu_: \x17\x17\x16V¬­Ãem' -H 'y: é' -H $'rIiL: n°Ô×\x07' -H 'Authorization: [Filtered]' 'https://api.yelp.com/v3/businesses/search?limit=15&amp;sort_by=rating&amp;%C3%8E%3D%C2%84=&amp;attributes='
+
+2. Test Case ID: SMzsYF
+
+- API accepts requests without authentication
+
+    Expected 401, got `400 Bad Request` for `GET /businesses/search`
+
+[400] Bad Request:
+
+    `{&quot;error&quot;: {&quot;code&quot;: &quot;VALIDATION_ERROR&quot;, &quot;description&quot;: &quot;Authorization is a required parameter.&quot;, &quot;field&quot;: &quot;Authorization&quot;, &quot;instance&quot;: null}}`
+
+Reproduce with: 
+
+    curl -X GET 'https://api.yelp.com/v3/businesses/search?limit=40&amp;latitude=-1.3330110579375685&amp;longitude=-1.401298464324817e-45&amp;price=2%2C1&amp;radius=38141&amp;attributes=&amp;device_platform=mobile-generic'
+
+3. Test Case ID: iSTj8P
+
+- Response violates schema
+
+    [] is not of type 'string'
+
+    Schema at /properties/error/properties/instance:
+
+        {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;The invalid value sent in the request&quot;,
+            &quot;example&quot;: &quot;1760049900   # ~2025-10-09 18:30/20:00/21:45 UTC-ish&quot;
+        }
+
+    Value:
+
+        []
+
+[400] Bad Request:
+
+    `{&quot;error&quot;: {&quot;code&quot;: &quot;VALIDATION_ERROR&quot;, &quot;description&quot;: &quot;[] is too short&quot;, &quot;field&quot;: &quot;price&quot;, &quot;instance&quot;: []}}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://api.yelp.com/v3/businesses/search?attributes=z%2C%60%C3%9Cb%15%C2%93%1B%C3%BE%F1%A2%9C%85%5E%7F%F2%80%A3%B7%C3%8A%21%22%F0%B7%94%AA%0F%C2%BC%C2%8C%10%7C%C3%9F%F3%AD%BA%AANh%12%E7%87%88Qr%C2%8D&amp;price=&amp;categories=0'
+
+4. Test Case ID: lpRfSX
+
+- Server error
+
+- Undocumented HTTP status code
+
+    Received: 500
+    Documented: 200, 400, 401
+
+[500] Internal Server Error:
+
+    `{&quot;error&quot;: {&quot;code&quot;: &quot;INTERNAL_ERROR&quot;, &quot;description&quot;: &quot;Something went wrong internally, please try again later.&quot;}}`
+
+Reproduce with: 
+
+    curl -X GET -H 'Authorization: [Filtered]' 'https://api.yelp.com/v3/businesses/search?device_platform=mobile-generic&amp;latitude=22.114223252691303&amp;matches_party_size_param=false&amp;term=%F2%99%8F%82%C3%B8%23%C2%88%F0%A0%9D%AF%C3%94&amp;open_now=true&amp;open_at=2912427332427139836&amp;attributes=%04c%C3%A6%C2%96%C2%BD%C3%A8%C2%BF4%3F%09%C3%A9%C3%8B%14%2Celse%2C%C2%90w8J%7D~%C2%98%C3%8F%C2%8D%F2%B6%A5%9D.Y%C3%8DL%C2%9B%C3%82%147%F0%97%9F%85%2C-%2C%EA%8B%9D%C3%9B%C3%8D%0DQ%2CG%C2%ADp%F2%8A%99%97%09%2C%09%EC%B0%93%F2%A7%99%88%2C%C2%92%1BL%40&amp;reservation_time=%F0%B3%AD%A2&amp;offset=551&amp;categories=%C3%86%C2%AAM%F3%8B%97%BE%2C%F4%8F%95%9B%C3%B3%7C%2C%C3%BDN%C2%94%C3%99%F4%80%B2%92%2C%C3%AA%C3%A0%C2%A4%2C0'"/>
+			<skipped type="skipped">No examples in schema</skipped>
+		</testcase>
+	</testsuite>
+</testsuites>

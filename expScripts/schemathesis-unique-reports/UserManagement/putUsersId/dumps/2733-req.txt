@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: YVw6wC
+Content-Type: application/json
+Content-Length: 131
+Host: localhost:42371
+
+{"\u00d9;\u00b8": [1.3546663673803214e+59, 1.3546663673803214e+59, {}], "e+\u00a5\udb19\udf3b\u00a7\u00f0\ud91f\udf96\u00f5": null}

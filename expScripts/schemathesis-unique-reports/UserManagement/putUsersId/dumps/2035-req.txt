@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 3tU8Hj
+Content-Type: application/json
+Content-Length: 77
+Host: localhost:42371
+
+{"Y": {"Inf": {}}, "\u00cc\u00b2\ud9a6\udc8e\u00c0\ud94e\udef9": {"Inf": {}}}

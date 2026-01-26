@@ -1,0 +1,6 @@
+pptname;invariant;invariantType;variables;postmanAssertion
+/projects&projectsGetUsingGET&200%array():::EXIT;input.limit >= size(return.array[]);daikon.inv.binary.twoScalar.IntGreaterEqual;(input.limit, size(return.array[..]));pm.expect(input_limit).to.be.at.least(return_array_size_array)
+/projects&projectsGetUsingGET&200():::EXIT;input.organizations == return.organizationName;daikon.inv.binary.twoString.StringEqual;(input.organizations, return.organizationName);pm.expect(input_organizations).to.eql(return_organizationName)
+/projects&projectsGetUsingGET&200():::EXIT;return.languageList[] == [];daikon.inv.unary.stringsequence.OneOfStringSequence;(return.languageList[..]);pm.expect([[]].some(value => pm.expect(return_languageList_array).to.deep.equal(value).that)).to.be.true
+/projects&projectsGetUsingGET&200():::EXIT;LENGTH(return.snapshotDate)==19;daikon.inv.unary.string.FixedLengthString;(return.snapshotDate);pm.expect(return_snapshotDate).to.have.length(19)
+/projects&projectsGetUsingGET&200():::EXIT;input.offset >= size(return.languageList[]);daikon.inv.binary.twoScalar.IntGreaterEqual;(input.offset, size(return.languageList[..]));pm.expect(input_offset).to.be.at.least(return_languageList_size_array)

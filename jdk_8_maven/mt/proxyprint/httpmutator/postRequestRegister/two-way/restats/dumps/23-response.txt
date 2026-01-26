@@ -1,0 +1,12 @@
+HTTP/1.1 200 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json;charset=UTF-8
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+x-application-context: application:0
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+
+{"id":1,"managerName":"Alice Manager","managerUsername":"bob_smith","managerEmail":"alice@example.com","managerPassword":"admin2025","pShopAddress":"789 Innovation Blvd","pShopLatitude":34.0522,"pShopLongitude":-74.006,"pShopNIF":"A1B2C3D4E5","pShopName":"Tech Print Solutions","pShopDateRequestAccepted":"18/08/2025 12:00"}

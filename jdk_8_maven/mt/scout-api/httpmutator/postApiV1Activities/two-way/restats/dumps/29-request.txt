@@ -1,0 +1,4 @@
+POST /api/v1/activities HTTP/1.1
+Authorization: ApiKey administrator
+
+{"date_published":"2025-06-16T09:00:00.000Z","date_updated":"2025-06-18T09:00:00.000Z","description_material":"an activity","description_introduction":"an introduction","description_notes":"a note","age_min":0,"age_max":0,"participants_min":100,"participants_max":0,"time_min":4,"time_max":6,"featured":false,"source":"https://example.com/example","author":{"id":2},"media_files":[{"uri":"https://example.com/forest.jpg","mime_type":"image/jpeg","name":"forest hunt"}]}

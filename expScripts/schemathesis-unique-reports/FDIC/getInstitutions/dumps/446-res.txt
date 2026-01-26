@@ -1,0 +1,17 @@
+HTTP/1.1 400 Bad Request
+date: Tue, 30 Dec 2025 05:39:22 GMT
+Content-Type: application/json; charset=utf-8
+content-length: 775
+connection: keep-alive
+access-control-allow-origin: *
+age: 0
+etag: W/"307-+7eA9FVloHnGRDRYQNfRfJ88EHw"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: crdn2acmkqgss62c90cg
+x-cache: MISS
+x-content-type-options: nosniff
+x-vcap-request-id: 3d5938d2-16cb-4570-4701-ec3e4213193f
+x-frame-options: DENY
+
+{"errors":[{"status":400,"links":{"about":{"href":"https://pfabankapi.app.cloud.gov/docs","meta":{"section":"Filter Syntax"}}},"title":"Invalid request input, please double check your search query syntax","detail":"search_phase_execution_exception: [parse_exception] Reason: parse_exception: Encountered \" \")\" \") \"\" at line 1, column 1.\nWas expecting one of:\n    <EOF> \n    <AND> ...\n    <OR> ...\n    <NOT> ...\n    \"+\" ...\n    \"-\" ...\n    <BAREOPER> ...\n    \"(\" ...\n    \"*\" ...\n    \"^\" ...\n    <QUOTED> ...\n    <TERM> ...\n    <FUZZY_SLOP> ...\n    <PREFIXTERM> ...\n    <WILDTERM> ...\n    <REGEXPTERM> ...\n    \"[\" ...\n    \"{\" ...\n    <NUMBER> ...\n    ","source":{"parameter":"filters"},"meta":{"timestamp":"2025-12-30T05:39:22.862Z"}}]}

@@ -1,0 +1,7 @@
+HTTP/1.1 400 
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:34:11 GMT
+connection: close
+
+{"timestamp":"2025-12-28T10:34:12.623+00:00","status":400,"error":"Bad Request","message":"Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: \"126165068356501840037709008177925779128\"","path":"/users/126165068356501840037709008177925779128"}

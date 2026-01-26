@@ -1,0 +1,11 @@
+PUT /users/6 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: ZPbHiT
+Content-Type: application/json
+Content-Length: 44
+Host: localhost:42371
+
+{"\u00ff\ud8ea\ude2b": [[], null], "": null}

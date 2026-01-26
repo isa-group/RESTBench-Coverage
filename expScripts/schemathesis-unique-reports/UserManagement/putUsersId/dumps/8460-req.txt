@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: voiLCw
+Content-Type: application/json
+Content-Length: 299
+Host: localhost:42371
+
+{"\u00c1": {"FancyURLopener": [[], [{}, "\u00d0\u00ba\u00ed\u00fc", []]], "f+\u00c5\ud8ae\udcea": {}, "\u007f\u009b\u007f": {}}, "8": [], "\ud95c\udc70\uda89\udcc0": {}, "\ud808\udca9": [], ",^\u00f1\\\u0013\u00da\u00bc\u0093": [{}, "\u00d0\u00ba\u00ed\u00fc", []], "city": "T\u0018", "address": ""}

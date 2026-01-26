@@ -1,0 +1,21 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/register": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/register": {
+			"post": [
+				"Host",
+				"Accept",
+				"Authorization",
+				"Content-Type",
+				"address",
+				"name",
+				"password"
+			]
+		}
+	}
+}

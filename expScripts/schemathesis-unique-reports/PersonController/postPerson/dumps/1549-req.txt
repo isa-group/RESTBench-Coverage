@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: TtzL0Z
+Content-Type: application/json
+Content-Length: 100
+Host: localhost:34113
+
+{"cars": [], "age": 15545, "id": {"\u00af\u0005": {}, "timestamp": -1}, "firstName": "\u0006\u007f"}

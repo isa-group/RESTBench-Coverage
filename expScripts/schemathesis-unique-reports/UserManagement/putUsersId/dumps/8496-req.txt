@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: JN1rvS
+Content-Type: application/json
+Content-Length: 280
+Host: localhost:42371
+
+{"address2": "\u00c3\u00cf\u000e%\u00c4\rL\u0014\ud845\udf6a8L\u00fe\u00dd+\u00b6\u0014\ud8d3\udf83(8\u00c3\u00c2", "\u00e55": {"\u00fc\u00e6\uda68\udef4": {"\ud852\uddff\u00e0": true, "\u00b1i+Z\u000e\uda01\udf80": null, "\u00c9": null}, "": 7.114086442378341e-91, "\u00f5": {}}}

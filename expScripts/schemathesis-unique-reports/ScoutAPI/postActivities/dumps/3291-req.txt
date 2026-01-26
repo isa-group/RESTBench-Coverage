@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: SIaqqI
+Content-Type: application/json
+Content-Length: 152
+Host: localhost:37143
+
+{"description_introduction": ",./;'[]\\-=<>?:\"{}|_+!@#$%^&*()`~", "age_min": -92, "media_files": [{}, {"capture_date": "0009-01-04T00:00:00.000003Z"}]}

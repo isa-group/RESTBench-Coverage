@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: x9CkGA
+Content-Type: application/json
+Content-Length: 108
+Host: localhost:34113
+
+{"\u001f": [[false], [{"\u00fe\ud922\udea5\ud885\udf9fQ\udadf\uddd4": {"": null}}, {}]], "age": 9, "": null}

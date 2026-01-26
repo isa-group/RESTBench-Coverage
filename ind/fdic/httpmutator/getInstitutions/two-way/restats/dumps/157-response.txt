@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"33e-TQHG+tdbhT6Opgy1eMxyXDmflEE"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjto09abj7bfs1hnq0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 64e5f561-1280-4224-5392-12a41744706c
+
+{"meta":{"total":6138,"parameters":{"filters":"","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC,DEP,DEPDOM,ROE,ROA,DATEUPDT,OFFICES","limit":"1","offset":"0","search":"NAME: First"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"57104","ACTIVE":1,"ROA":1.4328989571873498,"DEPDOM":1392827000,"DATEUPDT":"09/05/2025","ROE":14.62,"STNAME":"South Dakota","ASSET":1746394000,"OFFICES":4211,"NETINC":12330000,"DEP":1398809000,"NAME":"Wells Fargo Bank, National Association","CBSA":"Sioux Falls, SD","CITY":"Sioux Falls","OFFDOM":4218,"CERT":3511,"STALP":"SD","COUNTY":"Minnehaha","ID":"3511"},"score":15.953535,"highlight":{"PRIORNAME5.raw":["<em>Crocker</em> <em>First</em> National Bank of San Francisco"]}}],"totals":{"count":6138}}

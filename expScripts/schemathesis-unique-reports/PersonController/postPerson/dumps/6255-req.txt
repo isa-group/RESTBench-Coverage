@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: GhYDUM
+Content-Type: application/json
+Content-Length: 254
+Host: localhost:34113
+
+{"address": {"city": "ifilterfalse", "C": [], "country": null}, "createdAt": "9435-04-10T22:17:32.368129+01:27", "lastName": "\u00d1\u00b6\u0010\u00e9", "age": -14772, "'\r\u0010\u00e2\u009e\u0088$": [{}, {"N\udae8\udcc0\u00cc": 3.3900732294554388e+16}]}

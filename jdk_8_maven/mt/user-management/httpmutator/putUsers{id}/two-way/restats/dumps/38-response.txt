@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":7,"username":"alice1985","name":"Bob","surname":"Smith","gender":"MALE","birthDate":"1990-05-20","enabled":true,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"john.doe@example.com","phone":null,"skype":null,"facebook":"https://facebook.com/test.user","linkedin":"https://linkedin.com/in/alicesmith","website":null,"contactNote":"Preferred contact time: afternoon"},"addressDTO":{"address":"456 High Road","address2":null,"city":"London","country":null,"zipCode":"SW1A 1AA"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

@@ -1,0 +1,12 @@
+POST /v1/products HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: Zbh5gj
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 311
+Host: api.stripe.com
+
+description=¿&¿=False&¿=[1.9171169310666765e-199,+False]&¿=-28795&¿={'\x8b\U000ef414$íÚX\U00100581ë\U000e5c39':+{'ÝÜ¨[¼ïQ':+-30807,+'$Yú':+True},+'':+True}

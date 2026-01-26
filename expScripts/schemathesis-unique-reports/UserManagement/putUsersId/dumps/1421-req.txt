@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: 6inYT1
+Content-Type: application/json
+Content-Length: 94
+Host: localhost:42371
+
+{"facebook": "\u00a1y\u00e2\u00a7\udbff\udd69\ud869\ude0cn'\u00d1", "zipCode": "\ud841\ude89"}

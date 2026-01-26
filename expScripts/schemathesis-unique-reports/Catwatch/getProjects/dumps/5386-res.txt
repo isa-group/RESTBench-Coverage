@@ -1,0 +1,18 @@
+HTTP/1.1 400 
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-frame-options: DENY
+access-control-allow-origin: *
+access-control-allow-methods: POST, GET, OPTIONS, DELETE
+access-control-max-age: 3600
+access-control-allow-headers: x-requested-with
+x-application-context: application:0
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 11:52:28 GMT
+connection: close
+
+{"timestamp":1766922749190,"status":400,"error":"Bad Request","exception":"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException","message":"Failed to convert value of type 'java.lang.String[]' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: \"\uD839\uDF15\uDA32\uDE9E\uD832\uDC92Ò\uD8BF\uDFDC,jWu,¤,EÊ#7,\uDB34\uDDE6,2.8566383564354264e+16,-4.33706511940484e+16,-1.1723436463071775e+37,None,ú»FÇ{,\uD92F\uDF0FÚ60ç©c,\uD9DE\uDE39ë\uDAA9\uDFEE,\u00130òµ¡\u0019,[],True,[{'':None},-144,{'\\U0010fed4z6îc.':2.092371625820124e+16,'혓E':'L\\U0003b6de\\x07\\U00075d49\\x85\\U000bfdbb','~\\x9c':None}],\uD9CB\uDDE7脞oÏ\uDA84\uDC7BhÎª\uD8BA\uDD5F{\uDA7F\uDFD9洫!\u0005,{'Õå':-28221,'\\U0005db8eº\\U000e772b':None,'솮':121},{'\\x0fÜ\\U0005ec73.\\x95½\\U000be2b4x\\U000115f2':'AJ¤éä','r\\x8a\\x15\\x80\uD883\uDDEB':-1.1016330959836468e+16,'b¨\uD85B\uDD1B`\uD85F\uDF85Û\\x85\\xadòu\\xad\\x98\\x07ð\\U000f658b\\x14Ö`h':None},[46,None,True],\u0015\u0006\uDB38\uDF04¾rØ,¤,,{},1.175494351e-38,[[True,25640,'urllib.robotparser'],[-7324610753445563.0,None],''],[],[],Ä,÷1Ñó5.\uDAE0\uDC2Bø\u0015nv\u000E,{'\\U000fcf99\\U00019759\\x96º\\x050':None},{},[],9720,['','\\x05×%뵥è\\x93ô\\x0e\\x02',103],{'':None,'ã':'\\U00077cbbJ\\U000ada72\\U00094dbb\\U000a76959',\"\\x85'\\x92ó\":None}\"","path":"/projects"}

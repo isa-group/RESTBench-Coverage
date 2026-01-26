@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"23f-0aeNkgZYnvnu/z2O6OK3VvUuo8k"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjs42gj52khvkn5tcg
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 9646cc3d-5dfa-474b-552e-d680848084ed
+
+{"meta":{"total":3,"parameters":{"filters":"","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP","limit":"1","offset":"0","search":"NAME: Yonkers"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"10701","CITY":"Yonkers","OFFDOM":9,"STNAME":"New York","STALP":"NY","COUNTY":"Westchester","ID":"29248"},"score":312.22937,"highlight":{"PRIORNAME1.raw":["<em>The</em> <em>Yonkers</em> Savings and Loan Association"],"NAME.raw":["<em>The</em> <em>Yonkers</em> Savings and Loan Association, FA"]}}],"totals":{"count":3}}

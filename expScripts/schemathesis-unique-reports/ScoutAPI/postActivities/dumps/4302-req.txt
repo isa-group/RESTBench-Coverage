@@ -1,0 +1,12 @@
+POST /api/v1/activities HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: fDqIHO
+Content-Type: application/json
+Content-Length: 127
+Host: localhost:37143
+
+{"lorem \u0644\u0627 \u0628\u0633\u0645 \u0627\u0644\u0644\u0647 ipsum \u4f60\u597d1234\u4f60\u597d": {}, "/\u00e9\u009cs": {}}

@@ -1,0 +1,39 @@
+HTTP/1.1 400 Bad Request
+Server: daiquiri/5
+Content-Type: text/javascript; charset=utf-8
+Content-Length: 229
+x-apple-jingle-correlation-key: S2D7B723Q2PUHJEXHWHG6RD2LU
+x-apple-request-uuid: 9687f0ff-5b86-9f43-a497-3d8e6f447a5d
+x-apple-translated-wo-url: /WebObjects/MZStoreServices.woa/ws/wsSearch?term=6goYBX_&country=US&media=EVOMASTER&entity=3PXQ20CqOdZ&attribute=4dye63SULakYugGv&limit=104&explicit=EVOMASTER&urlDesc=
+apple-tk: false
+x-b3-spanid: f0cb34d4e5d9efc9
+b3: 9687f0ff5b869f43a4973d8e6f447a5d-f0cb34d4e5d9efc9
+x-b3-traceid: 9687f0ff5b869f43a4973d8e6f447a5d
+x-webobjects-loadaverage: 0
+x-responding-instance: MZStoreServices:6502883:::
+apple-seq: 0.0
+apple-originating-system: MZStoreServices
+Content-Encoding: gzip
+strict-transport-security: max-age=31536000; includeSubDomains
+x-apple-orig-url: https://mzstoreservices-mr.itunes.apple.com/search?term=6goYBX_&country=US&media=EVOMASTER&entity=3PXQ20CqOdZ&attribute=4dye63SULakYugGv&limit=104&explicit=EVOMASTER
+x-apple-application-site: MR22
+apple-timing-app: 3 ms
+x-apple-application-instance: 6502883
+x-daiquiri-instance: daiquiri:17317005:mr85p00it-hyhk04174901:7987:25RELEASE148:daiquiri-amp-store-shared-int-001-mr
+x-daiquiri-instance: daiquiri:12282006:mr47p00it-qujn05121902:7987:25RELEASE148:daiquiri-amp-store-l7shared-ext-001-mr
+Vary: Accept-Encoding
+Expires: Thu, 04 Dec 2025 15:03:18 GMT
+Cache-Control: max-age=0, no-cache
+Pragma: no-cache
+Date: Thu, 04 Dec 2025 15:03:18 GMT
+X-Cache: TCP_MISS from a2-18-28-203.deploy.akamaitechnologies.com (AkamaiGHost/22.3.2.1-811eb0bc095268e0c68e3c1c2197f35a) (-)
+X-True-Cache-Key: /L/itunes.apple.com/search vcd=2897 ci2=attribute=4dye63SULakYugGv&country=US&entity=3PXQ20CqOdZ&explicit=EVOMASTER&limit=104&media=EVOMASTER&term=6goYBX_///
+Connection: keep-alive
+X-Cache-Remote: TCP_MISS from a23-213-160-197.deploy.akamaitechnologies.com (AkamaiGHost/22.3.2.1-811eb0bc095268e0c68e3c1c2197f35a) (-)
+X-Apple-Partner: origin.0
+
+
+{
+ "errorMessage":"Invalid value(s) for key(s): [mediaType]",
+ "queryParameters":{"output":"json", "callback":"A javascript function to handle your search results", "country":"ISO-2A country code", "limit":"The number of search results to return", "term":"A search string", "lang":"ISO-2A language code"}
+}

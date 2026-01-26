@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: BbnMXU
+Content-Type: application/json
+Content-Length: 150
+Host: localhost:42371
+
+{"\u00be\u001da\u0095\u00bel\u0086s\u00c9\u0018": {}, "website": "", "country": "\u00e3\u00a9\u00b96\uda13\uded2\u0018\uda35\udecb\udafd\uddb8\u00c0"}

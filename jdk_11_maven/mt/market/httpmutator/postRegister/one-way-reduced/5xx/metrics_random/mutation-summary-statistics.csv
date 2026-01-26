@@ -1,0 +1,15 @@
+mutatorName,operatorName,count
+StatusCodeMutator,StatusCodeReplacementWith50XOperator,1
+MediaTypeMutator,NullOperator,2
+CharsetMutator,CharsetReplacementOperator,2
+ObjectMutator,ObjectAddElementOperator,2
+StringMutator,StringAddSpecialCharactersMutationOperator,1
+StringMutator,NullOperator,3
+StringMutator,StringBoundaryOperator,4
+ObjectMutator,ObjectRemoveObjectTypeElementOperator,1
+ObjectMutator,ChangeTypeOperator,2
+StatusCodeMutator,StatusCodeReplacementWith20XOperator,1
+ObjectMutator,ObjectRemoveElementOperator,1
+StringMutator,ChangeTypeOperator,1
+StringMutator,StringReplacementOperator,1
+ArrayMutator,ChangeTypeOperator,1

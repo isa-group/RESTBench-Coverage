@@ -1,0 +1,12 @@
+HTTP/1.1 400 
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+content-type: application/json
+expires: 0
+pragma: no-cache
+transfer-encoding: chunked
+vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+
+{"msg":"JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String \"date\": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'date' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String \"date\": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'date' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 44] (through reference chain: com.pfa.pack.model.entity.Assignment[\"commitDate\"])","throwable":null,"status":"BAD_REQUEST"}

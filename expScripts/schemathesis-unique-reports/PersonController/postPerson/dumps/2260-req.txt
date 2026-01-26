@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: oC4UKr
+Content-Type: application/json
+Content-Length: 109
+Host: localhost:34113
+
+{"Y\u00de\uda40\udd6d1\u00ae": [], "createdAt": "9751-06-29T01:16:56.445013+09:11", "age": 83, "address": {}}

@@ -1,0 +1,17 @@
+{
+	"documentedAndTested": {
+		"/users/{id}": {
+			"put": [
+				"application/json"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/users/{id}": {
+			"put": [
+				"*/*"
+			]
+		}
+	},
+	"notDocumentedAndTested": {}
+}

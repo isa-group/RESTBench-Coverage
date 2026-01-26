@@ -1,0 +1,11 @@
+PUT /users/5 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: DuxAnc
+Content-Type: application/json
+Content-Length: 131
+Host: localhost:42371
+
+{"gender": "\u00e1\u00df \udb29\udd8e\t\u0018", "facebook": "p?\u00c0\u0006\u0095", "address": "\u00e1\u00df \udb29\udd8e\t\u0018"}

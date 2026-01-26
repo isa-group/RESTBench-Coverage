@@ -1,0 +1,18 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/request/register": {
+			"post": [
+				"*/*"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/request/register": {
+			"post": [
+				"application/json",
+				"application/octet-stream"
+			]
+		}
+	}
+}

@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"PabnNi3Hsc2Bfp9W0qtn5py_kfc","items":[{"kind":"youtube#video","etag":"-hP1BJ0xHLSR27QkRfiyakVWG9w","id":"ZDW9eJOtZ3s","contentDetails":{"duration":"PT4M","dimension":"2d","definition":"hd","caption":"false","licensedContent":true,"contentRating":{},"projection":"rectangular"},"liveStreamingDetails":{"actualStartTime":"2025-10-10T21:00:06Z","actualEndTime":"2025-10-10T21:09:14Z","scheduledStartTime":"2025-10-10T21:00:00Z"}}],"nextPageToken":"CAEQAA","pageInfo":{"totalResults":200,"resultsPerPage":1}}

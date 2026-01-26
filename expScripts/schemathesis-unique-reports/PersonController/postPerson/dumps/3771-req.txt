@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: sfprHd
+Content-Type: application/json
+Content-Length: 139
+Host: localhost:34113
+
+{"insurance": true, "\u0099:": {"Inf": [null, null], "\udbf1\udc32\ud9b9\ude63\u0015\ud842\uddea\u00e2\u00ba\u00c8\u008a\u00a9\u00be": []}}

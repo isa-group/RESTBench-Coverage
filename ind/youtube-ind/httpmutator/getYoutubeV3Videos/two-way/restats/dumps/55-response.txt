@@ -1,0 +1,10 @@
+HTTP/1.1 200 
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+content-type: application/json; charset=UTF-8
+server: scaffolding on HTTPServer2
+vary: Origin,X-Origin,Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+
+{"kind":"youtube#videoListResponse","etag":"HRS8GkqSG-tvlNRDO_ivnUpls84","items":[{"kind":"youtube#video","etag":"UF4vez7V5XRzMCtdoNWe4BeAcNU","id":"uuPIwnn7G_A"},{"kind":"youtube#video","etag":"VGpsBj59kf5y0OxQI_66RUOx71o","id":"UPFRItMOgPo"},{"kind":"youtube#video","etag":"WkD6N9PDJJJFQKqMnf-SZrclPuI","id":"X1c4BJQ9LBk"},{"kind":"youtube#video","etag":"d3Ghx6PflV_xIZaEjrRyV-xpbjg","id":"ko70cExuzZM"},{"kind":"youtube#video","etag":"9QpXJPxpHHfSlkzSCTeEVekiyEw","id":"Xg8aWV14vSs"}],"nextPageToken":"CAUQAA","pageInfo":{"totalResults":200,"resultsPerPage":5}}

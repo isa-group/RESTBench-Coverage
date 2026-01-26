@@ -1,0 +1,109 @@
+HTTP/1.1 400 Bad Request
+vary: Origin, X-Origin, Referer
+Content-Type: application/json; charset=UTF-8
+content-encoding: gzip
+date: Mon, 29 Dec 2025 03:01:40 GMT
+server: scaffolding on HTTPServer2
+x-xss-protection: 0
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+transfer-encoding: chunked
+
+{
+  "error": {
+    "code": 400,
+    "message": "Invalid value at 'max_width' (TYPE_INT32), \"-9.976000096566262e-138\"\nInvalid value at 'max_width' (TYPE_INT32), \"\"\nInvalid value at 'max_width' (TYPE_INT32), \"'3􁕎񓊭񌘙\u0091§\"\nInvalid value at 'max_width' (TYPE_INT32), \"򉱃t\u001f\"\nInvalid value at 'max_width' (TYPE_INT32), \"ú󮔌跙\"\nInvalid value at 'max_width' (TYPE_INT32), \"@\u001a¯#ê\u003eÁ¼m򭥡\\\"\nInvalid value at 'max_width' (TYPE_INT32), \"3𱔊񻇕sO^Ü򮹹\u008f򽍹1\u0011°\u0015󅭿Váã\u0097\"\nInvalid value at 'max_width' (TYPE_INT32), \"񛅎Ö񒢶¤𦢬\u000b𺷡âô}󹢹\u000b􉋃¼Z\u009f񽺽}\u000e\"\nInvalid value at 'max_width' (TYPE_INT32), \"Âõ\u0084g¯®\"\nInvalid value at 'max_width' (TYPE_INT32), \"[{'¼\\U0005e4c7': -106, '': -93084855820465.72, '\\x93;¡\\x18': 4.371004585198198e+16}, []]\"\nInvalid value at 'max_width' (TYPE_INT32), \"[[]]\"\nInvalid value at 'max_width' (TYPE_INT32), \"{'\\U0004c00bü3ü\\x14\\x95인\\x16\\x11\\U00050771\\x8aÊã\\U000710dcÚ\\U0004761a': None}\"\nInvalid value at 'max_width' (TYPE_INT32), \"hØ\"\nInvalid value at 'max_width' (TYPE_INT32), \"񪝺\u0081Þ\"\nInvalid value at 'max_width' (TYPE_INT32), \"񮮀0\u0095N􌳹BOP®©&ôI6¢ù\"\nInvalid value at 'max_width' (TYPE_INT32), \"2.7020486428179724e+16\"\nInvalid value at 'max_width' (TYPE_INT32), \"Æ󰏠\"\nInvalid value at 'max_width' (TYPE_INT32), \"\"\nInvalid value at 'my_rating' (type.googleapis.com/youtube.api.v3.RatingWrapper.Rating), \"ÎDÁ\u0093򼒏\u0090\"",
+    "errors": [
+      {
+        "message": "Invalid value at 'max_width' (TYPE_INT32), \"-9.976000096566262e-138\"\nInvalid value at 'max_width' (TYPE_INT32), \"\"\nInvalid value at 'max_width' (TYPE_INT32), \"'3􁕎񓊭񌘙\u0091§\"\nInvalid value at 'max_width' (TYPE_INT32), \"򉱃t\u001f\"\nInvalid value at 'max_width' (TYPE_INT32), \"ú󮔌跙\"\nInvalid value at 'max_width' (TYPE_INT32), \"@\u001a¯#ê\u003eÁ¼m򭥡\\\"\nInvalid value at 'max_width' (TYPE_INT32), \"3𱔊񻇕sO^Ü򮹹\u008f򽍹1\u0011°\u0015󅭿Váã\u0097\"\nInvalid value at 'max_width' (TYPE_INT32), \"񛅎Ö񒢶¤𦢬\u000b𺷡âô}󹢹\u000b􉋃¼Z\u009f񽺽}\u000e\"\nInvalid value at 'max_width' (TYPE_INT32), \"Âõ\u0084g¯®\"\nInvalid value at 'max_width' (TYPE_INT32), \"[{'¼\\U0005e4c7': -106, '': -93084855820465.72, '\\x93;¡\\x18': 4.371004585198198e+16}, []]\"\nInvalid value at 'max_width' (TYPE_INT32), \"[[]]\"\nInvalid value at 'max_width' (TYPE_INT32), \"{'\\U0004c00bü3ü\\x14\\x95인\\x16\\x11\\U00050771\\x8aÊã\\U000710dcÚ\\U0004761a': None}\"\nInvalid value at 'max_width' (TYPE_INT32), \"hØ\"\nInvalid value at 'max_width' (TYPE_INT32), \"񪝺\u0081Þ\"\nInvalid value at 'max_width' (TYPE_INT32), \"񮮀0\u0095N􌳹BOP®©&ôI6¢ù\"\nInvalid value at 'max_width' (TYPE_INT32), \"2.7020486428179724e+16\"\nInvalid value at 'max_width' (TYPE_INT32), \"Æ󰏠\"\nInvalid value at 'max_width' (TYPE_INT32), \"\"\nInvalid value at 'my_rating' (type.googleapis.com/youtube.api.v3.RatingWrapper.Rating), \"ÎDÁ\u0093򼒏\u0090\"",
+        "reason": "invalid"
+      }
+    ],
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"-9.976000096566262e-138\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"'3􁕎񓊭񌘙\u0091§\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"򉱃t\u001f\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"ú󮔌跙\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"@\u001a¯#ê\u003eÁ¼m򭥡\\\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"3𱔊񻇕sO^Ü򮹹\u008f򽍹1\u0011°\u0015󅭿Váã\u0097\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"񛅎Ö񒢶¤𦢬\u000b𺷡âô}󹢹\u000b􉋃¼Z\u009f񽺽}\u000e\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"Âõ\u0084g¯®\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"[{'¼\\U0005e4c7': -106, '': -93084855820465.72, '\\x93;¡\\x18': 4.371004585198198e+16}, []]\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"[[]]\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"{'\\U0004c00bü3ü\\x14\\x95인\\x16\\x11\\U00050771\\x8aÊã\\U000710dcÚ\\U0004761a': None}\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"hØ\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"񪝺\u0081Þ\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"񮮀0\u0095N􌳹BOP®©&ôI6¢ù\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"2.7020486428179724e+16\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"Æ󰏠\""
+          },
+          {
+            "field": "max_width",
+            "description": "Invalid value at 'max_width' (TYPE_INT32), \"\""
+          },
+          {
+            "field": "my_rating",
+            "description": "Invalid value at 'my_rating' (type.googleapis.com/youtube.api.v3.RatingWrapper.Rating), \"ÎDÁ\u0093򼒏\u0090\""
+          }
+        ]
+      }
+    ]
+  }
+}
+

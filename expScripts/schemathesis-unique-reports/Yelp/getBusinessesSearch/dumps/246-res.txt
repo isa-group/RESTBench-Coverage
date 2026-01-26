@@ -1,0 +1,24 @@
+HTTP/1.1 400 Bad Request
+connection: keep-alive
+content-length: 144
+Content-Type: application/json
+server: envoy
+access-control-allow-origin: *
+x-routing-service: routing-main--useast1-679fdcbd8b-v57cz; site=public_api_v3
+access-control-allow-methods: POST,OPTIONS,GET,DELETE,PUT,PATCH
+access-control-allow-headers: Origin, Content-Type, Accept, Authorization
+access-control-max-age: 1728000
+access-control-allow-credentials: [Filtered]
+x-zipkin-id: 50b817ad01c7e17d852dec54256ea1da
+x-mode: ro
+x-proxied: 10-65-157-49-useast1bprod
+x-extlb: 10-65-157-49-useast1bprod
+accept-ranges: bytes
+date: Mon, 29 Dec 2025 22:49:34 GMT
+via: 1.1 varnish
+x-served-by: cache-fra-etou8220034-FRA
+x-cache: MISS
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+{"error": {"code": "VALIDATION_ERROR", "description": "The open_at provided is too long ago, the timestamp must be within the last two weeks."}}

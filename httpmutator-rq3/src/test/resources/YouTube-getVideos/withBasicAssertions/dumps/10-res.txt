@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Date: Fri, 05 Dec 2025 08:21:02 GMT
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+Content-Encoding: gzip
+Server: scaffolding on HTTPServer2
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
+
+{
+  "access_token": "ya29.a0Aa7pCA_ZTD-3qDXdSQ0zggNYAPEd-JYWgbR3MRDE11r0xfULua1nOqxpSKNA2w5DgsVpOhmhdfed3YD9K0I4jW8Gs-lWHlG1TfDAntjLpCXgQl5uNFm8kqujNMuawqyXK3LO2LbwCycfJOR8fGfH64arELggcwCpntBpSoE1uLUY4dNMLEqugQ6LK8GmikCw6zxkASeRaCgYKAewSARUSFQHGX2Mi2bQP4po3BGpBxyjuLs7s2A0207",
+  "expires_in": 3599,
+  "scope": "https://www.googleapis.com/auth/youtube.force-ssl",
+  "token_type": "Bearer",
+  "refresh_token_expires_in": 350016
+}

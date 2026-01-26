@@ -1,0 +1,11 @@
+POST /app/api/assignments HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: JRSpyS
+Content-Type: application/json
+Content-Length: 128
+Host: localhost:37971
+
+{"projectId": 1, "\u0016L\u0002\bv\udb1e\udce7": [[[-1.175494351e-38, 1394062685], null], false], "": [], "commitEmpDesc": null}

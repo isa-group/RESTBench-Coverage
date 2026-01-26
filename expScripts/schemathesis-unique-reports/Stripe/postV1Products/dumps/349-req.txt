@@ -1,0 +1,12 @@
+POST /v1/products HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Authorization: [Filtered]
+X-Schemathesis-TestCaseId: hPcCE5
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 234
+Host: api.stripe.com
+
+Կi}¥=&tax_code=1/0&package_dimensions=length&package_dimensions=weight&package_dimensions=l&description=Կi}¥&active=False&images=https://DCK.l.FNMbNcnRUSHpwLrc.oNlINE&images=https://l.jF.tm.oNlINE

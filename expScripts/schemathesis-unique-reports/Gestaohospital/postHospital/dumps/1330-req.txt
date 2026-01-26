@@ -1,0 +1,11 @@
+POST /v1/hospitais/ HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: tYDhJX
+Content-Type: application/json
+Content-Length: 89
+Host: localhost:38545
+
+{"\u00e9's\u00ac\b\u0081": {"\u00b1\n\ud81c\udff9\u00a6\ud84f\udd07G\ud8e3\ude20": [[]]}}

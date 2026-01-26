@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites disabled="0" errors="0" failures="1" tests="1" time="888.5460916711017">
+	<testsuite disabled="0" errors="0" failures="1" name="schemathesis" skipped="0" tests="1" time="888.5460916711017" hostname="fcd653bde8bc">
+		<testcase name="POST /app/api/assignments" time="888.546092">
+			<failure type="failure" message="1. Test Case ID: lVFozV
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{
+      &quot;msg&quot; : &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;dd-MM-yyyy\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text 'dd-MM-yyyy' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;dd-MM-yyyy\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text 'dd-MM-yyyy' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 27] (through reference chain: com.pfa.pack.model.entity.Assignment[\&quot;employee\&quot;]-&gt;com.pfa.pack.model.entity.Employee[\&quot;hiredate\&quot;])&quot;,
+      &quot;throwable&quot; : null,
+      &quot;status&quot; : &quot;BAD_REQUEST&quot;,
+      &quot;timestamp&quot; : &quot;28-12-202511:06:37&quot;
+    }`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;employee&quot;: {&quot;hiredate&quot;: &quot;dd-MM-yyyy&quot;, &quot;manager&quot;: {&quot;hiredate&quot;: &quot;dd-MM-yyyy&quot;}}, &quot;project&quot;: {&quot;endDate&quot;: &quot;dd-MM-yyyy&quot;, &quot;startDate&quot;: &quot;dd-MM-yyyy&quot;}}' http://localhost:37971/app/api/assignments"/>
+			<failure type="failure" message="1. Test Case ID: lVFozV
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 401, 403, 404, 5xx
+
+[400] Bad Request:
+
+    `{
+      &quot;msg&quot; : &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;dd-MM-yyyy\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text 'dd-MM-yyyy' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;dd-MM-yyyy\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text 'dd-MM-yyyy' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 27] (through reference chain: com.pfa.pack.model.entity.Assignment[\&quot;employee\&quot;]-&gt;com.pfa.pack.model.entity.Employee[\&quot;hiredate\&quot;])&quot;,
+      &quot;throwable&quot; : null,
+      &quot;status&quot; : &quot;BAD_REQUEST&quot;,
+      &quot;timestamp&quot; : &quot;28-12-202511:06:37&quot;
+    }`
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{&quot;employee&quot;: {&quot;hiredate&quot;: &quot;dd-MM-yyyy&quot;, &quot;manager&quot;: {&quot;hiredate&quot;: &quot;dd-MM-yyyy&quot;}}, &quot;project&quot;: {&quot;endDate&quot;: &quot;dd-MM-yyyy&quot;, &quot;startDate&quot;: &quot;dd-MM-yyyy&quot;}}' http://localhost:37971/app/api/assignments
+
+2. Test Case ID: QXzCSt
+
+- JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `*/*`
+
+- API rejected schema-compliant request
+
+    Valid data should have been accepted
+    Expected: 2xx, 401, 403, 404, 5xx
+
+[405] Method Not Allowed:
+
+    &lt;EMPTY&gt;
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d '{}' http://localhost:37971/app/api/assignments
+
+3. Test Case ID: r9WfNG
+
+- API accepted schema-violating request
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 406, 422, 428, 5xx
+    Invalid component: in body - violates `$ref` (#/x-bundled/schema1), `x-bundled` ({'schema3': {'type': 'object', 'properties': {'credentialId': {'type': 'integer', 'format': 'int32'}, 'enabled': {'type': 'boolean'}, 'password': {'type': 'string'}, 'role': {'type': 'string'}, 'username': {'type': 'string'}}, 'title': 'Credential'}, 'schema5': {'type': 'object', 'properties': {'adr': {'type': 'string'}, 'city': {'type': 'string'}, 'locationId': {'type': 'integer', 'format': 'int32'}, 'postalCode': {'type': 'string'}}, 'title': 'Location'}, 'schema4': {'anyOf': [{'type': 'object', 'properties': {'departmentId': {'type': 'integer', 'format': 'int32'}, 'departmentName': {'type': 'string'}, 'location': {'$ref': '#/x-bundled/schema5'}}, 'title': 'Department'}, {'type': 'null'}]}, 'schema2': {'anyOf': [{'type': 'object', 'properties': {'credential': {'$ref': '#/x-bundled/schema3'}, 'department': {'$ref': '#/x-bundled/schema4'}, 'email': {'type': 'string'}, 'employeeId': {'type': 'integer', 'format': 'int32'}, 'firstName': {'type': 'string'}, 'hiredate': {'anyOf': [{'type': 'string', 'example': 'dd-MM-yyyy'}, {'type': 'null'}]}, 'job': {'type': 'string'}, 'lastName': {'type': 'string'}, 'manager': {'anyOf': [{'type': 'object', 'properties': {'email': {'type': 'string'}, 'employeeId': {'type': 'integer', 'format': 'int32'}, 'firstName': {'type': 'string'}, 'hiredate': {'anyOf': [{'type': 'string', 'example': 'dd-MM-yyyy'}, {'type': 'null'}]}, 'job': {'type': 'string'}, 'lastName': {'type': 'string'}, 'phone': {'type': 'string'}, 'salary': {'type': 'number', 'format': 'double'}}, 'title': 'Employee'}, {'type': 'null'}]}, 'phone': {'type': 'string'}, 'salary': {'type': 'number', 'format': 'double'}}, 'title': 'Employee'}, {'type': 'null'}]}, 'schema6': {'anyOf': [{'type': 'object', 'properties': {'endDate': {'type': 'string', 'example': 'dd-MM-yyyy'}, 'projectId': {'type': 'integer', 'format': 'int32'}, 'startDate': {'type': 'string', 'example': 'dd-MM-yyyy'}, 'status': {'type': 'string'}, 'title': {'type': 'string'}}, 'title': 'Project'}, {'type': 'null'}]}, 'schema1': {'type': 'object', 'properties': {'commitDate': {'anyOf': [{'type': 'string', 'pattern': 'dd-MM-yyyyHH:mm:ss'}, {'type': 'null'}]}, 'commitEmpDesc': {'anyOf': [{'type': 'string'}, {'type': 'null'}]}, 'commitMgrDesc': {'anyOf': [{'type': 'string'}, {'type': 'null'}]}, 'employee': {'$ref': '#/x-bundled/schema2'}, 'employeeId': {'type': 'integer', 'format': 'int32', 'enum': [1, 2, 3, 4, 7, 14]}, 'project': {'$ref': '#/x-bundled/schema6'}, 'projectId': {'type': 'integer', 'format': 'int32', 'enum': [1, 2, 3]}}, 'title': 'Assignment'}})
+
+[405] Method Not Allowed:
+
+    &lt;EMPTY&gt;
+
+Reproduce with: 
+
+    curl -X POST -H 'Content-Type: application/json' -d null http://localhost:37971/app/api/assignments"/>
+		</testcase>
+	</testsuite>
+</testsuites>

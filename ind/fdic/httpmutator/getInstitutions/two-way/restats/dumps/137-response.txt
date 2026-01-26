@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"1f9-Ub1m8rC8yC75DS7Lm3n3GnobvUQ"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjt5ire6fuf0prjde0
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 00c195a8-192f-477f-5e01-4f513fd3d896
+
+{"meta":{"total":86,"parameters":{"filters":"","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC","limit":"1","search":"NAME: NBG"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"30274","CBSA":"Atlanta-Sandy Springs-Alpharetta, GA","CITY":"Riverdale","ACTIVE":0,"STNAME":"Georgia","CERT":19970,"STALP":"GA","COUNTY":"Clayton","NAME":"NBG Clayton Bank","ID":"19970"},"score":423.87582}],"totals":{"count":86}}

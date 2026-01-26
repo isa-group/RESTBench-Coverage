@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":4,"username":"alice1985","name":"Bob","surname":"Doe","gender":"MALE","birthDate":"1985-12-01","enabled":true,"note":"Frequent buyer","loginDt":null,"secured":false,"contactDTO":{"email":"alice.smith@test.org","phone":"+86-13800138000","skype":"john.doe.skype","facebook":"https://facebook.com/test.user","linkedin":"https://linkedin.com/in/testuser","website":null,"contactNote":null},"addressDTO":{"address":null,"address2":"Apt. 4B","city":"London","country":null,"zipCode":"100000"},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

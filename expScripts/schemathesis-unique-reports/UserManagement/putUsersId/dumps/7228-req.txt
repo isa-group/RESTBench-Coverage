@@ -1,0 +1,11 @@
+PUT /users/4 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: SSZ84H
+Content-Type: application/json
+Content-Length: 262
+Host: localhost:42371
+
+{"": {"assertRaisesRegexp": {"&s": [-4.9917498543051864e+16, null]}, "\udac2\udcdd": {"&s": [-4.9917498543051864e+16, null]}, "\u00835\u00db(\u00caB\udae0\udf36\u0098\u008c\u00b6\u00cc\u00de\ud836\ude0d\u00d9\u0018.n;@": {"&s": [-4.9917498543051864e+16, null]}}}

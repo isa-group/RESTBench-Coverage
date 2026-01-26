@@ -1,0 +1,19 @@
+HTTP/1.1 400 
+vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-frame-options: SAMEORIGIN
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:16:46 GMT
+connection: close
+
+{
+  "msg" : "JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String \"hò\r\uD978\uDE2Aú\uD801\uDDC2û¸\b\uDAD7\uDC4B\u0007pôdd-MM-yyyyHH:mm:ss±\u000EÎ\uD9E2\uDE7Eúþ\uDB4E\uDDB4@¥ÌºR\": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'hò\r\uD978\uDE2Aú\uD801\uDDC2û¸\b\uDAD7\uDC4B\u0007pôdd-MM-yyyyHH:mm:ss±\u000EÎ\uD9E2\uDE7Eúþ\uDB4E\uDDB4@¥ÌºR' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDateTime` from String \"hò\r\uD978\uDE2Aú\uD801\uDDC2û¸\b\uDAD7\uDC4B\u0007pôdd-MM-yyyyHH:mm:ss±\u000EÎ\uD9E2\uDE7Eúþ\uDB4E\uDDB4@¥ÌºR\": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'hò\r\uD978\uDE2Aú\uD801\uDDC2û¸\b\uDAD7\uDC4B\u0007pôdd-MM-yyyyHH:mm:ss±\u000EÎ\uD9E2\uDE7Eúþ\uDB4E\uDDB4@¥ÌºR' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 53] (through reference chain: com.pfa.pack.model.entity.Assignment[\"commitDate\"])",
+  "throwable" : null,
+  "status" : "BAD_REQUEST",
+  "timestamp" : "28-12-202511:16:46"
+}

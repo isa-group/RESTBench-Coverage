@@ -1,0 +1,12 @@
+HTTP/1.1 500 
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+Content-Type: application/json
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 10:39:47 GMT
+connection: close
+
+{"message":"Required request body is missing: public market.dto.UserDTO market.rest.CustomerRestController.createCustomer(market.dto.UserDTO)","description":"uri=/register","entityName":null,"fieldErrors":[]}

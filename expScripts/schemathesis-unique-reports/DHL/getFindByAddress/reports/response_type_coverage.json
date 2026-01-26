@@ -1,0 +1,18 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"application/json",
+				"application/problem+json"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/location-finder/v1/find-by-address": {
+			"get": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

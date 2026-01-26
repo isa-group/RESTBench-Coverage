@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: mBc7RG
+Content-Type: application/json
+Content-Length: 96
+Host: localhost:34113
+
+{"cars": [{"maxSpeedKmH": null, "model": ""}, {}, {"model": null, "brand": null, "": null}, {}]}

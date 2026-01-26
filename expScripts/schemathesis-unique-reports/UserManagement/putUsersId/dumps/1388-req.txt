@@ -1,0 +1,11 @@
+PUT /users/1 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: zlqaVB
+Content-Type: application/json
+Content-Length: 148
+Host: localhost:42371
+
+{"facebook": "none", "\u00e7\ud813\udfe7\uda39\udf34\u000f\uda2a\ude5d0\u00eec\u00b9^z\uda3d\udfab\u0082\u00aa\uda97\uddd1\u00ee\u00e7": {"": null}}

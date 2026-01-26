@@ -1,0 +1,18 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/api/person": {
+			"post": [
+				"application/json",
+				"*/*"
+			]
+		}
+	},
+	"notDocumentedAndTested": {
+		"/api/person": {
+			"post": [
+				"application/octet-stream"
+			]
+		}
+	}
+}

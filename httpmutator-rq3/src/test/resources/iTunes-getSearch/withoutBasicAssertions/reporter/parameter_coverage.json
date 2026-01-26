@@ -1,0 +1,29 @@
+{
+	"documentedAndTested": {
+		"/search": {
+			"get": [
+				"term",
+				"country",
+				"media",
+				"entity",
+				"attribute",
+				"limit",
+				"explicit",
+				"lang"
+			]
+		}
+	},
+	"documentedAndNotTested": {
+		"/search": {
+			"get": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/search": {
+			"get": [
+				"Host",
+				"Accept"
+			]
+		}
+	}
+}

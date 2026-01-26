@@ -1,0 +1,11 @@
+PUT /users/-9 HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: FrmAjX
+Content-Type: application/json
+Content-Length: 111
+Host: localhost:42371
+
+{"name": -2.7967587106160308e+16, "contactNote": "\u00ad!\u00b3\ud9a6\udd82Z\u00d6\u000e\u00ce", "address": ""}

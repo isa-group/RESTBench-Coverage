@@ -1,0 +1,18 @@
+HTTP/1.1 400 
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-frame-options: DENY
+access-control-allow-origin: *
+access-control-allow-methods: POST, GET, OPTIONS, DELETE
+access-control-max-age: 3600
+access-control-allow-headers: x-requested-with
+x-application-context: application:0
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 11:46:13 GMT
+connection: close
+
+{"timestamp":1766922374556,"status":400,"error":"Bad Request","exception":"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException","message":"Failed to convert value of type 'java.lang.String[]' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: \"/\uDA5B\uDCED,HF.¥µ\uD80B\uDE98G9,¤\uDAA2\uDDA9\uD98C\uDFFE,x¶ð,false,,Ó\uD9AA\uDE7C,éÌòF,\u0000\uD8E9\uDCEEÈ\u0011$8\uDAAB\uDEE8\uD9E5\uDDFA䙷~û\uD951\uDF03¼îH\uDB7A\uDE5EJ\uD8DE\uDFEDS\uDAA6\uDD9B\uDA4B\uDF8C,ß\uDBC8\uDCC5MÝF\uD9A6\uDFB2,$,\uDB60\uDD7BaJèP\uD91A\uDF5A¶\uDB56\uDD3D\u0001Ñ\uD9CF\uDCC50\uD8FA\uDC63\uD996\uDF83i\uD9C6\uDF949,m|®@\uD94A\uDDA5h\uD848\uDE5B,tX,¹ò_[,¡\"","path":"/projects"}

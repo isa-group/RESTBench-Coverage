@@ -1,0 +1,5 @@
+HTTP/1.1 201 
+content-type: application/json
+transfer-encoding: chunked
+
+{"id":2,"username":"alice1985","name":"Alice","surname":"Doe","gender":"FEMALE","birthDate":"2000-07-15","enabled":false,"note":"Handle with care","loginDt":null,"secured":false,"contactDTO":{"email":"user123@demo.net","phone":null,"skype":null,"facebook":null,"linkedin":"https://linkedin.com/in/alicesmith","website":"https://alicesmith.me","contactNote":"Urgent contact only"},"addressDTO":{"address":"789 Broadway","address2":"Suite 210","city":"Beijing","country":null,"zipCode":null},"roles":["USER"],"permissions":["LOGIN","VIEW_PROFILE"]}

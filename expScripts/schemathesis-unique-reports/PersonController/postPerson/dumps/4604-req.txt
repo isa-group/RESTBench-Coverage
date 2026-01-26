@@ -1,0 +1,11 @@
+POST /api/person HTTP/1.1
+User-Agent: schemathesis/4.6.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-Schemathesis-TestCaseId: tP0dqS
+Content-Type: application/json
+Content-Length: 267
+Host: localhost:34113
+
+{"firstName": "\u0093", "address": {"": [], "number": 0, "\u0090@\u00cdJ\u0004\u0013\u00d0?\u00d4\u00b0": [], "city": "", "\u00b3": {"": false}, "Infinity": [[], [6080019223296352.0, [null], 4131], [{"g#:": -4360633033907185.0, "": null}]], "v": [], "country": null}}

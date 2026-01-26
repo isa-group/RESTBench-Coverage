@@ -1,0 +1,22 @@
+{
+	"documentedAndTested": {},
+	"documentedAndNotTested": {
+		"/app/api/assignments": {
+			"post": []
+		}
+	},
+	"notDocumentedAndTested": {
+		"/app/api/assignments": {
+			"post": [
+				"Host",
+				"Accept",
+				"Content-Type",
+				"commitEmpDesc",
+				"employee",
+				"commitDate",
+				"employeeId",
+				"projectId"
+			]
+		}
+	}
+}

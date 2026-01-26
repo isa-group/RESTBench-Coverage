@@ -1,0 +1,17 @@
+HTTP/1.1 200 
+access-control-allow-origin: *
+age: 0
+content-type: application/json; charset=utf-8
+etag: W/"2cd-3EWn25ftUVl43p6htjL9LXapEDM"
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding,Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cprjuuo6or09st7pgupg
+x-cache: MISS
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 9
+x-vcap-request-id: 0340b35a-0b61-41ba-7868-996e46f0bdf3
+
+{"meta":{"total":2,"parameters":{"filters":"STNAME: Florida","fields":"ZIP,OFFDOM,CITY,COUNTY,STNAME,STALP,NAME,ACTIVE,CERT,CBSA,ASSET,NETINC,DEP,DEPDOM,ROE,ROA,DATEUPDT,OFFICES","limit":"1","search":"NAME: NBG"},"index":{"name":"institutions_20251010090008","createTimestamp":"2025-10-10T11:20:19Z"}},"data":[{"data":{"ZIP":"33408","ACTIVE":0,"ROA":18.204603834728598,"DEPDOM":0,"DATEUPDT":"12/21/1994","ROE":19.21,"STNAME":"Florida","ASSET":5029,"NETINC":632,"DEP":0,"NAME":"NBD Trust Company of Florida, National Association","CBSA":"Miami-Fort Lauderdale-Pompano Beach, FL","CITY":"North Palm Beach","OFFDOM":3,"CERT":24007,"STALP":"FL","COUNTY":"Palm Beach","ID":"24007"},"score":20.70456}],"totals":{"count":2}}

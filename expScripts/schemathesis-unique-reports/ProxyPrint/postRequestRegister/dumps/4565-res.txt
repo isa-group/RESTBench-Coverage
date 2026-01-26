@@ -1,0 +1,14 @@
+HTTP/1.1 400 
+x-application-context: application:0
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+pragma: no-cache
+expires: 0
+x-frame-options: DENY
+Content-Type: application/json;charset=UTF-8
+transfer-encoding: chunked
+date: Sun, 28 Dec 2025 11:04:15 GMT
+connection: close
+
+{"timestamp":1766919855374,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Could not read document: Numeric value (-83763762103201629689425218637729450595) out of range of long (-9223372036854775808 - 9223372036854775807)\n at [Source: (PushbackInputStream); line: 1, column: 47] (through reference chain: io.github.proxyprint.kitchen.models.printshops.RegisterRequest[\"id\"]); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Numeric value (-83763762103201629689425218637729450595) out of range of long (-9223372036854775808 - 9223372036854775807)\n at [Source: (PushbackInputStream); line: 1, column: 47] (through reference chain: io.github.proxyprint.kitchen.models.printshops.RegisterRequest[\"id\"])","path":"/request/register"}

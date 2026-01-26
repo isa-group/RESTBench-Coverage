@@ -1,0 +1,15 @@
+HTTP/1.1 200 
+accept-ranges: bytes
+content-type: application/json; charset=utf-8
+link: <https://places-api.foursquare.com/places/search?max_price=1&cursor=c3I6MQ&ll=37.3891%2C-5.9845&fields=fsq_place_id%2Cname%2Ccategories%2Clocation%2Clatitude%2Clongitude&tel_format=E164&exclude_all_chains=false&sort=RATING&exclude_fsq_chain_ids=5568ecaaa7c8a9cf8ec38f1c&limit=1&open_at=6T2109>; rel="next"
+server: Finatra
+vary: Origin
+via: 1.1 varnish
+x-cache: MISS
+x-cache-hits: 0
+x-ratelimit-limit: 0
+x-ratelimit-path: /v3/places/search
+x-ratelimit-remaining: 0
+x-served-by: cache-toj-leto2350025-TOJ
+
+{"results":[{"fsq_place_id":"4cf8e3847b44224bf177d105","latitude":37.3900567128735,"longitude":-5.990202095829306,"categories":[{"fsq_category_id":"4bf58dd8d48988d116941735","name":"Bar","short_name":"Bar","plural_name":"Bars","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_","suffix":".png"}},{"fsq_category_id":"4bf58dd8d48988d1db931735","name":"Tapas Restaurant","short_name":"Tapas","plural_name":"Tapas Restaurants","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/food/tapas_","suffix":".png"}}],"location":{"address":"Plaza de la Alfalfa, 10","locality":"Sevilla","region":"Andalucía","postcode":"41004","admin_region":"Andalucía","country":"ES","formatted_address":"Plaza de la Alfalfa, 10, 41004 Sevilla Andalucía"},"name":"Bar Alfalfa"}],"context":{"geo_bounds":{"circle":{"center":{"latitude":37.3891,"longitude":-5.9845},"radius":783}}}}
