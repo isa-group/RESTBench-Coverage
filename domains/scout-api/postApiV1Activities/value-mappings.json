@@ -1,16 +1,9 @@
 {
   "api": "scout-api",
   "operation": "postApiV1Activities",
-  "source": {
-    "mapper_files": [
-      "jdk_8_maven/mt/scout-api/src/test/java/mt/se/devscout/scoutapi/mapper/PostActivitiesMapper.java"
-    ],
-    "resource_files": []
-  },
   "fields": [
     {
       "field": "tags",
-      "domain_representation": "1-based index string in CSV",
       "resolved_value_representation": "array of tag objects",
       "mapping": [
         {
@@ -31,12 +24,10 @@
             }
           ]
         }
-      ],
-      "notes": "Resolved as TAGS.get(index - 1) in mapper."
+      ]
     },
     {
       "field": "media_files",
-      "domain_representation": "1-based index string in CSV",
       "resolved_value_representation": "array of media file objects",
       "mapping": [
         {
@@ -49,8 +40,7 @@
             }
           ]
         }
-      ],
-      "notes": "Resolved as MEDIA_FILES.get(index - 1) in mapper."
+      ]
     }
   ]
 }

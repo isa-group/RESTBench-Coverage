@@ -1,426 +1,140 @@
-# `httpmutator-benchmark`
+# RESTBench-Coverage
 
-This directory is prepared for replicating the experiments of the paper entitled `Black-Box Mutation Testing of Web APIs`.
+**RESTBench-Coverage** is a dataset that provides REST API test suites with
+**explicitly defined and strictly increasing coverage strength**.
+Its primary contribution is enabling **systematic and fair comparison of REST API
+testing techniques** by controlling for test-suite coverage across APIs and operations.
 
-# Index
+In black-box REST API testing, where source code is typically unavailable, coverage
+is defined in terms of how thoroughly test inputs and observable outputs of an API
+are exercised. RESTBench-Coverage adopts this notion of **input–output coverage**
+to stratify test suites in a consistent and reproducible manner.
 
-- [`httpmutator-benchmark`](#httpmutator-benchmark)
-- [Index](#index)
-- [1. Repository Structure](#1-repository-structure)
-- [2. Prerequisites for replicating our experiments](#2-prerequisites-for-replicating-our-experiments)
-  - [2.1. Build Required JARs](#21-build-required-jars)
-  - [2.2. Prepare Environment Variables](#22-prepare-environment-variables)
-  - [2.3. Build Docker Image](#23-build-docker-image)
-  - [2.4. Quick Check](#24-quick-check)
-- [3. RQ1 and RQ2 Experiments](#3-rq1-and-rq2-experiments)
-  - [3.1. Generate Test Suites](#31-generate-test-suites)
-      - [Options](#options)
-  - [3.2. Apply HTTPMutator and PITest](#32-apply-httpmutator-and-pitest)
-    - [3.2.1. Command and Options](#321-command-and-options)
-      - [Options](#options-1)
-    - [3.2.2. Example](#322-example)
-    - [3.2.3. Batch Execution](#323-batch-execution)
-      - [Database Dependencies](#database-dependencies)
-  - [3.3. Collecting and Aggregating the Results](#33-collecting-and-aggregating-the-results)
-    - [3.3.1. Collecting Results](#331-collecting-results)
-    - [3.3.2. Parsing and Analyzing Results](#332-parsing-and-analyzing-results)
-- [4. RQ3 Experiments](#4-rq3-experiments)
-    - [4.1. EvoMaster-based Experiments](#41-evomaster-based-experiments)
-    - [4.2 Schemathesis-based experiments](#42-schemathesis-based-experiments)
-    - [4.3 Detected faults](#43-detected-faults)
-    - [4.4 Generate the table in the paper](#44-generate-the-table-in-the-paper)
+OpenAPI specifications, domain definitions, and SUT code are included to support the
+**construction, interpretation, and reuse** of the test suites.
 
+---
 
+## Core Contribution: Coverage-Stratified Test Suites
 
-# 1. Repository Structure
+The central artifact of this repository is a collection of test suites organized by
+coverage strength. For each API operation, three test suites are provided—**TCL-4**,
+**TCL-5**, and **TCL-6**—with strictly increasing coverage strength.
+
+These labels refer to
+**[Test Coverage Levels (TCLs)](https://dl.acm.org/doi/10.1145/3340433.3342822)**,
+a family of black-box coverage criteria for REST APIs. TCLs quantify how thoroughly
+a test suite exercises an API’s observable input–output space, including exercised
+input parameters, triggered status codes, and observed response properties.
+
+The same stratification strategy is applied consistently across APIs and operations,
+enabling **fair and reproducible comparisons** of testing techniques under controlled
+coverage conditions.
+
+---
+
+## Definitions of TCL-4, TCL-5, and TCL-6 Test Suites
+
+The following definitions describe how the three coverage levels are operationalized
+in this dataset.
+
+Input domains are defined based on the API specification and its implementation:
+- Enumerated and boolean parameters use their complete value sets.
+- Other parameter types are assigned a small set of representative valid values.
+- Optional parameters explicitly include a `NULL` option.
+
+### TCL-4 Test Suite
+- The lowest coverage level.
+- Every input parameter is exercised at least once.
+- Both **successful responses (2XX status codes)** and **client error responses
+  (4XX status codes)** are covered.
+- Derived from a **1-way combinatorial test suite**, with redundancy reduction and
+  one additional test case designed to trigger a 4XX response.
+
+### TCL-5 Test Suite
+- An intermediate coverage level.
+- All input parameters and all status codes defined are
+  exercised at least once.
+- Based on a 1-way combinatorial test suite, augmented with additional test cases to cover missing 4XX status codes.
+
+### TCL-6 Test Suite
+- The highest coverage level.
+- All input parameters, all status codes, and all response properties defined are covered.
+- Generated using a 2-way combinatorial approach, further augmented to cover missing 4XX status codes and response fields.
+
+Together, these definitions provide a clear and operational notion of test-suite
+strength.
+
+---
+
+## Dataset Structure and File Formats
+
+This section explains how test suites are represented on disk, from domain
+specification to concrete request–response pairs.
+
+### 1) Input Domains for 2XX Requests (domains/)
+
+Input domains for successful responses (2XX status codes) are defined under
+the `domains/` directory using `*.model` files.
+
+Each `*.model` file defines the value space for a single API operation, using a
+simple format with one parameter per line:
 
 ```
-├── expScripts/
-├── httpmutator-rq3/
-├── ind/
-├── jdk_11_maven/
-  ├── mt/
-  └── sut/
-├── jdk_8_maven/
-  ├── mt/
-  └── sut/
-├── pictModels/
-├── private-m2/
-├── processedSpecs/
-  ├── {api_name}/
-    ├── {operation_id}.model
-├── specifications/
-├── statistics/
-├── Dockerfile
-├── docker-compose.yml
-├── entrypoint.sh
-├── generate-env.sh
-├── toolchains.xml
-```
-- `expScripts/` includes Python scripts to run the experiments, manage logs, and store results.
-- `httpmutator-rq3/` contains code for applying `HTTPMutator` on test cases generated by `EvoMaster` in `scr/test/java` and by `Schemathesis` in `scr/main/java` for RQ3 experiments.
-- `ind/` stores mutation-testing harnesses for closed-source APIs.
-- `jdk_11_maven/` contains Java source code in `sut/` and experimental scaffolding in `mt/` for Java 11 environments.
-- `jdk_8_maven/` contains Java source code in `sut/` and experimental scaffolding in `mt/` for Java 8 environments.
-- `pictModels/` holds the `PICT` combinatorial test-case model files for each API operation.
-- `private-m2/` local Maven repository used to provide pre-built dependencies inside Docker.
-- `processedSpecs/` contains API specifications used in our experiments.
-- `specifications/` original OpenAPI specifications collected for the APIs under test.
-- `statistics/` contains the list of API operations selected for the experiment and scripts to generate aggregated filter metrics.
-- Files related to docker setup: `Dockerfile`, `docker-compose.yml`, `entrypoint.sh`, `toolchains.xml`, and `generate-env.sh`.
-
-# 2. Prerequisites for replicating our experiments
-
-We provide a `Dockerfile` to set up the environment and run the experiments. You need to install `Docker` (we used `v26.1.3` in our experiments) and `Docker Compose` (we used `v2.27.1` in our experiments) first. `Docker Compose` simplifies the experiment running commands and manages multiple experiment runs.
-
-## 2.1. Build Required JARs
-
-1. Run `mvn clean install -DskipTests` in `HttpMutator` to compile and package `HTTPMutator` jar
-2. Run `mvn clean install -DskipTests` in `httpmutator-exp` to compile and package jars for mutation-testing harnesses in our experiments
-3. Copy the generated jars to `httpmutator-benchmark/private-m2/` directory, for example: `cp -r ~/.m2/repository/es/us/isa/httpmutator/* private-m2/es/us/isa/httpmutator/`
-
-## 2.2. Prepare Environment Variables
-
-
-Run `bash generate-env.sh` to generate environment variables file `httpmutator-benchmark/.env` for docker compose
-
-## 2.3. Pull or Build the Docker Image
-
-We provide a pre-built Docker image on Docker Hub:
-
-```bash
-docker pull lxxu/httpmutator-replication:artifact
-```
-Alternatively, you can build the image locally from this repository:
-
-```bash
-docker build -t lxxu/httpmutator-replication:artifact .
+<param>: v1 * v2 * v3
 ```
 
-## 2.4. Quick Check
+Optional parameters can include a NULL value to represent absence.
 
-To quickly verify that the setup is correct, you can initialize a container and enter its shell by running:
-```bash
-docker compose run --rm quick-test bash
+### 2) Input Combinations for 4XX Requests (4xx/)
+
+Input combinations intended to trigger client error responses (4XX status codes)
+are provided under the top-level `4xx/` directory.
+
+These files store input parameter-value combinations used to construct requests
+designed to trigger 4XX responses.
+
+### 3) Covering Arrays for 2XX Inputs (coveringArray.*)
+
+Within each operation-level test suite directory, the following files store the
+generated 2XX input combinations (covering arrays) derived from the
+corresponding domain definitions:
+
+- coveringArray.csv
+- coveringArray.txt
+
+### 4) Full Test Cases and Responses
+
+Each operation-level test suite directory also includes:
+
+- requests_responses.csv
+  The complete set of test cases as request–response pairs for the suite inputs.
+- responses.jsonl
+  A response-only view of the test cases, with one response per line.
+
+### Directory Layout
+
+All test suites are organized under the `tests/` directory by API, operation,
+and coverage strength:
+
 ```
-> In the compose file, we have mapped the local `httpmutator-benchmark/` directory to `/app/` in the container, and set environment variables needs.
->
-
-Then, inside the container, you can apply `HTTPMutator` with *Random* strategy on operation `POST /request/register` of API `Market`:
-```bash
-python3 /app/expScripts/cli.py endpoint --api Market --op-id postRegister --mode BLACK_RANDOM --level FIVE_XX --strength ONE_WAY_REDUCED
-```
-This command will generate statistics about the usage of mutation operators in the directory `jdk_11_maven/mt/market/httpmutator/postRegister/one-way-reduced/5xx/metrics_random`
-
-# 3. RQ1 and RQ2 Experiments
-
-RQ1 (Effectiveness and efficiency of HttpMutator in generating meaningful and diverse mutants) and RQ2 (Effectiveness of black-box mutation as a test adequacy criterion) involve three tasks:
-1. Generating *Small*, *Medium*, and *Large* test suites using `PICT`
-2. Applying `HTTPMutator` and `PITest` on these test cases
-3. Collecting and aggregating the results
-
-Let's go through these steps one by one, taking the `Market` API as an example. All the following commands are run **inside the docker container** by running:
-```bash
-docker compose run --rm quick-test bash
-```
-
-## 3.1. Generate Test Suites
-
-Use the following command for generating the test suites of a specific API operation.
-
-```bash
-python3 /app/expScripts/cli.py preparation --api <api_name> --op-id <operation_id>
-```
-#### Options
-- `--api`: Filter endpoints by API name. The value must match the `name` field of an `ApiConfig` defined in `expScripts/op_configs.py`.
-- `--op-id`: Filter endpoints by operation ID. The value must match the `id` field of an `OperationConfig` defined in `expScripts/op_configs.py`, which specifies all operations for the evaluation.
-
-For example, to generate test suites for the operation `POST /request/register` of the `Market` API, you can run:
-```bash
-python3 /app/expScripts/cli.py preparation --api Market --op-id postRegister
-```
-This command will create test suites in three sizes Small, Medium, and Large in three directories under `jdk_11_maven/mt/market/httpmutator/postRegister/`: `one-way-reduced` (_Small_), `one-way` (_Medium_), and `two-way` (_Large_).
-
-Each directory contains four files representing test suites in different formats:
-- `pictOutput.txt` and `pictOutput.csv`: each row represents input values for a test case
-- `testcases.csv`: contains test cases as HTTP requests
-- `httpMutatorInput.jsonl`: contains the HTTP responses of the test cases for `HTTPMutator`
-
-## 3.2. Apply HTTPMutator and PITest
-
-### 3.2.1. Command and Options
-
-The command for executing both RQ1 and RQ2 is:
-```bash
-python expScripts/cli.py endpoint \
-  --api <api_name> \
-  --op-id <operation_id> \
-  --level <assertion_level> \
-  --strength <test_suite_size> \
-  --mode <mutation_strategy>
+tests/<api>/<operation>/{TCL-4,TCL-5,TCL-6}/
 ```
 
-#### Options
+Within each coverage-level directory, files follow the formats described above.
 
-- `--api`: Filter endpoints by API name. The value must match the `name` field of an `ApiConfig` defined in `expScripts/op_configs.py`.
-- `--op-id`: Filter endpoints by operation ID. The value must match the `id` field of an `OperationConfig` defined in `expScripts/op_configs.py`, which specifies all operations for the evaluation.
-- `--level`: Filter by oracle type. This option can be repeated or specified as a comma-separated list. The supported enum values correspond to the oracle types defined in the RQ2 experiment setup of the paper:
-  - `FIVE_XX` corresponds to the **Crash Oracle**, which detects server-side failures through HTTP 5xx responses.
-  - `OAS` corresponds to the **Specification Oracle**, which validates responses against the OpenAPI specification.
-  - `INVARIANT` corresponds to the **Semantic Oracle**, which use `AGORA+` to check semantic invariants over API behavior. 
-  - `REGRESSION` corresponds to the **Regression Oracle**, which detects behavioral regressions across different runs.
+---
 
-- `--strength`: Filter by test suite sizes. This option can be repeated or specified as a comma-separated list. The supported enum values correspond to the test suite sizes defined in the paper:
-  - `ONE_WAY_REDUCED` corresponds to the _Small_ test suite.
-  - `ONE_WAY` corresponds to the _Medium_ test suite.
-  - `TWO_WAY` corresponds to the _Large_ test suite.
+## Supporting Artifacts
 
-- `--mode`: Filter by mutation testing mode. This option can be repeated or specified as a comma-separated list. The supported enum values correspond to the mutation testing strategies evaluated in the paper:
-  - `BLACK` represents `HTTPMutator`'s Exhaustive strategy.
-  - `BLACK_RANDOM` represents `HTTPMutator`'s Random strategy.
-  - `WHITE` represents white-box mutation testing, corresponding to `PITest`.
+Supporting artifacts are provided to make the test suites interpretable and reusable:
 
-
-### 3.2.2. Example
-Here, we illustrate how to use the `endpoint` command to reproduce the experiments for RQ1 and RQ2, using the `Market` API and the `postRegister` operation as a concrete example.
-
-- The experiment of RQ1 can be executed with the following command:
-```bash
-python3 /app/expScripts/cli.py endpoint \
-  --api Market \
-  --op-id postRegister \
-  --mode BLACK,BLACK_RANDOM \
-  --level FIVE_XX \
-  --strength ONE_WAY_REDUCED,ONE_WAY,TWO_WAY
-```
-
-- The experiment of RQ2 can be executed with the following command:
-```bash
-python3 /app/expScripts/cli.py endpoint \
-  --api Market \
-  --op-id postRegister \
-  --mode BLACK,BLACK_RANDOM,WHITE \
-  --level FIVE_XX,OAS,INVARIANT,REGRESSION \
-  --strength TWO_WAY
-```
-
-
-### 3.2.3. Batch Execution
-The Docker Compose configuration provided with this project already defines a fully prepared execution environment for all experiments. A large number of services are preconfigured in `docker-compose.yml`.
-
-Instead of manually entering a Docker container, experiments can be executed directly from the host machine by starting the relevant services with Docker Compose. Multiple experiments can be launched in batch using:
-```bash
-docker compose up <service_1> <service_2> ...
-```
-
-For example, the following command executes the experiments of RQ1 and RQ2 for both the Market and the ProjectTrackingSystem APIs.
-```bash
-docker compose up run-MARKET run-PTS
-```
-
-This approach allows parallel or grouped execution of RQ1 and RQ2 experiments without additional environment setup.
-
-#### Database Dependencies
-
-Some API systems depend on external databases. These database services are already defined and fully configured in the provided `docker-compose.yml` file. When running experiments via Docker Compose, must ensure that the corresponding database services are started and running. No additional database setup is required for the experiments described in this repository. These services are defined under `services:` in `docker-compose.yml`:
-
-- `URM-MYSQL` for UserManagement
-- `PERSON-MONGO` for PersonController
-- `GENOME-MONGO` for GenomeNexus
-- `GES-MONGO` for Gestaohospital
-
-## 3.3. Collecting and Aggregating the Results
-
-
-After the experiments complete, results are stored following a fixed directory structure.
-
-- For experiments of API operations in the `jdk_8_maven` and `jdk_11_maven`:
-  - `HTTPMutator` results are stored in:
-  ```
-  jdk_8_maven/mt/<api_name>/httpmutator/<op_id>/<strength>/<level>/metrics
-  jdk_11_maven/mt/<api_name>/httpmutator/<op_id>/<strength>/<level>/metrics 
-  ```
-  - For `PITest`, results are stored in:
-  ```
-  jdk_8_maven/mt/<api_name>/target/pit-reports
-  jdk_11_maven/mt/<api_name>/target/pit-reports
-  ```
-- In the `ind/` directory, only `HTTPMutator` experiments are executed. The results are stored in:
-```
-ind/<api_name>/httpmutator/<op_id>/<strength>/<level>/metrics 
-```
-
-### 3.3.1. Collecting Results
-
-After all experiments have finished, results can be aggregated by running the following command inside the `quick-test` container:
-```bash
-python3 /app/expScripts/collect_metrics.py
-```
-This script automatically traverses the result directories and collects metrics into the following consolidated locations:
-- `HTTPMutator` Exhaustive results: `/app/expScripts/black_metrics`
-- `HTTPMutator` Random results: `/app/expScripts/black_random_metrics`
-- `PITest` results: `/app/expScripts/pit-reports`
-
-### 3.3.2. Parsing and Analyzing Results
-
-After running `collect_metrics.py` and generating the aggregated result directories (`/app/expScripts/black_metrics`, `/app/expScripts/black_random_metrics`, and `/app/expScripts/pit-reports`), you can reproduce all datasets used in the paper for RQ1 and RQ2 by running the notebook:
-`expScripts/parse_results.ipynb`.
-
-The notebook reads the aggregated outputs produced by `collect_metrics.py` and compiles them into the final tables/figures-ready data used in the paper's RQ1 and RQ2 analysis.
-
-The Python dependencies required to run `expScripts/parse_results.ipynb` are listed in: `expScripts/requirements.txt`. Install them (e.g., inside the container or in a dedicated analysis environment) before executing the notebook to ensure the RQ1/RQ2 result parsing runs successfully.
-
-
-# 4. RQ3 Experiments
-
-RQ3 evaluates the effectiveness of the test oracle under black-box mutation testing with HttpMutator. The same evaluation procedure is applied to test suites generated by EvoMaster (two configurations) and by Schemathesis. HttpMutator generates mutated HTTP responses and the original assertions in each test suite serve as the test oracle that validates mutants. The reported results are mutation score, input coverage measured with Restats, and the number of detected faults. 
-- **EvoMaster_OAS** is the EvoMaster configuration that uses default black-box oracles without the regression oracle 
-- **EvoMaster_REG** is the EvoMaster configuration that adds regression oracles 
-
-> All commands below are executed inside the Docker container described in Section 2.4 unless explicitly stated otherwise.
-
-### 4.1. EvoMaster-based Experiments
-
-1. **EvoMaster artifact and test suite generation.** Ensure the EvoMaster jar is available at [`expScripts/evo/evomaster.jar`](expScripts/evo/evomaster.jar) (version 3.4.0). If the file is not present, download it from <https://github.com/WebFuzzing/EvoMaster/releases/download/v3.4.0/evomaster.jar> and place it at the specified location. Run the EvoMaster experiment for all API system operations with [`expScripts/run_evomaster.py`](expScripts/run_evomaster.py), which produces two test suites per operation (EvoMaster_OAS and EvoMaster_REG) that include assertions.
-    ```bash
-    python3 expScripts/run_evomaster.py
-    ```
-    Generated tests are written under [`expScripts/evomaster-generated-tests-without-basic-assertions/`](expScripts/evomaster-generated-tests-without-basic-assertions/) (EvoMaster_OAS) and [`expScripts/evomaster-generated-tests/`](expScripts/evomaster-generated-tests/) (EvoMaster_REG).
-2. **Adapt tests to embed HttpMutator and request dumps.** Move the generated test classes into [`httpmutator-rq3/src/test/java`](httpmutator-rq3/src/test/java) and adapt them so HttpMutator is embedded and request dumps are produced for Restats. Example (the Market API):
-    ```java
-    // Original test
-    @Test
-    public void test_0() {
-      given().accept("application/json")
-        .post(baseUrlOfSut + "/request/register")
-        .then()
-        .statusCode(200);
-    }
-    ```
-    ```java
-    // Adapted test
-    private static HttpMutatorRestAssuredFilter filter;
-
-    @BeforeAll
-    public static void initClass() {
-      // One-time setup for this test class; per-test changes are small.
-      // Output folder for mutation artifacts and dumps; keep the default or adjust the prefix.
-      Path outputDir = PackageDumpPathResolver.resolve(
-        Paths.get("src/test/resources"),
-        Original_successes_Test.class.getPackage().getName()
-      );
-      // Deterministic seed; keep the strategy as-is for reproduction.
-      filter = new HttpMutatorRestAssuredFilter(
-        42L,
-        new RandomSingleStrategy(),
-        outputDir,
-        "successes",
-        HttpMutatorRestAssuredFilter.OriginalAssertionFailurePolicy.THROW
-      );
-      // HttpMutator records requests and later runs mutations.
-      // WebScarabDumpFilter writes request dumps for Restats coverage.
-      WebScarabDumpFilter webScarabFilter = new WebScarabDumpFilter(outputDir.resolve("dumps"));
-      RestAssured.filters(filter, webScarabFilter);
-    }
-
-    @Test
-    public void test_0() {
-      // Run the request as usual (no inline assertions here).
-      given().accept("application/json")
-        .post(baseUrlOfSut + "/request/register");
-
-      // Register the assertions here: the original response is still checked as before,
-      // and the same assertions will be reused automatically for mutation testing.
-      filter.addAssertionsForLastRequest(resp ->
-        resp.statusCode(200)
-      );
-    }
-
-    @AfterAll
-    public static void runMutations() {
-      // One-time: after all original tests ran, execute mutation testing.
-      // Outputs are written under outputDir (mutants + validation results).
-      filter.runAllMutations();
-    }
-    ```
-    Mutation results and Restats request dumps are written under [`httpmutator-rq3/src/test/resources/`](httpmutator-rq3/src/test/resources/).
-3. **Run mutation testing as one connected execution.** HttpMutator is already embedded into the adapted tests (via the REST Assured filter and the final mutation trigger such as `runAllMutations()`), so mutation testing happens when the adapted tests are executed. The execution chain is: 
-   1. for open-souced API sytem, start the API system via `OperationTest` under [`mt/<api-name>/`](mt/<api-name>/) inside either [`jdk_8_maven/`](jdk_8_maven/) or [`jdk_11_maven/`](jdk_11_maven/)
-      ```bash
-        cd <jdk_8_maven|jdk_11_maven>/mt/<api-name>
-        mvn test -Dtest=OperationTest
-        ```
-   2. then for open-sourced APIs, read the runtime port from the logs: `API is started on port: <port>`
-   3. for replaying tests on open-sourced APIs, update `baseUrlOfSut` in the adapted tests to that port
-   4. for open-sourced and closed-sourced apis, execute the adapted tests from [`/app/httpmutator-rq3`](/app/httpmutator-rq3), which triggers HttpMutator to generate mutants and validates them using the original assertions as the test oracle.
-      ```bash
-      cd /app/httpmutator-rq3
-      mvn test -Dsurefire.includes="**/<api_name>/**/*.java"
-      ```
-4. **Compute input coverage with Restats.** Generate Restats configs with [`expScripts/generate_restats_config.py`](expScripts/generate_restats_config.py), then run Restats with [`httpmutator-rq3/src/test/resources/run_restats.sh`](httpmutator-rq3/src/test/resources/run_restats.sh):
-    ```bash
-    python3 expScripts/generate_restats_config.py
-    bash httpmutator-rq3/src/test/resources/run_restats.sh
-    ```
-5. **Aggregate mutation score and input coverage.** Parse results with [`expScripts/parse_evomaster_result.py`](expScripts/parse_evomaster_result.py):
-    ```bash
-    python3 expScripts/parse_evomaster_result.py
-    ```
-    The aggregated output is written to [`httpmutator-rq3/src/test/resources/rq3-assert-summary-aggregated.csv`](httpmutator-rq3/src/test/resources/rq3-assert-summary-aggregated.csv).
-
-### 4.2 Schemathesis-based experiments
-
-1. **Generate raw test reports and a minimal test suite.** Schemathesis version `4.5.4` is already installed inside the Docker container; if running locally, install the same version:
-    ```bash
-    pip install schemathesis==4.5.4
-    ```
-    Run Schemathesis for each API system operation with [`expScripts/run_schemathesis.py`](expScripts/run_schemathesis.py), which produces raw test reports under [`expScripts/schemathesis-unique-reports/<API_NAME>/<OPERATION_ID>/`](expScripts/schemathesis-unique-reports/).
-    ```bash
-    python3 expScripts/run_schemathesis.py
-    ```
-    Filter the reports to obtain a minimal test suite and convert the results to JSONL inputs for HttpMutator with [`expScripts/collect_schemathesis_results.py`](expScripts/collect_schemathesis_results.py):
-    ```bash
-    python3 expScripts/collect_schemathesis_results.py
-    ```
-    HttpMutator inputs are written in the same operation directory as `httpmutator-inputs.jsonl`.
-2. **Generate mutants with HttpMutator.** From [`/app/httpmutator-rq3`](/app/httpmutator-rq3), run the Schemathesis mutant generator:
-    ```bash
-    cd /app/httpmutator-rq3
-    mvn -q -DskipTests compile
-    mvn exec:java -Dexec.mainClass=es.us.isa.httpmutator.experiment.rq3.schemathesis.SchemathesisMutantGenerator
-    ```
-    > NOTE: For Deutschebahn, mutant generation may take several days, and the resulting file may exceed 1 TB.
-    Mutants are written in the same operation directory as `mutants.jsonl`.
-
-3. **Validate mutants using the test oracle and compute mutation score.** Run mutant validation with [`expScripts/assert_mutants_with_schemathesis.py`](expScripts/assert_mutants_with_schemathesis.py):
-    ```bash
-    python3 expScripts/assert_mutants_with_schemathesis.py
-    ```
-    Each run appends one row to [`expScripts/schemathesis-unique-reports/schemathesis_mutant_validation_summary.csv`](expScripts/schemathesis-unique-reports/schemathesis_mutant_validation_summary.csv).
-4. **Compute input coverage with Restats.** Convert VCR reports to WebScarab dumps with [`expScripts/vcr_to_webscrab.py`](expScripts/vcr_to_webscrab.py), generate Restats configs with [`expScripts/generate_restats_config.py`](expScripts/generate_restats_config.py), and run Restats with [`httpmutator-rq3/src/test/resources/run_restats.sh`](httpmutator-rq3/src/test/resources/run_restats.sh):
-    ```bash
-    python3 expScripts/vcr_to_webscrab.py
-    python3 expScripts/generate_restats_config.py
-    bash expScripts/schemathesis-unique-reports/run_all_restats.sh
-    ```
-    Input coverage reports are written under [`expScripts/schemathesis-unique-reports/<API_NAME>/<OPERATION_ID>/reporter/`](expScripts/schemathesis-unique-reports/<API_NAME>/<OPERATION_ID>/reporter/).
-5. **Aggregate mutation score and input coverage.** Parse results with [`expScripts/parse_schemathesis_result.py`](expScripts/parse_schemathesis_result.py):
-    ```bash
-    python3 expScripts/parse_schemathesis_result.py
-    ```
-    The summary is written to [`expScripts/schemathesis-unique-reports/summary.csv`](expScripts/schemathesis-unique-reports/summary.csv).
-
-### 4.3 Detected faults
-
-1. **Count detected faults from test generation.** Detected faults are counted during test generation for EvoMaster_OAS, EvoMaster_REG, and Schemathesis. Run [`expScripts/collect_faults_for_evo_and_sch.py`](expScripts/collect_faults_for_evo_and_sch.py):
-    ```bash
-    python3 expScripts/collect_faults_for_evo_and_sch.py
-    ```
-    The resulting fault summaries are stored as:
-    - Schemathesis: [`expScripts/schemathesis-unique-reports/faults.json`](expScripts/schemathesis-unique-reports/faults.json)
-    - EvoMaster_OAS: [`expScripts/evomaster-generated-tests-without-basic-assertions/faults.json`](expScripts/evomaster-generated-tests-without-basic-assertions/faults.json)
-    - EvoMaster_REG: [`expScripts/evomaster-generated-tests/faults.json`](expScripts/evomaster-generated-tests/faults.json)
-
-### 4.4 Generate the table in the paper
-
-Use the same notebook for RQ1, RQ2, and RQ3 at [`expScripts/parse_results.ipynb`](expScripts/parse_results.ipynb). The Python dependencies required to execute the notebook are listed in [`expScripts/requirements.txt`](expScripts/requirements.txt).
+- specs/
+  Processed OpenAPI specifications used to define operations and parameters.
+- domains/
+  Input domain definitions (`*.model`) used as the basis for 2XX test case generation.
+- 4xx/
+  Input parameter-value combinations used to construct requests that trigger
+  client error responses (4XX status codes).
+- suts/
+  SUT source code provided for context and reproducibility.

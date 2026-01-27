@@ -84,14 +84,6 @@ RUN mkdir -p /opt && \
     ln -s $MAVEN_HOME/bin/mvn /usr/bin/mvn && \
     rm -rf /tmp/maven.tar.gz /var/lib/apt/lists/*
 
-# 6) Install Node.js 20.x (LTS) and Newman, for PostmanAssertify
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends nodejs && \
-    npm install -g newman && \
-    npm cache clean --force && \
-    rm -rf /var/lib/apt/lists/*
-
 # ───────────────────────────────────────────────────────────────────────────────
 # Install gosu for user privilege switching in the entrypoint script
 # ───────────────────────────────────────────────────────────────────────────────
@@ -107,19 +99,9 @@ RUN apt-get update && \
 # ───────────────────────────────────────────────────────────────────────────────
 # Copy the user's toolchains.xml, and mvn dependencies into the container's Maven config
 COPY toolchains.xml /root/.m2/toolchains.xml
-RUN mkdir -p /root/.m2/repository
-COPY private-m2/ /root/.m2/repository/
-
-RUN mkdir -p /app
-WORKDIR /app
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh"]
-
-# ───────────────────────────────────────────────────────────────────────────────
-# Declare /app as volume for the project source
-# ───────────────────────────────────────────────────────────────────────────────
-VOLUME ["/app"]
-CMD ["python3", "/app/expScripts/cli.py", "--api", "ScoutAPI", "--op-id", "postActivities"]
+CMD ["bash"]

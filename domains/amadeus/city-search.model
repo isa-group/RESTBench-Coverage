@@ -1,8 +1,0 @@
-countryCode: FR*US*ES*NULL
-keyword: NY*PARIS*MADRID
-max: 1*10*50*NULL
-include: AIRPORTS*NULL
-
-IF [countryCode] = "FR" THEN [keyword] = "PARIS";
-IF [countryCode] = "ES" THEN [keyword] = "MADRID";
-IF [countryCode] = "US" THEN [keyword] = "NY";
