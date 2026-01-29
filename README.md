@@ -1,194 +1,58 @@
 # RESTBench-Coverage
 
-Coverage-stratified REST API test suites for 20 APIs with TCL-4/5/6 suites per operation.
+RESTBench-Coverage is a dataset of REST API test suites with explicitly defined, strictly increasing coverage strength based on [REST API testing coverage criteria](https://personal.us.es/amarlop/wp-content/uploads/2019/09/Test_Coverage_Criteria_for_RESTful_Web_APIs.pdf).
 
-**RESTBench-Coverage** is a dataset that provides REST API test suites with
-**explicitly defined and strictly increasing coverage strength**.
-Its primary contribution is enabling **systematic and fair comparison of REST API
-testing techniques** by controlling for test-suite coverage across APIs and operations.
-
-In black-box REST API testing, where source code is typically unavailable, coverage
-is defined in terms of how thoroughly test inputs and observable outputs of an API
-are exercised. RESTBench-Coverage adopts this notion of **input–output coverage**
-to stratify test suites in a consistent and reproducible manner.
-
-OpenAPI specifications are included for all APIs, and SUT code is included for
-open-source APIs to support **construction, interpretation, and reuse** of the
-test suites.
-
----
-
-## Benchmark Summary (APIs and Artifacts)
-
-Each API is represented by a single operation in this benchmark. Test suites are
-available in TCL-4, TCL-5, and TCL-6 variants per operation under
-`Test-suites/<api>/<operation>/TCL-{4,5,6}/`, and each suite includes:
-`coveringArray.csv`, `coveringArray.txt`, `requests_responses.csv`, and `responses.jsonl`.
-
-| Category | API (tests folder) | Operation | OpenAPI spec | SUT code |
-| --- | --- | --- | --- | --- |
-| Industrial | amadeus | getV3ShoppingHotel-offers | `APIs/Industrial/amadeus/get-hotelOffers.yaml` | — |
-| Industrial | deutschebahn | getStations | `APIs/Industrial/deutschebahn/get-stations.yaml` | — |
-| Industrial | dhl | getLocation-finderV1Find-by-address | `APIs/Industrial/dhl/get-location.yaml` | — |
-| Industrial | fdic | getInstitutions | `APIs/Industrial/fdic/get-institutions.yaml` | — |
-| Industrial | foursquare | getPlacesSearch | `APIs/Industrial/foursquare/get-places.yaml` | — |
-| Industrial | itunes | getSearch | `APIs/Industrial/ITunes/get-search.yaml` | — |
-| Industrial | ohsome | getElementsAggregation | `APIs/Industrial/ohsome/get-elements.yaml` | — |
-| Industrial | stripe | postV1Products | `APIs/Industrial/stripe/post-products.yaml` | — |
-| Industrial | yelp | getBusinessesSearch | `APIs/Industrial/yelp/get-search.yaml` | — |
-| Industrial | youtube-ind | getYoutubeV3Videos | `APIs/Industrial/youtube/get-videos.yaml` | — |
-| Open-source | catwatch | getProjects | `APIs/Open-source/catwatch/get-projects.json` | `APIs/Open-source/catwatch/Code` |
-| Open-source | genome-nexus | postAnnotation | `APIs/Open-source/genome-nexus/post-annotation.json` | `APIs/Open-source/genome-nexus/Code` |
-| Open-source | gestaohospital | postV1Hospitais | `APIs/Open-source/gestaohospital/post-hospital.json` | `APIs/Open-source/gestaohospital/Code` |
-| Open-source | languagetool | postCheck | `APIs/Open-source/languagetool/post-check.json` | `APIs/Open-source/languagetool/Code` |
-| Open-source | market | postRegister | `APIs/Open-source/market/post-register.json` | `APIs/Open-source/market/Code` |
-| Open-source | person-controller | postApiPerson | `APIs/Industrial/person/post-person.yaml` | `APIs/Open-source/person-controller/Code` |
-| Open-source | project-tracking-system | postAppApiAssignments | `APIs/Open-source/project-tracking-system/postAssignments.yaml` | `APIs/Open-source/project-tracking-system/Code` |
-| Open-source | proxyprint | postRequestRegister | `APIs/Open-source/proxyprint/post-requestRegister.json` | `APIs/Open-source/proxyprint/Code` |
-| Open-source | scout-api | postApiV1Activities | `APIs/Open-source/scout-api/post-activities.json` | `APIs/Open-source/scout-api/Code` |
-| Open-source | user-management | putUsersId | `APIs/Open-source/user-management/put-userId.yaml` | `APIs/Open-source/user-management/Code` |
-
----
-
-## Core Contribution: Coverage-Stratified Test Suites
-
-The central artifact of this repository is a collection of test suites organized by
-coverage strength. For each API operation, three test suites are provided—**TCL-4**,
-**TCL-5**, and **TCL-6**—with strictly increasing coverage strength.
-
-These labels refer to
-**[Test Coverage Levels (TCLs)](https://dl.acm.org/doi/10.1145/3340433.3342822)**,
-a family of black-box coverage criteria for REST APIs. TCLs quantify how thoroughly
-a test suite exercises an API’s observable input–output space, including exercised
-input parameters, triggered status codes, and observed response properties.
-
-The same stratification strategy is applied consistently across APIs and operations,
-enabling **fair and reproducible comparisons** of testing techniques under controlled
-coverage conditions.
-
----
 
 ## Definitions of TCL-4, TCL-5, and TCL-6 Test Suites
 
-The following definitions describe how the three coverage levels are operationalized
-in this dataset.
+Each test suite in the dataset is assigned to one of three coverage levels (TCL-4, TCL-5, TCL-6), where higher levels strictly subsume the lower ones. The definitions below specify how these levels are instantiated for each target operation.
 
-Inputs are derived from the API specification and its implementation, with
-enumerations and booleans using their defined value sets and other parameter
-types represented with a small set of representative valid values.
+### Input domains
+
+For test generation, we derive input domains from the API specification (and, when needed, implementation constraints). In particular:
+
+- Enumerated and boolean parameters use their complete value sets.
+- Other parameter types are assigned a small set of representative valid values.
+- Optional parameters explicitly include a NULL option.
 
 ### TCL-4 Test Suite
 - The lowest coverage level.
-- Every input parameter is exercised at least once.
-- Derived from a **1-way combinatorial test suite**, with redundancy reduction and
-  minimal augmentation to improve response diversity.
+- The main test suite targets successful executions (2XX) and ensures that every input parameter is exercised at least once with a non-null value.
+- In addition, extra 4XX-triggering inputs are provided to cover client error responses (4XX).
 
 ### TCL-5 Test Suite
 - An intermediate coverage level.
-- All input parameters and all status codes defined are exercised at least once.
-- Based on a 1-way combinatorial test suite, augmented with additional test cases.
+- The main test suite targets successful executions (2XX) and ensures that every input parameter value is exercised, and that all defined 2XX status codes are exercised at least once.
+- In addition, extra 4XX-triggering inputs are provided to cover missing 4XX status codes defined for the operation.
 
 ### TCL-6 Test Suite
 - The highest coverage level.
-- All input parameters, all status codes, and all response properties defined are covered.
-- Generated using a 2-way combinatorial approach, further augmented to cover missing
-  status codes and response fields.
+- The main test suite targets successful executions (2XX) and ensures that, for any pair of two input parameters, all combinations of their values (w.r.t. the input domains defined above) are exercised.
+- In addition, extra 4XX-triggering inputs are provided to cover missing 4XX status codes and response fields not exercised by the main suite.
 
-Together, these definitions provide a clear and operational notion of test-suite
-strength.
 
----
+## Benchmark Summary
 
-## Repository Structure (Simplified)
+| API | Type | Spec path | Target operation | #Tests @ TCL-4 | #Tests @ TCL-5 | #Tests @ TCL-6 |
+| --- | --- | --- | --- | --- | --- | --- |
+| ITunes | industrial | `APIs/Industrial/ITunes/getSearch.yaml` | GET /search | 2 | 31 | 678 |
+| amadeus | industrial | `APIs/Industrial/amadeus/getV3ShoppingHotel-offers.yaml` | GET /v3/shopping/hotel-offers | 3 | 6 | 30 |
+| deutschebahn | industrial | `APIs/Industrial/deutschebahn/getStations.yaml` | GET /stations | 3 | 7 | 27 |
+| dhl | industrial | `APIs/Industrial/dhl/getLocation-finderV1Find-by-address.yaml` | GET /location-finder/v1/find-by-address | 2 | 27 | 186 |
+| fdic | industrial | `APIs/Industrial/fdic/getInstitutions.yaml` | GET /institutions | 2 | 17 | 201 |
+| foursquare | industrial | `APIs/Industrial/foursquare/getPlacesSearch.yaml` | GET /places/search | 4 | 14 | 130 |
+| ohsome | industrial | `APIs/Industrial/ohsome/getV1ElementsAggregation.yaml` | GET /v1/elements/{aggregation} | 4 | 10 | 47 |
+| stripe | industrial | `APIs/Industrial/stripe/postV1Products.yaml` | POST /v1/products | 4 | 18 | 228 |
+| yelp | industrial | `APIs/Industrial/yelp/getBusinessesSearch.yaml` | GET /businesses/search | 3 | 7 | 49 |
+| youtube | industrial | `APIs/Industrial/youtube/getYoutubeV3Videos.yaml` | GET /youtube/v3/videos | 4 | 45 | 333 |
+| catwatch | open-source | `APIs/Open-source/catwatch/getProjects.json` | GET /projects | 2 | 15 | 155 |
+| genome-nexus | open-source | `APIs/Open-source/genome-nexus/postAnnotation.json` | POST /annotation | 2 | 9 | 41 |
+| gestaohospital | open-source | `APIs/Open-source/gestaohospital/postV1Hospitais.json` | POST /v1/hospitais | 2 | 5 | 19 |
+| languagetool | open-source | `APIs/Open-source/languagetool/postV2Check.json` | POST /v2/check | 4 | 6 | 30 |
+| market | open-source | `APIs/Open-source/market/postRegister.json` | POST /register | 2 | 4 | 15 |
+| person-controller | open-source | `APIs/Open-source/person-controller/postApiPerson.yaml` | POST /api/person | 2 | 4 | 35 |
+| project-tracking-system | open-source | `APIs/Open-source/project-tracking-system/postAppApiAssignments.yaml` | POST /app/api/assignments | 2 | 9 | 44 |
+| proxyprint | open-source | `APIs/Open-source/proxyprint/postRequestRegister.json` | POST /request/register | 2 | 7 | 28 |
+| scout-api | open-source | `APIs/Open-source/scout-api/postApiV1Activities.json` | POST /api/v1/activities | 4 | 6 | 31 |
+| user-management | open-source | `APIs/Open-source/user-management/putUsersId.yaml` | PUT /users/{id} | 3 | 10 | 52 |
 
-APIs
-```
-Industrial
-  amadeus               -> APIs/Industrial/amadeus/get-hotelOffers.yaml
-  deutschebahn          -> APIs/Industrial/deutschebahn/get-stations.yaml
-  dhl                   -> APIs/Industrial/dhl/get-location.yaml
-  fdic                  -> APIs/Industrial/fdic/get-institutions.yaml
-  foursquare            -> APIs/Industrial/foursquare/get-places.yaml
-  itunes                -> APIs/Industrial/ITunes/get-search.yaml
-  ohsome                -> APIs/Industrial/ohsome/get-elements.yaml
-  stripe                -> APIs/Industrial/stripe/post-products.yaml
-  yelp                  -> APIs/Industrial/yelp/get-search.yaml
-  youtube-ind           -> APIs/Industrial/youtube/get-videos.yaml
-
-Open-source
-  catwatch              -> APIs/Open-source/catwatch/get-projects.json
-                           APIs/Open-source/catwatch/Code
-  genome-nexus          -> APIs/Open-source/genome-nexus/post-annotation.json
-                           APIs/Open-source/genome-nexus/Code
-  gestaohospital        -> APIs/Open-source/gestaohospital/post-hospital.json
-                           APIs/Open-source/gestaohospital/Code
-  languagetool          -> APIs/Open-source/languagetool/post-check.json
-                           APIs/Open-source/languagetool/Code
-  market                -> APIs/Open-source/market/post-register.json
-                           APIs/Open-source/market/Code
-  person-controller     -> APIs/Industrial/person/post-person.yaml
-                           APIs/Open-source/person-controller/Code
-  project-tracking-system -> APIs/Open-source/project-tracking-system/postAssignments.yaml
-                             APIs/Open-source/project-tracking-system/Code
-  proxyprint            -> APIs/Open-source/proxyprint/post-requestRegister.json
-                           APIs/Open-source/proxyprint/Code
-  scout-api             -> APIs/Open-source/scout-api/post-activities.json
-                           APIs/Open-source/scout-api/Code
-  user-management       -> APIs/Open-source/user-management/put-userId.yaml
-                           APIs/Open-source/user-management/Code
-```
-
-Test suites
-```
-Test-suites/<api>/<operation>/{TCL-4,TCL-5,TCL-6}/
-  coveringArray.csv
-  coveringArray.txt
-  requests_responses.csv
-  responses.jsonl
-```
-
-## File Formats (Test Suites)
-
-This section explains how test suites are represented on disk, from input
-combinations to concrete request–response pairs.
-
-### 1) Covering Arrays (coveringArray.*)
-
-Within each operation-level test suite directory, the following files store the
-generated input combinations (covering arrays):
-
-- coveringArray.csv
-- coveringArray.txt
-
-### 2) Full Test Cases and Responses
-
-Each operation-level test suite directory also includes:
-
-- requests_responses.csv
-  The complete set of test cases as request–response pairs for the suite inputs.
-- responses.jsonl
-  A response-only view of the test cases, with one response per line.
-
-### Directory Layout
-
-All test suites are organized under the `Test-suites/` directory by API, operation,
-and coverage strength:
-
-```
-Test-suites/<api>/<operation>/{TCL-4,TCL-5,TCL-6}/
-```
-
-Within each coverage-level directory, files follow the formats described above.
-
----
-
-## Supporting Artifacts
-
-Supporting artifacts are provided to make the test suites interpretable and reusable:
-
-- APIs/Industrial/
-  Industrial API OpenAPI specifications used to define operations and parameters.
-- APIs/Open-source/
-  Open-source API OpenAPI specifications and corresponding `Code/` directories.
-- Test-suites/
-  Coverage-stratified test suites organized by API, operation, and TCL level.
