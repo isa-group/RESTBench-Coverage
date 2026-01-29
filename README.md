@@ -33,26 +33,25 @@ For test generation, we derive input domains from the API specification (and, wh
 
 ## Benchmark Summary
 
-| API | Type | Spec path | Target operation | #Tests @ TCL-4 | #Tests @ TCL-5 | #Tests @ TCL-6 |
-| --- | --- | --- | --- | --- | --- | --- |
-| ITunes | industrial | `APIs/Industrial/ITunes/getSearch.yaml` | GET /search | 2 | 31 | 678 |
-| amadeus | industrial | `APIs/Industrial/amadeus/getV3ShoppingHotel-offers.yaml` | GET /v3/shopping/hotel-offers | 3 | 6 | 30 |
-| deutschebahn | industrial | `APIs/Industrial/deutschebahn/getStations.yaml` | GET /stations | 3 | 7 | 27 |
-| dhl | industrial | `APIs/Industrial/dhl/getLocation-finderV1Find-by-address.yaml` | GET /location-finder/v1/find-by-address | 2 | 27 | 186 |
-| fdic | industrial | `APIs/Industrial/fdic/getInstitutions.yaml` | GET /institutions | 2 | 17 | 201 |
-| foursquare | industrial | `APIs/Industrial/foursquare/getPlacesSearch.yaml` | GET /places/search | 4 | 14 | 130 |
-| ohsome | industrial | `APIs/Industrial/ohsome/getV1ElementsAggregation.yaml` | GET /v1/elements/{aggregation} | 4 | 10 | 47 |
-| stripe | industrial | `APIs/Industrial/stripe/postV1Products.yaml` | POST /v1/products | 4 | 18 | 228 |
-| yelp | industrial | `APIs/Industrial/yelp/getBusinessesSearch.yaml` | GET /businesses/search | 3 | 7 | 49 |
-| youtube | industrial | `APIs/Industrial/youtube/getYoutubeV3Videos.yaml` | GET /youtube/v3/videos | 4 | 45 | 333 |
-| catwatch | open-source | `APIs/Open-source/catwatch/getProjects.json` | GET /projects | 2 | 15 | 155 |
-| genome-nexus | open-source | `APIs/Open-source/genome-nexus/postAnnotation.json` | POST /annotation | 2 | 9 | 41 |
-| gestaohospital | open-source | `APIs/Open-source/gestaohospital/postV1Hospitais.json` | POST /v1/hospitais | 2 | 5 | 19 |
-| languagetool | open-source | `APIs/Open-source/languagetool/postV2Check.json` | POST /v2/check | 4 | 6 | 30 |
-| market | open-source | `APIs/Open-source/market/postRegister.json` | POST /register | 2 | 4 | 15 |
-| person-controller | open-source | `APIs/Open-source/person-controller/postApiPerson.yaml` | POST /api/person | 2 | 4 | 35 |
-| project-tracking-system | open-source | `APIs/Open-source/project-tracking-system/postAppApiAssignments.yaml` | POST /app/api/assignments | 2 | 9 | 44 |
-| proxyprint | open-source | `APIs/Open-source/proxyprint/postRequestRegister.json` | POST /request/register | 2 | 7 | 28 |
-| scout-api | open-source | `APIs/Open-source/scout-api/postApiV1Activities.json` | POST /api/v1/activities | 4 | 6 | 31 |
-| user-management | open-source | `APIs/Open-source/user-management/putUsersId.yaml` | PUT /users/{id} | 3 | 10 | 52 |
-
+| API | Type | Target operation | #Tests @ TCL-4 | #Tests @ TCL-5 | #Tests @ TCL-6 |
+| --- | --- | --- | --- | --- | --- |
+| ITunes | industrial | GET /search | 2 | 31 | 678 |
+| amadeus | industrial | GET /v3/shopping/hotel-offers | 3 | 6 | 30 |
+| deutschebahn | industrial | GET /stations | 3 | 7 | 27 |
+| dhl | industrial | GET /location-finder/v1/find-by-address | 2 | 27 | 186 |
+| fdic | industrial | GET /institutions | 2 | 17 | 201 |
+| foursquare | industrial | GET /places/search | 4 | 14 | 130 |
+| ohsome | industrial | GET /v1/elements/{aggregation} | 4 | 10 | 47 |
+| stripe | industrial | POST /v1/products | 4 | 18 | 228 |
+| yelp | industrial | GET /businesses/search | 3 | 7 | 49 |
+| youtube | industrial | GET /youtube/v3/videos | 4 | 45 | 333 |
+| catwatch | open-source | GET /projects | 2 | 15 | 155 |
+| genome-nexus | open-source | POST /annotation | 2 | 9 | 41 |
+| gestaohospital | open-source | POST /v1/hospitais | 2 | 5 | 19 |
+| languagetool | open-source | POST /v2/check | 4 | 6 | 30 |
+| market | open-source | POST /register | 2 | 4 | 15 |
+| person-controller | open-source | POST /api/person | 2 | 4 | 35 |
+| project-tracking-system | open-source | POST /app/api/assignments | 2 | 9 | 44 |
+| proxyprint | open-source | POST /request/register | 2 | 7 | 28 |
+| scout-api | open-source | POST /api/v1/activities | 4 | 6 | 31 |
+| user-management | open-source | PUT /users/{id} | 3 | 10 | 52 |
