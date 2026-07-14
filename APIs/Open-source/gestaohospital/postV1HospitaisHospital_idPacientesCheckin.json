@@ -1,0 +1,308 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Documentação da API de acesso aos endpoints da GestaoHospitalAPI - Aceleradev Brasil\r\nJornada de desafios da Aceleradev Brasil - CodeNation",
+    "version": "1.0",
+    "title": "Sistema de Gestão Hospital API"
+  },
+  "host": "localhost:8080",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "location-resource",
+      "description": "Location Resource"
+    },
+    {
+      "name": "product-resource",
+      "description": "Product Resource"
+    },
+    {
+      "name": "patient-resource",
+      "description": "Patient Resource"
+    },
+    {
+      "name": "hospital-resource",
+      "description": "Hospital Resource"
+    }
+  ],
+  "paths": {
+    "/v1/hospitais/{hospital_id}/pacientes/checkin": {
+      "post": {
+        "tags": [
+          "patient-resource"
+        ],
+        "summary": "checkinPacient",
+        "operationId": "checkinPacientUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "hospital_id",
+            "in": "path",
+            "description": "hospital_id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "patient",
+            "description": "patient",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Patient"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Patient"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "type": "object",
+              "required": [
+                "status",
+                "error",
+                "message",
+                "path"
+              ],
+              "properties": {
+                "status": {
+                  "type": "integer",
+                  "format": "int32",
+                  "enum": [
+                    400
+                  ]
+                },
+                "error": {
+                  "type": "string",
+                  "enum": [
+                    "Bad Request"
+                  ]
+                },
+                "message": {
+                  "type": "string",
+                  "description": "Detailed error message describing the JSON parsing or validation failure."
+                },
+                "path": {
+                  "type": "string",
+                  "description": "Request path that caused the error."
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "HospitalDTO": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "availableBeds": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "beds": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "Patient": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "birthDate": {
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true,
+          "format": "date-time"
+        },
+        "cpf": {
+          "nullable": true,
+          "x-nullable": true,
+          "type": "string"
+        },
+        "entryDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "exitDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "gender": {
+          "nullable": true,
+          "x-nullable": true,
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/Location",
+          "x-nullable": true
+        },
+        "name": {
+          "nullable": true,
+          "x-nullable": true,
+          "type": "string"
+        }
+      }
+    },
+    "GeoJsonPoint": {
+      "type": "object",
+      "x-nullable": true,
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "type": {
+          "type": "string"
+        },
+        "x": {
+          "type": "number",
+          "format": "double"
+        },
+        "y": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "LocationDTO": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "string"
+        },
+        "longitude": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "referenceId": {
+          "type": "string"
+        }
+      }
+    },
+    "ProductDTO": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "productName": {
+          "type": "string"
+        },
+        "productType": {
+          "type": "string",
+          "enum": [
+            "COMMON",
+            "BLOOD"
+          ]
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "Location": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "nullable": true,
+          "x-nullable": true,
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/definitions/GeoJsonPoint"
+        },
+        "locationCategory": {
+          "type": "string",
+          "nullable": true,
+          "x-nullable": true,
+          "enum": [
+            "HOSPITAL",
+            "PATIENT"
+          ]
+        },
+        "name": {
+          "nullable": true,
+          "x-nullable": true,
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/definitions/GeoJsonPoint"
+        },
+        "referenceId": {
+          "nullable": true,
+          "x-nullable": true,
+          "type": "string"
+        }
+      }
+    }
+  }
+}
