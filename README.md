@@ -33,6 +33,10 @@ For test generation, we derive input domains from the API specification (and, wh
 
 ## Benchmark Summary
 
+The dataset contains 32 target operations across 20 APIs, with 3,406 recorded tests in 96 test suites.
+
+For Scout API activity creation, `POST /api/v1/activities` and `POST /api/v2/activities` refer to the same operation and are represented by a single benchmark entry.
+
 | API | Type | Target operation | #Tests @ TCL-4 | #Tests @ TCL-5 | #Tests @ TCL-6 |
 | --- | --- | --- | --- | --- | --- |
 | ITunes | industrial | GET /search | 2 | 31 | 678 |
@@ -46,12 +50,24 @@ For test generation, we derive input domains from the API specification (and, wh
 | yelp | industrial | GET /businesses/search | 3 | 7 | 49 |
 | youtube | industrial | GET /youtube/v3/videos | 4 | 45 | 333 |
 | catwatch | open-source | GET /projects | 2 | 15 | 155 |
+| catwatch | open-source | GET /contributors | 2 | 27 | 261 |
 | genome-nexus | open-source | POST /annotation | 2 | 9 | 41 |
 | gestaohospital | open-source | POST /v1/hospitais | 2 | 5 | 19 |
+| gestaohospital | open-source | PUT /v1/hospitais/{hospital_id}/pacientes/{patientId} | 3 | 10 | 66 |
+| gestaohospital | open-source | POST /v1/hospitais/{hospital_id}/pacientes/checkin | 3 | 6 | 37 |
+| gestaohospital | open-source | PUT /v1/hospitais/{hospital_id} | 2 | 5 | 25 |
 | languagetool | open-source | POST /v2/check | 4 | 6 | 30 |
 | market | open-source | POST /register | 2 | 4 | 15 |
+| market | open-source | PUT /customer/cart | 2 | 14 | 36 |
+| market | open-source | PUT /customer/contacts | 2 | 5 | 8 |
 | person-controller | open-source | POST /api/person | 2 | 4 | 35 |
+| person-controller | open-source | PUT /api/person | 2 | 4 | 34 |
 | project-tracking-system | open-source | POST /app/api/assignments | 2 | 9 | 44 |
+| project-tracking-system | open-source | POST /app/api/employees | 2 | 6 | 28 |
+| project-tracking-system | open-source | POST /app/api/departments | 3 | 4 | 10 |
 | proxyprint | open-source | POST /request/register | 2 | 7 | 28 |
+| proxyprint | open-source | POST /admin/register | 1 | 4 | 24 |
 | scout-api | open-source | POST /api/v1/activities | 4 | 6 | 31 |
+| scout-api | open-source | PUT /api/v2/activities/{id} | 3 | 8 | 42 |
 | user-management | open-source | PUT /users/{id} | 3 | 10 | 52 |
+| user-management | open-source | POST /users | 3 | 5 | 37 |

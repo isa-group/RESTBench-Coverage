@@ -1,0 +1,612 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Api Documentation",
+    "version": "1.0",
+    "title": "Api Documentation",
+    "termsOfService": "urn:tos",
+    "contact": {},
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host": "localhost:28372",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "cart-rest-controller",
+      "description": "Cart Rest Controller"
+    },
+    {
+      "name": "contacts-rest-controller",
+      "description": "Contacts Rest Controller"
+    },
+    {
+      "name": "customer-rest-controller",
+      "description": "Customer Rest Controller"
+    },
+    {
+      "name": "orders-rest-controller",
+      "description": "Orders Rest Controller"
+    },
+    {
+      "name": "products-rest-controller",
+      "description": "Products Rest Controller"
+    }
+  ],
+  "paths": {
+    "/customer/cart": {
+      "put": {
+        "tags": [
+          "cart-rest-controller"
+        ],
+        "summary": "addItem",
+        "operationId": "addItemUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "item",
+            "description": "item",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CartItemDTOReq"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CartDTO"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized – Access is denied",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Access is denied"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "uri=/customer/cart"
+                },
+                "entityName": {
+                  "type": "string",
+                  "x-nullable": true,
+                  "nullable": true
+                },
+                "fieldErrors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "field": {
+                        "type": "string"
+                      },
+                      "message": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "field",
+                      "message"
+                    ]
+                  },
+                  "example": []
+                }
+              },
+              "required": [
+                "message",
+                "description",
+                "entityName",
+                "fieldErrors"
+              ]
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found – Requested entity doesn't exist",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Requested entity doesn't exist"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "uri=/customer/cart"
+                },
+                "entityName": {
+                  "type": "string",
+                  "example": "Product"
+                },
+                "fieldErrors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "field": {
+                        "type": "string",
+                        "example": "id"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "No instance with this id"
+                      }
+                    },
+                    "required": [
+                      "field",
+                      "message"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "message",
+                "description",
+                "entityName",
+                "fieldErrors"
+              ]
+            }
+          },
+          "406": {
+            "description": "Not Acceptable – Argument validation error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "Argument validation error"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "uri=/register"
+                },
+                "entityName": {
+                  "type": "string",
+                  "example": "userDTO"
+                },
+                "fieldErrors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "field": {
+                        "type": "string",
+                        "example": "email"
+                      },
+                      "message": {
+                        "type": "string",
+                        "example": "The value shall be in the format of an email address"
+                      }
+                    },
+                    "required": [
+                      "field",
+                      "message"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "message",
+                "description",
+                "entityName",
+                "fieldErrors"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CartDTO": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "$ref": "#/definitions/Links"
+        },
+        "cartItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CartItemDTORes"
+          }
+        },
+        "deliveryCost": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deliveryIncluded": {
+          "type": "boolean"
+        },
+        "empty": {
+          "type": "boolean"
+        },
+        "productsCost": {
+          "type": "number",
+          "format": "double"
+        },
+        "totalCost": {
+          "type": "number",
+          "format": "double"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "user": {
+          "type": "string"
+        }
+      },
+      "title": "CartDTO"
+    },
+    "CartItemDTOReq": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Link"
+          }
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "CartItemDTOReq"
+    },
+    "CartItemDTORes": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "object",
+          "properties": {
+            "View product": {
+              "type": "object",
+              "properties": {
+                "href": {
+                  "type": "string"
+                }
+              },
+              "title": "View product"
+            }
+          }
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "CartItemDTORes"
+    },
+    "ContactsDTOReq": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Link"
+          }
+        },
+        "address": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100,
+          "pattern": "^[^#$%^*()']*$"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 20,
+          "pattern": "^\\+[1-9][0-9]?[\\s]*\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$"
+        }
+      },
+      "title": "ContactsDTOReq"
+    },
+    "ContactsDTORes": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "$ref": "#/definitions/Links"
+        },
+        "address": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100,
+          "pattern": "^[^#$%^*()']*$"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 20,
+          "pattern": "^\\+[1-9][0-9]?[\\s]*\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$"
+        }
+      },
+      "title": "ContactsDTORes"
+    },
+    "CreditCardDTO": {
+      "type": "object",
+      "properties": {
+        "ccNumber": {
+          "type": "string",
+          "pattern": "\\b(?:\\d[ -]*?){13,16}\\b"
+        }
+      },
+      "title": "CreditCardDTO"
+    },
+    "Link": {
+      "type": "object",
+      "properties": {
+        "deprecation": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "hreflang": {
+          "type": "string"
+        },
+        "media": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "profile": {
+          "type": "string"
+        },
+        "rel": {
+          "$ref": "#/definitions/LinkRelation"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "Link"
+    },
+    "LinkRelation": {
+      "type": "object",
+      "title": "LinkRelation"
+    },
+    "Links": {
+      "type": "object",
+      "properties": {
+        "Customer contacts": {
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string"
+            }
+          },
+          "title": "Customer contacts"
+        },
+        "Proceed to payment": {
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string"
+            }
+          },
+          "title": "Proceed to payment"
+        }
+      },
+      "title": "Links"
+    },
+    "OrderDTO": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "$ref": "#/definitions/Links"
+        },
+        "billNumber": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "dateCreated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deliveryCost": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "deliveryIncluded": {
+          "type": "boolean"
+        },
+        "executed": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "payed": {
+          "type": "boolean"
+        },
+        "productsCost": {
+          "type": "number",
+          "format": "double"
+        },
+        "totalCost": {
+          "type": "number",
+          "format": "double"
+        },
+        "userAccount": {
+          "type": "string"
+        }
+      },
+      "title": "OrderDTO"
+    },
+    "ProductDTO": {
+      "type": "object",
+      "required": [
+        "alcohol",
+        "price",
+        "volume"
+      ],
+      "properties": {
+        "_links": {
+          "$ref": "#/definitions/Links"
+        },
+        "age": {
+          "type": "integer",
+          "format": "int32",
+          "maximum": 2000,
+          "exclusiveMaximum": false
+        },
+        "alcohol": {
+          "type": "number",
+          "format": "float",
+          "minimum": 1,
+          "maximum": 96,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false
+        },
+        "available": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "distillery": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[^#$%^&*()']*$"
+        },
+        "price": {
+          "type": "number",
+          "format": "double"
+        },
+        "productId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "volume": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "ProductDTO"
+    },
+    "UserDTOReq": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Link"
+          }
+        },
+        "address": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100,
+          "pattern": "^[^#$%^*()']*$"
+        },
+        "email": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 50,
+          "pattern": "^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 50,
+          "pattern": "^[\\pL '-]+$"
+        },
+        "password": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 50,
+          "pattern": "^[a-zA-Z0-9]+$"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 20,
+          "pattern": "^\\+[1-9][0-9]?[\\s]*\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$"
+        }
+      },
+      "title": "UserDTOReq"
+    },
+    "UserDTORes": {
+      "type": "object",
+      "properties": {
+        "_links": {
+          "$ref": "#/definitions/Links"
+        },
+        "address": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100,
+          "pattern": "^[^#$%^*()']*$"
+        },
+        "email": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 50,
+          "pattern": "^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 50,
+          "pattern": "^[\\pL '-]+$"
+        },
+        "password": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 50,
+          "pattern": "^[a-zA-Z0-9]+$"
+        },
+        "phone": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 20,
+          "pattern": "^\\+[1-9][0-9]?[\\s]*\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$"
+        }
+      },
+      "title": "UserDTORes"
+    }
+  }
+}
